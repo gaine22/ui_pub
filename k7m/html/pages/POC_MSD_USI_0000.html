@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico"> 
+
+	<title>나의서비스 | SK 7mobile</title>
+	
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+<body>
+	<div class="skip" id="skip">
+		<ul>
+			<li><a href="#main">본문 바로가기</a></li>
+		</ul>
+	</div>
+	<div class="base-layer" id="baseLayer">
+		<section class="ui-modal modal-usim" id="POC_MSD_CNP_0000" role="dialog" aria-hidden="true">
+			<div class="ui-modal-wrap">
+				<header class="ui-modal-tit">
+					<h1>비밀번호 확인</h1>
+					<button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id: 'POC_MSD_CNP_0000' });">닫기</button>
+				</header>
+				<div class="ui-modal-cont">
+                    <ul class="list-dot">
+                        <li>회원님의 소중한 개인정보를 위해 비밀번호를 다시 한번 확인합니다.</li>
+                        <li>비밀번호가 타인에게 노출되지 않도록 주의해주세요.</li>
+                    </ul>
+                    <div class="modal-form">
+                        <ul class="form-wrap">
+                            <li class="line">
+                                <dl>
+                                    <dt><label for="userName">이름</label></dt>
+                                    <dd>
+                                        <div>
+                                            <input type="text" class="inputbox" id="userName">
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li class="line">
+                                <dl>
+                                    <dt><label for="userPwd">비밀번호</label></dt>
+                                    <dd>
+                                        <div>
+                                            <input type="text" class="inputbox" id="userPwd">
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<div class="wrapper">
+		<div id="topBanner" class="topbanner"></div>
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>		
+		<main class="main" id="main" role="main">
+            <div class="contents-wrap">				
+				<section>
+				    <h2 class="h2">나의 서비스</h2>
+                    <div class="mys-info type2">
+                        <div class="box1">
+                            <div class="name">
+                                <strong>홍**님</strong>
+                            </div>
+                            <div class="phone2">
+                                <p>
+									이용중인 휴대폰번호 : <strong><i>1</i>개</strong>
+								</p>
+								<select title="휴대폰번호 선택">
+									<option value="">010-1234-5678</option>
+								</select>
+                            </div>
+							<div class="btn-wrap type-arrow">
+                                <span><a href="#" class="btn btn-bluegreen white">가입정보조회</a></span>
+                                <span><a href="#" class="btn btn-bluegreen white">비밀번호 변경</a></span>
+                            </div>
+                        </div>
+                        <div class="box2">
+                            <dl>
+                                <dt class="icon1">지난달 청구요금 <span>2017.12</span></dt>
+                                <dd class="num"><strong>50,000</strong>원</dd>
+                                <dd class="date"><strong>청구기간</strong><span>2017.11.01~2017.11.30</span></dd>
+                            </dl>
+                            <div class="btn-wrap type-arrow">
+                                <a href="#" class="btn btn-seablue white">자세히보기</a>
+                            </div>
+                        </div>
+                        <div class="box3">
+                            <dl>
+                                <dt class="icon2">7point 멤버십</dt>
+								<!-- 180327 원을 point로 수정, 다음달 소멸예정 문구 수정 및 날짜 삭제 -->
+                                <dd class="num"><strong>10,000</strong>point</dd>
+                                <dd class="date"><strong>다음달 소멸예정</strong><span><i class="fc-red">-5,000 point</i></span></dd>
+                            </dl>
+                            <div class="btn-wrap type-arrow">
+                                <a href="#" class="btn btn-seablue white">자세히보기</a>
+                            </div>
+                        </div>
+                    </div>
+				</section>
+				<section>
+					<h3 class="h3">나의활동</h2>
+					<ul class="mys-banner">
+						<li class="icon1">
+							<!-- 180327 상품주문을 장바구니로 문구수정 -->
+							<a href="#"><strong>장바구니</strong><span><i>1</i>건</span></a>
+						</li>
+						<li class="icon2">
+							<a href="#"><strong>상품후기</strong><span><i>1</i>건</span></a>
+						</li>
+						<li class="icon3">
+							<a href="#"><strong>1 : 1 상담</strong><span><i>14</i>건</span></a>
+						</li>
+					</ul>
+				</section>
+                <section>
+                    <div class="mys-tit">
+                        <h3 class="h3">이용중인 요금제 잔여사용량</h3>
+                        <p class="list-dot dot-red only-d">2018-01-01~2018-01-04 기준 (부가세포함)</p>
+                    </div>
+                    <div class="mys-info3">
+                        <div class="box1">
+							<strong class="tit">이용중인 요금제</strong>
+							<em class="name">LTE 온라인 데이터 S4</em>
+							<div class="btn-wrap type-arrow">
+                                <a href="#" class="btn btn-seablue white">부가서비스 조회</a>
+                            </div>
+                        </div>
+						<p class="list-dot dot-red only-m">2018-01-01~2018-01-04 기준 (부가세포함)</p>
+                        <div class="box2">
+                            <strong class="tit">현재 잔여사용량(기본 제공량 기준)</strong>
+							<table class="tbl-base4">
+								<caption>현재 잔여사용량</caption>
+								<colgroup>
+									<col style="width:auto">
+									<col style="width:26%" span="3">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">구분</th>
+										<th scope="col">기본제공</th>
+										<th scope="col">전체사용량</th>
+										<th scope="col">잔여사용량</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">음성</th>
+										<td>120분</td>
+										<td>0초</td>
+										<td>2시간</td>
+									</tr>
+									<tr>
+										<th scope="row">데이터</th>
+										<td>1GB</td>
+										<td>82.19MB</td>
+										<td>941.8MB</td>
+									</tr>
+									<tr>
+										<th scope="row">SMS</th>
+										<td>200건</td>
+										<td>0건</td>
+										<td>200건</td>
+									</tr>
+								</tbody>
+							</table>
+                        </div>
+                    </div>
+                    <ul class="list-dot">
+                        <li>요금제 기본제공량은 이용기간에 따라 일할 계산되므로 월 중 신규가입 또는 요금제 변경 고객님의 경우 기본 제공량에 차이가 있을 수 있습니다. </li>
+                        <li>사용량은 시스템 상황에 따라 다소 차이가 있을 수 있습니다.</li>
+                    </ul>
+                </section> 
+                <section>
+                    <h3 class="h3">주요서비스 바로가기</h3>
+                    <ul class="mys-ico-list2">
+                        <li class="icon1"><a href="#"><strong>변경/분실/정지</strong> 바로가기</a></li>
+                        <li class="icon2"><a href="#"><strong>부가서비스 조회/해지</strong> 바로가기</a></li>
+                        <li class="icon3"><a href="#"><strong>장바구니</strong> 바로가기</a></li>
+                    </ul>
+                </section>
+			</div><!-- //.contents-wrap -->
+		</main>
+		<div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+	
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			//$plugins.uiModal({ id:'POC_MSD_CNP_0000'});
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>
+
+			

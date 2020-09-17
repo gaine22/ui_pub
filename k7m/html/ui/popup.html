@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../resources/img/common/ico_favicon.ico"> 
+
+	<title>SKTELINK</title>
+	
+	<script src="../resources/js/ui.init.js"></script>
+	<link rel="stylesheet" href="../resources/css/ui.base.css">
+</head>
+
+<body class="page-form">
+	<div class="base-skip" id="baseSkip"></div>
+	<div class="base-modal" id="baseModal"></div>
+	<div class="base-wrapper">
+		<header class="base-header" id="baseHeader"></header>
+		<main class="base-main" id="baseMain" role="main">
+			<div class="base-content">
+				<div class="base-tit">
+					<h1 class="h1">Window Popup Guide</h1>
+				</div>
+				
+				<section class="mgb-l">
+					<a href="http://naver.com" class="btn-base" id="uiPopupA" target="_blank" aria-haspopup="true" title="가이드 새 창 열림" ><span>팝업띄우기</span></a>
+					<a href="http://daum.net" class="btn-base" id="uiPopupB" target="_blank" aria-haspopup="true" title="가이드 새 창 열림" data-popname="list"><span>팝업띄우기</span></a>
+				</section>
+<pre><xmp class="code mgb-l">
+<a class="exe-winpop" href="..." target="_blank" aria-haspopup="true" title="새 창 열림">팝업</a>
+// 필수요소 : 
+class ="ui-winpop", 
+href="...", 
+// 선택요소 : 
+data-name
+data-width
+data-height
+data-align
+data-top
+data-left
+data-toolbar
+data-location
+data-menubar
+data-status
+data-resizable
+data-scrollbars
+
+$(documnet).off('click.winpop').on('click.winpop', '.exe-winpop', function(e){
+	e.preventDefault()
+	$plugins.uiPopup({
+		link: this.href,
+		name: $(this).data('name'),
+		width: $(this).data('width'),
+		height: $(this).data('height'),
+		align: $(this).data('align'),
+		top: $(this).data('top'),
+		left: $(this).data('left'),
+		toolbar: $(this).data('toolbar'),
+		location: $(this).data('location'),
+		menubar: $(this).data('menubar'),
+		status: $(this).data('status'),
+		resizable: $(this).data('resizable'),
+		scrollbars: $(this).data('scrollbars')
+	});
+});
+
+</xmp></pre>		
+			</div>
+
+		</main>
+		<footer class="base-footer" id="baseFooter"></footer>
+	</div>
+	
+	<script src="../resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../resources/js/ui.plugins.js"></script>
+	<script src="../resources/js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+            $('#uiPopupA').on('click', function(e){
+                e.preventDefault();
+                $plugins.uiPopup({ link:$(this).attr('href'), width:200  });
+            });
+            $('#uiPopupB').on('click', function(e){
+                e.preventDefault();
+                $plugins.uiPopup({ link:$(this).attr('href'), name:'list'  });
+            });
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

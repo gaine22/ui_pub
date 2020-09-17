@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico"> 
+
+	<title>진행이벤트 | SK 7mobile</title>
+	
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+<body>
+	<div class="skip" id="skip">
+		<ul>
+			<li><a href="#main">본문 바로가기</a></li>
+		</ul>
+	</div>
+    <!-- 20180228 추가 -->
+    <div class="base-layer" id="baseLayer">
+        <!-- MODAL: 로그인선택 -->
+        <section class="ui-modal" id="popLoginChoice" role="dialog" aria-hidden="true">
+            <div class="ui-modal-wrap">
+                <header class="ui-modal-tit">
+                    <h1>로그인</h1>
+                    <button type="button" class="ui-modal-close btn-close">닫기</button>
+                </header>
+                <div class="ui-modal-cont">
+                    <div class="login-choice">
+                        <p class="login-txt">이벤트 참여를 위해서는<br>로그인이 필요합니다.</p>
+                        <div class="member"><button type="button" onclick="$plugins.uiModal({ id:'popLogin', width:500 });">회원 로그인</button></div>
+                        <div class="nonmember"><button type="button">비회원 로그인</button></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- MODAL: 로그인선택 -->
+        <section class="ui-modal" id="popLogin" role="dialog" aria-hidden="true">
+            <div class="ui-modal-wrap">
+                <header class="ui-modal-tit">
+                    <h1>로그인</h1>
+                    <button type="button" class="ui-modal-close btn-close">닫기</button>
+                </header>
+                <div class="ui-modal-cont pdb-n">
+                    <div class="modal-login">
+                        <p class="login-txt">이벤트 참여를 위해서는<br>로그인이 필요합니다.</p>
+                        <input type="text" class="inputbox" placeholder="아이디" title="아이디 입력">
+                        <input type="password" class="inputbox" placeholder="패스워드" title="패스워드 입력">
+                        <div class="btn-wrap">
+                            <button type="button" class="btn-point-red"><i>로그인</i></button>
+                        </div>
+                    </div>
+                    <div class="modal-login-bottom">
+                        <p>
+                            SK 7mobile 회원이 아니시면 간단한 가입으로 <br>
+                            SK 7mobile 휍회원이 되세요
+                        </p>
+                        <div class="btn-wrap">
+                            <a href="#" class="btn-point-gray">회원가입</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- // 20180228 추가 -->
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+            <div class="contents-wrap">
+                <section>
+                    <h1 class="hide">혜택 이벤트</h1>
+    				<h2 class="h2">진행 이벤트</h2>
+                    <article class="view-wrap">
+                        <!-- 20180323 : 구조 수정 -->
+                        <header class="view-header">
+                            <div class="tit-area">
+                                <h1>SK임직원 전용몰 특별오픈!! (eFamilyshop)</h1>
+                            </div>
+                            <div class="date">
+                                <strong>기간</strong>
+                                <span>2018.01.01~2018.01.02</span>
+                            </div>
+                            <div class="sns">
+                                <a href="#" class="s0">카카오톡 공유</a>
+                                <a href="#" class="s1">facebook 공유</a>
+                                <a href="#" class="s2">twitter 공유</a>
+                                <a href="#" class="s3">instagram 공유</a>
+                                <a href="#" class="s4">url 공유</a>
+                            </div>
+                        </header>
+                        <!-- 20180323 : 구조 수정 -->
+                        <div class="view-cont">
+                            <img src="../images/common/@event.jpg" alt="이벤트내용">
+
+                            <!-- 설문 이벤트 형-->
+                            <div class="survey">
+                                <ul>
+                                    <li><input type="radio" name="r1" id="r1_1" checked="checked" title="보기1"><label class="lb-radio checked" for="r1_1"><span>보기1</span></label></li>
+                                    <li><input type="radio" name="r1" id="r1_2" title="보기2"><label class="lb-radio checked" for="r1_2"><span>보기2</span></label></li>
+                                    <li><input type="radio" name="r1" id="r1_3" title="보기3"><label class="lb-radio checked" for="r1_3"><span>보기3</span></label></li>
+                                    <li><input type="radio" name="r1" id="r1_4" title="보기4"><label class="lb-radio checked" for="r1_4"><span>보기4</span></label></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 기본 이벤트 형 버튼 -->
+                    <div class="btn-wrap">
+                        <a href="#" class="btn btn-darkgray"><i>목록</i></a>
+                    </div>
+                    <!-- 설문 이벤트 형 버튼 -->
+                    <div class="btn-wrap">
+                        <span><a href="#" class="btn btn-darkgray"><i>목록</i></a></span>
+                        <span><button type="button" class="btn btn-point"><i>참여하기</i></button></span><!-- 20180323: 버튼 순서와 색상 수정 -->
+                    </div>
+
+                    <!-- 20180323 : 전체적 구조 마크업 수정 -->
+                    <div class="comment-wrap">
+                         <!-- <p class="total">댓글 240</p> 20180323 아래로 이동 -->
+                        <div class="box-comment">
+                            <div class="write-area">
+                                <textarea placeholder="댓글은 로그인이 필요합니다.
+등록된 댓글 중 지나친 비방, 욕설, 목적 및 취지에 맞지 않는 댓글은 관리자에 의해 예고 없이 삭제됩니다."></textarea>
+                                <div class="attached">
+                                    <div><img src="../images/common/@event.jpg" alt=""><button type="button"><i>첨부취소</i></button></div>
+                                    <div><img src="../images/common/@event.jpg" alt=""><button type="button"><i>첨부취소</i></button></div>
+                                </div>
+                                <div class="limit">0 byte / 600 byte</div>
+                            </div>
+                            <div class="btn-comment-area">
+                                <div class="btn-file">
+                                    <input type="file" id="imgUpload"><label for="imgUpload"><span>이미지등록</span></label>
+                                </div>
+                                <p>(사진은 1장당 1MB 이내의 jpg, jpeg, gif, png 형식으로만 최대 2장까지 등록 가능합니다.)</p>
+                                <div class="btn-comment"><button type="button" onclick="$plugins.uiModal({ id:'popLoginChoice', width:500 });" ><i>댓글 달기</i></button></div><!-- 20180228 버튼수정 모달팝업이벤트 -->
+                            </div>
+                        </div>
+                        <div class="list-comment">
+                            <!-- 20180323 구조 변경 -->
+                            <div class="sort-area">
+                                <span class="total">댓글 120</span>
+                                <div class="txt-sort"><button type="button" class="on"><i>최신순</i></button><button type="button"><i>추천순</i></button></div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="inner">
+                                        <div class="info clear">
+                                            <div>
+                                                <strong class="name">유저ID</strong>
+                                                <span class="date">2017.12.01 14:24:55</span>
+                                            </div>
+                                            <!-- 20180323 : edit 버튼영역 아래로 이동 -->
+                                        </div>
+                                        <div class="cont-comment">
+                                            최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력
+                                        </div>
+                                        <!-- 20180323 : edit 버튼 모음 구조 추가 -->
+                                        <div class="edit">
+                                            <button type="button" class="recommend"><i>추천(1)</i></button>
+                                            <button type="button" class="delete"><i>삭제</i></button>
+                                            <button type="button"><i>수정</i></button>
+                                        </div>
+                                        <!-- // 20180323 : edit 버튼 모음 구조 추가 -->
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner">
+                                        <div class="info clear">
+                                            <div>
+                                                <strong class="name">유저ID</strong>
+                                                <span class="date">2017.12.01 14:24:55</span>
+                                            </div>
+                                        </div>
+                                        <div class="cont-comment">
+                                            이게바로 정답이네요!
+                                            <div class="img">
+                                                <img src="../images/main/@h3.png" alt="유저ID가 올린 이미지">
+                                            </div>
+                                        </div>
+                                       <!-- 20180323 : 버튼 모음 구조 추가 -->
+                                        <div class="edit">
+                                            <button type="button" class="recommend"><i>추천(1)</i></button>
+                                            <button type="button" class="delete"><i>삭제</i></button>
+                                            <button type="button"><i>수정</i></button>
+                                        </div>
+                                        <!-- // 20180323 : 버튼 모음 구조 추가 -->
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- // 20180323 : 전체적 구조 마크업  수정 -->
+                    <div class="paging">
+                        <a class="direction" href="#">맨처음</a>
+                        <a class="direction prev" href="#">이전</a>
+                        <span class="paging-list">
+                            <a href="#" class="on">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#">7</a>
+                            <a href="#">8</a>
+                            <a href="#">9</a>
+                            <a href="#">10</a>
+                        </span>
+                        <a class="direction next" href="#">다음</a>
+                        <a class="direction end" href="#">맨뒤</a>
+                    </div>
+                </section>
+            </div><!-- //.contents-wrap -->
+		</main>
+		<div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+	
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){ 			
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

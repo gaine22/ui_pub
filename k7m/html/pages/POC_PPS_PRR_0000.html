@@ -1,0 +1,29 @@
+<section class="ui-modal" id="recdPopup" role="dialog" aria-hidden="true">
+    <div class="ui-modal-wrap">
+        <header class="ui-modal-tit">
+            <h1>추천인/추천판매점 입력</h1>
+            <button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id: 'recdPopup', endfocus: 'btnRecdPopup' });">닫기</button>
+        </header>
+        <div class="ui-modal-cont modal-recdPop">
+            <!-- 20180316 문구 강조 수정 -->
+            <div class="txt-gray-box">
+                <p>추천인휴대폰번호 또는 추천판매점정보를 <br class="mbr"> 입력하시면, <br class="wbr"><span class="fc-red">추가포인트</span>가 지급됩니다.</p>
+            </div>
+            <h2>추천 정보 입력</h2>
+            <ul class="form-wrap">
+                <li class="line">
+                    <div>
+                        <input type="text" class="inputbox" placeholder="휴대폰번호 또는 판매점코드를 입력하세요.">
+                    </div>
+                </li>
+            </ul>
+            <!-- 20180316 문구 태그수정 -->
+            <p class="form-subtxt">* 휴대폰번호 입력 예시 : 010XXXXXXXX ( ‘-’ 없이 입력)</p>
+            <p class="form-subtxt">* 추천판매점 입력 예시 : STPXXXX</p>
+            <p class="form-subtxt fc-red">* 해당 팝업 종료 후 다시 열리지 않으니 확인하시고<br class="mbr"> 꼭 입력해주세요.</p>
+            <div class="btn-wrap">
+                <button type="button" class="btn btn-ok"><i>확인</i></button>
+            </div>
+        </div>
+    </div>
+</section>

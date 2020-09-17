@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	
+	<title>The&middot;K 한국교직원 공제회</title>
+	
+	<link rel="stylesheet" href="./resources/css/ui.base.css">
+	<style>
+		body{overflow-y:scroll; position:fixed;}
+		.wrap{opacity:0}
+	</style>
+</head>
+<body>
+	<div class="mdim"></div>
+	<div class="wrap page1" id="wrap">
+		<header class="header">
+			<img src="./resources/img/left.png" alt="">
+			<button tyle="button" class="btn" id="btn_gnb"></button>
+			<button tyle="button" class="btn2" id="btn_mypage"></button>
+			<a href="main.html" class="btn_link n1">main</a>
+			<a href="main2.html" class="btn_link n2">보험제도</a>
+			<a href="main3.html" class="btn_link n3">행복서비스</a>
+			<a href="main4.html" class="btn_link n4" target="_blank">대한민국 스승상</a>
+			<a href="main5.html" class="btn_link n5" target="_blank">ENG</a>
+		</header>
+		<div class="gnb_menu_wrap">
+			<img src="./resources/img/gnbmenu.png" alt="" class="gnb_menu">
+			<button class="btn_close"></button>
+		</div>
+		<div class="layer_mypage">
+		    <img src="./resources/img/layer_mypage.png" alt="">
+		    <a href="#none" class="link"></a>
+		    <button class="close"></button>
+		</div>
+		<main class="main">
+		    <div class="dim"></div>
+			<div class="ui-parallax-wrap" id="uiParallax" style="background:#f4f5f8">
+				<div class="ui-parallax-item">
+					<img src="./resources/img/main02_01.png" alt="">
+				</div>
+				<div class="ui-parallax-item" style="padding-bottom:100px; background:#f4f5f8">
+					<div class="ui-position" id="exeFix1">
+						<div class="ui-position-wrap">
+							<img src="./resources/img/main02_02.png" alt="">
+						</div>
+					</div>
+					<div style=" padding-top:36px; ">
+					    <img src="./resources/img/main02_03.png" alt="">
+					</div>
+			        
+				</div>
+				<div class="ui-parallax-item" style="padding-bottom:100px;">
+					<img src="./resources/img/main02_04.png" alt="">
+				</div>
+				<div class="ui-parallax-item" style="background:#f4f5f8">
+					<img src="./resources/img/main02_05.png" alt="">
+					<a href="main2_detail.html" class="btn_link n3_detail">디테일</a>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<img src="./resources/img/footer.png" alt="">
+		</footer>
+	</div>
+	<div class="dimWrap">
+		<div class="mob scroll" id="mScroll">
+			<div class="m_header">
+				<img src="./resources/img/mob_h.png" alt="">
+			</div>
+			<img src="./resources/img/mob2.png" alt="">
+		</div>
+		<div class="ctrl">
+			<button type="button" class="mobClose" data-href="main2.html">DESKTOP</button>
+			<button type="button" class="active">MOBILE</button>
+		</div>
+	</div>
+	<div class="mobData"></div>
+	<!-- //모바일 -->
+	
+	<script src="./resources/js/lib/jquery-1.12.4.min.js"></script>
+	<script src="./resources/js/lib/jquery.easing.min.js"></script>
+	<script src="./resources/js/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="./resources/js/ui.common.js"></script>
+	
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			$('.wrap').delay(500).animate({opacity: 1}, 500);
+			$._mainSlide.init({id : 'mainSlide'});
+			$._aniDim.init(false);
+			$("#mScroll").mCustomScrollbar();
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

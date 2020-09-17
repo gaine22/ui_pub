@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../resources/img/common/ico_favicon.ico"> 
+
+	<title>SKTELINK</title>
+	
+	<script src="../resources/js/ui.init.js"></script>
+	<link rel="stylesheet" href="../resources/css/ui.base.css">
+</head>
+
+<body class="page-form">
+	<div class="base-skip" id="baseSkip"></div>
+	<div class="base-modal" id="baseModal"></div>
+	<div class="base-wrapper">
+		<header class="base-header" id="baseHeader"></header>
+		<main class="base-main" id="baseMain" role="main">
+			<div class="base-content">
+				<h1 class="h1">Introduction</h1>
+				<p class="txt-lead"></p>
+				
+                <h2 class="h2">Base Directory and file</h2>
+                <p>기본 파일 디렉토리 및 파일은 아래와 같이 구성한다.</p>
+<div class="box-code">
+<pre>
+<code>
+your-project/
+├── html/
+	└── css/
+	│    ├── ui_base.css
+	│    ├── ui_plugins.css
+	│    ├── ui_common.css	
+	│    ├── ui_main.css
+	│    └── ui_content.css
+	└── images/
+	│    ├── common/
+	│    ├── main/
+	│    ├── desktop/
+	│    └── mobile/
+	└── js/
+		├── lib/
+		│    └── jquery.min.js
+		│    └── owl.carousel.js
+		│    └── swiper.min.js 
+		├── ui_common.js
+		├── ui_init.js
+		└── ui_plugins.js
+
+    └── pages/
+    └── ui/ GUIDE용
+    └── resources/ GUIDE용
+        ├── css/
+        ├── data/
+        │    ├── codinglist.json
+        │    └── codinglist.xlsx      
+        ├── font/
+        ├── img/
+        └── js/
+                ├── lib/
+                │    └── jquery-3.2.1.min.js    
+                ├── ui.common.js
+                ├── ui.init.js
+                └── ui.plugins.js
+</code>
+</pre>
+</div>
+				<h2 class="h2">Base HTML Template</h2>
+				<p>HTML5 Doctype를 기본으로 구성한 아래와 같이 작성한다.</p>
+
+<div class="box-code">
+<pre>
+<code>
+<span class="nc">&lt;doctype html&gt;</span>
+<span class="nt">&lt;html <span class="na">lang=</span>"ko"&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta <span class="na">charset=</span><span class="s">"utf-8"</span>&gt;</span>
+    <span class="nt">&lt;meta <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=edge"</span>&gt;</span>
+    <span class="nt">&lt;meta <span class="na">name=</span><span class="s">"viewport"</span> <span class="na"></span>content=</span><span class="s">"width=device-width, initial-scale=1.0, shrink-to-fit=no"</span>&gt;</span>
+    <span class="nt">&lt;title&gt;</span>page title<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;script <span class="na">src=</span><span class="s">"../resources/js/ui.init.js"</span>&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;link <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"../resources/css/ui.base.css"</span>&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div class="base-skip" id="baseSkip"&gt;</span><span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div class="base-modal" id="baseModal"&gt;</span><span class="nt">&lt;/div&gt;</span>
+	
+    <span class="nt">&lt;script <span class="na">src=</span><span class="s">"../resources/js/lib/jquery-3.2.1.min.js"</span>&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script <span class="na">src=</span><span class="s">"../resources/js/ui.plugins.js"</span>&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script <span class="na">src=</span><span class="s">"../resources/js/ui.common.js"</span>&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script&gt;</span>
+      ;(function($, win, doc, undefined) {
+        $(doc).ready(function(){
+
+        });
+      })(jQuery, window, document);
+    <span class="nt">&lt;/script&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code>
+</pre>
+</div>
+				
+			</div>
+		</main>
+		<footer class="base-footer" id="baseFooter"></footer>
+	</div>
+	
+	<script src="../resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../resources/js/ui.plugins.js"></script>
+	<script src="../resources/js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			$plugins.uiForm();
+			$plugins.uiFormCheck();
+
+			$plugins.uiForm({ id: 'c2_0', all: true, callback: allCheckCallback });
+			$plugins.uiForm({ id: 'c5_0', all: true, callback: allCheckCallback });
+			$plugins.uiForm({ id: 'c3_0', all: true, callback: allCheckCallback });
+			$plugins.uiForm({ id: 'c3_4', callback: inpCheckCallback });
+			
+			function allCheckCallback(v){
+				console.log(v);
+			}
+
+			function inpCheckCallback(v){
+				console.log(v);
+				if (v.value) {
+					$('#aaa input').prop('disabled', false).prop('checked', true).removeAttr('disabled');
+					$('#aaa label').removeClass('disabled').addClass('checked');
+				} else {
+					$('#aaa input').prop('disabled', true).prop('checked', false).attr('disabled');
+					$('#aaa label').removeClass('checked').addClass('disabled');
+				}
+			}
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

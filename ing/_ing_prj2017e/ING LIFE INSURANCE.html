@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://www.inglife.co.kr/wcms/eng/scweslk010m.jsp -->
+<html class="no-js" lang="ko"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ING LIFE INSURANCE</title>
+
+
+
+
+
+
+
+
+<!-- [WebTrends] Current Menu -->
+<meta name="WT.ti" content="MENUNOTFOUND">
+
+<meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=medium-dpi">
+
+
+
+<meta name="subject" content="[ING LIFE]">
+<meta name="keywords" content="[ING LIFE]">
+<meta name="description" content="[ING LIFE]">
+<script async="" src="./ING LIFE INSURANCE_files/fbds.js.다운로드"></script><script src="./ING LIFE INSURANCE_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" src="./ING LIFE INSURANCE_files/dtagent55_n3_5560.js.다운로드" data-dtconfig="rid=RID_-2045272120|rpid=-2006120098|domain=|tp=500,50,0"></script>
+<link rel="stylesheet" href="./ING LIFE INSURANCE_files/reset.css">
+<link rel="stylesheet" href="./ING LIFE INSURANCE_files/layout.css">
+  <link rel="stylesheet" href="./ING LIFE INSURANCE_files/wcms.css">
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+</head>
+<body>
+
+<!-- ##### Javascript defined & include ##### -->
+<div id="scriptContainerId"></div>
+
+<script charset="utf-8" type="text/javascript" src="./ING LIFE INSURANCE_files/json3.min.js.다운로드"></script>
+
+<!--[if !IE]> -->
+<script charset="utf-8" type="text/javascript" src="./ING LIFE INSURANCE_files/jquery-2.1.0.min.js.다운로드"></script>
+<!-- <![endif]-->
+<!--[if lt IE 9]>
+<script charset="utf-8" type="text/javascript" src="/smartui/lib/jquery/jquery-1.10.2.min.js"></script>
+<script charset="utf-8" type="text/javascript" src="/scripts/common/html5shiv.js"></script>
+<script charset="utf-8" type="text/javascript" src="/scripts/common/css3-mediaqueries.js"></script>
+<script charset="utf-8" type="text/javascript" src="/scripts/common/ie.print.js"></script>
+<![endif]-->
+<!--[if gte IE 9]>
+<script charset="utf-8" type="text/javascript" src="/smartui/lib/jquery/jquery-2.1.0.min.js"></script>
+<![endif]-->
+
+<script charset="utf-8" type="text/javascript" src="./ING LIFE INSURANCE_files/jquery-ui.min.js.다운로드"></script>
+<script charset="utf-8" type="text/javascript" src="./ING LIFE INSURANCE_files/jquery.blockUI.js.다운로드"></script>
+
+<script charset="utf-8" type="text/javascript" src="./ING LIFE INSURANCE_files/sui_config.js.다운로드"></script>
+<script charset="utf-8" type="text/javascript" src="./ING LIFE INSURANCE_files/sui_min.js.다운로드"></script>
+<script charset="utf-8" type="text/javascript" src="./ING LIFE INSURANCE_files/sui.ucb_min.js.다운로드"></script>
+<script charset="utf-8" type="text/javascript" src="./ING LIFE INSURANCE_files/sui.nsn_min.js.다운로드"></script>
+<script charset="utf-8" type="text/javascript" src="./ING LIFE INSURANCE_files/sui.uti.formatter_min.js.다운로드"></script>
+<script charset="utf-8" type="text/javascript" src="./ING LIFE INSURANCE_files/sui.uti.validator_min.js.다운로드"></script>
+
+
+
+<script charset="utf-8" type="text/javascript" src="./ING LIFE INSURANCE_files/client.js.다운로드"></script>
+
+
+<!-- ## example env & common javascript defined ## -->
+<script type="text/javascript">
+	//로그 활성화
+	sui.log.setEnabled(false);
+	sui.log.setEnabled(sui.log.LEVEL.log, false);
+	sui.log.setEnabled(sui.log.LEVEL.debug, false);
+	sui.log.setEnabled(sui.log.LEVEL.info, false);
+	sui.log.setEnabled(sui.log.LEVEL.warn, false);
+	sui.log.setEnabled(sui.log.LEVEL.error, false);
+
+	//===== GLOBAL VARIABLE DEFINED AREA START===============================================================================
+	$.envType = 'O';
+	//사용자의 로그인 여부
+	$.isLogin = false;
+	//세션유효시간
+	$.sessionTime = '15';
+    $.cookieSave = 0;
+    $.serverData = '20170419';
+    //Linux - firefox 에서 문제가 있어서 화면블록킹은 제거
+    $.isCyber = false; ;
+
+    //===== GLOBAL VARIABLE DEFINED AREA END  ===============================================================================
+
+    $(document).ready(function () {
+
+    	$(document).keydown(function (e) {
+    	    // F5, ctrl + F5, ctrl + r 새로고침 막기 (사이버센터만 막기)
+    	    var allowPageList   = new Array('/biz/common/*', '/biz/home/*', '/biz/wcms/*');
+    	    var bBlockF5Key     = true;
+    	    for (number in allowPageList) {
+    	        var regExp = new RegExp('^' + allowPageList[number] + '.*', 'i');
+    	        if (regExp.test(document.location.pathname)) {
+    	            bBlockF5Key = false;
+    	            break;
+    	        }
+    	    }
+
+    	    if (bBlockF5Key) {
+    	        if (e.which === 116) {
+    	            if (typeof event == "object") {
+    	                event.keyCode = 0;
+    	            }
+    	            return false;
+    	        } else if (e.which === 82 && e.ctrlKey) {
+    	            return false;
+    	        }
+    	    }
+    	});
+
+
+        //# sui 환경변수 설정
+        //sui.env.setLocale("");
+        sui.env.setLocale('ko-KR');
+        sui.env.setViewType('PC');
+        sui.env.put("config.env.deviceType", "PC");
+        //NScreen 대상이 아니므로 PC타입의 컴포넌트만 뷰
+        sui.env.setScreenId("scweslk010m");
+        sui.env.setScreenDir("/");
+
+        //# site 환경변수 설정
+        sui.env.put("env.security.enabled", "false");
+    });
+</script>
+
+<script charset="utf-8" type="text/javascript" src="./ING LIFE INSURANCE_files/connectionImpl_ajax.js.다운로드"></script>
+<script charset="utf-8" type="text/javascript" src="./ING LIFE INSURANCE_files/common.js.다운로드"></script>
+<script type="text/javascript">
+    //최초 화면을 호출하면 블록킹 처리 하여 화면이 다 그려지기 전 까지 사용자 입력을 막는다.
+    if($.isCyber) {
+        ingmh.custw.transaction.screenBlock();
+    }
+
+ 	// NPAPI 중단으로 크롬 접속자가 키보드 보안 모듈을 로딩하는 페이지에 접근하면 안내 페이지로 강제 이동
+ 	var isMobile = (ingmh.custw.library.isMobile.Android() || ingmh.custw.library.isMobile.BlackBerry() || ingmh.custw.library.isMobile.iOS() || ingmh.custw.library.isMobile.Windows());
+
+    if(!isMobile && ingmh.custw.library.isChrome()){
+
+    	var path = 	document.location.pathname;
+
+    	if(path.indexOf("/biz/cyber/") == 0
+				|| path.indexOf("/biz/common/cb/ll/") == 0
+				|| path.indexOf("scwcsrc010m") > -1
+				|| path.indexOf("scwcbig030m") > -1
+				|| path.indexOf("scwcbig090m") > -1
+				|| path.indexOf("scwbsbt070p") > -1
+				|| path.indexOf("scwbsev100p") > -1
+				|| path.indexOf("scwpnvn120p") > -1
+				|| path.indexOf("scwpnvn130p") > -1
+		){
+			if(opener == null || opener == undefined){
+				ingmh.custw.bizutil.goGetScreen("/biz/common/cb/et/scwcbet970m.jsp","");
+			}else{
+				ingmh.custw.bizutil.alert("구글 크롬 브라우저의 플러그인(NPAPI포함)차단으로 인해, 인터넷 익스플로러 IE9.0이상 사용 시 이용 가능하오니 양해 부탁 드립니다.");
+				self.close();
+			}
+		}
+    }
+</script>
+<script>(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+  }
+  _fbq.push(['addPixelId', '642635232512106']);
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', 'PixelInitialized', {}]);
+</script>
+<noscript>&lt;img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=642635232512106&amp;amp;ev=PixelInitialized" /&gt;</noscript>
+<!-- skipToContent -->
+<div id="skipToContent">
+   <a href="https://www.inglife.co.kr/wcms/eng/scweslk010m.jsp#goContent">메인콘텐츠 바로가기</a>
+</div>
+<!-- //skipToContent -->
+
+
+<div id="wrap" style="margin-top: 0px;">
+    <!-- header -->
+    <header>
+    	<div class="hGroup">
+          <h1><a href="https://www.inglife.co.kr/">ING</a></h1>
+            <div class="topTitle">
+                <span>WELCOME TO ING LIFE KOREA</span>
+                <button>목록</button>
+            </div>
+        </div>
+    	<div class="inner">
+            <div class="headerG">
+                <nav>
+                    <ul>
+                        <li class="on"><a href="https://www.inglife.co.kr/wcms/eng/scweslk010m.jsp#none">WELCOME TO ING LIFE KOREA</a></li>
+                        <li><a href="https://www.inglife.co.kr/wcms/eng/scweslk010m.jsp#none">INSURANCE PRODUCT &amp; CHANNELS</a></li>
+                        <li><a href="https://www.inglife.co.kr/wcms/eng/scweslk010m.jsp#none">CUSTOMER SERVICE</a></li>
+                        <li><a href="https://www.inglife.co.kr/wcms/eng/scweslk010m.jsp#none">VISION &amp; MISSION</a></li>
+                        <li><a href="https://www.inglife.co.kr/wcms/eng/scweslk010m.jsp#none">CORPRATE RESPONSIBILITY</a></li>
+                        <li><a href="https://www.inglife.co.kr/wcms/eng/scweslk010m.jsp#none">CEO MESSAGE</a></li>
+                        <li><a href="https://www.inglife.co.kr/wcms/eng/scweslk010m.jsp#none">HISTORY</a></li>
+                        <li><a href="https://www.inglife.co.kr/wcms/eng/scweslk010m.jsp#none">LOCATIONS</a></li>
+                        <!-- IR메뉴추가 -->
+                        <li><a href="./scwirmn030e.html" class="ir">Investor Relatrions(IR)</a></li>
+                        <!-- //IR메뉴추가 -->
+                    </ul>
+                </nav>
+            </div>
+            <div class="sideMenu">
+                <ul>
+                    <li><a href="https://www.inglife.co.kr/biz/common/cb/ma/scwcbma010m.jsp">KOREAN</a></li>
+                    <li><a href="https://www.inglife.co.kr/wcms/eng/scweslk010m.jsp#none" onclick="window.open(&#39;/wcms/eng/pr/scweslk030p.jsp&#39;,&#39;&#39;,&#39;width=555, height=710, left=100,top=50, toolbar=no, directories=no, copyhistory=no, status=no, menubar=no, location=no, scrollbars=yes, resizable=no&#39;);" title="window open">PRESS &amp; MEDIA</a></li>
+                    <li style="font-size: 12px; color: #333; line-height: 14px; padding: 9px 0;"><p style="color: #ed7800; font-weight: bold;">1588-5005</p><span>+82-2-2261-1133(from overseas)</span></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <!-- container-->
+    <section id="container">
+    	<!-- 1. Welcome to ING Life Kore -->
+        <h2 class="hidden">Welcome to ING Life Korea</h2>
+        <section class="cont01">
+﻿
+<div>
+<div><span class="img"><img src="./ING LIFE INSURANCE_files/ing_life_cont01_pc.png" alt=""></span></div>
+<div class="textG">
+<h4>ORANGE PROMISE <span>- Right Promise for you</span></h4>
+<p>We will continue to enhance our image as a
+                    'sound financial partner to fulfill customer dreams by
+                    delivering the right promise to our customers'
+                    and increase customer's credibility.</p> </div> </div>
+        </section>
+        <!--// Welcome to ING Life Kore -->
+
+        <!-- 2. Insurance Product & Channels -->
+        <h2 class="hidden">Insurance Product &amp; Channels</h2>
+        <section class="cont02">
+﻿
+       	<div>
+            	<div class="">
+                	<dl class="mission">
+                        <dt>INSURANCE PRODUCT</dt>
+                        <dd>
+                        	<span>ING life provides a broad range of insurance products including protection, annuity, variable products and</span>
+                        	<span>corporate pension via multi channels such as financial consultant, Bank, GA.</span>
+                        </dd>
+                    </dl>
+                	<ul class="tab">
+                        <li class="on"><a href="https://www.inglife.co.kr/wcms/eng/scweslk010m.jsp#none">PRODUCTS</a></li>
+                        <li><a href="https://www.inglife.co.kr/wcms/eng/scweslk010m.jsp#none">CHANNELS</a></li>
+                    </ul>
+
+                    <h3 class="hidden">PRODUCTS</h3>
+                    <ul class="list">
+<li class="list01"><dl><dd class="img"><img alt="" src="./ING LIFE INSURANCE_files/ing_life_img01.png"> </dd><dt>PROTECTION </dt><dd class="text">ING life can help you protect your family and yourself from financial loss</dd></dl></li>
+<li class="list02"><dl><dd class="img"><img alt="" src="./ING LIFE INSURANCE_files/ing_life_img02.png"> </dd><dt>ANNUITY </dt><dd class="text">ING life's annuity products are the answer to your financial future with safety and stability</dd></dl></li>
+<li class="list03"><dl><dd class="img"><img alt="" src="./ING LIFE INSURANCE_files/ing_life_img03.png"> </dd><dt>VARIABLE PRODUCTS </dt><dd class="text">Variable products are long-term investments designed for retirement planning. Our expertise in managing wealth for individuals at all of their life stages ensures that we have products to suit your financial and personal situation whatever your objective of financial planning may be</dd></dl></li><dl><dd class="img">&nbsp;</dd></dl>
+                    </ul>
+
+                    <h3 class="hidden">CHANNELS</h3>
+                    <ul class="list" style="display:none">
+<li class="list01"><dl><dd class="img"><img alt="" src="./ING LIFE INSURANCE_files/ing_life_img011.png"> </dd><dt>Tided Agency </dt><dd class="text">Tided Agency can help you protect your family and yourself from financial loss</dd></dl></li>
+<li class="list02"><dl><dd class="img"><img alt="" src="./ING LIFE INSURANCE_files/ing_life_img022.png"> </dd><dt>Bancassuarance </dt><dd class="text">Provides saving plans in an easy and simple manner at any nearest bank branch across the nation.</dd></dl></li>
+<li class="list03"><dl><dd class="img"><img alt="" src="./ING LIFE INSURANCE_files/ing_life_img033.png"> </dd><dt>General Agency </dt><dd class="text">A General Agent (commonly referred to as a GA) is an insurance agency which partners with various insurance companies to market and distribute their products to agents and brokers. ING life enters GA market based on expertise insurance business.</dd></dl></li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </section>
+        <!--// Insurance Product & Channels -->
+
+        <!-- 3. Customer Service -->
+        <div id="goContent" class="hidden"><h1>Customer Service</h1></div>
+        <section class="cont03">
+ ﻿
+<div>
+<div>
+<ul>
+<li><dl><dd class="img"><img alt="" src="./ING LIFE INSURANCE_files/ing_life_cus01.png"> </dd><dt>State of the Art Internet Site </dt><dd class="text">ING life is the first company in Korea to offer customer services via an internet site based on the public authentication certificate. It provides the most progressive security system, far exceeding the level of conventional personal security systems using only ID and password. Through this service, ING life ensures that valuabl information of customers is well protected during customer service transactions over the web. </dd></dl></li>
+<li><dl><dd class="img"><img alt="" src="./ING LIFE INSURANCE_files/ing_life_cus02.png"> </dd><dt>Professional Call Center </dt><dd class="text">ING life provides another customer contact service channel: telephone service.<br>
+Wherever you are, you may enjoy customer services with just a phone call ranging from a service as simple as changing address to policy loan service after a simple ID verification procedure. <span>Please call us at 82-1588-5005 for advice from kind and specialized call center agents.</span></dd></dl></li>
+<li><dl><dd class="img"><img alt="" src="./ING LIFE INSURANCE_files/ing_life_cus03.png"> </dd><dt>Customer Center </dt><dd class="text"><span>Customers can also enjoy face-to-face service at our state of the art customer center, which you can find in central area of Seoul and Busan.</span> <span>Customers can enjoy one-stop services from professional customer service staff on their existing insurance policies and fund products. Customers can also enjoy financial consultation based on their life planning through out their life from our professional financial consultants.</span> </dd></dl></li>
+</ul></div></div>
+        </section>
+        <!--// Customer Service -->
+
+        <!--4.  Vision & Mission -->
+        <h2 class="hidden">Vision &amp; Mission</h2>
+        <section class="cont04">
+﻿
+<div>
+<div> <dl class="mission"> <dt>MISSION</dt> <dd><span>Our mission is to make our customer's financial future easier. </span> <span>We vow to be the sound financial partner to fulfill your dreams through responsible business management and reliable service to deliver on 'Right Promise for you - ORANGE PROMISE'</span> </dd> </dl> <dl class="vision"> <dt>VISION</dt> <dd><span>We strive to do our best to practice ethical business to deliver 'Right Promise for Customer - ORANGE PROMISE' under the vision, 'sound financial partner to fulfill customer dreams'.</span> </dd> </dl> </div> </div>
+        </section>
+        <!--// Vision & Mission-->
+
+        <!--5. Corporate Responsibility-->
+        <h2 class="hidden">Corporate Responsibility</h2>
+        <section class="cont05">
+ ﻿
+<div>
+<div><dl class="mission"><dt>CORPORATE RESPONSIBILITY </dt><dd><span>Since 1987 ING life has worked on empowering children to discover their own potential and enable them to build a better future</span> <span>for themselves and for the community around them by supporting quality educational programmes and making donations.</span> </dd></dl>
+<h3><span>ING CHANCES FOR CHILDREN</span></h3>
+<ul>
+<li><span><img alt="" src="./ING LIFE INSURANCE_files/ing_life_img05_1.png"></span>
+<p>Orange Day (both HQ and TA)</p></li>
+<li><span><img alt="" src="./ING LIFE INSURANCE_files/ing_life_img05_2.png"></span>
+<p>Sharing Benefit since 2001</p></li>
+<li><span><img alt="" src="./ING LIFE INSURANCE_files/ing_life_img05_3.png"></span>
+<p>Financial Education for children</p></li>
+<li><span><img alt="" src="./ING LIFE INSURANCE_files/ing_life_img05_4.png"></span>
+<p>Winning Football</p></li>
+</ul>
+<h3><span>ING GOES GREEN</span></h3>
+<ul>
+<li><span><img alt="" src="./ING LIFE INSURANCE_files/ing_life_img05_5.png"></span>
+<p>Energy-saving at ING Center</p></li>
+<li><span><img alt="" src="./ING LIFE INSURANCE_files/ing_life_img05_6.png"></span>
+<p>Planting Trees campaign</p></li>
+<li><span><img alt="" src="./ING LIFE INSURANCE_files/ing_life_img05_7.png"></span>
+<p>Paper saving through CD provision</p></li>
+<li><span><img alt="" src="./ING LIFE INSURANCE_files/ing_life_img05_8.png"></span>
+<p>Earth Hour campaign</p></li>
+</ul></div></div>
+        </section>
+        <!--// Corporate Responsibility -->
+
+        <!--6. CEO Massage-->
+        <h2 class="hidden">CEO Massage</h2>
+        <section class="cont06">
+﻿
+<div>
+<div class="right">
+<div class="tit">
+<p>"Building on global business capabilities and professionalism, <span>ING life vows to provide the best financial answers."</span></p><img alt="" src="./ING LIFE INSURANCE_files/arrow1.png"> </div>
+<p><img alt="Munkuk.Cheong President &amp; CEO" src="./ING LIFE INSURANCE_files/ing_life_img06.png"></p><strong>Munkuk Cheong, President &amp; CEO<br>ING life&nbsp;Insurance</strong> </div>
+<div class="left">
+<h3>CEO Message</h3>
+<p>Thank you for visiting the ING life home page.<br>ING life has continued growth in Korea since establishment in 1987 and made an increasing contribution to the overall advancement of Korea's insurance market.</p>
+<p>At ING life, we strive to do our best to practice ethical business to deliver 'Right Promise for Customer - ORANGE PROMISE' under the vision, 'sound financial partner to fulfill customer dreams'.</p>
+<p>ING life promises to increase customer satisfaction to provide the best financial consulting service based on the global business capabilities and professionalism. We vow to be the sound financial patner to fulfill your dreams through responsible business management and reliable service to deliver on 'Right Promise for you - ORANGE PROMISE'</p>
+<p>We look forward to your continued support and interest.</p>
+<p>Thank you.</p>
+<p>Munkuk Cheong, President &amp; CEO<br>ING life Insurance</p>
+<h3 class="Business">Business philosophy</h3>
+<ul>
+<li><b>OWNERSHIP</b> treat customers with ownership. </li>
+<li><b>RESPECT </b>respect all customers' opinions. </li>
+<li><b>ACCURACY</b> explain products accurately. </li>
+<li><b>NEEDS</b> do my best to fulfill customers' need. </li>
+<li><b>GENUINE</b> treat customers with a genuine heart. </li>
+<li><b>EXPECTATION</b> <span>provide services beyond customers' expectations</span></li>
+</ul></div></div>
+        </section>
+        <!--// CEO Massage -->
+
+        <!--7. History-->
+        <h2 class="hidden">History-</h2>
+        <section class="cont07">
+﻿
+			<div class="history">
+            	<div>
+                    <div class="hisW01 on" style="margin-left: 368.997px;">
+                        <ul>
+                            <li class="nth01">
+                                <b>1999</b>
+                                <p><span>Changed company name to ING life Korea</span></p>
+                            </li>
+                            <li class="nth02">
+                                <b>1998</b>
+                                <p><span>Changeover to surplus based on ING <span>accounding standards</span></span></p>
+                            </li>
+                            <li class="nth03">
+                                <b>1991</b>
+                                <p><span>Netherlands Life Insurance is founded</span></p>
+                            </li>
+                            <li class="nth04">
+                                <b>1987</b>
+                                <p><span>Life of Georgia establishes a branch in Korea</span></p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="hisW02" style="margin-left: 368.997px;">
+                        <ul>
+                            <li class="nth01">
+                                <b>2003</b>
+                                <p><span>Reached current premium to KRW 100 billionn</span> <span>&amp; premium received to KRW 1 trillion</span></p>
+                            </li>
+                            <li class="nth02">
+                                <b>2002</b>
+                                <p><span>Strategic alliance with KB</span></p>
+                            </li>
+                            <li class="nth03">
+                                <b>2001</b>
+                                <p><span>The first company in Korea in rated <span> "A(Excellent)" by A.M. Best</span></span> </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="hisW03" style="margin-left: 368.997px;">
+                        <ul>
+                            <li class="nth01">
+                                <b>2007</b>
+                                <p><span class="bul">Reached 1 millionth customer</span> <span class="bul">Rated "A(Excellent)" by A.M. Best for</span> <span>7 consecutive years('00~'06)</span></p>
+                            </li>
+                            <li class="nth02">
+                                <b>2005</b>
+                                <p><span>Achieved 1 million of contractions</span></p>
+                            </li>
+                            <li class="nth03">
+                                <b>2004</b>
+                                <p><span>Became the 4th largest life insurer in Korea</span> <span>(Based on premium received)</span></p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="hisW04" style="margin-left: 368.997px;">
+                        <ul>
+                            <li class="nth01">
+                                <b>2013</b>
+                                <p><span>Rated "AAA" by Korea ratings for 7 consecutive <span> years on IFSR</span> </span> <span>(Insurer Finance Strength Rating)</span></p>
+                            </li>
+                            <li class="nth02">
+                                <b>2010</b>
+                                <p><span>MOU with Forest for Life</span></p>
+                            </li>
+                            <li class="nth03">
+                                <b>2009</b>
+                                <p><span>20th Anniversary</span> <span>Won 'Foreign Invest Awards Industrial Service </span> <span> Medaln' hosted by the Ministry of Knowledge <span> Economy</span> </span></p>
+                            </li>
+                        </ul>
+                    </div>
+
+            	</div>
+            </div>
+            <div class="tab">
+                <div>
+                	<ul>
+                        <li class="nth01 on">
+                            <b>1987~</b>
+                            <button type="button">1987~선택</button>
+                        </li>
+                        <li class="nth02">
+                            <b>2000~</b>
+                            <button type="button">2000~선택</button>
+                        </li>
+                        <li class="nth03">
+                            <b>2004~</b>
+                            <button type="button">2004~선택</button>
+                        </li>
+                        <li class="nth04">
+                           <b>2009~</b>
+                            <button type="button">2009~선택</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+        <!--// History -->
+
+        <!--8. Locations -->
+        <h2 class="hidden">Locations</h2>
+        <section class="cont08 bg01">
+﻿
+<div>
+<div>
+<ul>
+<li><a class="on" href="https://www.inglife.co.kr/wcms/eng/scweslk010m.jsp#none"><strong>HEAD OFFICE &amp; GANGBUK</strong></a>
+<div style="display: block;"><dl><dt><strong>CUSTOMER CENTER</strong> </dt><dd><span>ING Center, 37, Sejong-daero 7-gil, Jung-gu,</span> <span>Seoul, Korea (100-883)</span> <span>Call Center : 1588-5005</span> </dd></dl><dl><dt><strong>TRANSPORTATION</strong> </dt><dd><em>Subway</em> <span>- Line2 City hall station exit 9</span> <span>- Line1&nbsp;Seoul station exit 3</span><em>Bus</em> <span>- Red bus 9710, 2000, 9301</span> <span>- Blue bus 163, 201, 401, 402, 406, 261, 262</span> </dd></dl></div></li>
+<li><a href="https://www.inglife.co.kr/wcms/eng/scweslk010m.jsp#none"><strong>GANGNAM</strong></a>
+<div><dl><dt><strong>CUSTOMER CENTER</strong> </dt><dd><span>ING ORANGE TOWER, 318, Teheran-ro,</span> <span>Gangnam-gu, Seoul, Korea (135-911)</span> </dd></dl><dl><dt><strong>TRANSPORTATION</strong> </dt><dd><em>Subway</em> <span>- Line2&nbsp;Seolleung station exit&nbsp;4 </span><em>Bus</em> <span>- Blue bus 146, 360, 730, 341</span> <span>- Green bus 4420</span> </dd></dl></div></li>
+<li><a href="https://www.inglife.co.kr/wcms/eng/scweslk010m.jsp#none"><strong>BUSAN</strong></a>
+<div><dl><dt><strong>CUSTOMER CENTER</strong> </dt><dd><span>ING Customer Center, 181, Beomil-ro,</span> <span>Busanjin-gu, Busan, Korea (614-718)</span> </dd></dl><dl><dt><strong>TRANSPORTATION</strong> </dt><dd><em>Subway</em> <span>- BUSAN Line1 Beomnaegol station exit 1</span><em>Bus</em> <span>- 5, 5-1, 1017, 796, 80, 89, 99, 111-1, 111-2, 306</span> </dd></dl></div></li>
+</ul></div></div>
+        </section>
+        <!--// Locations -->
+         <div class="topBtn">
+            <button type="button">top</button>
+        </div>
+		<!-- footer -->
+        <footer>
+            <div>
+            	COPYRIGHT © 2014 ING LIFE INSURANCE. ALL RIGHTS RESERVED.
+            </div>
+        </footer>
+        <!-- //footer -->
+    <div class="topBtn"><button type="button">맨위로</button></div></section>
+    <!-- // container -->
+</div>
+<!-- //wrap -->
+<script charset="utf-8" type="text/javascript" src="./ING LIFE INSURANCE_files/scweslk010m.js.다운로드"></script>
+<script charset="utf-8" type="text/javascript" src="./ING LIFE INSURANCE_files/scweslk010m.js(1).다운로드"></script>
+
+</body></html>

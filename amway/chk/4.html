@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"> -->
+<!-- <meta http-equiv="Pragma" content="no-cache"> -->
+<!-- <meta http-equiv="Expires" content="0"> -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta content="width=device-width, target-densitydpi=160, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport">
+<title>2017 XS Night Run 입장 바코드 확인</title>
+<link rel="stylesheet" href="https://www.abnkorea.co.kr/_ui/mobile/common/css/default.css">
+<!-- <link rel="stylesheet" href="https://www.abnkorea.co.kr/_ui/mobile/common/css/common.css">
+<link rel="stylesheet" href="https://www.abnkorea.co.kr/_ui/mobile/common/css/layout.css">
+<link rel="stylesheet" href="https://www.abnkorea.co.kr/_ui/mobile/common/css/table.css">
+<link rel="stylesheet" href="https://www.abnkorea.co.kr/_ui/mobile/common/css/content.css">
+<link rel="stylesheet" href="https://www.abnkorea.co.kr/_ui/mobile/common/css/product.css">
+<link rel="stylesheet" href="https://www.abnkorea.co.kr/_ui/mobile/common/css/popup.css"> -->
+<style>
+@font-face {font-family:"Free 3 of 9 Regular";
+	src:url("font/FREE3OF9.eot?");
+	src:local(※),
+	url("font/FREE3OF9.eot?") format("eot"),
+	url("font/FREE3OF9.woff") format("woff"),
+	url("font/FREE3OF9.ttf") format("truetype"),
+	url("font/FREE3OF9.svg#font/Free3of9") format("svg");
+	font-weight:normal;font-style:normal;}
+
+body{background-color:#030303;font-size:13px;color:#fff;}
+.os-pop-wrap {width:100%;min-width:320px; margin:0 auto;}
+.os-pop-wrap .mgtM{margin-top:14px !important}
+.os_img-wrapImg{margin:0;padding:0;font-size:0}
+.os-pop-wrap * {box-sizing:border-box;}
+.os-pop-wrap img {width:100%;}
+
+.os-frm-wrap {width:100%;height:auto;min-height:200px;margin:0;padding:0;background:url(https://www.abnkorea.co.kr/_ui/_noticeImg/2017/05/0502_nr_pop/m_bg_input.jpg) 0 0 repeat;margin-bottom:30px;border:1px solid #333;border-top:0 none;}
+
+.os-frm-wrap.type04 {padding-top:20px;}
+.os-frm-wrap.type05 {padding-bottom:20px;}
+
+.os-frm-list {padding:20px 0 0;}
+.os-frm-item {overflow:hidden;}
+.os-frm-label-before {position:absolute; top:-5px; left:10%;}
+.os-frm-label-before img{width:5px}
+.os-frm-label-after {position:absolute; top:0; right:10px;}
+.os-frm-label {position:relative;float:left; padding-left:5%; width:34%; height:22px; line-height:22px; color:#fff; cursor:pointer;letter-spacing: -1px;word-spacing:-1px}
+.os-frm-label.type02 {width:34%}
+.os-frm-label.type03 {width:42%}
+.os-frm-label.type03 .os-frm-label-before {left:6.5%;}
+.os-frm-label img{vertical-align: middle;}
+.os-frm-input {line-height:22px;width:auto;}
+.os-frm-input.type02 {padding-left:34%}
+.os-frm-input input {padding:0; width:23%; height:22px; border:0; background-color:#fff; vertical-align:top; line-height:22px;}
+.os-frm-input select {padding:0; width:20%; height:22px; border:0; background-color:#fff; vertical-align:top; line-height:22px;}
+.os-frm-input input.type02{width:57%}
+.os-frm-input-num {overflow:hidden;}
+.os-frm-input-num span {margin-left:2%;font-weight:bold}
+.os-frm-input-num .dash {width:auto;}
+.os-frm-input-num span:first-child {margin-left:0;}
+.os-frm-input-num .long {width:228px}
+.os-frm-input-txt input{width:63.5%;height:22px;padding-left:5px;}
+.os-frm-input-chk input[type=checkbox]{width:20px;height:20px;background:#fff;vertical-align:middle;margin:0;}
+.os-frm-input-chk label{margin-right:10px}
+.os-frm-input-chk span{white-space: nowrap;}
+.os-frm-submit .os_btn01 {background:url(https://www.abnkorea.co.kr/_ui/_noticeImg/2017/05/0502_nr_pop/m_btn01.jpg) 0 0 no-repeat;background-size:contain;margin:0;padding:0;border:0 none;font-size:0;width:263px;height:29px;}
+.os-frm-submit .os_btn02 {background:url(https://www.abnkorea.co.kr/_ui/_noticeImg/2017/05/0502_nr_pop/m_btn02.jpg) 0 0 no-repeat;background-size:contain;margin:0;padding:0;border:0 none;font-size:0;width:263px;height:29px;}
+.os-frm-input .os_btn03 {background:url(https://www.abnkorea.co.kr/_ui/_noticeImg/2017/05/0502_nr_pop/m_btn03.jpg) 0 0 no-repeat;background-size:contain;margin:0;padding:0;border:0 none;font-size:0;width:51px;height:22px;margin-left:5%;}
+.os-frm-submit .os_btn04 {background:url(https://www.abnkorea.co.kr/_ui/_noticeImg/2017/05/0502_nr_pop/m_btn04.jpg) 0 0 no-repeat;background-size:contain;margin:0;padding:0;border:0 none;font-size:0;width:263px;height:29px;margin-bottom:5%}
+.os-frm-submit .os_btn05 {background:url(https://www.abnkorea.co.kr/_ui/_noticeImg/2017/05/0502_nr_pop/m_btn05.jpg) 0 0 no-repeat;background-size:contain;margin:0;padding:0;border:0 none;font-size:0;width:263px;height:29px;margin-bottom:5%}
+.os-txt-remain{color:#bcbfc2;padding-left:35%;line-height:22px}
+.os-agree-wrap{margin:20px 0 0 5%;width:89%}
+.os-agree-wrap .title{margin:0;padding:0}
+.os-box-wrap {width:100%;height:147px;background:#fff;overflow:hidden;overflow-y:auto;color:#303030;}
+.os-box-wrap .para{margin:0;padding:20px 10px 10px 20px;}
+.os-txt-group{margin:10px;padding:10px;border-top:1px solid #aaa;border:1px solid #434343;}
+.os-txt-group ul{margin-left:5px}
+.os-agree-radio{text-align:center;margin-top:15px;}
+.os-agree-radio input[type="checkbox"] + label, .os-agree-radio input[type="radio"] + label{color:#fff;margin-left:0;margin-right:10px}
+.os-barcode-img{width:87.4%;height:120px;line-height:120px;margin:0 auto;padding:0;text-align:center;background:#fff;color:#000;font-family:'Free 3 of 9 Regular';}
+
+/* 좁은 화면 바코드 사이즈 */
+.os-barcode-img{font-size:50px;}
+
+.os-barcode-num{margin-top:20px;padding:0 0 0 6%;line-height:16px;height:16px;color:#fff;font-size:15px;}
+.os-barcode-num span{letter-spacing:1px}
+.os-notice-txt{padding:20px 5% 0 5%;}
+.os-notice-txt .title img{width:auto;}
+.os-border-line img{width:100%;height:1px;}
+.os-notice-list{color:#a7a7a7;line-height:1.5;}
+.os-notice-list li{margin-left:0.6em;text-indent:-0.6em;margin-bottom:2px}
+.os-notice-list span{color:#e6f913;text-indent:0}
+.mgtS{margin-top:10px !important;}
+.os-frm-label-before img{width:5px;min-width:auto}
+
+
+@media screen and (min-width:520px) {
+	body{font-size:18px}
+	.os-pop-wrap{width:100%;max-width:640px}
+	.os-frm-wrap{width:100%;max-width:640px}
+	.os-frm-label.type03 {width:34%}
+	.os-frm-label.type03 .os-frm-label-before {left:10%;}
+	.os-frm-label-before img{width:5px;min-width:auto}
+	.os-frm-input select{height:30px}
+	.os-frm-input input{height:30px}
+
+	/* 넓은 화면 바코드 사이즈 */
+	.os-barcode-img{font-size:90px;}
+}
+</style>
+</head>
+<body>
+	<div class="os-pop-wrap os-mo">
+		<h1 class="os_img-wrapImg">
+			<img src="https://www.abnkorea.co.kr/_ui/_noticeImg/2017/05/0502_nr_pop/m_img01.jpg" alt="2017 XS Night Run 입장권 신청번호 확인">
+			<span class="hide">JAMSIL OLYMPIC STADIUM 2017.7.20. THU</span>
+		</h1>
+		<h2 class="os_img-wrapImg">
+			<img src="https://www.abnkorea.co.kr/_ui/_noticeImg/2017/05/0502_nr_pop/m_img04.jpg" alt="입장 바코드 확인">
+		</h2>
+		<div class="os-frm-wrap type04">
+			
+			<!-- [!] 바코드 폰트: 앞뒤에 *표시 붙어야 하고 태그와 텍스트 사이에 띄어쓰기 없어야 함 -->
+			<div class="os-barcode-img">*123456789*</div>
+
+			<p class="os-barcode-num">
+				입장권 신청번호 : <span>123456789</span>
+			</p>
+
+			<div class="os-border-line mgtS">
+				<hr class="hide">
+				<img src="https://www.abnkorea.co.kr/_ui/_noticeImg/2017/05/0502_nr_pop/m_line.gif" alt="">
+			</div>
+
+			<div class="os-notice-txt">
+				<h4 class="title textC">
+					<img src="https://www.abnkorea.co.kr/_ui/_noticeImg/2017/05/0502_nr_pop/txt21.png" alt="티켓 확인 및 이용에 대한 설명">
+				</h4>
+				<ul class="os-notice-list mgtM">
+					<li>- 입장 전까지 <span>XS Night Run</span> 입장권 발급이 필요합니다.</li> 
+					<li>- <span>XS Night Run</span> 당일 게이트에서 바코드를 인식 후 입장 가능합니다.</li>
+					<li>- 바코드 티켓은 한번 입장이 되면 다시 입장이 불가합니다.</li> 
+					<li>- 양도, 복사, 불법으로 전송된 바코드 티켓은 입장이 거부됩니다.</li>
+					<li>- 본인이 등록한 <span>XS Night Run 입장 바코드</span>로만 입장이 가능하며 중복은 불가합니다.</li>
+					<li>- 본 행사는 만 18세 이상 입장 가능합니다.</li>
+				</ul>
+			</div>
+
+			<div class="os_img-wrapImg os_btn-wrap textC mgtM os-frm-submit">
+				<input type="button" class="os_btn05" value="처음으로">
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>

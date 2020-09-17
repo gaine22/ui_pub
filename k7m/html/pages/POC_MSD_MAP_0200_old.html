@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico"> 
+
+	<title>소액결제 | SK 7mobile</title>
+	
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+<body>
+	<div class="skip" id="skip">
+		<ul>
+			<li><a href="#main">본문 바로가기</a></li>
+		</ul>
+	</div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+            <div class="contents-wrap">
+                <section>
+                    <h2 class="h2">소액결제</h2>
+
+                    <div class="select-top-area noline">
+                        <span class="lb-select"><label for="hpnumber">휴대폰번호</label> : 1개</span>
+                        <select class="selectbox-l" title="보유휴대폰" id="hpnumber">
+                            <option>010-1234-5678</option>
+                        </select>
+                    </div>
+
+                    <div class="ui-tab item2">
+                        <div class="ui-tab-btns">
+                            <a href="../pages/POC_MSD_MAP_0100.html" class="ui-tab-btn"><i>이용한도/제한</i></a>
+                            <a href="../pages/POC_MSD_MAP_0200.html" class="ui-tab-btn" aria-selected="true"><i>이용내역</i></a>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="h3">소액결제 이용내역</h3>
+                    <ul class="tbl-wrap">
+                        <li class="style">
+                            <div class="dt">최근 거래 내역</div>
+                            <div class="dd btns-wrap">
+                                <button type="button" class="btn-inbase point">당일</button>
+                                <button type="button" class="btn-inbase">1주</button>
+                                <button type="button" class="btn-inbase">1개월</button>
+                                <button type="button" class="btn-inbase">3개월</button>
+                            
+                            </div>
+                        </li>
+                        <li class="style">
+                            <div class="dt">기간 지정 조회</div>                            
+                            <div class="dd date-wrap">
+                                <input type="text" class="date inputbox-s" id="date1" placeholder="2018-01-01">
+                                <label for="date1" class="datepicker"><span class="hide">소액결제 이용내역 조회 시작일</span></label>
+                                    <em class="swung">~</em> 
+                                <input type="text" class="date inputbox-s" id="date2" placeholder="2018-02-01"> 
+                                <label for="date2" class="datepicker"><span class="hide">소액결제 이용내역 조회 종료일</span></label>
+                                <button type="button" class="btn-inquiry">조회</button> 
+                                <span class="sub-txt">* 최대 3개월까지 조회 가능합니다.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="mw100">
+                    <p class="txt-tbl-top">조회기간 기준 총 <span class="fc-point">10건</span>/<span class="fc-point">1,000,000원</span>을 이용하셨습니다.</p>
+
+                    <div class="scroll-tbl-wrap">
+                        <div class="scroll-tbl">
+                            <table class="tbl-base td-item7">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">결제일시</th>
+                                        <th scope="col">구분</th>
+                                        <th scope="col">대행업체</th>
+                                        <th scope="col">사용처(연락처)</th>
+                                        <th scope="col">결제금액(원)</th>
+                                        <th scope="col">승인상태</th>
+                                        <th scope="col">취소일자</th>
+                                    </tr>
+                                </thead>                       
+                                <tbody>
+                                    <tr>
+                                        <td>2017-01-24 11:12:40</td>
+                                        <td>자동결제</td>
+                                        <td>모빌리언스</td>
+                                        <td>모빌리언스(02-2345-6789)</td>
+                                        <td>100,000</td>
+                                        <td>승인</td>
+                                        <td>2017-01-24 11:12:40</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-01-24 11:12:40</td>
+                                        <td>자동결제</td>
+                                        <td>모빌리언스</td>
+                                        <td>모빌리언스(02-2345-6789)</td>
+                                        <td>100,000</td>
+                                        <td>승인</td>
+                                        <td>2017-01-24 11:12:40</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-01-24 11:12:40</td>
+                                        <td>자동결제</td>
+                                        <td>모빌리언스</td>
+                                        <td>모빌리언스(02-2345-6789)</td>
+                                        <td>100,000</td>
+                                        <td>승인</td>
+                                        <td>2017-01-24 11:12:40</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-01-24 11:12:40</td>
+                                        <td>자동결제</td>
+                                        <td>모빌리언스</td>
+                                        <td>모빌리언스(02-2345-6789)</td>
+                                        <td>100,000</td>
+                                        <td>승인</td>
+                                        <td>2017-01-24 11:12:40</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-01-24 11:12:40</td>
+                                        <td>자동결제</td>
+                                        <td>모빌리언스</td>
+                                        <td>모빌리언스(02-2345-6789)</td>
+                                        <td>100,000</td>
+                                        <td>승인</td>
+                                        <td>2017-01-24 11:12:40</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                   
+                    <p class="list-dot">자세한 구매 내역은 대행업체/사용처의 고객센터로 문의주시기 바랍니다.</p>
+                    <div class="paging">
+                        <a class="direction" href="#">맨처음</a>
+                        <a class="direction prev" href="#">이전</a>
+                        <span class="paging-list">
+                            <a href="#" class="on">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#">7</a>
+                            <a href="#">8</a>
+                            <a href="#">9</a>
+                            <a href="#">10</a>
+                        </span>
+                        <a class="direction next" href="#">다음</a>
+                        <a class="direction end" href="#">맨뒤</a>
+                    </div>
+                </section>
+                <section>
+                    
+                    <div class="note-box">
+                        <!-- 20180320 리스트 스타일 변경 -->
+                        <ol class="list-dot">
+                            <li>소액결제 서비스는 온/오프라인의 사용처(컨텐츠 제공사)에서 휴대폰으로 편리하게 결제를 할 수 있는 서비스 입니다.</li>
+                            <li>소액결제는 19세 이상의 개인 고객만 이용 가능하며, 통신과금서비스 이용동의를 하셔야 서비스 이용이 가능합니다.(개인사업자, 법인, 외국인 이용불가)</li>
+                            <li>소액결제 한도 및 변경
+                                <ul class="list-indent">
+                                    <li>1) 개통일 기준 3개월/6개월/6개월 이후 한도가 변경됩니다.<br>
+                                        - 신규가입 ~ 90일: 10만원<br>
+                                        - 91일 ~ 180일: 20만원<br>
+                                        - 181일 이 후 ~: 30만원</li>
+                                    <li>2) 소액결제 한도에 대한 ‘차단 및 하향’만 가능하며, 한도상향은 고객센터를 통해서 가능합니다.</li>
+                                    <li>3) 미납고객의 경우 소액결제 한도가 자동 차단되며, 미납금액 수납 후 잔여 한도내에서 사용가능합니다.</li>
+                                    <li>4) 12개월 장기간 소액결제 미사용 시 한도는 자동 차잔됩니다.</li>
+                                    <li>5) 기기변경 시 개통일이 변경되므로 소액결제 한도는 재부여 됩니다.<br>
+                                    ex) 2013년 9월 개통, 2014년 2월 기기변경 시 이전 소액결제 한도가 30만원 이였더라도 기변 후 소액결제 한도는 10만원으로 재부여됨.</li>
+                                </ul>
+                            </li>
+                            <li>소액결제 내역은 최근 3개월까지 조회 가능 합니다.</li>
+                            <li>소액결제는 이용한도에 따라 사용이 가능하며, 결제하신 금액은 익월 청구서에서 확인하실 수 있습니다.</li>
+                            <li>결제비밀번호 서비스는 무료로 이용할 수 있습니다.</li>
+                        </ol>
+                    </div>
+                </section>
+            </div><!-- //.contents-wrap -->
+		</main>
+		<div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+	
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			
+			
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

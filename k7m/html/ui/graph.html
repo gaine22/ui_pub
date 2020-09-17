@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../resources/img/common/ico_favicon.ico"> 
+
+	<title>SKTELINK</title>
+	
+	<script src="../resources/js/ui.init.js"></script>
+	<link rel="stylesheet" href="../resources/css/ui.base.css">
+    <style>
+        .month{margin-bottom:3rem}
+        .month dd{display:flex; }
+        .month span{display:block; flex:0 8.3%; position:relative; text-align:center; font-weight:500; color:#222}
+        .month span:before{content:""; display:block; position:fixed; width:1px; height:100%; border-left:1px dashed rgba(211, 211, 211, 1)}
+
+        dl{width:100%; display:flex; text-align:left; margin-bottom:10px}
+        dt{flex:0 200px;}
+        dd{flex:2; position:relative}
+        .bar{overflow:hidden; height:18px; position:absolute; top:0; width:0; background:#222; 
+            -webkit-transition:width 1.9s ease; 
+            -moz-transition:width 1.9s ease; 
+            -o-transition:width 1.9s ease; 
+            transition:width 1.9s ease;}
+        .bar b{float:left; padding:0 0 0 10px; color:#ffe400}
+        .bar b + b{float:right; padding:0 10px 0 0}
+	
+        @-webkit-keyframes AnimationName {
+            0%{background:#ffe400}
+            35%{background:#96dac8}
+            70%{background:#6bc6ed}
+            100%{background:#ffe400}
+        }
+        @-moz-keyframes AnimationName {
+            0%{background:#ffe400}
+            35%{background:#96dac8}
+            70%{background:#6bc6ed}
+            100%{background:#ffe400}
+        }
+        @keyframes AnimationName { 
+            0%{background:#ffe400}
+            35%{background:#96dac8}
+            70%{background:#6bc6ed}
+            100%{background:#ffe400}
+        }
+    </style>
+</head>
+
+<body class="page-form">
+	<div class="base-skip" id="baseSkip"></div>
+	<div class="base-modal" id="baseModal"></div>
+	<div class="base-wrapper">
+		<header class="base-header" id="baseHeader"></header>
+		<main class="base-main" id="baseMain" role="main">
+			<div class="base-content">
+                <dl class="month">
+                <dt>2017</dt>
+                <dd>
+                    <span class="m1">01</span>
+                    <span class="m2">02</span>
+                    <span class="m3">03</span>
+                    <span class="m4">04</span>
+                    <span class="m5">05</span>
+                    <span class="m6">06</span>
+                    <span class="m7">07</span>
+                    <span class="m8">08</span>
+                    <span class="m9">09</span>
+                    <span class="m10">10</span>
+                    <span class="m11">11</span>
+                    <span class="m12">12</span>
+                </dd>
+                </dl>
+                
+                <div id="uiProjectList"></div>
+            </div>
+		</main>
+		<footer class="base-footer" id="baseFooter"></footer>
+	</div>
+	
+	<script src="../resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../resources/js/ui.plugins.js"></script>
+	<script src="../resources/js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+
+			$plugins.uiProject();
+
+			$plugins.uiProject({
+				id: 'uiProjectList',
+				list: {"list":[
+					{"name":"동부화재 보상모바일", "ms":"1", "ds":"~",  "me":"4", "de":"4"},
+					{"name":"메트라이프 DEO", "ms":"1", "ds":"~", "me":"5", "de":"31"},
+					{"name":"메트라이프 Plan D", "ms":"6", "ds":"19", "me":"7", "de":"21"},
+					{"name":"메트라이프 고도화(2.5)", "ms":"9", "ds":"19", "me":"11", "de":"17"},
+					{"name":"메트라이프 GMAP", "ms":"1", "ds":"~", "me":"2", "de":"9"},
+					{"name":"SK텔링크 다이렉트샵", "ms":"4", "ds":"24", "me":"7", "de":"5"},
+					{"name":"삼성카드 다이렉트오토 중고차", "ms":"8", "ds":"28", "me":"12", "de":"31"},
+					{"name":"동부 4단계 앱 지원", "ms":"5", "ds":"18", "me":"8", "de":"16"},
+					{"name":"농협손보 다이렉트 지원", "ms":"8", "ds":"17", "me":"8", "de":"28"},
+					{"name":"삼성카드 다이렉트오토 UX 1.5", "ms":"5", "ds":"2", "me":"8", "de":"21"},
+					{"name":"NH농협생명", "ms":"8", "ds":"24", "me":"12", "de":"9"},
+					{"name":"교직원공제회", "ms":"7", "ds":"1", "me":"10", "de":"20"},
+					{"name":"JB우리캐피탈 다이렉트", "ms":"4", "ds":"13", "me":"10", "de":"31"},
+					{"name":"AIA생명 온라인 창구 재구축", "ms":"12", "ds":"6", "me":"12", "de":"~"},
+					{"name":"평창 뉴스서비스 네트워크 구축", "ms":"11", "ds":"1", "me":"12", "de":"~",}
+				]}
+			});
+			
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

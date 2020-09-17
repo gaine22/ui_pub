@@ -1,0 +1,227 @@
+<section class="ui-modal modal-usim" id="pageFot0321" role="dialog" aria-hidden="true">
+    <div class="ui-modal-wrap">
+        <header class="ui-modal-tit">
+            <h1>통신자료 제공사실 열람신청 조회</h1>
+            <button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id: 'pageFot0321' });">닫기</button>
+        </header>
+        <div class="ui-modal-cont">
+            <!-- 본인인증 -->
+            <div>
+                <div class="term-box box-height1">
+                    <p class="tit"><strong>안내사항</strong></p>
+                    <div class="inbox">
+                        <ol>
+                            <li>1. 통신자료 제공사실 열람신청은 현재 당사 가입중인 본인회선만 가능합니다.</li>
+                            <li>2. 요청하신 자료는 메일로만 회신 가능하오니, 정확한 메일주소를 입력해 주시기 바랍니다.</li>
+                            <li>3. 전화번호, 가입자명이 일치하여야 확인서 발급이 가능합니다.</li>
+                            <li>4. 통신자료 제공사실 열람신청 15일 이내에 메일로 보내드립니다.</li>
+                        </ol>
+                    </div>
+                </div>
+                <h2 class="term-tit">휴대폰 본인인증</h2>
+                <div class="modal-form">
+                    <ul class="form-wrap tb-line">
+                        <li class="line">
+                            <dl>
+                                <dt><label for="userName">이름</label></dt>
+                                <dd>
+                                    <div>
+                                        <input type="text" class="inputbox" id="userName">
+                                    </div>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li class="line">
+                            <dl>
+                                <dt><label for="userSecure">보안문자</label></dt>
+                                <dd>
+                                    <div>
+                                        <div class="mgb-s">
+                                            <span class="secure-area"><img src="../images/common/@secure.png" alt="보안문자 956638"></span><button type="button" class="btn-new"><span>보안문자 새로고침</span></button> <button type="button" class="btn-audio"><span>보안문자 음성듣기</span></button>
+                                        </div>
+                                        <input type="text" class="inputbox-secure" id="userSecure" placeholder="보안문자를 입력하세요">
+                                    </div>
+                                    
+                                </dd>
+                            </dl>
+                        </li>
+                        <li class="line">
+                            <dl>
+                                <dt><label for="userPhone">가입하신<br class="only-d">휴대폰번호</label></dt>
+                                <dd>
+                                    <div class="inp-pos">
+                                        <input type="number" class="inputbox" id="userPhone" placeholder="휴대폰번호 '-'없이 입력"> <button type="button" class="btn-inbase pos-b"><i>휴대폰 인증</i></button> <!-- 20180302 : 클래스명수정 -->
+                                    </div>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li class="line">
+                            <dl>
+                                <dt><label for="userNum">인증번호</label></dt>
+                                <dd>
+                                    <div class="inp-pos">
+                                        <input type="number" class="inputbox-s" id="userNum"> <button type="button" class="btn-inbase pos-r"><i>인증번호 확인</i></button> <!-- 20180302 : 클래스명수정 -->
+                                    </div>
+                                </dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- // 본인인증 -->
+            <!-- 본인인증 후 -->
+            <div>
+                <div class="term-box box-height3">
+                    <p class="tit"><strong>안내사항</strong></p>
+                    <div class="inbox">
+                        <ol>
+                            <li>1. 수사기관에 고객정보제공은 전기통신사업법 제83조 제3항에 근거합니다.</li>
+                            <li>2. 통신자료 제공사실은 전기통신사업법 시행령 제53조에 의거 요청일 현 시점을 기준으로 1년 이내의 제공사실만 보관합니다.</li>
+                            <li>3. 통신자료 제공사실 확인서를 받기 위하여는 메일주소를 반드시 입력하여야 합니다. </li>
+                            <li>4. 통신자료 제공사실 확인서는 신청 15일 이후에 요청하신 메일로 보내드립니다.</li>
+                            <li>5. 통신자료 제공사실 확인서 신청은 본인만 발급가능합니다. </li>
+                            <li>6. 전화번호, 가입자명이 일치하여야 확인서 발급이 가능합니다.</li>
+                            <li>7. 온라인에서 신청한 확인서는 재발송이 불가능하며, 확인서 필요 시 다시 신청하셔야 합니다.</li>
+                        </ol>
+                    </div>
+                    <div class="check-area">
+                        <input type="checkbox" id="c5_1" title="안내 확인">
+                        <label class="lb-check ck" for="c5_1"><span>위 내용을 확인 하였습니다.</span></label>
+                    </div>
+                    <p class="tit mgt-l"><strong>개인정보 수집 및 이용에 대한 동의</strong></p>
+                    <table class="tbl-base">
+                        <caption>개인정보 수집 및 이용에 대한 동의</caption>
+                        <colgroup>
+                            <col style="width:25%" span="4">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>개인정보<br>보호항목</th>
+                                <th>이용목적</th>
+                                <th>보유기간</th>
+                                <th>위탁업체</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>성명, 전화번호,<br>이메일</td>
+                                <td>통신자료 제공사실 조회 및 통보,<br>본인확인</td>
+                                <td>서비스<br>제공기간</td>
+                                <td>고객센터 <br>F&amp;U 신용정보</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="check-area">
+                        <input type="checkbox" id="c5_2" title="동의">
+                        <label class="lb-check ck" for="c5_2"><span>동의합니다.</span></label>
+                    </div>
+                    <p class="fc-red">* 개인정보 수집 이용에 동의하지 않으실 경우 제공사실 조회가 제한됩니다.</p>
+                </div>
+
+                <h2 class="term-tit">통신자료 제공사실 확인서 요청</h2>
+                <div class="modal-form">
+                    <ul class="form-wrap tb-line">
+                        <li class="line">
+                            <dl>
+                                <dt>요청휴대폰번호</dt>
+                                <dd>
+                                    <p class="text">
+                                        010-59**-91**
+                                    </p>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li class="line">
+                            <dl>
+                                <dt>이름</dt>
+                                <dd>
+                                    <p class="text">
+                                        네*****)
+                                    </p>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li class="line">
+                            <dl>
+                                <dt>조회요청기간</dt>
+                                <dd>
+                                    <div class="dateform-wrap">
+                                        <span>
+                                            <input type="text" class="date inputbox-s" placeholder="2018-01-01" id="datepicker1">
+                                            <label for="datepicker1" class="datepicker"><span class="hide">충전 기간 조회 시작날짜</span></label>
+                                        </span> 
+                                        <em class="unit-s">~</em>
+                                        <span>
+                                            <input type="text" class="date inputbox-s" placeholder="2018-02-01" id="datepicker2">
+                                            <label for="datepicker2" class="datepicker"><span class="hide">충전 기간 조회 종료날짜</span></label>
+                                        </span>
+                                    </div>
+                                    <p class="sub-info">* 조회요청기간은 현재일부터 최대 1년까지 가능합니다.</p>
+                                </dd>
+                            </dl>
+                        </li>
+                         <li class="line">
+                            <dl>
+                                <dt>이메일</dt>
+                                <dd>
+                                    <div class="mailform-wrap">
+                                        <span>
+                                            <input type="text" class="inputbox-s email" title="이메일 아이디">
+                                            <span class="unit-s">@</span>
+                                            <input type="text" class="inputbox-s email" title="이메일 공급자">
+                                        </span>
+                                        <select class="selectbox-m" title="이메일공급자">
+                                            <option>직접입력</option>
+                                            <option>naver.com</option>
+                                            <option>gmail.com</option>
+                                            <option>nate.com</option>
+                                            <option>daum.net</option>
+                                            <option>hanmail.net</option>
+                                        </select>   
+                                    </div>
+                                    <p class="sub-info">* 요청결과를 받을 이메일주소를 입력해 주세요.</p>
+                                </dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btn-wrap">
+                    <span><button type="button" class="btn btn-point-m"><i>확인</i></button></span>
+                    <span><button type="button" class="btn btn-gray-m" onclick="$plugins.uiModalClose({ id: 'pageFot0321'});"><i>취소</i></button></span>
+                </div>
+            </div>
+            <!-- // 본인인증 후 -->
+        </div>
+    </div>
+</section>
+<script>
+    ;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			$plugins.uiForm();
+                
+            $('input.date').datepicker({
+                inline: true, 
+                dateFormat: "yy-MM-dd",    /* 날짜 포맷 */ 
+                prevText: '이전 달', 
+                nextText: '다음 달', 
+                defaultDate:new Date(),
+                showButtonPanel: true,    /* 버튼 패널 사용 */ 
+                changeMonth: true,        /* 월 선택박스 사용 */ 
+                changeYear: true,        /* 년 선택박스 사용 */ 
+                showOtherMonths: true,    /* 이전/다음 달 일수 보이기 */ 
+                selectOtherMonths: true,    /* 이전/다음 달 일 선택하기 */         
+                yearRange:'2010:+5',
+                closeText: '닫기', 
+                currentText: '오늘', 
+                showMonthAfterYear: true,        /* 년과 달의 위치 바꾸기 */ 
+                minDate: '-20y',
+                /* 한글화 */ 
+                monthNames : ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'], 
+                monthNamesShort : ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'], 
+                dayNames : ['일', '월', '화', '수', '목', '금', '토'],
+                dayNamesShort : ['일', '월', '화', '수', '목', '금', '토'],
+                dayNamesMin : ['일', '월', '화', '수', '목', '금', '토']			
+            });
+		});
+	})(jQuery, window, document);
+</script>

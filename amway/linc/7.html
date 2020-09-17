@@ -1,0 +1,168 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>제품 교환권 - ABN Korea</title>
+<link rel="stylesheet" href="http://www.abnkorea.co.kr/_ui/mobile/common/css/default.css" />
+<link rel="stylesheet" href="http://www.abnkorea.co.kr/_ui/mobile/common/css/main.css" />
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/jquery-1.8.3.min.js"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/pbCommon.js"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/pbLayerPopup.js"></script>
+
+<!-- 교환권 CSS 170516 -->
+<!-- css 파일의 내용을 https://www.abnkorea.co.kr/_ui/mobile/common/css/shopping.css 맨 끝에 넣어주세요. 중복되지 않도록 주의 부탁드립니다. -->
+<!-- [!] font 폴더의 바코드 폰트도 같이 설치해주시고 css style에서 경로 설정해주세요. -->
+<link rel="stylesheet" href="style.css" />
+<!-- //교환권 CSS 170516 -->
+
+</head>
+
+<body>
+
+<!-- 제품 교환권 확인하기 170516 -->
+<div id="pbWrap">
+    <!-- container -->
+    <div id="pbContainer" style="margin-bottom:0">
+        <!-- content -->
+        <section id="pbContent">
+            <div class="LINC_check_wrap">
+                <h1 class="LINC_check_title">제품 교환권</h1>
+                <p class="LINC_check_sub">암순이 님이 들리는 특별한 선물</p>
+                <!-- [!] 바코드 폰트: 앞뒤에 *표시 붙어야 하고 태그와 텍스트 사이에 띄어쓰기 없어야 함 -->
+                <div class="LINC_check_barcode">
+                    <span>*1234567890*</span>
+                </div>
+                
+                <!-- 바코드가 이미지 일 경우 -->
+                <!-- <div class="barcodeImg">
+                    <img src="#" alt="바코드 이미지">
+                </div> -->
+                <!-- //바코드가 이미지 일 경우 -->
+
+                <div class="LINC_check_userinfo">
+                    <dl>
+                        <dt>ABO 성명</dt>
+                        <dd>암순이</dd>
+                    </dl>
+                    <dl>
+                        <dt>사용자 전화번호</dt>
+                        <dd>010-1234-1234</dd>
+                    </dl>
+                </div>
+                <div class="btnWrap aNumb1">
+                    <a href="#" class="btnBasicBL">암웨이 회원가입하기</a>
+                </div>
+                
+                <div class="LINC_check_list">
+                    <h2 class="LINC_check_sub">제품 교환권</h2>
+                    <ul class="chkList">
+                        <li>
+                            <p class="itemName">&middot; 무료 증정품</p>
+                            <div class="itemInfo">
+                                <dl>
+                                    <dt>수신일</dt>
+                                    <dd>2017-04-21</dd>
+                                </dl>
+                                <dl>
+                                    <dt>만료일</dt>
+                                    <dd>2017-07-20</dd>
+                                </dl>
+                                <dl>
+                                    <dt>제품명</dt>
+                                    <dd>글리스터 치약</dd>
+                                </dl>
+                                <dl>
+                                    <dt>수량</dt>
+                                    <dd>1개 </dd>
+                                </dl>
+                            </div>
+                            <div class="itemView">
+                                <div class="prdImg"><img src="http://www.abnkorea.co.kr/medias/BB-E6833A13-1-156-R.png?context=bWFzdGVyfHByb2R1Y3QtZ2FsbGVyeS1pbWFnZXN8MTE4NTV8aW1hZ2UvcG5nfHByb2R1Y3QvZ2FsbGVyeS9pbWFnZXMvaDVkL2g5Ni84ODgwMjc3NzQ5NzkwLnBuZ3xjMTdmN2FkZDYwMDYyMzRjNTRlYmE4NzgzMWQ0YjJmNjhhMDBlMGQzMmU0ZGU5YmIxNDYzY2JhM2Y4MmM1ODMz" alt="글리스터 치약_교환권"></div>
+                                <a href="#uiLayerPop_LINC_barcode" class="btnTbl" onclick="layerPopupOpen(this);return false;">사용하기</a>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="itemName">&middot; 무료 증정품</p>
+                            <div class="itemInfo">
+                                <dl>
+                                    <dt>수신일</dt>
+                                    <dd>2017-04-21</dd>
+                                </dl>
+                                <dl>
+                                    <dt>만료일</dt>
+                                    <dd>2017-07-20</dd>
+                                </dl>
+                                <dl>
+                                    <dt>제품명</dt>
+                                    <dd>글리스터 치약</dd>
+                                </dl>
+                                <dl>
+                                    <dt>수량</dt>
+                                    <dd>1개 </dd>
+                                </dl>
+                            </div>
+                            <div class="itemView">
+                                <div class="prdImg"><img src="http://www.abnkorea.co.kr/medias/BB-E6833A13-1-156-R.png?context=bWFzdGVyfHByb2R1Y3QtZ2FsbGVyeS1pbWFnZXN8MTE4NTV8aW1hZ2UvcG5nfHByb2R1Y3QvZ2FsbGVyeS9pbWFnZXMvaDVkL2g5Ni84ODgwMjc3NzQ5NzkwLnBuZ3xjMTdmN2FkZDYwMDYyMzRjNTRlYmE4NzgzMWQ0YjJmNjhhMDBlMGQzMmU0ZGU5YmIxNDYzY2JhM2Y4MmM1ODMz" alt="글리스터 치약_교환권"></div>
+                                <a href="#uiLayerPop_LINC_barcode" class="btnTbl" onclick="layerPopupOpen(this);return false;">사용하기</a>
+                            </div>
+                        </li>
+                    </ul> <!-- //chkList -->
+                </div>
+
+                <div class="LINC_check_notice">
+                    <h3 class="noticeTit">알아두세요!</h3>
+                    <ul class="noticeList">
+                        <li>- <b>본 제품은 무료 증정품이며, 판매가 불가합니다.</b></li>
+                        <li>- 교환권의 사용 만료일은 각 교환권의 만료일을 확인하시기 바랍니다.</li>
+                        <li>- 교환권은 전국 AP에서 교환이 가능합니다.</li>
+                    </ul>
+                </div>
+            </div> <!-- //LINC_check_wrap -->
+
+            <!-- 레이어팝업 영역 170516 -->
+            <div class="pbLayerPopup" id="uiLayerPop_LINC_barcode">
+                <div class="pbLayerHeader">
+                    <strong>제품 교환권 사용하기</strong>
+                </div>
+                <div class="pbLayerContent">
+                    <div class="pop_LINC_barcode">
+                        <div class="verticalBarcode">
+                            <!-- [!] 바코드 폰트: 앞뒤에 *표시 붙어야 하고 태그와 텍스트 사이에 띄어쓰기 없어야 함 -->
+                            <div class="popBarcode">
+                                <span>*1234567890*</span>
+                            </div>
+                            <p class="popNumber">1234567890</p>
+                        </div>
+
+                        <!-- 170516 바코드가 이미지 일 경우 -->
+                        <!-- <div class="barcodeImg">
+                            <img src="#" alt="바코드 이미지">
+                        </div> -->
+                        <!-- //170516 바코드가 이미지 일 경우 -->
+
+                        <div class="useCodeInput">
+                            <label for="useCode">사용 코드 입력</label>
+                            <input type="text" id="useCode">
+                        </div>
+                    </div>
+
+                    
+                    <div class="btnWrap aNumb1">
+                        <a href="#none" class="btnBasicBL">확인</a>
+                    </div>
+                </div>
+                <a href="#none" class="btnPopClose"><img src="http://www.abnkorea.co.kr/_ui/mobile/images/common/btn_close.gif" alt="창 닫기"></a>
+            </div>
+            <!-- //레이어팝업 영역 170516 -->
+
+        </section>
+        <!-- //content -->
+    </div>
+    <!-- container -->
+</div>
+<!-- //제품 교환권 확인하기 170516 -->
+
+</body>
+</html>

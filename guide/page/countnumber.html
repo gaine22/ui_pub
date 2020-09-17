@@ -1,0 +1,54 @@
+<h1 class="g_h1">COUNT NUMBER guide</h1>
+
+<div class="ex_div" style="font-size:20px">
+	숫자 자체에 콤마가 없을 경우에는 true<br>
+	금액은 <div class="ui_count exe_count1"></div>원 입니다.<br>
+	','콤마를 생성해줍니다. ㅋㅋ<br><br>
+	
+	숫자 자체에 콤마가 있을 경우에는 false<br>
+	금액은 <div class="ui_count exe_count2">0</div>원 입니다.<br>
+	문자열로 받아들입니다.<br><br>
+	
+	html의 숫자를 반영 <div class="ui_count exe_count3">1234567.890</div> 
+	
+	<br><br>
+	<button type="button" class="ui_count_exe btn_base">적용</button>	
+</div>
+
+
+
+<div class="ex_div2">
+	<h3 class="g_h3">HTML Code</h3>
+<pre><xmp class="code">
+'''date of final modification'''
+2017.03.12
+
+'''html'''
+<div class="ui_count">1234567.890</div>
+
+'''script'''
+var data = {
+	'selector': '.exe_count1',
+	
+	// true 콤마 자동생성필요, false 콤마 자동생성불필요
+	'comma': true,
+	
+	// 문자식일경우'123,23.00', 값이 없을경우 false           
+	'value': 54231258.135,
+	
+	// false일 경우 기본값 1000
+	'speed': 1000,
+	
+	// false일 경우 기본값 'easeInOutQuad'      
+	'eff': 'easeInOutQuad'        
+};
+$._uiCountNumber.start(data);
+
+-- effect 종류 --
+linear, ease, 
+ease-in, ease-out, ease-in-out, 
+easeInQuad, easeInCubic, easeInQuart, easeInQuint, easeInSine, easeInExpo, easeInCirc, easeInBack, 		
+easeOutQuad, easeOutCubic, easeOutQuart, easeOutQuint, easeOutSine, easeOutExpo, easeOutCirc, easeOutBack, 
+easeInOutQuad, easeInOutCubic, easeInOutQuart, easeInOutQuint, easeInOutSine, easeInOutExpo, easeInOutCirc, easeInOutBack	
+</xmp></pre>
+</div>

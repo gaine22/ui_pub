@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico">
+
+	<title>나에게 맞는 요금제 찾기 | SK 7mobile</title>
+
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+
+<body>
+	<div class="skip" id="skip"></div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+			<div class="contents-wrap">
+				<section>
+                    <h1 class="hide">요금제&amp;서비스</h1>
+				    <h2 class="h2">나에게 맞는 요금제 찾기</h2>
+                    <div class="ui-tab tab-radio srh-tab-wrap" id="uiSearchTab">
+                        <div class="ui-tab-btns">
+                            <button type="button" class="ui-tab-btn"><i>음성+데이터로 찾기</i></button>
+                            <button type="button" class="ui-tab-btn"><i>월 납부요금으로 찾기</i></button>
+                        </div>
+                        <div class="ui-tab-pnls">
+                            <section class="ui-tab-pnl">
+                                <h3 class="hide">음성+데이터로 찾기</h3>
+								<div class="gauge-wrap">
+									<div class="data-area">
+										<input type="radio" id="data1" name="dataSelect" checked="checked"><label for="data1">LTE</label>
+										<input type="radio" id="data2" name="dataSelect"><label for="data2">3G</label>
+										<input type="radio" id="data3" name="dataSelect"><label for="data3">유심</label>
+									</div>
+
+									<!-- DESKTOP ONLY 음성+데이터로 찾기 세로형 -->
+									<div class="range-box-wrap only-d">
+										<div class="range-box-vertical call-range">
+											<p class="range-tit hide">음성</p>
+											<div id="rangeSlide1" class="range-area">
+												<div class="ui-slider-handle" tabindex="0"><span class="ui-slider-value">60분</span></div>
+												<ul class="scope">
+													<li class="scope0">300분 이상</li>			
+													<li class="scope1">300분</li>
+													<li class="scope2">240분</li>
+													<li class="scope3">180분</li>
+													<li class="scope4">120분</li>
+													<li class="scope5">60분</li>
+													<li class="scope6">0분</li>
+												</ul>
+											</div>
+										</div>
+										<div class="range-box-vertical data-range">
+											<p class="range-tit hide">데이터</p>
+											<div id="rangeSlide2" class="range-area">
+												<div class="ui-slider-handle" tabindex="0"><span class="ui-slider-value">2.5GB</span></div>
+												<ul class="scope">	
+													<li class="scope0">8GB 이상</li>
+													<li class="scope1">8GB</li>
+													<li class="scope2">7GB</li>
+													<li class="scope3">6GB</li>
+													<li class="scope4">5GB</li>
+													<li class="scope5">4GB</li>
+													<li class="scope6">3GB</li>
+													<li class="scope7">2GB</li>
+													<li class="scope8">1GB</li>
+													<li class="scope9">0GB</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+
+									<!-- MOBILE ONLY 음성+데이터로 찾기 가로형 -->
+									<div class="range-box-wrap hz only-m">
+										<div class="range-box call-range">
+											<p class="range-tit hide">음성</p>
+											<div id="rangeSlideH1" class="range-area">
+												<div class="ui-slider-handle" tabindex="0"><span class="ui-slider-value">60분</span></div>
+												<ul class="scope">
+													<li class="scope1">0분</li>
+													<li class="scope2">60분</li>
+													<li class="scope3">120분</li>
+													<li class="scope4">180분</li>
+													<li class="scope5">240분</li>
+													<li class="scope6">300분</li>
+													<li class="scope7">300분 이상</li>
+												</ul>
+											</div>
+											<p class="value-item">음성 <span id="callvalue">60분</span></p>
+										</div>
+										<div class="range-box data-range">
+											<p class="range-tit hide">데이터</p>
+											<div id="rangeSlideH2" class="range-area">
+												<div class="ui-slider-handle" tabindex="0"><span class="ui-slider-value">2.5GB</span></div>
+												<ul class="scope">
+													<li class="scope1">0GB</li>
+													<li class="scope2">1GB</li>
+													<li class="scope3">2GB</li>
+													<li class="scope4">3GB</li>
+													<li class="scope5">4GB</li>
+													<li class="scope6">5GB</li>
+													<li class="scope7">6GB</li>
+													<li class="scope8">7GB</li>
+													<li class="scope9">8GB</li>
+													<li class="scope10">8GB 이상</li>
+												</ul>
+											</div>
+											<p class="value-item">데이터 <span id="datavalue">2.5GB</span></p>
+										</div>										
+									</div>
+                                    
+                                    <div class="btn-wrap">
+                                        <button class="btn btn-darkgray xl"><span>요금제검색</span></button>
+                                    </div>
+                                </div>
+                 
+                                <div class="txt-top-org pm-tit">
+                                    <h3 class="tit">데이터중심11GB LTE</h3>
+                                    <p>데이터와 음성 중 데이터 비중이 많으신 분이<br class="mbr"> 만족하실 수 있는 요금제 입니다.</p>
+                                </div>
+                                <div class="pm-top">
+                                    <div class="fl">
+                                        <span class="ico data">11.0GB</span>
+                                        <span class="ico call">기본제공</span>
+                                        <span class="ico sms">기본제공</span>
+                                    </div>
+                                    <div class="fr">
+                                        <span class="plan-tit"><em>기본료</em><span><strong>622,700</strong> 원/월</span></span>
+                                        <span class="plan-tit"><em>스페셜 약정 할인(24개월)</em><span><strong>0</strong> 원/월</span></span>
+                                        <span class="plan-tit fc-red"><em>할인 후 기본료</em><span><strong>62,700</strong> 원/월</span></span>
+                                    </div>
+                                </div>    
+                                <ul class="list-dash-txt">
+                                    <li>* 휴대폰 기종에 따라 실제 요금과 차이가 있을 수 있습니다.</li>
+                                    <li>* 부가서비스 이용, 해외로밍 등에 서비스 이용금액이 추가로 발생할 수 있습니다.</li>
+                                </ul>      
+
+                                <div class="prd-recommend">
+                                    <h3 class="h3 txt-c">추천 휴대폰</h3>
+                                    <div class="ui-carousel owl-carousel">
+                                        <div class="item">
+                                            <button type="button">
+                                               <span class="prd-img"><img src="../images/desktop/@sample_product.png" alt=""></span> <!-- 20180223 : 임시이미지 수정 -->
+                                                <span class="lb-tag type1">NEW</span>
+                                                <span class="prd-tit">Galaxy A7 2016</span>
+                                            </button>
+                                        </div>
+                                        <div class="item on"> <!-- 활성화시 클래스 on -->
+                                            <button type="button">
+                                               <span class="prd-img"><img src="../images/desktop/@sample_product.png" alt=""></span>
+                                                <span class="lb-tag type2">HIT</span>
+                                                <span class="prd-tit">Galaxy Note</span>
+                                            </button>
+                                        </div>
+                                        <div class="item">
+                                            <button type="button">
+                                               <span class="prd-img"><img src="../images/desktop/@sample_product.png" alt=""></span>
+                                                <span class="lb-tag type3">추천</span>
+                                                <span class="prd-tit">Galaxy pp</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="result-price">
+                                    <div class="result">
+                                        예상 납부금액
+                                        <em class="fc-red">22,5500 원/월<span> (VAT 포함)</span></em>
+                                    </div>
+                                    <div class="option">
+                                        <dl class="opt-select">
+                                            <dt>할인방법</dt>
+                                            <dd>
+                                                <input type="radio" name="r1" id="r1_1" checked="checekd"><label for="r1_1">휴대폰 할인</label>
+                                                <input type="radio" name="r1" id="r1_2"><label for="r1_2">요금할인</label>
+                                            </dd>
+                                        </dl>
+                                        <dl class="opt-select">
+                                            <dt>제휴카드할인</dt>
+                                            <dd>
+                                               <input type="radio" name="r2" id="r2_1" checked="checekd"><label for="r2_1">없음</label>
+                                               <input type="radio" name="r2" id="r2_2"><label for="r2_2">KB 국민 이지홈</label>
+                                               <input type="radio" name="r2" id="r2_3"><label for="r2_3">하나 심플라이프</label>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>휴대폰 구매가</dt>
+                                            <dd class="fc-red">0 원/월</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>통신요금</dt>
+                                            <dd class="fc-red">22,500 원/월</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>유심비(신규가입시)</dt>
+                                            <dd class="fc-red">6,600 원</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="btn-wrap txt-r">
+                                    <span><button type="button" class="btn btn-bluegreen-l"><i>위시리스트</i></button></span>
+                                    <span><button type="button" class="btn btn-darkgold-l"><i>자세히보기</i></button></span>
+                                </div>
+                            </section>
+                            <section class="ui-tab-pnl">
+                                <h3 class="hide">월 납부요금으로 찾기</h3>
+								<div class="gauge-wrap">
+									<div class="data-area">
+										<input type="radio" id="paydata1" name="paydataSelect" checked="checked"><label for="paydata1">LTE</label>
+										<input type="radio" id="paydata2" name="paydataSelect"><label for="paydata2">3G</label>
+										<input type="radio" id="paydata3" name="paydataSelect"><label for="paydata3">유심</label>
+									</div>
+
+									<div class="range-box-wrap hz ">
+										<!-- 월 납부요금으로 찾기 변경 -->
+										<div class="payment-range slt-range">
+											<p class="range-tit hide">월 납부요금</p>
+											<div id="paymentSlider" class="range-area">
+												<div class="ui-slider-handle" tabindex="0"><span class="ui-slider-value">10,000원</span></div>
+												<ul class="scope">
+													<li class="scope1">0원</li>
+													<li class="scope2">10,000원</li>
+													<li class="scope3">20,000원</li>
+													<li class="scope4">30,000원</li>
+													<li class="scope5">40,000원</li>
+													<li class="scope6">50,000원</li>
+													<li class="scope7">60,000원</li>
+													<li class="scope8">70,000원</li>
+												</ul>
+											</div>
+											<p class="value-item">월 납부금액 <span id="monthlyText1">10,000원</span> <span>~</span> <span id="monthlyText2">20,000원</span></p>
+										</div>
+									</div>
+                                    
+                                    <div class="btn-wrap">
+                                        <button class="btn btn-darkgray xl"><span>추천상품 찾기</span></button>
+                                    </div>
+								</div>
+                                
+                                <p class="txt-price"><strong class="fc-red">*부가세포함</strong> 요금입니다.</p>
+                                <ul class="list-price2">
+                                    <li>
+                                        <div class="phone"><img src="../images/desktop/@sample_product.png" alt="폰이름"></div>
+                                        <div class="box1">
+                                            <dl class="name">
+                                                <dt>LTE 온라인 음성 S1</dt>
+                                                <dd><span>1.0GB</span><span>120분</span><span>200건</span></dd>
+                                            </dl>
+                                            <div class="p-info">
+                                                기본료 15,400 원/월
+                                                <strong class="fc-red">약정할인 후 기본료 9,900원/월</strong>
+                                            </div>
+                                        </div>
+                                        <div class="box2">
+                                            <div class="p-info">
+                                                월 예상 납부금액
+                                                <strong class="fc-red">22,500<span>원/월</span><i>(VAT 포함)</i></strong>
+                                            </div>
+                                            <a href="#" class="btn btn-darkblue-m"><i>자세히보기</i></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="phone"><img src="../images/desktop/@sample_product.png" alt="폰이름"></div>
+                                        <div class="box1">
+                                            <dl class="name">
+                                                <dt>LTE 온라인 음성 S1</dt>
+                                                <dd><span>1.0GB</span><span>120분</span><span>200건</span></dd>
+                                            </dl>
+                                            <div class="p-info">
+                                                기본료 15,400 원/월
+                                                <strong class="fc-red">약정할인 후 기본료 9,900원/월</strong>
+                                            </div>
+                                        </div>
+                                        <div class="box2">
+                                            <div class="p-info">
+                                                월 예상 납부금액
+                                                <strong class="fc-red">22,500원/월<i>(VAT 포함)</i></strong>
+                                            </div>
+                                            <a href="#" class="btn btn-darkblue-m"><i>자세히보기</i></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="phone"><img src="../images/desktop/@sample_product.png" alt="폰이름"></div>
+                                        <div class="box1">
+                                            <dl class="name">
+                                                <dt>LTE 온라인 음성 S1</dt>
+                                                <dd><span>1.0GB</span><span>120분</span><span>200건</span></dd>
+                                            </dl>
+                                            <div class="p-info">
+                                                기본료 15,400 원/월
+                                                <strong class="fc-red">약정할인 후 기본료 9,900원/월</strong>
+                                            </div>
+                                        </div>
+                                        <div class="box2">
+                                            <div class="p-info">
+                                                월 예상 납부금액
+                                                <strong class="fc-red">22,500원/월<i>(VAT 포함)</i></strong>
+                                            </div>
+                                            <a href="#" class="btn btn-darkblue-m"><i>자세히보기</i></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>	
+                    </div>
+                           
+				</section>
+			</div><!-- .contents-wrap -->
+		</main>
+        <div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+
+    <script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			$plugins.uiTab({ id:'uiSearchTab', current:0});
+			
+			/* 음성+데이터로 찾기 PC ONLY */
+			$(".range-box-vertical > div").each(function(){
+                var $slider = $(this),
+                    unit1 = "분",
+					unit2 = "GB";
+				
+                $slider.slider({
+					orientation: "vertical",
+                    range: "min",
+                    value: $slider.attr("id") == "rangeSlide1" ? "" != null ? "" : 0 : "" != null ? "" : 0,
+                    min: 0,
+                    max: $slider.attr("id") == "rangeSlide1" ? 330 : 8.5,
+                    step: $slider.attr("id") == "rangeSlide1" ? 30 : 0.5,
+					value : $slider.attr("id") == "rangeSlide1" ? 60 : 2.5,
+                    create: function(event, ui){
+                        this.$state = $(ui.handle).find(".ui-slider-value");
+                        this.$state.css("display") != "block" ? this.$state.show() : null;						
+                    },
+                    start: function(event, ui) {
+                        this.$state = $(ui.handle).find(".ui-slider-value");
+                        this.$state.html(ui.value + ($slider.attr("id") == "rangeSlide1" ? unit1 : unit2));
+                        this.$state.css("display") != "block" ? this.$state.show() : null;
+						
+                    },
+                    slide: function(event, ui) {
+						if($slider.attr("id") == "rangeSlide1"){
+							var uiVal = ui.value != 330 ? ui.value + unit1 : ui.value - 30 + unit1 + " <em>이상</em>";
+							this.$state.html(uiVal);
+						}
+						else{
+							var uiVal = ui.value;
+							uiVal = uiVal != 8.5 ? uiVal + unit2 :  "8GB <em>이상</em>";
+							this.$state.html(uiVal);
+						}
+					}					
+				});
+			});
+
+			/* 음성+데이터로 찾기 MOBILE ONLY */
+			$(".range-box > div").each(function(){
+				var $sliderH = $(this),
+					unit1 = "분",
+					unit2 = "GB",
+					unit3 = "원";
+
+				$sliderH.slider({
+					orientation: "horizontal",
+					range: "min",
+					value: $sliderH.attr("id") == "rangeSlideH1" ? "" != null ? "" : 0 : "" != null ? "" : 0,
+					min: 0,
+					max: $sliderH.attr("id") == "rangeSlideH1" ? 330 : 8.5,
+					step: $sliderH.attr("id") == "rangeSlideH1" ? 30 : 0.5,
+					value : $sliderH.attr("id") == "rangeSlideH1" ? 60 : 2.5,
+					create: function(event, ui){
+						this.$state = $(ui.handle).find(".ui-slider-value");
+						this.$state.css("display") != "block" ? this.$state.show() : null;						
+					},
+					start: function(event, ui) {
+						this.$state = $(ui.handle).find(".ui-slider-value");
+						this.$state.html(ui.value + ($sliderH.attr("id") == "rangeSlideH1" ? unit1 : unit2));
+						this.$state.css("display") != "block" ? this.$state.show() : null;
+						
+					},
+					slide: function(event, ui) {
+						if($sliderH.attr("id") == "rangeSlideH1"){
+							var uiVal = ui.value != 330 ? ui.value + unit1 : ui.value - 30 + unit1 + " <em>이상</em>";
+							this.$state.html(uiVal);
+							$("#callvalue").html(uiVal);
+						} else{
+							var uiVal = ui.value;
+							uiVal = uiVal != 8.5 ? uiVal + unit2 : "8GB <em>이상</em>";
+							this.$state.html(uiVal);
+							$("#datavalue").html(uiVal);
+						}
+					}
+				});
+
+				$slt_slider_handle = $('.slt-range .ui-slider-handle');
+
+				/* 월 납부요금으로찾기 */
+				$('#paymentSlider').slider({
+						orientation: "horizontal",
+						range: "min",
+						min: 0,
+						max: 70000,
+						step : 10000,
+						value: 10000,
+						slide: function(event, ui) {
+							var uiVal1 = ui.value,
+								uiStep = 10000;
+								uiVal2 = uiVal1 + uiStep;
+
+							uiVal1 = uiVal1 != 70000 ? uiVal1 + unit3 : uiVal1 + unit3 + " 이상";
+							uiVal2 = uiVal2 != 80000 ? uiVal2 + unit3 : "";
+							$("#monthlyText1").text(uiComma(uiVal1));
+							$("#monthlyText2").text(uiComma(uiVal2));
+						}
+					});
+					function uiComma(n) {
+						var parts = n.toString().split(".");
+							return parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",") + (parts[1] ? "." + parts[1] : "");
+					}				
+			});
+
+			$('.ui-carousel').owlCarousel({
+                responsive:{
+                    320:{
+                        loop: false,
+                        center : true,
+                        nav: false,
+                        items: 2,
+                        startPosition : 1
+                    },
+                    768:{
+                        loop: false,
+                        nav: false,
+                        items: 3,
+                        freeDrag: false,
+                        mouseDrag: false,
+                        touchDrag: false
+                    }
+                }
+			});
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

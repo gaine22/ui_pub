@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico">
+
+	<title>가상계좌 발급 및 충전하기 | SK 7mobile</title>
+
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+
+<body>
+	<div class="skip" id="skip"></div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+			<div class="contents-wrap">
+				<section>
+				    <h2 class="h2">가상계좌 발급 및 충전하기</h2>
+                    <div class="step-wrap">
+                        <ol>
+                            <li class="step1" aria-selected="true">
+                                <span>STEP 01</span>
+                                <strong>약관동의 및 휴대폰번호확인</strong>
+                            </li>
+                            <li class="step2" aria-selected="false">
+                                <span>STEP 02</span>
+                                <strong>충전정보입력</strong>
+                            </li>
+                            <li class="step3" aria-selected="false">
+                                <span>STEP 03</span>
+                                <strong>충전신청 완료</strong>
+                            </li>
+                        </ol>
+                    </div>
+					<div class="agree-box">
+                        <fieldset class="div-wrap" role="group">
+                            <legend>약관동의 선택</legend>
+                            <span class="top-all">
+                                <input type="checkbox" id="agr_0">								
+                                <label class="lb-check all sck" for="agr_0"><span>이용약관 및 개인정보의 수집 &middot; 이용 &middot; 제공에 모두 동의합니다. </span></label>
+                            </span>
+                            <span>
+                                <input type="checkbox" id="agr_2" name="agr_0">
+                                <label class="lb-check sck" for="agr_2"><span>[필수] 개인 정보 수집 , 이용 동의</span></label>
+                                 <button type="button" class="btn-ico-pop" aria-haspopup="true" onclick="$plugins.uiModal({ id:'termModal2' });"><span><i>[필수] 개인 정보 수집 , 이용 동의 팝업</i></span></button>
+                            </span>
+                        </fieldset>
+                    </div>
+					<h3 class="chk-title">
+						<input type="checkbox" id="chk-tit" checked="checked">
+						<label class="lb-check sck" for="chk-tit"><span>내 휴대폰에 충전</span></label>
+					</h3>
+					<ul class="form-wrap">
+						<li class="line">
+							<dl>
+								<dt><label for="phonenumber">휴대폰번호<sup>*<span class="hide">필수</span></sup></label></dt>
+								<dd><input type="text" class="inputbox" id="phonenumber" value="01012345678" disabled="disabled"></dd>
+							</dl>
+						</li>
+					</ul>
+					<div class="btn-wrap">
+						<a href="#none" class="btn btn-darkgray"><i>다음</i></a>
+					</div>
+                <section>
+				</section>
+			</div><!-- .contents-wrap -->
+		</main>
+        <div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+
+	<script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

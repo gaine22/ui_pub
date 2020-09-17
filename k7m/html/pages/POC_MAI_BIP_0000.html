@@ -1,0 +1,25 @@
+<section class="ui-modal" id="broswerInfo" role="dialog" aria-hidden="true">
+	<div class="ui-modal-wrap">
+		<header class="ui-modal-tit">
+			<h1>브라우저 사용안내</h1>
+			<button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id: 'broswerInfo' });">닫기</button>
+		</header>
+		<div class="ui-modal-cont">
+			<div class="modal-cont">                
+                <p class="txt1">본 사이트는 아래 브라우저 버전으로 이용하셔야<br class="wbr"> 최적의 서비스를 이용하실 수 있습니다.</p>
+                <div class="txt-box2">
+                    <ul class="list-dot fl">
+                        <li>크롬:XXX 이상</li>
+                        <li>인터넷익스플로러:XXX 이상</li>
+                        <li>사파리:XXX 이상</li>                        
+                    </ul>                
+                </div>
+				<div class="ui-cookie btn-cookie-wrap">
+                    <input type="checkbox" class="cookie" id="cookie2">
+                    <label class="lb-check sck" for="cookie2"><span>오늘 하루 그만 보기</span></label>
+                    <button type="button" class="btn btn-darkgray-m" onclick="$plugins.uiModalClose({ id:'broswerInfo' });"><i>닫기</i></button>
+                </div>
+			</div>
+		</div>
+	</div>
+</section>

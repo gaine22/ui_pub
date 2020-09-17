@@ -1,0 +1,259 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+    <!-- page common -->
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <META http-equiv="Expires" content="0"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- //page common -->
+
+    <meta name="keywords">
+<meta name="description">
+<meta content="noindex,follow" name="robots">
+<meta content="True" name="HandheldFriendly">
+<meta content="320" name="MobileOptimized">
+<meta content="telephone=no" name="format-detection">
+<title>마이 페이지 - ABN Korea</title>
+    
+<link rel="stylesheet" href="http://www.abnkorea.co.kr/_ui/mobile/common/css/default.css">
+
+<link rel="stylesheet" href="http://www.abnkorea.co.kr/_ui/mobile/common/css/main.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    try {
+        document.domain = "abnkorea.co.kr";   
+    } catch(e) {}
+    
+    var COMMON_RESOUCE_PATH = "http://www.abnkorea.co.kr/_ui/mobile/common";
+    var IMAGE_RESOUCE_PATH = "http://www.abnkorea.co.kr/_ui/mobile/images";
+    var WEBSITE_AKLSITE_HTTP = "http://mobile.abnkorea.co.kr";
+    var WEBSITE_AKLSITE_HTTPS = "https://mobile.abnkorea.co.kr";
+
+    // PILOT_LIMITED
+    var PILOT_LIMITED_BUGREPORT_URL = "https://board.abnkorea.co.kr/bbs/board.php?bo_table=pilot_mboard";
+    var PILOT_LIMITED_ABO_MESSAGE = "ABO 유저만 사용할 수 있는 기능입니다.";
+    var PILOT_LIMITED_IS_LOGIN = (true || false);
+    var PILOT_LIMITED_IS_ABO = true;
+    var PILOT_LIMITED_ENCODE_ABO_NO = "NzQ4MDAwMg%3D%3D";
+//]]>
+</script>
+
+<!-- common js -->
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/jquery-1.8.3.min.js"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/jquery.validate.min.js"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/jquery.placeholder.min.js"></script>
+
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/jquery.touchSlider.js"></script>
+    <script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/jquery.touchSlider2.js"></script>
+<script src="pbCommon.js"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/pbCommonEcm.js"></script>
+<script src="pbLayerPopup.js"></script>
+
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/jquery.event.drag-1.5.min.js"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/jquery.cookie.js?_=2017052911"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/lynx.messages.js?_=2017052911"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/lynx.common.js?_=2017052911"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/lynx.buynow.js?_=2017052911"></script>
+<!-- <script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/lynx.autocomplete.js?_=2017052911"></script> -->
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/lynx.smartorder.js?_=2017052911"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/beta.fix.js?_=2017052911"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/netfunnel.js" charset="UTF-8"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/netfunnel-skin.js" charset="UTF-8"></script>
+    
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/pbMain.js"></script>
+
+        <script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/barcode39_min.js?_=2017052911"></script>
+            <script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/am.certify.js?_=2017052911"></script>
+            <script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/am.common.js?_=2017052911"></script>    
+            <script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/am.validation.js?_=2017052911"></script>
+            <script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/am.personalInfo.js?_=2017052911"></script>
+            <script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/so.hyperstore.js?_=2017052911"></script>
+        <script type="text/javascript">
+
+    // ABO login
+    var COOKIE_ABO_FIRST_LOGIN_ANALYTICS = "COOKIE_ABO_FIRST_LOGIN_ANALYTICS";
+    if($.trim($.cookieUtil.get(COOKIE_ABO_FIRST_LOGIN_ANALYTICS)).length >=1 ){
+        dataLayer.event = {"name"   : "abo_login"};
+        //console.log("login abo");
+        $.cookieUtil.remove(COOKIE_ABO_FIRST_LOGIN_ANALYTICS);
+    }
+
+   var isPilotLimited = "false";
+
+   $(document).ready(function() {
+       $.buynow.data.urlHttps = "https://mobile.abnkorea.co.kr";
+    });
+</script>
+<link rel="stylesheet" href="style.css" />
+<style>
+    #pbHeader .headCont a:visited{color:#fff;}
+</style>
+</head>
+
+<body >
+    <div id="pbSkipNavi"><a href="#pbContainer">본문 바로가기</a><a href="#uiAllMenuOpen">전체메뉴 바로가기</a><a href="#pbGnb">주메뉴 바로가기</a></div>
+    <div id="pbWrap">
+    <!-- container -->
+    <div id="pbContainer" style="margin-bottom:0">
+        <!-- content -->
+        <section id="pbContent">
+            <div class="LINC_check_wrap">
+                <h1 class="LINC_check_title">제품 교환권</h1>
+                <p class="LINC_check_sub">Mark Beiderwieden 님이 드리는 특별한 선물</p>
+                <!-- [!] 바코드 폰트: 앞뒤에 *표시 붙어야 하고 태그와 텍스트 사이에 띄어쓰기 없어야 함 -->
+                <div class="LINC_check_barcode">
+                    <span>*1234567890*</span>
+                </div>
+                
+                <!-- 바코드가 이미지 일 경우 -->
+                <!-- <div class="barcodeImg">
+                    <img src="#" alt="바코드 이미지">
+                </div> -->
+                <!-- //바코드가 이미지 일 경우 -->
+
+                <div class="LINC_check_userinfo">
+                    <dl>
+                        <dt>ABO 성명</dt>
+                        <dd>암웨이</dd>
+                    </dl>
+                    <dl>
+                        <dt>사용자 전화번호</dt>
+                        <dd>010-1234-1234</dd>
+                    </dl>
+                </div>
+                <div class="btnWrap aNumb1">
+                    <a href="#" class="btnBasicBL" style="font-size:14px;line-height:34px;width:65%">암웨이 회원가입하기</a>
+                </div>
+                
+                <div class="LINC_check_list">
+                    <h2 class="LINC_check_sub">제품 교환권</h2>
+                    <ul class="chkList">
+                        <li>
+                            <p class="itemName">&middot; 무료 증정품</p>
+                            <div class="itemInfo">
+                                <dl>
+                                    <dt>수신일</dt>
+                                    <dd>2017-04-21</dd>
+                                </dl>
+                                <dl>
+                                    <dt>만료일</dt>
+                                    <dd>2017-07-20</dd>
+                                </dl>
+                                <dl>
+                                    <dt>제품명</dt>
+                                    <dd style="letter-spacing:-1px">XS 음료 교환권</dd>
+                                </dl>
+                                <dl>
+                                    <dt>수량</dt>
+                                    <dd>1개 </dd>
+                                </dl>
+                            </div>
+                            <div class="itemView">
+                                <div class="prdImg"><img src="http://www.abnkorea.co.kr/medias/259860-3-640.jpg?context=bWFzdGVyfHByb2R1Y3QtZ2FsbGVyeS1pbWFnZXN8MTM1NTA4fGltYWdlL2pwZWd8cHJvZHVjdC9nYWxsZXJ5L2ltYWdlcy9oZWUvaGI2Lzg4NDYwMDA2NTIzMTguanBnfDhiZDA4OGFhMjc1Y2JkNDE3OTE0ZDg2NjA3OGFjNjA1OGEwZDE3OWQ0NjM4Njk0MWNhYTRmNmI0ZWIxMjM5NzE" alt="XS 음료 교환권"></div>
+                                
+                            </div>
+                        </li>
+                        <li>
+                            <p class="itemName">&middot; 무료 증정품</p>
+                            <div class="itemInfo">
+                                <dl>
+                                    <dt>수신일</dt>
+                                    <dd>2017-04-21</dd>
+                                </dl>
+                                <dl>
+                                    <dt>만료일</dt>
+                                    <dd>2017-07-20</dd>
+                                </dl>
+                                <dl>
+                                    <dt>제품명</dt>
+                                    <dd style="letter-spacing:-1px">XS 음료 교환권</dd>
+                                </dl>
+                                <dl>
+                                    <dt>수량</dt>
+                                    <dd>1개 </dd>
+                                </dl>
+                            </div>
+                            <div class="itemView">
+                                <div class="prdImg"><img src="http://www.abnkorea.co.kr/medias/259860-3-640.jpg?context=bWFzdGVyfHByb2R1Y3QtZ2FsbGVyeS1pbWFnZXN8MTM1NTA4fGltYWdlL2pwZWd8cHJvZHVjdC9nYWxsZXJ5L2ltYWdlcy9oZWUvaGI2Lzg4NDYwMDA2NTIzMTguanBnfDhiZDA4OGFhMjc1Y2JkNDE3OTE0ZDg2NjA3OGFjNjA1OGEwZDE3OWQ0NjM4Njk0MWNhYTRmNmI0ZWIxMjM5NzE" alt="XS 음료 교환권"></div>
+                                
+                            </div>
+                        </li>
+                    </ul> <!-- //chkList -->
+                </div>
+
+                <div class="LINC_check_notice">
+                    <h3 class="noticeTit">알아두세요!</h3>
+                    <ul class="noticeList">
+                        <li>- <b>본 제품은 무료 증정품이며, 판매가 불가합니다.</b></li>
+                        <li>- 교환권의 사용 만료일은 각 교환권의 만료일을 확인하시기 바랍니다.</li>
+                        <li>- 교환권은 전국 AP에서 교환이 가능합니다.</li>
+                    </ul>
+                </div>
+            </div> <!-- //LINC_check_wrap -->
+
+            <!--  확인용 추후 삭제 예정 -->
+            <div class="btnWrap aNumb1" style="border-top: 1px solid #dadada;padding-top:15px;margin-bottom:20px">
+                <a href="index.html" class="btnBasicGL goto_home" style="background-color:#63c5ad;border:1px solid #63c5ad">처음으로</a>
+            </div>
+
+            <!-- 레이어팝업 영역 170516 -->
+            <div class="pbLayerPopup" id="uiLayerPop_LINC_barcode">
+                <div class="pbLayerHeader">
+                    <strong>제품 교환권 사용하기</strong>
+                </div>
+                <div class="pbLayerContent">
+                    <div class="pop_LINC_barcode">
+                        <div class="verticalBarcode">
+                            <!-- [!] 바코드 폰트: 앞뒤에 *표시 붙어야 하고 태그와 텍스트 사이에 띄어쓰기 없어야 함 -->
+                            <div class="popBarcode">
+                                <span>*1234567890*</span>
+                            </div>
+                            <p class="popNumber">1234567890</p>
+                        </div>
+
+                        <!-- 170516 바코드가 이미지 일 경우 -->
+                        <!-- <div class="barcodeImg">
+                            <img src="#" alt="바코드 이미지">
+                        </div> -->
+                        <!-- //170516 바코드가 이미지 일 경우 -->
+
+                        <div class="useCodeInput">
+                            <label for="useCode">사용 코드 입력</label>
+                            <input type="text" id="useCode">
+                        </div>
+                    </div>
+
+                    
+                    <div class="btnWrap aNumb1">
+                        <a href="#none" class="btnBasicBL">확인</a>
+                    </div>
+                </div>
+                <a href="#none" class="btnPopClose"><img src="http://www.abnkorea.co.kr/_ui/mobile/images/common/btn_close.gif" alt="창 닫기"></a>
+            </div>
+            <!-- //레이어팝업 영역 170516 -->
+
+        </section>
+        <!-- //content -->
+    </div>
+    <!-- container -->
+</div>
+
+<!-- 시연용 스크립트 -->
+<script>
+$(function() {
+    $('.btnSearch').on('click', function(e) {
+        e.preventDefault();
+    });
+    $('a').filter(':not(.goto_home)').removeAttr('href');
+    $('#pbGnb ul li a').off('click');
+    $('.btnMenuOpen').off('click');
+    $('.unitedSearch input[type=text]').off('click');
+})
+</script>
+<!-- //시연용 스크립트 -->
+</body>
+</html>

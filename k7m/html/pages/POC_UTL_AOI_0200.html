@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico"> 
+
+	<title>신청내역조회 | SK 7mobile</title>
+	
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+<body>
+	<div class="skip" id="skip">
+		<ul>
+			<li><a href="#main">본문 바로가기</a></li>
+		</ul>
+	</div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+            <div class="contents-wrap">
+				<section>
+                    <h2 class="h2">신청내역조회</h2>
+                    <div class="txt-gray-box2">
+                        <p>
+                            안녕하세요. 홍길동 고객님! <br>
+                            고객님께서 <span class="fc-red">2018-02-30</span>에 주문하신 신청현황과 내용은 아래와 같습니다.
+                        </p>
+                    </div>
+                    <div class="ui-tab item2">
+                        <div class="ui-tab-btns">
+                            <a href="../pages/POC_UTL_AOI_0200.html" class="ui-tab-btn" aria-selected="true"><i>신청진행현황</i></a>
+                            <a href="../pages/POC_UTL_AOI_0300.html" class="ui-tab-btn"><i>신청서 조회</i></a>
+                        </div>
+                    </div>     
+                    <section>
+                        <h3 class="hide">신청진행현황</h3>
+                        <!-- 20180323 : 수정 -->
+                        <ul class="progress-area">
+                            <li class="on"> <!-- 단계완료 class="on" / 현재단계 class="on current" -->
+                                <span class="state">현재</span>
+                                <strong class="icon1">01. 주문접수완료</strong>
+                            </li>
+                            <li class="on current">
+                                <span class="state">현재</span>
+                                <strong class="icon2">02. 상담-배송대기</strong>
+                            </li>
+                            <li>
+                                <span class="state">현재</span>
+                                <strong class="icon3">03. 개통완료</strong>
+                            </li>
+                            <li>
+                                <span class="state">현재</span>
+                                <strong class="icon4">04. 상품발송</strong>
+                            </li>
+                        </ul>
+                        <!-- // 20180323 : 수정 -->
+                        <ul class="list-dot">
+                            <li>가입 및 개통문의 : 1599-3508(유료)</li>
+                            <li>운영시간 : 평일 10:00 ~ 18:00 (휴일 및 공휴일 휴무)</li>
+                        </ul>
+                    </section>             
+				</section>
+			</div><!-- //.contents-wrap -->
+		</main>
+		<div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+	
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			
+			
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

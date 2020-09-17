@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico"> 
+
+	<title>분실신고 신청/ 해제 | SK 7mobile</title>
+
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+<body>
+	<div class="skip" id="skip">
+		<ul>
+			<li><a href="#main">본문 바로가기</a></li>
+		</ul>
+	</div>
+    <div class="base-layer" id="baseLayer"></div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+            <div class="contents-wrap">
+                <section>
+                    <h2 class="h2">분실신고 신청/ 해제</h2>
+                    <div class="select-top-area">
+                        <span class="lb-select"><label for="hpnumber">휴대폰번호</label> : 1개</span>
+                        <select class="selectbox-l" title="보유휴대폰" id="hpnumber">
+                            <option>010-1234-5678</option>
+                        </select>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="h3tit">분실신고 정보를 입력해주세요.</h3>
+                    <ul class="tbl-wrap form-wrap"><!-- edit180228 form-wrap 클래스 추가 -->
+                        <li class="style-line">
+                            <div class="dt">이름</div>
+                            <div class="dd">홍*동</div>
+                        </li>
+                        <li class="style-line">
+                            <div class="dt">신고접수일자</div>
+                            <div class="dd">2018-01-09</div>
+                        </li>
+                        <li class="style-line">
+                            <div class="dt">휴대폰번호</div>
+                            <div class="dd">010-12**-56**</div>
+                        </li>
+                        <li class="style">
+                            <div class="dt">분실일자<sup>*<span class="hide">필수</span></sup></div>
+                            <div class="dd date-wrap">
+                                <div>
+                                    <input type="text" class="date inputbox-s" placeholder="2018-02-01" id="date"> <label for="date" class="datepicker"><span class="hide">분실일자</span></label>
+                                </div>
+                            </div>
+                        </li>                        
+                        <li class="style">
+                            <div class="dt">분실유형<sup>*<span class="hide">필수</span></sup></div>
+                            <div class="dd">
+                                <fieldset class="div-wrap" role="group">
+                                    <legend>분실유형</legend>  
+                                        <input type="radio" name="lostph" id="lostph_1" checked="checked" title="모두 분실(휴대폰+USIM)">
+                                        <label class="lb-radio checked" for="lostph_1"><span>모두 분실(휴대폰+USIM)</span></label>
+                                        <input type="radio" name="lostph" id="lostph_2" title="휴대폰 분실">
+                                        <label class="lb-radio" for="lostph_2"><span>휴대폰 분실</span></label>
+                                        <input type="radio" name="lostph" id="lostph_3" title="USIM 분실">
+                                        <label class="lb-radio" for="lostph_3"><span>USIM 분실</span></label>                                        
+                                </fieldset>
+                            </div>
+                        </li>
+                        <li class="style">
+                            <div class="dt">분실사유<sup>*<span class="hide">필수</span></sup></div>
+                            <div class="dd">
+                                <fieldset class="div-wrap" role="group">
+                                    <legend>분실사유</legend>  
+                                        <input type="radio" name="loss" id="loss_1" checked="checked" title="분실">
+                                        <label class="lb-radio checked" for="loss_1"><span>분실</span></label>
+                                        <input type="radio" name="loss" id="loss_2" title="파손">
+                                        <label class="lb-radio" for="loss_2"><span>파손</span></label>
+                                        <input type="radio" name="loss" id="loss_3" title="도난">
+                                        <label class="lb-radio" for="loss_3"><span>도난</span></label>
+                                </fieldset>
+                            </div>
+                        </li>
+                        <li class="style">
+                            <div class="dt">분실내용<sup>*<span class="hide">필수</span></sup></div>
+                            <div class="dd">
+                                <textarea class="textarea-lg" title="분실내용" placeholder="*한글160자 내 입력가능" maxlength="160"></textarea><!-- edit180228 textarea 변경-->
+                            </div>
+                        </li>
+                        <li class="style">
+                            <div class="dt">분실장소<sup>*<span class="hide">필수</span></sup></div>
+                            <div class="dd">
+                                <textarea class="textarea-lg2" title="분실장소" placeholder="*한글80자 내 입력가능" maxlength="80"></textarea><!-- edit180228 textarea 변경-->
+                            </div>
+                        </li>
+                        <li class="style">
+                            <div class="dt">연락처<sup>*<span class="hide">필수</span></sup></div>
+                            <div class="dd">
+                                <input type="text" class="inputbox-m" title="분실장소">
+                                <span class="list-note">※ 실제 연락 가능하신 전화번호를 입력해주세요.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <div class="txt-box bg">
+                        <div class="line">
+                            <input type="checkbox" id="m_agree" name="m_agree_n">
+                            <!-- edit180312 문구수정 -->
+                            <label class="lb-check sck" for="m_agree"><span>신청정보를 확인하였으며, 변경진행에 동의합니다.</span></label>
+                            <div class="btn-right">
+                                <button type="button" class="btn-point"><i>분실신고 신청</i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 20180322 : 유의사항 수정 -->
+                    <div class="note-box">
+                        <h3 class="ico-note">유의사항</h3>
+                        <ol>
+                            <li>분실정지시 자동으로 발신 금지됩니다. (수신은 가능)</li>
+                            <li>정지해제 신청시 요금이 연체된 경우에는 홈페이지를 통하여 해제가 불가하며, 고객센터로 문의주시기 바랍니다.</li>
+                            <li>일시정지 할 경우 요금제와 상관없이 월 3,000원(일할계산)이 부과(부가세별도)되며, 일시정지 기간 중에도 일부 부가서비스는 제공되므로 이에 따라 요금이 발생될 수 있습니다. 
+                            <li>정지를 해제하시는 해당 월에는 월 3,300원(VAT포함)의 기본요금이 정지한 기간만큼 날짜대로 계산됩니다.</li>
+                            <li>휴대폰 분실 등록 후 일시 정지를 하지 않을 경우 요금제의 기본요금이 모두 부과됩니다.</li>
+                            <li>분실신고시 타 이용자의 USIM이용은 불가합니다.</li>
+                            <li>USIM분실 등록 후 재발급을 희망하는 경우 고객센터로 문의 바랍니다.</li>
+                        </ol>
+                    </div>
+                    <!-- // 20180322 : 유의사항 수정 -->                    
+                </section>
+            </div><!-- //.contents-wrap -->
+		</main>
+		<div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+	
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

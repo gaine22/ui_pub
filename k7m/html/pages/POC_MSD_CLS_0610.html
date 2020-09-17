@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico"> 
+
+	<title>일시정지 신청/ 해제 | SK 7mobile</title>
+
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+<body>
+	<div class="skip" id="skip">
+		<ul>
+			<li><a href="#main">본문 바로가기</a></li>
+		</ul>
+	</div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+            <div class="contents-wrap">
+                <section>
+                    <h2 class="h2">일시정지 신청/ 해제</h2>
+                    <div class="select-top-area">
+                        <span class="lb-select"><label for="hpnumber">휴대폰번호</label> : 1개</span>
+                        <select class="selectbox-l" title="보유휴대폰" id="hpnumber">
+                            <option>010-1234-5678</option>
+                        </select>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="h3tit">일시정지 설정 정보를 입력해주세요.</h3>
+                    <ul class="tbl-wrap ">
+                        <li class="style">
+                            <div class="dt">일시정지 기간</div>
+                            <div class="dd date-wrap">
+                                <div>
+                                    <input type="text" class="date inputbox-s" placeholder="2018-01-01" id="inqdate1"> <label class="datepicker" for="inqdate1"><span class="hide">일시정지 기간 시작일</span></label>
+                                    <em class="swung">~</em> 
+                                    <input type="text" class="date inputbox-s" placeholder="2018-02-01" id="inqdate2"> <label class="datepicker" for="inqdate2"><span class="hide">일시정지 기간 종료일</span></label> <button type="button" class="btn-inquiry">조회</button>
+                                </div>
+                                <ul class="list-dot-txt">
+                                    <li>* 정지시작일자는 오늘날짜부터 30일 이내 일자만 선택이 가능합니다.</li>
+                                    <li>* 정지종료일자는 오늘날짜부터 90일 이내 일자만 선택이 가능합니다.</li>
+                                    <li>* 해당 서비스는 설정된 정지기간을 경과하면 자동으로 서비스가 해제 됩니다.</li>
+                                </ul>
+                            </div>
+                        </li>                        
+                        <li class="style">
+                            <div class="dt">일시정지 사유</div>
+                            <div class="dd">
+                                <fieldset class="div-wrap" role="group">
+                                    <legend>일시정지 사유</legend>  
+                                        <input type="radio" name="pause" id="pause_1" checked="checked" title="고객요청">
+                                        <label class="lb-radio checked" for="pause_1"><span>고객요청</span></label>
+                                        <input type="radio" name="pause" id="pause_2" title="분실">
+                                        <label class="lb-radio" for="pause_2"><span>분실</span></label>
+                                        <input type="radio" name="pause" id="pause_3" title="장기일시정지_해외체류">
+                                        <label class="lb-radio" for="pause_3"><span>장기일시정지_해외체류</span></label>
+                                        <input type="radio" name="pause" id="pause_4" title="다량발송일시정지">
+                                        <label class="lb-radio" for="pause_4"><span>다량발송일시정지</span></label>
+                                </fieldset>
+                            </div>
+                        </li>
+                         <li class="style">
+                            <div class="dt">일시정지 항목</div>
+                            <div class="dd">
+                                <fieldset class="div-wrap" role="group">
+                                    <legend>일시정지 항목</legend>  
+                                        <input type="radio" name="pause_item" id="pause_item_1" checked="checked" title="걸기/받기 모두 정지">
+                                        <label class="lb-radio checked" for="pause_item_1"><span>걸기/받기 모두 정지</span></label>
+                                        <input type="radio" name="pause_item" id="pause_item_2" title="걸기만 정지">
+                                        <label class="lb-radio" for="pause_item_2"><span>걸기만 정지</span></label>
+                                </fieldset>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <div class="txt-box bg">
+                        <div class="line">
+                            <input type="checkbox" id="m_agree" name="m_agree_n">
+                            <!-- edit180312 문구수정 -->
+                            <label class="lb-check sck" for="m_agree"><span>신청정보를 확인하였으며, 변경진행에 동의합니다.</span></label>
+                            <div class="btn-right">
+                                <button type="button" class="btn-point"><i>신청하기</i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 20180322 : 유의사항 수정 -->
+                    <div class="note-box">
+                        <h3 class="ico-note">유의사항</h3>
+                        <ol>
+                            <li>선불고객 일시정지는 연4회(분기당 1회), 1회 신청시 시작일로부터 6일 이후까지 신청 가능합니다.</li>
+                            <li>후불고객 일시정지는 연2회, 1회 신청시 오늘날짜로부터 90일 이내까지 신청 가능합니다.</li>
+                            <li>정지 신청시 발신정지 선택시 수신은 가능하며, 수신정지 선택시 발신/수신 모두 불가합니다.<br> (수신가능한 경우 일부 부가서비스 이용이 가능합니다.)</li>
+                            <li>일시정지 할 경우 요금제와 상관없이 월 3,000원(일할계산)이 부과(부가세별도)되며, 일시정지 기간 중에도 일부 부가서비스는 제공되므로 이에 따라 요금이 발생될 수 있습니다.</li>
+                            <li>정지상태에서 이동전화 부가서비스등 서비스 신청/변경/취소는 이뤄지지 않으므로 정지해제한 후 부가서비스 신청, 요금제 변경 등의 업무를 이용하시기 바랍니다.</li>
+                            <li>장기정지 서비스가 필요한 고객님께서는 고객센터 &lt;1599-0999(유료)/휴대폰 114&gt;로 문의바랍니다.</li>
+                        </ol>
+                    </div>
+                    <!-- // 20180322 : 유의사항 수정 -->
+                </section>
+            </div><!-- //.contents-wrap -->
+		</main>
+		<div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+	
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

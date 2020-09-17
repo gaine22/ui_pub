@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../resources/img/common/ico_favicon.ico"> 
+
+	<title>SKTELINK</title>
+	
+	<script src="../resources/js/ui.init.js"></script>
+	<link rel="stylesheet" href="../resources/css/ui_guide.css">
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+
+<body class="page-form">
+	<div class="base-skip" id="baseSkip"></div>
+	<div class="base-modal" id="baseModal"></div>
+	<div class="base-wrapper">
+		<header class="base-header" id="baseHeader"></header>
+		<main class="base-main" id="baseMain" role="main">
+		<div class="base-content">
+			<div class="contents-wrap">
+				<div class="base-tit">
+					<h1 class="h1">FORM - 정보입력</h1>
+				</div>
+
+				<section class="mgtl">
+					<ul class="list-dot">
+						<li>상담시간은 평일 9:00 ~ 18:00 입니다. (단, 휴일 상담 신청은 익일 평일에 바로 처리해드리겠습니다.)</li>
+						<li><span class="fc-red1">SMS 알림</span>으로 고객님의 답변완료를 알려드립니다.</li>
+					</ul>
+
+
+					<!-- 개발참고사항: 웹접근성 - 각 입력항목의 id 값과 label for 값을 동일하게 맞춘다 -->
+					<ul class="form-wrap">
+						<li class="line">
+							<dl>
+								<dt><label for="q_type">유형<sup>*<span class="hide">필수</span></sup></label></dt>
+								<dd>
+									<div>
+										<select class="selectbox" title="유형" id="q_type">
+											<option>선택</option>
+											<option>가입(구매)/개통</option>
+											<option>배송</option>
+											<option>상품문의</option>
+											<option>교환/반품</option>
+											<option>주문정보변경/환불/취소</option>
+											<option>해지신청</option>
+											<option>기타</option>
+										</select>
+									</div>
+								</dd>
+							</dl>
+						</li>
+						<li class="line">
+							<dl>
+								<dt><label for="user_tel">휴대폰번호<sup>*<span class="hide">필수</span></sup></label></dt>
+								<dd>
+									<div>
+										<input type="text" class="inputbox" id="user_tel">
+										<p>&#8251; '-'를 제외하고 입력해주세요.</p>
+									</div>
+									
+								</dd>
+							</dl>
+						</li>
+						<li class="line">
+							<dl>
+								<dt><label for="user_pwd">비밀번호<sup>*<span class="hide">필수</span></sup></label></dt>
+								<dd>
+									<div>
+										<input type="password" class="inputbox" id="user_pwd">
+										<p>&#8251; 상담내역 조회 시 필요한 비밀번호 영문, 숫자 조합 10~20자리로 입력해주세요.</p>
+									</div>
+									
+								</dd>
+							</dl>
+						</li>
+						<li class="line">
+							<dl>
+								<dt><label for="secure_txt">보안문자<sup>*<span class="hide">필수</span></sup></label></dt>
+								<dd>
+									<div>
+										<span class="secure-area"><img src="../images/common/@secure.png" alt="보안문자 956638"></span><button type="button" class="btn-new"><span>보안문자 새로고침</span></button> <button type="button" class="btn-audio"><span>보안문자 음성듣기</span></button><input type="text" class="inputbox-secure" id="secure_txt" placeholder="보안문자를 입력하세요">
+									</div>
+									
+								</dd>
+							</dl>
+						</li>
+						<li class="line">
+							<dl>
+								<dt><label for="inqury_title">제목<sup>*<span class="hide">필수</span></sup></label></dt>
+								<dd>
+									<div>
+										<input type="text" class="inputbox-l" id="inqury_title">
+									</div>
+								</dd>
+							</dl>
+						</li>
+						<li class="line">
+							<dl>
+								<dt><label for="inqury_con">내용<sup>*<span class="hide">필수</span></sup></label></dt>
+								<dd>
+									<div>
+										<textarea class="textarea" id="inqury_con"></textarea>
+									</div>
+								</dd>
+							</dl>
+						</li>
+						<li class="line">
+							<dl>
+								<dt><label for="inqury_con">생년월일<sup>*<span class="hide">필수</span></sup></label></dt>
+								<dd>
+									<div><fieldset class="div-wrap day-wrap" role="group">
+											<legend>생년월일</legend>
+												<input type="number" name="birthDate1" id="birthDate1" class="inputbox-s" placeholder="생일년도(예:1987)" maxlength="4" title="연도 입력 " autocomplete="off">
+												<select class="selectbox-xxs" title="월">
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5</option>
+													<option>6</option>
+													<option>7</option>
+													<option>8</option>
+													<option>9</option>
+													<option>10</option>
+													<option>11</option>
+													<option>12</option>
+												</select>
+												<select class="selectbox-xxs" title="일">
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5</option>
+													<option>6</option>
+													<option>7</option>
+													<option>8</option>
+													<option>9</option>
+													<option>10</option>
+													<option>11</option>
+													<option>12</option>
+												</select>
+										</fieldset>
+									</div>
+								</dd>
+							</dl>
+						</li>
+						<li class="line">
+							<dl>
+								<dt><label for="inqury_con">성별/<label for="user-nation">국적</label><sup>*<span class="hide">필수</span></sup></label></dt>
+								<dd>
+									<div>
+										<fieldset class="div-wrap radio-wrap" role="group">
+											<legend>성별</legend>
+												<input type="radio" name="gender" id="gender1" checked="checked" title="남자">
+												<label class="lb-radio checked" for="gender1"><span>남자</span></label>
+												<input type="radio" name="gender" id="gender2" title="여자">
+												<label class="lb-radio" for="gender2"><span>여자</span></label>
+										</fieldset>
+										<select class="selectbox-s" title="내외국인 구분" id="user-nation">
+											<option>내국인</option>
+											<option>외국인</option>
+										</select>
+									</div>
+								</dd>
+							</dl>
+						</li>
+						<li class="line">
+							<dl>
+								<dt><label for="cert_number">인증번호<sup>*<span class="hide">필수</span></sup></label></dt>
+								<dd>
+									<div class="cert-wrap">
+										<input type="text" class="inputbox" id="cert_number"> <button type="button" class="btn-inbase">인증번호받기</button>
+									</div>
+								</dd>
+							</dl>
+						</li>
+						<li class="line">
+							<dl>
+								<dt>상담 가능 시간<sup>*<span class="hide">필수</span></sup></dt>
+								<dd>
+									<div>
+										<fieldset class="div-wrap" role="group">
+											<legend>상담 가능 시간</legend>
+											<input type="text" class="date inputbox" id="datepicker1" placeholder="상담 가능 날짜(예:2017-12-22)">
+											<label for="datepicker1" class="datepicker"><span class="hide">상담 가능 날짜</span></label>
+											<select class="selectbox-xs" title="오전오후 구분">
+												<option>오전</option>
+												<option>오후</option>
+											</select>
+											<input type="text" class="inputbox-m">
+										</fieldset>
+									</div>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+
+					<h4 class="h4">개인정보수집 동의</h4>
+					<div class="txt-box">
+						<strong class="tit">온라인상담 관련 개인정보 수집/이용 동의</strong>
+						<ol>
+							<li>1. 수집항목 : 이동전화번호, 비밀번호, 상담내용</li>
+							<li>2. 이용목적 : 이동통신서비스 및 단말기 상담</li>
+							<li>3. 개인정보 보유기간 및 이용기간
+								<ul class="list-dash-txt">
+									<li>- 이용자가 '서비스'를 이용하는 기간에 한하여 보유 및 이용</li>
+									<li>- 법령에서 정하는경우 해당기간까지 보유(상세사항 개인정보처리방침)</li>
+								</ul>
+							</li>
+							<li>4. 개인정보 수집/이용에 동의하지 않을 시, 온라인상담 이용 불가</li>
+						</ol>
+					</div>
+					<div class="input-warp">
+						<input type="checkbox" id="agree1"><label class="lb-check" for="agree1"><span>위 내용을 숙지하였으며 이에 동의합니다.</span></label>
+					</div>
+
+						
+					
+
+					<div class="btn-wrap">
+						<span><button type="button" class="btn btn-ok"><span>확인</span></button></span>
+						<span><button type="button" class="btn btn-cancel"><span>취소</span></button></span>
+					</div>
+				</section>
+
+				
+				<hr class="hr">
+				<h3>FORM</h3>
+				<section class="info-wrap">
+					<p class="code-box">label.lb-radio</p>
+                    <fieldset class="div-wrap" role="group">
+                        <legend>성별</legend>
+                            <input type="radio" name="r3" id="r3_1" checked="checked" title="남자">
+                            <label class="lb-radio checked" for="r3_1"><span>남자</span></label>
+                            <input type="radio" name="r3" id="r3_2" title="여자">
+                            <label class="lb-radio" for="r3_2"><span>여자</span></label>
+					</fieldset>
+					
+					<p class="code-box">label.lb-check</p>
+					<fieldset class="div-wrap" role="group">
+						<legend>박스 체크</legend>
+							<input type="checkbox" id="c5_1" name="c5_0" checked="checked" title="박스 체크1">
+							<label class="lb-check checked" for="c5_1"><span>체크1</span></label>
+							<input type="checkbox" id="c5_2" name="c5_0">
+							<label class="lb-check" for="c5_2"><span>체크2</span></label>
+					</fieldset>
+
+					<p class="code-box">label.lb-check.ck</p>
+					<fieldset class="div-wrap" role="group">
+						<legend>박스 체크</legend>
+							<input type="checkbox" id="c6_1" name="c6_0" checked="checked" title="박스 체크3">
+							<label class="lb-check ck checked" for="c6_1"><span>박스 체크3</span></label>
+							<input type="checkbox" id="c6_2" name="c6_0" title="박스 체크4">
+							<label class="lb-check ck" for="c6_2"><span>박스 체크4</span></label>
+					</fieldset>
+
+					<p class="code-box">label.lb-check.rck</p>
+					<fieldset class="div-wrap" role="group">
+						<legend>라운드 체크</legend>
+							<input type="checkbox" id="c7_1" name="c7_0" checked="checked">
+							<label class="lb-check rck checked" for="c7_1"><span>라운드 체크1</span></label>
+							<input type="checkbox" id="c7_2" name="c7_0" title="라운드 체크2">
+							<label class="lb-check rck" for="c7_2"><span>라운드 체크2</span></label>
+					</fieldset>
+
+					<p class="code-box">label.lb-check.ck</p>
+					<fieldset class="div-wrap" role="group">
+						<legend>라운드 체크</legend>
+							<input type="checkbox" id="c8_1" name="c8_0" checked="checked">
+							<label class="lb-check ck checked" for="c8_1"><span>라운드 체크1</span></label>
+							<input type="checkbox" id="c8_2" name="c8_0" title="라운드 체크2">
+							<label class="lb-check ck" for="c8_2"><span>라운드 체크2</span></label>
+					</fieldset>
+
+					<p class="code-box">label.lb-check.sck</p>
+					<fieldset class="div-wrap" role="group">
+						<legend>square 체크</legend>
+							<input type="checkbox" id="c9_1" name="c9_0" checked="checked">
+							<label class="lb-check sck checked" for="c9_1"><span>square 체크1</span></label>
+							<input type="checkbox" id="c9_2" name="c9_0" title="square 체크2">
+							<label class="lb-check sck" for="c9_2"><span>square 체크2</span></label>
+					</fieldset>
+
+					
+                </section>
+				
+			    <div class="code-wrapper">
+<pre><xmp class="code mgb-l">
+
+
+</xmp></pre>
+                </div>
+                <div class="code-warning">
+                    <p>* </p>
+                </div>
+            </div>
+		</div>
+		</main>
+		<footer class="base-footer" id="baseFooter"></footer>
+	</div>
+	
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

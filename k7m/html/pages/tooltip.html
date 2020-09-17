@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico">
+	<title>툴팁 | SK 7mobile</title>
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+
+<body>
+	<div class="skip" id="skip"></div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+        
+        
+        <div class="base-layer" id="baseLayer">
+            <!-- 툴팁1 -->
+            <div class="ui-tooltip" id="uiDrop1" role="tooltip" aria-hidden="true">
+                <span class="tt-arrow"></span>
+                <section>
+                    <h2 class="title">타이틀</h2>
+                    <dl>
+                        <dt>제목1</dt>
+                        <dd>내용1</dd>
+                    </dl>
+                    <dl>
+                        <dt>제목2</dt>
+                        <dd>내용2</dd>
+                    </dl>
+                </section>
+            </div>
+            <!-- 툴팁2 -->
+            <div class="ui-tooltip" id="uiDrop2" role="tooltip" aria-hidden="true">
+                <span class="tt-arrow"></span>
+                <h2 class="title">타이틀</h2>
+                <p class="tit-sub">타이틀 텍스트</p>
+            </div>
+        </div>
+		<main class="main" id="main" role="main">
+			<div class="contents-wrap">
+                <div>
+                    <span style="display:inline-block;margin:200px auto;border:1px solid black;"> 툴팁1
+                        <button type="button" class="btn-tip ui-tooltip-btn" aria-describedby="uiDrop1"><i>툴팁안내</i></button>
+                    </span>
+                </div>
+                <div>
+                    <span style="display:inline-block;border:1px solid black;"> 툴팁2
+                        <button type="button" class="btn-tip ui-tooltip-btn" aria-describedby="uiDrop2"><i>툴팁안내</i></button>
+                    </span>
+                </div>
+				
+			</div><!-- .contents-wrap -->
+		</main>
+        <!-- <div class="qucik" id="quick"></div> -->
+		<footer class="footer" id="footer"></footer>
+	</div>
+
+	<script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+    <!-- 180227 360 회전 슬라이더 추가 -->
+    <script src="../js/lib/threesixty.min.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+            $plugins.uiTooltip();
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

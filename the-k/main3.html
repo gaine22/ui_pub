@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	
+	<title>The&middot;K 한국교직원 공제회</title>
+	
+	<link rel="stylesheet" href="./resources/css/ui.base.css">
+</head>
+<body>
+	<!-- 모바일 -->
+	<button type="button" class="mobView" data-href="mobile3.html">모바일 보기</button>
+	<div class="dimWrap">
+		<div class="mob scroll" id="mScroll" style="backgorund:#222"></div>
+	</div>
+	<div class="mobData"></div>
+	<!-- //모바일 -->
+	<div class="wrap page1" id="wrap">
+		<header class="header">
+			<img src="./resources/img/left.png" alt="">
+			<button type="button" class="btn" id="btn_gnb"></button>
+			<button type="button" class="btn2" id="btn_mypage"></button>
+			<a href="main.html" class="btn_link n1">main</a>
+			<a href="main2.html" class="btn_link n2">보험제도</a>
+			<a href="main3.html" class="btn_link n3">행복서비스</a>
+			<a href="main4.html" class="btn_link n4" target="_blank">대한민국 스승상</a>
+			<a href="main5.html" class="btn_link n5" target="_blank">ENG</a>
+		</header>
+		<div class="gnb_menu_wrap">
+			<img src="./resources/img/gnbmenu.png" alt="" class="gnb_menu">
+			<button class="btn_close"></button>
+		</div>
+		<div class="layer_mypage">
+		    <img src="./resources/img/layer_mypage.png" alt="">
+		    <a href="mypage.html" class="link"></a>
+		    <button class="close"></button>
+		</div>
+		<main class="main">
+		    <div class="dim"></div>
+			<div class="ui-parallax-wrap" id="uiParallax">
+				<div id="exeFix1" class="ui-parallax-item" style="background:#1e292b">
+					<div id="mainSlide" class="main_slide" >
+			            <ul>
+			                <li><img src="./resources/img/mainslide_01.png" alt=""></li>
+			                <li><img src="./resources/img/mainslide_02.png" alt=""></li>
+			                <li><img src="./resources/img/mainslide_03.png" alt=""></li>
+			            </ul>
+			            <p class="paging">
+			                <a href="#none" class="page-01 on"></a>
+			                <a href="#none" class="page-02"></a>
+			                <a href="#none" class="page-03"></a>
+			            </p>
+			        </div>
+				</div>
+				<div class="ui-parallax-item" style="padding-bottom:170px; background:#f4f5f8">
+					<img src="./resources/img/main03_02.png" alt="">
+				</div>
+				<div class="ui-parallax-item" style="padding-bottom:100px; background:#f4f5f8">
+					<img src="./resources/img/main03_03.png" alt="">
+				</div>
+				<div class="ui-parallax-item" style="padding-bottom:100px; background:#f4f5f8">
+					<img src="./resources/img/main03_04.png" alt="">
+				</div>
+				<div class="ui-parallax-item" style="background:#fff">
+					<img src="./resources/img/main03_05.png" alt="">
+				</div>
+			</div>
+		</main>
+        <footer class="footer">
+			<img src="./resources/img/footer.png" alt="">
+		</footer>
+	</div>
+	<script src="./resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="./resources/js/lib/jquery.easing.min.js"></script>
+	<script src="./resources/js/lib/gambit-smoothscroll-min.js"></script>
+	<script src="./resources/js/ui.common.js"></script>
+	
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			
+			$plugins.uiParallax({ id:'uiParallax', callback: callbackParallax })
+			function callbackParallax(v){
+				console.log(v);
+				
+				if(v.index === 0){
+					$('#' + v.id).find('.ui-parallax-item').eq(v.index + 1).css('margin-top', (v.v/2) * -1);
+				} else if(v.index > 0 && v.index < 5){
+					$('#' + v.id).find('.ui-parallax-item').eq(v.index + 1).css('margin-top', ((v.v - v.h)  /2) * -1);
+				}
+			}
+			
+			//fixed
+			NETIVE.uiFollow.inner({ id: 'exeFix1', ps: 'top', fix: false  });
+            
+			
+			//slide
+			$._mainSlide.init({id : 'mainSlide'});
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

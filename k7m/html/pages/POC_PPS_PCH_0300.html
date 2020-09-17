@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico"> 
+
+	<title>SK 7mobile</title>
+	
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+<body>
+	<div class="skip" id="skip">
+		<ul>
+			<li><a href="#main">본문 바로가기</a></li>
+		</ul>
+	</div>
+	<div class="base-layer" id="baseLayer">
+	</div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>		
+		<header class="header" id="header"></header>		
+		<main class="main" id="main" role="main">
+            <div class="contents-wrap">				
+				<section>
+                    <h2 class="h2">편의점 충전 안내</h2>
+                    <div class="box-list">
+                        <p class="ico-svr svr1">위 편의점에서 <strong class="fc-red">충전카드 핀번호 구매</strong> 후,<br> 영수증에서 발급된 카드번호로 충전합니다.</p>
+
+                        <div class="pd">
+                            <h4>편의점에서 충전방법</h4>
+                            <div>
+                                <ol class="list-line">
+                                    <li><span class="num">①</span> 가까운 편의점에 방문하여 아래와 같이 문의해주세요.
+                                        <ul class="list-dash-txt fc-red">
+                                            <li>- <em class="bl-tit">CU, MINISTOP :</em> <span>"사이버머니 SK7mobile 충전상품 1만원 주세요."</span></li>
+                                            <li>- <em class="bl-tit">GS25 :</em> <span>"편의점캐시 SK7mobile 충전상품 1만원 주세요."</span></li>
+                                            <li>- <em class="bl-tit">7ELEVEN :</em> <span>"통신상품 SK7mobile 충전상품 1만원 주세요."</span></li>
+                                        </ul>
+                                    </li>
+                                    <li><span class="num">②</span> 충전금액 1만원을 지불 후, 영수증을 받습니다.</li>
+                                    <li><span class="num">③</span> 영수증의 현금가격 아래 카드  번호로 아래와 같이 충전합니다.<br>
+                                        폰에서 [114] 통화 &rarr; 영수증에 적힌 카드번호를 누르면 문제메시지로 안내됩니다.
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    
+                        <div class="pd">
+                            <div class="btn-right-wrap only-d">
+                                <p class="txt"><strong class="bold">편의점 직원이 잘 모를 경우,</strong> 아래 내용을 편의점 직원에게 보여주세요.</p>
+                                <div class="btn-right">
+                                    <button type="button" class="btn-seablue" onclick="javascript:printPopup()"><i class="arr">인쇄하기</i></button>
+                                </div>
+                            </div>
+                            <div class="only-m">
+                                <h4>편의점에서 충전방법</h4>
+                            </div>
+                            <div>
+                                <ul class="list-line in-ico">
+                                    <li><span class="ico-store gs25"><i>GS25</i></span> 
+                                        <span class="rarr-txt">GS25 편의점POS기기 <em class="rarr">&rarr;</em> "편의점캐쉬"선택 <em class="rarr">&rarr;</em> <br class="mbr">"SK 7mobile"선택 <em class="rarr">&rarr;</em> 충전</span></li>
+                                    <li><span class="ico-store cu"><i>CU</i></span> 
+                                        <span class="rarr-txt">CU 편의점POS기기 <em class="rarr">&rarr;</em> "서비스"선택 <em class="rarr">&rarr;</em> <br class="mbr">"프리페이드"선택 <em class="rarr">&rarr;</em> 상품전단지(SK 7mobile)<br class="mbr"> 바코드 스캔</span></li>
+                                    <li><span class="ico-store eleven"><i>7ELEVEN</i></span> 
+                                        <span class="rarr-txt">7ELEVEN 편의점POS기기 <em class="rarr">&rarr;</em> "서비스"선택 <em class="rarr">&rarr;</em> <br class="mbr">2page이동 <em class="rarr">&rarr;</em> "MVNO PIN번호 충전"선택 <em class="rarr">&rarr;</em> <br class="mbr">SK 7mobile</span></li>
+                                    <li><span class="ico-store ministop"><i>MINISTOP</i></span> 
+                                        <span class="rarr-txt">MINISTOP 편의점POS기기 <em class="rarr">&rarr;</em> <br class="mbr">하단"편의점캐쉬"선택 <em class="rarr">&rarr;</em> <br class="mbr">"SK 7mobile충전"선택 <em class="rarr">&rarr;</em> 금액입력 <em class="rarr">&rarr;</em> 충전</span></li>
+                                </ul>
+                            </div>
+                        </div>                           
+                    </div>
+				</section>
+			</div><!-- //.contents-wrap -->
+		</main>
+		<div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+	
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>        
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+            
+		});        
+	})(jQuery, window, document);
+
+    function printPopup(){        
+        var winWidth = window.outerWidth;
+        var winHeight = window.outerHeight;      
+        var popX = (winWidth - 1024)/2;
+        var popY = (winHeight - 438)/2;
+
+        var popUrl = "../pages/POC_PPS_PCH_0310.html";
+        var popOption = "width=1024, height=438, top="+ popY + ", left="+ popX+ ", resizable=no, scrollbars=no, status=no;";
+        printWindow = window.open(popUrl,"", popOption);
+        printWindow.focus();
+        printWindow.print();     
+    }
+	</script>
+</body>
+</html>
+
+			

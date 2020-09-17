@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../resources/img/common/ico_favicon.ico"> 
+
+	<title>SKTELINK</title>
+	
+	<script src="../resources/js/ui.init.js"></script>
+	<link rel="stylesheet" href="../resources/css/ui.base.css">
+	<style>
+	.slotmachine .ui-slot{position:relative; overflow:hidden; width:200px; height:400px; display:inline-block; margin:0 10px}
+	.slotmachine .ui-slot-wrap{position:absolute; top:0; left:0; width:100%; overflow:hidden;}
+	.slotmachine .ui-slot-item{width:100%; height:200px; float:left}
+
+	.slotmachine .ui-slot li{font-size:50px; text-align:center; line-height:200px; background:url(/resources/img/dummy/bg_slot.png) no-repeat}
+	.slotmachine .ui-slot li.n1{background-position:0 0}
+	.slotmachine .ui-slot li.n2{background-position:-200px 0}
+	.slotmachine .ui-slot li.n3{background-position:-400px 0}
+	.slotmachine .ui-slot li.n4{background-position:0 -200px}
+	.slotmachine .ui-slot li.n5{background-position:-200px -200px}
+	.slotmachine .ui-slot li.n6{background-position:-400px -200px}
+	.slotmachine .ui-slot li.n7{background-position:0 -400px}
+	.slotmachine .ui-slot li.n8{background-position:-200px -400px}
+	.slotmachine .ui-slot li.n9{background-position:-400px -400px}
+
+	.man li{width:200px; height:300px; background:url(/resources/img/dummy/man.png) no-repeat}
+	.man li.n1{background-position:0 0}
+	.man li.n2{background-position:0 -300px}
+	.man li.n3{background-position:0 -600px}
+	.man li.n4{background-position:0 -900px}
+	.man li.n5{background-position:0 -1200px}
+	.man li.n6{background-position:0 -1500px}
+	.man li.n7{background-position:0 -1800px}
+	.man li.n8{background-position:0 -2100px}
+	.man li.n9{background-position:0 -2400px}
+	.man li.n10{background-position:0 -2700px}
+
+	.w li{width:200px; height:300px; background:url(/resources/img/dummy/w.png) no-repeat}
+	.w li.n1{background-position:0 0}
+	.w li.n2{background-position:0 -300px}
+	.w li.n3{background-position:0 -600px}
+	.w li.n4{background-position:0 -900px}
+	.w li.n5{background-position:0 -1200px}
+	.w li.n6{background-position:0 -1500px}
+	.w li.n7{background-position:0 -1800px}
+	.w li.n8{background-position:0 -2100px}
+	.w li.n9{background-position:0 -2400px}
+	.w li.n10{background-position:0 -2700px}
+
+	.p3 .ui-cardlist-item.hero:after{display:none;}
+	.p3 .ui-cardlist-item p,
+	.p3 .ui-cardlist-item strong{opacity:0}
+	.p3.box{position:relative; opacity:0;}
+	.p3 .title{line-height:2; padding:50px 20px; font-size:2rem; text-align:center; width:100%;
+	-webkit-transition:background 0.5s ease, color 0.5s ease; 
+	-moz-transition:background 0.5s ease, color 0.5s ease; 
+	-o-transition:background 0.5s ease, color 0.5s ease; 
+	transition:background 0.5s ease, color 0.5s ease;}
+	.p3.on .title,
+	.p3 .title:hover{background:#111; color:#fff;}
+	.p3 .ui-cardlist-item{width:200px; border-radius:4px; overflow:hidden; box-shadow:0 0 10px rgba(0,0,0,0.2); padding:0}
+	.p3 .ui-cardlist-item strong{display:block; width:100%; padding:10px; text-align:center; font-size:1.8rem; letter-spacing:0.5rem}
+	.p3 .ui-cardlist-item p{padding:10px 10px 20px; color:#777}
+	.p3 .ui-slot{display:inline-block; margin:0}
+	</style>
+</head>
+
+<body class="page-form">
+	<div class="base-skip" id="baseSkip"></div>
+	<div class="base-modal" id="baseModal"></div>
+	<div class="base-wrapper">
+		<header class="base-header" id="baseHeader"></header>
+		<main class="base-main" id="baseMain" role="main">
+			<div class="base-content">
+				<div class="base-tit">
+					<h1 class="h1">Slot</h1>
+				</div>
+				
+				<section class="slotmachine" style="overflow:hidden; width:700px; border-radius:50px; border:10px solid #fc0405; text-align:center">
+					<div class="ui-slot" id="uiSlot1">
+						<ul class="ui-slot-wrap">
+						<li class="ui-slot-item n1"></li>
+						<li class="ui-slot-item n2"></li>
+						<li class="ui-slot-item n3"></li>
+						<li class="ui-slot-item n4"></li>
+						<li class="ui-slot-item n5"></li>
+						<li class="ui-slot-item n6"></li>
+						<li class="ui-slot-item n7"></li>
+						<li class="ui-slot-item n8"></li>
+						<li class="ui-slot-item n9"></li> 
+						</ul>
+					</div>
+					
+					<div class="ui-slot" id="uiSlot2">
+						<ul class="ui-slot-wrap">
+						<li class="ui-slot-item n1"></li>
+						<li class="ui-slot-item n2"></li>
+						<li class="ui-slot-item n3"></li>
+						<li class="ui-slot-item n4"></li>
+						<li class="ui-slot-item n5"></li>
+						<li class="ui-slot-item n6"></li>
+						<li class="ui-slot-item n7"></li>
+						<li class="ui-slot-item n8"></li>
+						<li class="ui-slot-item n9"></li>
+						</ul>
+					</div>
+					
+					<div class="ui-slot" id="uiSlot3">
+						<ul class="ui-slot-wrap">
+						<li class="ui-slot-item n1"></li>
+						<li class="ui-slot-item n2"></li>
+						<li class="ui-slot-item n3"></li>
+						<li class="ui-slot-item n4"></li>
+						<li class="ui-slot-item n5"></li>
+						<li class="ui-slot-item n6"></li>
+						<li class="ui-slot-item n7"></li>
+						<li class="ui-slot-item n8"></li>
+						<li class="ui-slot-item n9"></li>
+						</ul>
+					</div>
+				</section>
+				<div id="slotResult" style="overflow:hidden; width:700px; padding:20px; border-radius:50px; background:#fc0405; color:#fff; font-size:30px; text-align:center">
+					과연~ 행운이...
+				</div>
+				<div class="btn-wrap" style="text-align:center; width:700px; padding:20px;">
+					<button type="button" class="btn-base" id="start"><span>start</span></button>
+					<button type="button" class="btn-base" id="stop"><span>stop</span></button>
+					<button type="button" class="btn-base" id="allstop"><span>all stop</span></button>
+				</div>
+
+				<div class="p3 box">
+					<div class="ui-cardlist" role="list" id="uiListcard">
+						<ul class="ui-cardlist-wrapper">
+							
+							<li class="ui-cardlist-item n1" role="listitem">
+								<div class="ui-slot man" id="muiSlot1">
+									<ul class="ui-slot-wrap">
+									<li class="ui-slot-item n1"></li>
+									<li class="ui-slot-item n2"></li>
+									<li class="ui-slot-item n3"></li>
+									<li class="ui-slot-item n4"></li>
+									<li class="ui-slot-item n5"></li>
+									<li class="ui-slot-item n6"></li>
+									<li class="ui-slot-item n7"></li>
+									<li class="ui-slot-item n8"></li>
+									<li class="ui-slot-item n9"></li>
+									<li class="ui-slot-item n10"></li> 
+									</ul>
+								</div>
+								<strong>조현민 차장</strong>
+							</li>
+							<li class="ui-cardlist-item n3" role="listitem">
+								<div class="ui-slot w" id="wuiSlot3">
+									<ul class="ui-slot-wrap">
+									<li class="ui-slot-item n1"></li>
+									<li class="ui-slot-item n2"></li>
+									<li class="ui-slot-item n3"></li>
+									<li class="ui-slot-item n4"></li>
+									<li class="ui-slot-item n5"></li>
+									<li class="ui-slot-item n6"></li>
+									<li class="ui-slot-item n7"></li>
+									<li class="ui-slot-item n8"></li>
+									<li class="ui-slot-item n9"></li>
+									<li class="ui-slot-item n10"></li> 
+									</ul>
+								</div>
+								<strong>안소명 과장</strong>
+							</li>
+							<li class="ui-cardlist-item hero" role="listitem">
+								<button type="button" class="title" id="allstop2">
+								2017<br>
+								SI<br>PROJECT<br>HEROES
+								</button>
+							</li>
+							<li class="ui-cardlist-item n2" role="listitem">
+								<div class="ui-slot man" id="muiSlot2">
+									<ul class="ui-slot-wrap">
+									<li class="ui-slot-item n1"></li>
+									<li class="ui-slot-item n2"></li>
+									<li class="ui-slot-item n3"></li>
+									<li class="ui-slot-item n4"></li>
+									<li class="ui-slot-item n5"></li>
+									<li class="ui-slot-item n6"></li>
+									<li class="ui-slot-item n7"></li>
+									<li class="ui-slot-item n8"></li>
+									<li class="ui-slot-item n9"></li>
+									<li class="ui-slot-item n10"></li> 
+									</ul>
+								</div>
+								<strong>윤건식 과장</strong>
+							</li>
+							
+							
+							<li class="ui-cardlist-item n2" role="listitem">
+								<div class="ui-slot w" id="wuiSlot2">
+									<ul class="ui-slot-wrap">
+									<li class="ui-slot-item n1"></li>
+									<li class="ui-slot-item n2"></li>
+									<li class="ui-slot-item n3"></li>
+									<li class="ui-slot-item n4"></li>
+									<li class="ui-slot-item n5"></li>
+									<li class="ui-slot-item n6"></li>
+									<li class="ui-slot-item n7"></li>
+									<li class="ui-slot-item n8"></li>
+									<li class="ui-slot-item n9"></li>
+									<li class="ui-slot-item n10"></li> 
+									</ul>
+								</div>
+								<strong>황혜원 과장</strong>
+							</li>
+							<li class="ui-cardlist-item n1" role="listitem">
+								<div class="ui-slot w" id="wuiSlot1">
+									<ul class="ui-slot-wrap">
+									<li class="ui-slot-item n1"></li>
+									<li class="ui-slot-item n2"></li>
+									<li class="ui-slot-item n3"></li>
+									<li class="ui-slot-item n4"></li>
+									<li class="ui-slot-item n5"></li>
+									<li class="ui-slot-item n6"></li>
+									<li class="ui-slot-item n7"></li>
+									<li class="ui-slot-item n8"></li>
+									<li class="ui-slot-item n9"></li>
+									<li class="ui-slot-item n10"></li> 
+									</ul>
+								</div>
+								<strong>김미혜 과장</strong>
+							</li>
+							<li class="ui-cardlist-item n3" role="listitem">
+								<div class="ui-slot man" id="muiSlot3">
+									<ul class="ui-slot-wrap">
+									<li class="ui-slot-item n1"></li>
+									<li class="ui-slot-item n2"></li>
+									<li class="ui-slot-item n3"></li>
+									<li class="ui-slot-item n4"></li>
+									<li class="ui-slot-item n5"></li>
+									<li class="ui-slot-item n6"></li>
+									<li class="ui-slot-item n7"></li>
+									<li class="ui-slot-item n8"></li>
+									<li class="ui-slot-item n9"></li>
+									<li class="ui-slot-item n10"></li> 
+									</ul>
+								</div>
+								<strong>곽규채 대리</strong>
+							</li>
+							
+							
+							<li class="ui-cardlist-item n4" role="listitem">
+								<div class="ui-slot man" id="muiSlot4">
+									<ul class="ui-slot-wrap">
+									<li class="ui-slot-item n1"></li>
+									<li class="ui-slot-item n2"></li>
+									<li class="ui-slot-item n3"></li>
+									<li class="ui-slot-item n4"></li>
+									<li class="ui-slot-item n5"></li>
+									<li class="ui-slot-item n6"></li>
+									<li class="ui-slot-item n7"></li>
+									<li class="ui-slot-item n8"></li>
+									<li class="ui-slot-item n9"></li>
+									<li class="ui-slot-item n10"></li> 
+									</ul>
+								</div>
+								<strong>이성룡 사원</strong>
+							</li>
+							<li class="ui-cardlist-item n4" role="listitem">
+								<div class="ui-slot w" id="wuiSlot4">
+									<ul class="ui-slot-wrap">
+									<li class="ui-slot-item n1"></li>
+									<li class="ui-slot-item n2"></li>
+									<li class="ui-slot-item n3"></li>
+									<li class="ui-slot-item n4"></li>
+									<li class="ui-slot-item n5"></li>
+									<li class="ui-slot-item n6"></li>
+									<li class="ui-slot-item n7"></li>
+									<li class="ui-slot-item n8"></li>
+									<li class="ui-slot-item n9"></li>
+									<li class="ui-slot-item n10"></li> 
+									</ul>
+								</div>
+								<strong>김혜진 주임</strong>
+							</li>
+							<li class="ui-cardlist-item n5" role="listitem">
+								<div class="ui-slot man" id="muiSlot5">
+									<ul class="ui-slot-wrap">
+									<li class="ui-slot-item n1"></li>
+									<li class="ui-slot-item n2"></li>
+									<li class="ui-slot-item n3"></li>
+									<li class="ui-slot-item n4"></li>
+									<li class="ui-slot-item n5"></li>
+									<li class="ui-slot-item n6"></li>
+									<li class="ui-slot-item n7"></li>
+									<li class="ui-slot-item n8"></li>
+									<li class="ui-slot-item n9"></li>
+									<li class="ui-slot-item n10"></li> 
+									</ul>
+								</div>
+								<strong>송우진 사원</strong>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</main>
+		<footer class="base-footer" id="baseFooter"></footer>
+	</div>
+	
+	<script src="../resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../resources/js/ui.plugins.js"></script>
+	<script src="../resources/js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+
+			$plugins.uiSlot({ id: 'uiSlot1', current: 1, auto: false, single:false });
+			$plugins.uiSlot({ id: 'uiSlot2', current: 4, auto: false, single:false });
+			$plugins.uiSlot({ id: 'uiSlot3', current: 2, auto: false, single:false });
+			
+			var n = 1,
+				win = [];
+			
+			$('#start').click(function(){
+				n = 1;
+				win = [];
+				$plugins.uiSlotStart({ id: 'uiSlot1'});
+				$plugins.uiSlotStart({ id: 'uiSlot2'});
+				$plugins.uiSlotStart({ id: 'uiSlot3'}); 
+			});
+			$('#stop').click(function(){
+				if (n < 4) {
+					$plugins.uiSlotStop({ id: 'uiSlot' + n, callback: slotMCallback });
+					n = n + 1;
+				}
+			});
+			$('#allstop').click(function(){
+				win = [];
+				$plugins.uiSlotStop({ id: 'uiSlot1', callback: slotMCallback });
+				$plugins.uiSlotStop({ id: 'uiSlot2', callback: slotMCallback });
+				$plugins.uiSlotStop({ id: 'uiSlot3', callback: slotMCallback }); 
+			});
+
+			function slotMCallback(v){
+				win.push(v);
+				var lucky = 0;
+				
+				if (win.length === 3) {
+					(win[0] === win[1]) ? lucky = lucky + 1 : '';
+					(win[0] === win[2]) ? lucky = lucky + 1 : '';
+					(win[1] === win[2]) ? lucky = lucky + 1 : '';
+					
+					switch(lucky){
+					case 0: $('#slotResult').text('꽝입니다 ㅎㅎㅎ');
+					break;
+					case 1: $('#slotResult').text('아깝네요~~~');
+					break;
+					case 3: $('#slotResult').text('축하합니다.');
+					break;
+					}
+				}
+			}
+
+			$('.box').stop().delay(800).animate({
+				opacity: 1
+			},700);
+			
+			$plugins.uiCardList({ id:'uiListcard', margin:10, response:true });
+			//$plugins.uiCardListRow({ id:'uiListcard' });  추가
+			
+			$plugins.uiSlot({ id: 'muiSlot1', current:1, auto:true });
+			$plugins.uiSlot({ id: 'muiSlot2', current:3, auto:true });
+			$plugins.uiSlot({ id: 'muiSlot3', current:6, auto:true });
+			$plugins.uiSlot({ id: 'muiSlot4', current:8, auto:true });
+			$plugins.uiSlot({ id: 'muiSlot5', current:10, auto:true });
+			
+			$plugins.uiSlot({ id: 'wuiSlot1', current:1, auto:true });
+			$plugins.uiSlot({ id: 'wuiSlot2', current:3, auto:true });
+			$plugins.uiSlot({ id: 'wuiSlot3', current:6, auto:true });
+			$plugins.uiSlot({ id: 'wuiSlot4', current:8, auto:true }); 
+			
+
+			var n = 1,
+				j = 1,
+				m = [],
+				w = [];
+			
+			$('#allstop2').on('click',function(){
+				if (n === 1 && j === 1) {
+					$('body').addClass('on');
+					slotstop(n);
+					slotstop2(j);
+				} else {
+					$('body').removeClass('on');
+					n = 1;
+					j = 1;
+					m = [],
+					w = [];
+				}
+			});
+			function slotstop(n){
+				if (n < 6) {
+					setTimeout(function(){
+						$plugins.uiSlotStop({ id: 'muiSlot' + n, callback: slotCallback });
+						$('#muiSlot' + n).closest('.ui-cardlist-item').addClass('ok');
+						$('.ui-cardlist-item.n'+ n).find('strong').stop().animate({
+							opacity: 1
+						},500);
+						$('.ui-cardlist-item.n'+ n).find('p').stop().animate({
+							opacity: 1
+						},500);
+					},100);
+					
+				}
+			}
+			function slotstop2(j){
+				if (j < 5) {
+					setTimeout(function(){
+						$plugins.uiSlotStop({ id: 'wuiSlot' + j, callback: slotCallback2 });
+						$('#wuiSlot' + j).closest('.ui-cardlist-item').addClass('ok');
+						$('.ui-cardlist-item.n'+ j).find('strong').stop().animate({
+							opacity: 1
+						},500);
+						$('.ui-cardlist-item.n'+ j).find('p').stop().animate({
+							opacity: 1
+						},500);
+					},100);
+				}
+			}
+
+			function slotCallback(v){
+				if (n < 6 && n > 1) {
+					var len = m.length;
+					for (var i = 0; i < len ; i++) {
+						if (m[i] === v) {
+							slotstop(n);
+							break;
+						} else { 
+							if(i === len - 1){
+								m.push(v);
+								n = n + 1;
+								if (n < 6) {
+									slotstop(n);
+								}
+							}
+						}
+					}
+				} else if(n === 1) {
+					m.push(v);
+					n = n + 1;
+					slotstop(n);
+				}
+			}
+			function slotCallback2(v){
+				if (j < 5 && j > 1) {
+					var len = w.length;
+					for (var i = 0; i < len ; i++) {
+						if (w[i] === v) {
+							slotstop2(j);
+							break;
+						} else { 
+							if(i === len - 1){
+								w.push(v);
+								j = j + 1;
+								if (j < 5) {
+									slotstop2(j);
+								}
+							}
+						}
+					}
+				} else if(j === 1) {
+					w.push(v);
+					j = j + 1;
+					slotstop2(n);
+				}
+			}
+			
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

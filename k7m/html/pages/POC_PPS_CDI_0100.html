@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico">
+
+	<title>충전내역 조회 | SK 7mobile</title>
+
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+
+<body>
+	<div class="skip" id="skip"></div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+			<div class="contents-wrap">
+				<section>
+                    <h1 class="hide">나의 선불 서비스</h1>
+				    <h2 class="h2">충전내역 조회</h2>
+                    <div class="banner-area">
+                        <img src="../images/desktop/@top_banner1.png" alt="갤럭시A8 2018 2만원대 요금제에도 최대 지원금, 준프리미엄">
+                    </div>
+                </section>
+                <!-- 180305 :class 제거 -->
+                <section>
+                    <div class="ui-tab item2" id="chargeTab">
+                        <div class="ui-tab-btns">
+                            <button type="button" class="ui-tab-btn"><i>홈페이지충전조회</i></button>
+                            <button type="button" class="ui-tab-btn"><i>홈페이지 외 충전</i></button>
+                        </div>
+
+                        <div class="ui-tab-pnls">
+                            <section class="ui-tab-pnl">
+                                <h2 class="hide">홈페이지충전조회</h2>
+                                <div class="inner">
+                                    <ul class="tbl-wrap"><!-- 180315 : form-wrap 클래스 제거 -->
+                                        <li class="style">
+                                            <div class="dt"><label for="rdo_charge1">충전종류</label></div>
+                                            <div class="dd">
+                                                <fieldset class="div-wrap" role="group">
+                                                    <legend>충전종류</legend>
+                                                        <input type="radio" name="rdo_charge1" id="rdo_charge1-1" checked="checked" title="전체">
+                                                        <label class="lb-radio checked" for="rdo_charge1-1"><span>전체</span></label>
+                                                        <input type="radio" name="rdo_charge1" id="rdo_charge1-2" title="일반충전">
+                                                        <label class="lb-radio" for="rdo_charge1-2"><span>일반충전</span></label>
+                                                        <input type="radio" name="rdo_charge1" id="rdo_charge1-3" title="데이터충전">
+                                                        <label class="lb-radio" for="rdo_charge1-3"><span>데이터충전</span></label>
+                                                        <input type="radio" name="rdo_charge1" id="rdo_charge1-4" title="데이터전환">
+                                                        <label class="lb-radio" for="rdo_charge1-4"><span>데이터전환</span></label>
+                                                        <input type="radio" name="rdo_charge1" id="rdo_charge1-5" title="받은선물">
+                                                        <label class="lb-radio" for="rdo_charge1-5"><span>받은 선물</span></label>
+                                                </fieldset>
+                                            </div>
+                                        </li>
+                                        <li class="style">
+                                            <!-- 180305 : 텍스트 수정 -->
+                                            <div class="dt">조회기간</div>
+                                            <div class="dd date-wrap">
+                                                <div class="mgb-s">
+                                                    <!-- 180227 : button i태그 추가 -->
+                                                    <button type="button" class="btn-inbase"><i>1주</i></button>
+                                                    <button type="button" class="btn-inbase"><i>1개월</i></button>
+                                                    <button type="button" class="btn-inbase"><i>3개월</i></button>
+                                                </div>
+                                                <div>
+                                                    <input type="text" class="date inputbox-s" placeholder="2018-01-01" id="datepicker1">
+                                                    <label for="datepicker1" class="datepicker"><span class="hide">충전 기간 조회 시작날짜</span></label> 
+                                                    <em class="swung">~</em> 
+                                                    <input type="text" class="date inputbox-s" placeholder="2018-02-01" id="datepicker2">
+                                                    <label for="datepicker2" class="datepicker"><span class="hide">충전 기간 조회 종료날짜</span></label>
+                                                    <!-- 180227 : button i태그 추가 -->
+                                                    <button type="button" class="btn-inquiry"><i>조회</i></button>
+                                                    <span class="sub-txt">* 최대 3개월까지 조회 가능합니다.</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h3 class="h3tit">충전내역</h3>
+                                <!-- 180315 : 전체적인 영역 수정 -->
+                                <table class="tbl-base tbl-only-m">
+                                    <caption>충전내역</caption>
+                                    <colgroup>
+                                        <col class="cg1">
+                                        <col class="cg2">
+                                        <col class="cg3 pay">
+                                        <col class="cg4">
+                                        <col class="cg5 state">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="date">충전일</th>
+                                            <th scope="col" class="type">충전종류</th>
+                                            <th scope="col" class="pay">결제수단</th>
+                                            <th scope="col" class="price">충전/전환 금액(원)</th>
+                                            <th scope="col" class="state">상태</th>
+                                        </tr>
+                                    </thead>                       
+                                    <tbody>
+                                        <tr>
+                                            <td class="date">2017-01-24 <span>11:12:40</span></td>
+                                            <td class="type">일반충전</td>
+                                            <td class="pay">계좌이체</td>
+                                            <td class="price">+10,000  <button type="button" class="cancel">[취소] </button></td>
+                                            <td class="state">완료</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="date">2017-01-24 <span>11:12:40</span></td>
+                                            <td class="type">일반충전</td>
+                                            <td class="pay">계좌이체</td>
+                                            <td class="price">+10,000  <button type="button" class="cancel">[취소] </button></td>
+                                            <td class="state">완료</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="date">2017-01-24 <span>11:12:40</span></td>
+                                            <td class="type">일반충전</td>
+                                            <td class="pay">계좌이체</td>
+                                            <td class="price">+10,000</td>
+                                            <td class="state">완료</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="date">2017-01-24 <span>11:12:40</span></td>
+                                            <td class="type">일반충전</td>
+                                            <td class="pay">계좌이체</td>
+                                            <td class="price">+10,000</td>
+                                            <td class="state">완료</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <strong class="bot-sub-text fc-gray">* 당일 충전에 한하여 취소가 가능합니다</strong>
+                                <!-- //180315 : 전체적인 영역 수정 -->
+                                <div class="paging">
+                                    <a class="direction" href="#">맨처음</a>
+                                    <a class="direction prev" href="#">이전</a>
+                                    <a href="#" class="on">1</a>
+                                    <a href="#">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">4</a>
+                                    <a href="#">5</a>
+                                    <a class="direction next" href="#">다음</a>
+                                    <a class="direction end" href="#">맨뒤</a>
+                                </div>
+                            </section>
+                            <section class="ui-tab-pnl">
+                                <h2 class="hide">홈페이지 외 충전</h2>
+                                <p class="txt-price only-d"><strong class="fc-red">* 전화/매장 충전조회는 전일 기준으로만 조회가 가능합니다.(당일 충전내역은 익일 확인 가능합니다.)</strong></p>
+                                <div class="inner">                                    
+                                    <ul class="tbl-wrap"><!-- 180315 : form-wrap 클래스 제거 -->
+                                        <li class="style">
+                                            <div class="dt"><label for="rdo_charge2">충전종류</label></div>
+                                            <div class="dd">
+                                                <fieldset class="div-wrap" role="group">
+                                                    <legend>충전종류</legend>
+                                                        <input type="radio" name="rdo_charge2" id="rdo_charge2-1" checked="checked" title="전체">
+                                                        <label class="lb-radio checked" for="rdo_charge2-1"><span>전체</span></label>
+                                                        <input type="radio" name="rdo_charge2" id="rdo_charge2-2" title="일반충전">
+                                                        <label class="lb-radio" for="rdo_charge2-2"><span>일반충전</span></label>
+                                                        <input type="radio" name="rdo_charge2" id="rdo_charge2-3" title="데이터충전">
+                                                        <label class="lb-radio" for="rdo_charge2-3"><span>데이터충전</span></label>
+                                                        <input type="radio" name="rdo_charge2" id="rdo_charge2-4" title="데이터전환">
+                                                        <label class="lb-radio" for="rdo_charge2-4"><span>데이터전환</span></label>
+                                                        <input type="radio" name="rdo_charge2" id="rdo_charge2-5" title="받은 선물">
+                                                        <label class="lb-radio" for="rdo_charge2-5"><span>받은 선물</span></label>
+                                                </fieldset>
+                                            </div>
+                                        </li>
+                                        <li class="style">
+                                            <!-- 180305 : 텍스트 수정 -->
+                                            <div class="dt">조회기간</div>
+                                            <div class="dd date-wrap">
+                                                <div class="mgb-s">
+                                                    <!-- 180227 : button i태그 추가 -->
+                                                    <button type="button" class="btn-inbase"><i>1주</i></button>
+                                                    <button type="button" class="btn-inbase"><i>1개월</i></button>
+                                                    <button type="button" class="btn-inbase"><i>3개월</i></button>
+                                                </div>
+                                                <div>
+                                                    <input type="text" class="date inputbox-s" placeholder="2018-01-01" id="datepicker3"> 
+                                                    <label for="datepicker3" class="datepicker"><span class="hide">충전 기간 조회 시작날짜</span></label> 
+                                                    <em class="swung">~</em> 
+                                                    <input type="text" class="date inputbox-s" placeholder="2018-02-01" id="datepicker4">
+                                                    <label for="datepicker4" class="datepicker"><span class="hide">충전 기간 조회 종료날짜</span></label>
+                                                    <!-- 180227 : button i태그 추가 -->
+                                                    <button type="button" class="btn-inquiry"><i>조회</i></button>
+                                                    <span class="sub-txt">* 최대 3개월까지 조회 가능합니다.</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h3 class="h3tit">충전내역</h3>
+                                <!-- 180315 : 테이블 수정  -->
+                                <table class="tbl-base tbl-only-m">
+                                    <caption>충전내역</caption>
+                                    <colgroup>
+                                        <col class="cg1">
+                                        <col class="cg3 pay">
+                                        <col class="cg4">
+                                        <col class="cg5 state">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">충전일</th>
+                                            <th scope="col">결제수단</th>
+                                            <th scope="col">충전/전환 금액(원)</th>
+                                            <th scope="col" class="state">상태</th>
+                                        </tr>
+                                    </thead>                       
+                                    <tbody>
+                                        <tr>
+                                            <td class="date">2017-01-24 <span>11:12:40</span></td>
+                                            <td>가상계좌 입금</td>
+                                            <td class="price">+100,000</td>
+                                            <td class="state">완료</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="date">2017-01-24 <span>11:12:40</span></td>
+                                            <td>선불(PPS)카드충전</td>
+                                            <td class="price">-100,000</td>
+                                            <td class="state">완료</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!-- // 180315 : 테이블 수정  -->
+                                <div class="paging">
+                                    <a class="direction" href="#">맨처음</a>
+                                    <a class="direction prev" href="#">이전</a>
+                                    <a href="#" class="on">1</a>
+                                    <a href="#">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">4</a>
+                                    <a href="#">5</a>
+                                    <a class="direction next" href="#">다음</a>
+                                    <a class="direction end" href="#">맨뒤</a>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+				</section>
+			</div><!-- .contents-wrap -->
+		</main>
+        <div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+
+	<script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			$plugins.uiTab({ id:'chargeTab', current:0}); // current : 0 == 홈페이지 충전조회 , current : 1 == 홈페이지 외 충전
+
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

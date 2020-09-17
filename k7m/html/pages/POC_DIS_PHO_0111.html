@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico">
+	<title>휴대폰 목록 - 다이렉트샵 | SK 7mobile</title>
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+
+<body>
+	<div class="skip" id="skip"></div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+        <!-- 비교하기 팝업 -->
+        <div class="base-layer" id="baseLayer">
+            <section class="ui-modal modal-cp-product" id="cpProductPop" role="dialog" aria-hidden="true">
+                <div class="ui-modal-wrap">
+                    <header class="ui-modal-tit">
+                        <h1>휴대폰 및 요금제 비교하기</h1>
+                        <button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id: 'cpProductPop', endfocus: 'btnCpProduct' });">닫기</button>
+                    </header>
+                    <div class="ui-modal-cont">
+                        <section class="sec1">
+                            <div class="title">
+                                <h2>선택한 휴대폰</h2>
+                                <span>총 <em>3</em>개</span>
+                            </div>
+                            <div class="cp-product">
+                                <div class="item pro1">
+                                    <img src="../images/desktop/@sample_product.png" alt="폰이미지 샘플">
+                                    <div class="txt-wrap">
+                                        <em class="pd-made">SAMSUNG</em>
+                                        <strong class="model-name">RE_갤럭시S7엣지_8G</strong>
+                                        <a href="#none" class="btn btn-cp">구매하기</a>
+                                    </div>
+                                    <button class="btn-cp-close">삭제하기</button>
+                                </div>
+                                <div class="item pro2">
+                                    <img src="../images/desktop/@sample_product.png" alt="폰이미지 샘플">
+                                    <div class="txt-wrap">
+                                        <em class="pd-made">SAMSUNG</em>
+                                        <strong class="model-name">RE_갤럭시S7엣지_16G</strong>
+                                        <a href="#none" class="btn btn-cp">구매하기</a>
+                                    </div>
+                                    <button class="btn-cp-close">삭제하기</button>
+                                </div>
+                                <div class="item pro3">
+                                    <img src="../images/desktop/@sample_product.png" alt="폰이미지 샘플">
+                                    <div class="txt-wrap">
+                                        <em class="pd-made">SAMSUNG</em>
+                                        <strong class="model-name">RE_갤럭시S7엣지_32G</strong>
+                                        <a href="#none" class="btn btn-cp">구매하기</a>
+                                    </div>
+                                    <button class="btn-cp-close">삭제하기</button>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="sec2">
+                            <h3 class="h3tit">월 납부금액 비교</h3>
+                            <span class="sub-txt">※ 24개월 약정 및 할부 기준 시 예상납부 금액</span>
+                            <table class="tbl-base th-line">
+                                <caption>월 납부금액 비교</caption>
+                                <colgroup>
+                                    <col style="width:38%">
+                                    <col style="width:auto">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">요금제</th>
+                                        <td>
+                                            <select class="selectbox" title="요금제선택" id="sltPlan">
+                                                <option>실속 LTE 요금제 2G</option>
+                                                <option>실속 LTE 요금제 4G</option>
+                                                <option>실속 LTE 요금제 6G</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">기본제공량</th>
+                                        <td class="data-box">
+                                            <span class="data1">음성 <em>100분</em></span>
+                                            <span class="data2">데이터 <em>2GB</em></span>
+                                            <span class="data3">문자<em>200건</em></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">월 예상납부금액 (A+B)</th>
+                                        <td class="fc-red">32,900원</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">월 휴대폰 할부금 (A)</th>
+                                        <td class="fc-red">32,900원</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">월 통신 요금 (B)</th>
+                                        <td class="fc-red">32,900원</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+
+                        <section class="sec3">
+                            <h3 class="h3tit">제품스펙</h3>
+                            <table class="tbl-base th-line">
+                                <caption>제품 스펙</caption>
+                                <colgroup>
+                                    <col style="width:28%">
+                                    <col style="width:auto">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">요금제</th>
+                                        <td>
+                                            <p class="color-box">
+                                                <span class="gray">그레이</span>
+                                                <span class="pink">핑크</span>
+                                                <span class="rosegold">로즈골드</span>
+                                                <span class="white">화이트</span>
+                                                <span class="gold">골드</span>
+                                                <span class="coralblue">코랄블루</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">네트워크 종류</th>
+                                        <td>LTE</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">카메라</th>
+                                        <td>후면 듀얼 1200만화소, 전면 500만화소</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">디스플레이</th>
+                                        <td>5.5인치, 2560 x 1440 dual edge Super AMOLED</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">메모리</th>
+                                        <td>5.5인치, 2560 x 1440 dual edge Super AMOLED</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">운영체제</th>
+                                        <td>안드로이드 마시멜로 6.0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">배터리</th>
+                                        <td>3,600mAh</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </div> 
+        <button type="button" class="btn-cp ui-laypop" id="btnCpProduct" aria-haspopup="true" style="width:200px;height:60px;text-align:center;border:1px solid black;margin:30px 0;">비교하기</button>
+		<footer class="footer" id="footer"></footer>
+	</div>
+
+	<script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			$plugins.uiTab({ id:'phoneMenuTab', current:0});
+            $plugins.uiForm({ id: 'chk-phone1', all: true, callback: allCheckCallback}); // 바른폰 제조사 선택
+            $plugins.uiForm({ id: 'chk-phone2', all: true, callback: allCheckCallback}); // LTE 제조사 선택
+            $plugins.uiForm({ id: 'chk-phone3', all: true, callback: allCheckCallback}); // 3G 제조사 선택
+            function allCheckCallback(v){}
+           
+           var cpProductSlide = $('.cp-product');
+            $('.btn-cp').on('click', function(){
+                $plugins.uiModal({ 
+                    id : 'cpProductPop',
+                    width : 975,
+                    callback : function(){
+                        cpProductSlide.owlCarousel({
+                            items: 1,
+                            loop: false,
+                            nav: true,
+                            autoplay:false,
+                            item:1
+                        });
+                    }
+                })
+            })
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

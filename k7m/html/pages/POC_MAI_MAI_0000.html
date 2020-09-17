@@ -1,0 +1,925 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico"> 
+
+	<title>SK 7mobile</title>
+	
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+
+<body>
+	<div class="skip" id="skip">
+		<ul>
+			<li><a href="#main">본문 바로가기</a></li>
+		</ul>
+	</div>
+	<div class="base-layer" id="baseLayer">
+		<!-- 범용공지팝업 -->
+		<section class="ui-modal" id="layerPopup" role="dialog" aria-hidden="true">
+            <div class="ui-modal-wrap">
+                <header class="ui-modal-tit">
+                    <h1>[서비스점검] 도로명주소 검색 서비스 점검으로 인한 일시중단 안내</h1>
+                    <button type="button" class="ui-modal-close btn-close">닫기</button>
+                </header>
+                <div class="ui-modal-cont">
+					<div class="txt-gray-box">
+						<p style="min-height:200px">Contents Area</p>
+					</div>
+					<div class="ui-cookie btn-cookie-wrap">
+						<input type="checkbox" class="cookie" id="cookie2">
+						<label class="lb-check sck" for="cookie2"><span>오늘 하루 그만 보기</span></label>
+						<button type="button" class="btn btn-gray-m" onclick="$plugins.uiModalClose({ id:'layerPopup' });"><i>닫기</i></button>
+					</div>
+				</div><!-- //.ui-modal-cont -->
+			</div>
+		</section>
+
+		<!-- 기변추천안내 -->
+		<section class="ui-modal" id="changePhoneInfo" role="dialog" aria-hidden="true">
+            <div class="ui-modal-wrap">
+                <header class="ui-modal-tit">
+                    <h1>기변추천안내</h1>
+                    <button type="button" class="ui-modal-close btn-close">닫기</button>
+                </header>
+                <div class="ui-modal-cont">
+					<div class="info-box">
+						<p>010--55**-96** 회선 고객님만을 위한<br>SK 7mobile의 기변 추천안내</p>
+						<div class="product-info">
+							<a href="#none">
+								<em class="tag t4">기변추천</em>
+								<img src="../images/desktop/@sample_product.png" alt="폰이미지샘플">
+								<div class="txt-wrap">
+									<dl>
+										<dt>RE갤럭시S732G</dt>
+										<dd>
+											<span class="sub-txt1">한정수량 역대 최저가</span>
+											<em class="price">할부금 <strong>1,000</strong>원/월</em>
+											<span class="sub-txt2">음성: 120분, 데이터: 900M,<br> 문자: 무제한<br>[데이터중심300MB_LTE]</span>
+											<span class="monthly-price">월 예상납부금액: <strong>50,000</strong>원/월</span>
+										</dd>
+									</dl>
+								</div>
+							</a>
+						</div>
+						<div class="center-info">
+							<h3>기변센터 안내</h3>
+							<div class="info-tel">
+								<span>가입 및 개통문의</span>
+								<a href="tel:15993508" class="tel">1599-3508</a>(유료)
+							</div>
+							<p class="info-txt">요금제 변경, 잔여 할부 조회 등<br> 기존 SK7mobile의 일반 상담 문의는<br> <strong>114</strong> 또는 <strong>1599-0999</strong>를<br> 이용해주시기 바랍니다.</p>
+							<p class="info-txt brd-t"><span>평일 10:00~18:00</span><span>휴일 및 공휴일 제외</span></p>
+						</div>
+					</div>
+					<div class="ui-cookie btn-cookie-wrap">
+						<input type="checkbox" class="cookie" id="cookie1">
+						<label class="lb-check sck" for="cookie1"><span>오늘 하루 그만 보기</span></label>
+						<button type="button" class="btn btn-gray-m" onclick="$plugins.uiModalClose({ id:'changePhoneInfo' });"><i>닫기</i></button>
+					</div>
+				</div><!-- //.ui-modal-cont -->
+			</div>
+
+		</section>
+	</div>
+	<div class="wrapper">
+		<div id="topBanner" class="topbanner"></div>
+		<div class="toplink"><a href="#" title="새창" target="_blank"><span>SK Telink 바로가기</span></a></div>
+		<header class="header" id="header"></header>		
+		<main class="main" id="main" role="main">
+			<!-- MOBILE MAIN ONLY -->
+			<div class="only-m m-gnb">
+				<ul>
+					<li><a href="#">다이렉트샵</a></li>
+					<li class="ln1"><a href="#">요금제 &middot; 서비스</a></li>
+					<li class="ln2"><a href="#">혜택 &middot; 이벤트</a></li>
+					<li><a href="#">고객센터</a></li>
+				</ul>
+			</div>
+			<!-- // MOBILE MAIN ONLY -->
+			<!-- #프로모션 영역 -->
+			<div class="main-banner">
+				<div class="promo-banner owl-carousel">
+					<!--  최소 2개 이상 5개 이하, 1개 일때는 loop값 false로 변경할 것, 모바일 이미지 추가  -->
+					<div class="item bnr1">
+						<a href="#" target="_blank" title="새창">
+							<img src="../images/main/@pm_bnr1_m.jpg" class="only-m" alt="이미지문구">
+							<span>이미지 문구</span>
+						</a>
+					</div>
+					<div class="item bnr2">
+						<a href="#" target="_blank" title="새창">
+							<img src="../images/main/@pm_bnr2_m.jpg" class="only-m" alt="선착순 판매 가격 끝판왕 갤럭시 S7엣지 오직2만원 64GB 구매 시 128GB 무료 업그레이드 찬스까지">
+							<span>선착순 판매 가격 끝판왕 갤럭시 S7엣지 오직2만원 64GB 구매 시 128GB 무료 업그레이드 찬스까지</span>
+						</a>
+					</div>
+					<div class="item bnr3">
+						<a href="#" target="_blank" title="새창">
+							<img src="../images/main/@pm_bnr3_m.jpg" class="only-m" alt="이미지문구">
+							<span>이미지 문구</span>
+						</a>
+					</div>
+					<div class="item bnr4">
+						<a href="#" target="_blank" title="새창">
+							<img src="../images/main/@pm_bnr4_m.jpg" class="only-m" alt="이미지문구">
+							<span>이미지 문구</span>
+						</a>
+					</div>
+					<div class="item bnr5">
+						<a href="#" target="_blank" title="새창">
+							<img src="../images/main/@pm_bnr5_m.jpg" class="only-m" alt="이미지문구">
+							<span>이미지 문구</span>
+						</a>
+					</div>
+				</div>
+				<div class="promo-controls">
+					<div class="promo-dots">
+						<div class="owl-dot active"><span>새해맞이 가격혜택</span></div>
+						<div class="owl-dot"><span>선착순 판매</span></div>
+						<div class="owl-dot"><span>매일참여가능</span></div>
+						<div class="owl-dot"><span>특가찬스</span></div>
+						<div class="owl-dot"><span>폴더폰 기획</span></div>
+					</div>
+					<div class="promo-btns">
+						<a class="button promo-banner-stop on">자동롤링 멈춤</a>
+						<a class="button promo-banner-play">자동롤링 시작</a>
+					</div>
+				</div>
+			</div>
+			
+			<!-- #고객지원서비스 영역 -->
+			<div class="main-service">
+				<div class="main-inner">
+					<div class="mainservice-box service-box">
+						<a href="#">
+							<em class="lb-tit">2018년 첫 최대 지원금</em>
+							<span class="img"><img src="../images/main/main_service_img1.png" alt=""></span>
+							<span class="txt">장기우수 고객을 위한 <strong>특별기변전</strong></span>
+						</a>
+					</div>
+					<div class="mainservice-box service-box">
+						<a href="#">
+							<em class="lb-tit">결합상품</em>
+							<span class="img"><img src="../images/main/main_service_img2.png" alt=""></span>
+							<span class="txt">합리적인 소비!<strong>Q6+LG 32인치TV</strong></span>
+						</a>
+					</div>
+					<div class="mainservice-box login-area">
+						<!-- 로그인 전 -->
+						<div class="login-before-area">
+							<div class="login-before1">
+								<span>사용중인 <span class="fc-red">상품/잔여량</span>을<br> 바로 확인하세요!</span>
+								<button type="button" class="btn-login"><span>로그인</span></button>
+							</div>
+							<div class="login-before2">
+								<a href="#">회원가입</a>
+								<a href="#">아이디/비밀번호 찾기</a>
+							</div>
+						</div>
+
+						<!-- 로그인 후 -->
+						<div class="login-after-area" style="display:none">
+							<div class="login-after1">
+								<span class="txt-tit">안녕하세요. <strong>네***</strong>님</span>
+								<span class="lb-box">기변대상고객</span>
+							</div>
+
+							<div class="login-after2">
+								<span class="txt-tit">최근 접속일 : 2018.01.04</span>
+								<button type="button" class="btn-logout"><span>로그아웃</span></button>
+								<!-- <ul>
+									<li>
+										<span class="area-tit">사용중인 요금제</span>
+										<strong class="plan-tit">바른LTE25</strong>
+									</li>
+									<li>
+										<span class="area-tit">11월 청구금액</span>
+										<strong class="plan-tit">바른LTE25</strong>
+									</li>
+								</ul> -->
+							</div>
+						</div>
+
+						<div class="login-area-link">
+							<a href="#" class="la3-1"><span>사용량조회</span></a>
+							<a href="#" class="la3-2"><span>실시간조회</span></a>
+							<a href="#" class="la3-3"><span>요금조회</span></a>
+							<a href="#" class="la3-4"><span>분실신고</span></a>
+						</div>
+						<div class="login-area-event">
+							<a href="#"><span>출석체크</span></a>
+							<a href="#"><span>경품추첨</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- #각종 혜택 -->
+			<div class="main-benefit">
+				<div class="main-inner">
+					<h3>SK7mobile 고객님을 위한 <strong>각종 혜택</strong></h3>
+					<ul>
+						<li class="mb1"><a href="#"><span>7mobile 보험 안내</span></a></li>
+						<li class="mb2"><a href="#"><span>7Point 안내</span></a></li>
+						<li class="mb3"><a href="#"><span>휴대폰결제 서비스 안내</span></a></li>
+						<li class="mb4"><a href="#"><span>제휴카드 할인 안내</span></a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<!-- #이 달의 핫딜 외 -->
+			<div class="main-hotdeal">
+				<div class="main-inner">
+					<h3>지금 가장 <strong>HOT</strong>한 상품입니다.</h3>
+					<div class="hot-items">
+						<ul>
+							<li><!-- 20180323 lb-sub-txt1 마케팅문구 추가  -->
+								<a href="#" class="prd-lb">
+									<span class="lb-img"><img src="../images/main/@h1.png" alt=""></span>
+									<span class="lb-tag type1">핫딜</span>
+									<span class="lb-tit">RE_갤럭시노트5_32G</span>
+									<span class="lb-sub-txt1">한정수량 역대 최저가 한정수량 역대 최저가 한정수량 역대 최저가</span>
+									<span class="lb-price">월<em>12,800</em>원</span>
+									<span class="lb-txt">LTE실속2GB 요금제 기준</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prd-lb">
+									<span class="lb-img"><img src="../images/main/@h2.png" alt=""></span>
+									<span class="lb-tag type2">추천</span>
+									<span class="lb-tit">RE_갤럭시S7_32G</span>
+									<span class="lb-sub-txt1">한정수량 역대 최저가</span>
+									<span class="lb-price">월<em>0</em>원</span>
+									<span class="lb-txt">LTE실속2GB 요금제 기준</span>
+								</a>
+							</li>
+							<!-- 20180329 유심상품 추가  -->
+							<li>
+								<a href="#" class="prd-lb">
+									<span class="lb-img">
+										<dl class="prd-svc">
+											<dt>데이터 제공량</dt>
+											<dd class="prd-data">데이터<br>1.0GB</dd>
+											<dt>음성 제공량</dt>
+											<dd class="prd-voice">통화<br>30분</dd>
+											<dt>문자 제공량</dt>
+											<dd class="prd-sms">문자<br>0건</dd>
+										</dl>
+									</span>
+									<span class="lb-tag type3">유심상품</span>
+									<span class="lb-tit">RE_갤럭시S7_32G</span>
+									<span class="lb-sub-txt1">한정수량 역대 최저가</span>
+									<span class="lb-price">월<em>0</em>원</span>
+									<span class="lb-txt">LTE실속2GB 요금제 기준</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<!-- #테마별 상품 추천 영역 -->
+			<!-- 20180222 각 item마다 a태그 추가 -->
+			<!-- 20180323 prd-sub-txt1 마케팅문구 추가  -->
+			<div class="main-product-banner">
+				<div class="product-banner owl-carousel">
+					<!-- 20180327 유심 요금제 추가  -->
+					<div class="item">						
+						<a href="#">
+							<span class="prd-top-txt">싸게쓰는 USIM 8</span>
+							<span class="prd-img">
+								<dl class="prd-svc">
+									<dt>데이터 제공량</dt>
+									<dd class="prd-data">데이터<br>1.0GB</dd>
+									<dt>음성 제공량</dt>
+									<dd class="prd-voice">통화<br>30분</dd>
+									<dt>문자 제공량</dt>
+									<dd class="prd-sms">문자<br>0건</dd>
+								</dl>
+							</span>
+							<span class="prd-tit">바른LTE유심14</span>
+							<span class="prd-sub-txt1">쓰던 휴대폰 그대로 약정없이 저렴하게<br class="wbr"> 이용하는 USIM 요금제</span>
+							<span class="prd-price">월<em>9,790</em>원</span>
+							<span class="prd-txt">싸게쓰는 USIM 8 요금제 기준</span>
+						</a>
+					</div>
+					<!-- // 20180327 유심 요금제 추가  -->
+
+					<div class="item">
+						<a href="#">
+							<span class="prd-top-txt">구하기 힘든 폴더폰</span>
+							<span class="prd-img"><img src="../images/main/@pd2.png" alt=""></span>
+							<span class="prd-tit">와인스마트3G</span>
+							<span class="prd-sub-txt1">#단순개봉폰#가격은낮추고 #구성폰은그대로#단순개봉폰</span>
+							<span class="prd-price">월<em>0</em>원</span>
+							<span class="prd-txt">바른LTE25요금제 기준</span>
+						</a>
+					</div>
+					<div class="item">
+						<a href="#">
+							<span class="prd-top-txt">#3040남성 #인기폰</span>
+							<span class="prd-img"><img src="../images/main/@pd3.png" alt=""></span>
+							<span class="prd-tit">RE_아이폰7+_32G</span>
+							<span class="prd-sub-txt1">한정수량 역대 최저가</span>
+							<span class="prd-price">월<em>24,790</em>원</span>
+							<span class="prd-txt">바른LTE25요금제 기준</span>
+						</a>
+					</div>
+					<div class="item">
+						<a href="#">
+							<span class="prd-top-txt">#2030여성 #인기폰</span>
+							<span class="prd-img"><img src="../images/main/@pd4.png" alt=""></span>
+							<span class="prd-tit">RE_아이폰6_32G</span>
+							<span class="prd-sub-txt1">한정수량 역대 최저가</span>
+							<span class="prd-price">월<em>0</em>원</span>
+							<span class="prd-txt">모든요금제 기준</span>
+						</a>
+					</div>
+					<div class="item">
+						<a href="#">
+							<span class="prd-top-txt">효도 선물로 딱</span>
+							<span class="prd-img"><img src="../images/main/@pd5.png" alt=""></span>
+							<span class="prd-tit">Q6</span>
+							<span class="prd-sub-txt1">한정수량 역대 최저가</span>
+							<span class="prd-price">월<em>0</em>원</span>
+							<span class="prd-txt">바른LTE25요금제 기준</span>
+						</a>
+					</div>
+					<div class="item">
+						<a href="#">
+							<span class="prd-top-txt">효도 선물로 딱</span>
+							<span class="prd-img"><img src="../images/main/@pd6.png" alt=""></span>
+							<span class="prd-tit">Q6</span>
+							<span class="prd-sub-txt1">한정수량 역대 최저가</span>
+							<span class="prd-price">월<em>0</em>원</span>
+							<span class="prd-txt">바른LTE25요금제 기준</span>
+						</a>
+					</div>
+					<div class="item">
+						<a href="#">
+							<span class="prd-top-txt">효도 선물로 딱</span>
+							<span class="prd-img"><img src="../images/main/@pd7.png" alt=""></span>
+							<span class="prd-tit">Q6</span>
+							<span class="prd-sub-txt1">한정수량 역대 최저가</span>
+							<span class="prd-price">월<em>0</em>원</span>
+							<span class="prd-txt">바른LTE25요금제 기준</span>
+						</a>
+					</div>
+					<div class="item">
+						<a href="#">
+							<span class="prd-top-txt">믿고쓰는 바른폰</span>
+							<span class="prd-img"><img src="../images/main/@pd8.png" alt=""></span>
+							<span class="prd-tit">RE_갤럭시S7엣지_32G</span>
+							<span class="prd-sub-txt1">한정수량 역대 최저가</span>
+							<span class="prd-price">월<em>2,210</em>원</span>
+							<span class="prd-txt">바른LTE25요금제 기준</span>
+						</a>
+					</div>
+					<div class="item">
+						<a href="#">
+							<span class="prd-top-txt">파격적인0원폰</span>
+							<span class="prd-img"><img src="../images/main/@pd9.png" alt=""></span>
+							<span class="prd-tit">갤럭시J5_2017</span>
+							<span class="prd-sub-txt1">한정수량 역대 최저가</span>
+							<span class="prd-price">월<em>0</em>원</span>
+							<span class="prd-txt">바른LTE25요금제 기준</span>
+						</a>
+					</div>
+				</div>
+
+				<div class="main-btn-wrap">
+					<a href="#" class="btn-round product-banner-more">추천상품 더보기 +</a>
+				</div>				
+			</div>
+
+			<!-- #결합상품 20180323 추가 -->
+			<div class="main-combi">
+				<div class="main-inner">
+					<h3>휴대폰과 함께 저렴하게 구매하세요.</h3>
+                    <ul class="combi-list">
+                        <li>
+                            <div class="clear">
+                                <div class="phone-box">
+                                    <img src="../images/desktop/@sample_product.png" alt="상품명">
+                                    <p>RE_갤럭시S7엣지_32G</p>
+                                </div>
+                                <div class="combi-box">
+                                    <div class="prd">
+                                        <img src="../images/desktop/@sample_combi1.png" alt="상품명">
+                                        <p>소니 플레이스테이션4 SLIM</p>
+                                    </div>
+                                    <div class="info">
+                                        <dl class="icon1">
+                                            <dt>데이터</dt>
+                                            <dd>11.0GB</dd>
+                                        </dl>
+                                        <dl class="icon2">
+                                            <dt>통화</dt>
+                                            <dd>기본제공</dd>
+                                        </dl>
+                                        <dl class="icon3">
+                                            <dt>문자</dt>
+                                            <dd>기본제공</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price-box">
+                                <dl>
+                                    <dt>월 예상납입 금액</dt>
+                                    <dd><strong>50,530</strong>원/월</dd>
+                                </dl>
+                            </div>
+                            <div class="btn-layer">
+                                <a href="#"><span>결합상품 상세보기</span></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="clear">
+                                <div class="phone-box">
+                                    <img src="../images/desktop/@sample_product.png" alt="상품명">
+                                    <p>RE_갤럭시S7엣지_32G</p>
+                                </div>
+                                <div class="combi-box">
+                                    <div class="prd">
+                                        <img src="../images/desktop/@sample_combi1.png" alt="상품명">
+                                        <p>소니 플레이스테이션4 SLIM</p>
+                                    </div>
+                                    <div class="info">
+                                        <dl class="icon1">
+                                            <dt>데이터</dt>
+                                            <dd>11.0GB</dd>
+                                        </dl>
+                                        <dl class="icon2">
+                                            <dt>통화</dt>
+                                            <dd>기본제공</dd>
+                                        </dl>
+                                        <dl class="icon3">
+                                            <dt>문자</dt>
+                                            <dd>기본제공</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price-box">
+                                <dl>
+                                    <dt>월 예상납입 금액</dt>
+                                    <dd><strong>50,530</strong>원/월</dd>
+                                </dl>
+                            </div>
+                            <div class="btn-layer">
+                                <a href="#"><span>결합상품 상세보기</span></a>
+                            </div>
+                        </li>
+                    </ul>
+				</div>
+			</div>
+
+			<!-- #요금제 찾기 영역 -->
+			<div class="main-payment">
+				<div class="main-inner">
+					<h3>나에게 맞는 <strong>요금제</strong>를 찾아보세요</h3>
+					<div class="ui-tab tab-radio" id="mainpmTab">
+						<div class="ui-tab-btns">
+							<button type="button" class="ui-tab-btn"><i>음성+데이터로 찾기</i></button>
+							<button type="button" class="ui-tab-btn"><i>월 납부요금으로 찾기</i></button>
+						</div>
+						<div class="ui-tab-pnls">
+							<section class="ui-tab-pnl">
+								<!-- 20180322 타이틀 추가 -->
+								<h3 class="hide">음성+데이터로 찾기</h3>
+								<div class="gauge-wrap">
+									<div class="data-area">
+										<input type="radio" id="data1" name="dataSelect" checked="checked"><label for="data1">LTE</label>
+										<input type="radio" id="data2" name="dataSelect"><label for="data2">3G</label>
+										<input type="radio" id="data3" name="dataSelect"><label for="data3">유심</label>
+									</div>
+
+									<!-- DESKTOP ONLY 음성+데이터로 찾기 세로형 -->
+									<div class="range-box-wrap only-d">
+										<div class="range-box-vertical call-range">
+											<p class="range-tit hide">음성</p>
+											<div id="rangeSlide1" class="range-area">
+												<div class="ui-slider-handle" tabindex="0"><span class="ui-slider-value">60분</span></div>
+												<ul class="scope">
+													<li class="scope0">300분 이상</li>			
+													<li class="scope1">300분</li>
+													<li class="scope2">240분</li>
+													<li class="scope3">180분</li>
+													<li class="scope4">120분</li>
+													<li class="scope5">60분</li>
+													<li class="scope6">0분</li>
+												</ul>
+											</div>
+										</div>
+										<div class="range-box-vertical data-range">
+											<p class="range-tit hide">데이터</p>
+											<div id="rangeSlide2" class="range-area">
+												<div class="ui-slider-handle" tabindex="0"><span class="ui-slider-value">2.5GB</span></div>
+												<ul class="scope">	
+													<li class="scope0">8GB 이상</li>
+													<li class="scope1">8GB</li>
+													<li class="scope2">7GB</li>
+													<li class="scope3">6GB</li>
+													<li class="scope4">5GB</li>
+													<li class="scope5">4GB</li>
+													<li class="scope6">3GB</li>
+													<li class="scope7">2GB</li>
+													<li class="scope8">1GB</li>
+													<li class="scope9">0GB</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+
+									<!-- MOBILE ONLY 음성+데이터로 찾기 가로형 -->
+									<div class="range-box-wrap hz only-m">
+										<div class="range-box call-range">
+											<p class="range-tit hide">음성</p>
+											<div id="rangeSlideH1" class="range-area">
+												<div class="ui-slider-handle" tabindex="0"><span class="ui-slider-value">60분</span></div>
+												<ul class="scope">
+													<li class="scope1">0분</li>
+													<li class="scope2">60분</li>
+													<li class="scope3">120분</li>
+													<li class="scope4">180분</li>
+													<li class="scope5">240분</li>
+													<li class="scope6">300분</li>
+													<li class="scope7">300분 이상</li>
+												</ul>
+											</div>
+											<p class="value-item">음성 <span id="callvalue">60분</span></p>
+										</div>
+										<div class="range-box data-range">
+											<p class="range-tit hide">데이터</p>
+											<div id="rangeSlideH2" class="range-area">
+												<div class="ui-slider-handle" tabindex="0"><span class="ui-slider-value">2.5GB</span></div>
+												<ul class="scope">
+													<li class="scope1">0GB</li>
+													<li class="scope2">1GB</li>
+													<li class="scope3">2GB</li>
+													<li class="scope4">3GB</li>
+													<li class="scope5">4GB</li>
+													<li class="scope6">5GB</li>
+													<li class="scope7">6GB</li>
+													<li class="scope8">7GB</li>
+													<li class="scope9">8GB</li>
+													<li class="scope10">8GB 이상</li>
+												</ul>
+											</div>
+											<p class="value-item">데이터 <span id="datavalue">2.5GB</span></p>
+										</div>										
+									</div>
+									<!-- 20180322 요금제 찾기 위치 변경 -->
+									<div class="main-btn-wrap">
+										<button class="btn-round gauge-search"><span>요금제 찾기</span></button>
+									</div>
+								</div>
+							</section>
+							<section class="ui-tab-pnl">
+								<!-- 20180322 타이틀 추가 -->
+								<h3 class="hide">월 납부요금으로 찾기</h3>
+								<div class="gauge-wrap">
+									<div class="data-area">
+										<input type="radio" id="paydata1" name="paydataSelect" checked="checked"><label for="paydata1">LTE</label>
+										<input type="radio" id="paydata2" name="paydataSelect"><label for="paydata2">3G</label>
+										<input type="radio" id="paydata3" name="paydataSelect"><label for="paydata3">유심</label>
+									</div>
+
+									<div class="range-box-wrap hz ">
+										<!-- 월 납부요금으로 찾기 변경 -->
+										<div class="payment-range slt-range">
+											<p class="range-tit hide">월 납부요금</p>
+											<div id="paymentSlider" class="range-area">
+												<div class="ui-slider-handle" tabindex="0"><span class="ui-slider-value">10,000원</span></div>
+												<ul class="scope">
+													<li class="scope1">0원</li>
+													<li class="scope2">10,000원</li>
+													<li class="scope3">20,000원</li>
+													<li class="scope4">30,000원</li>
+													<li class="scope5">40,000원</li>
+													<li class="scope6">50,000원</li>
+													<li class="scope7">60,000원</li>
+													<li class="scope8">70,000원</li>
+												</ul>
+											</div>
+											<p class="value-item">월 납부금액 <span id="monthlyText1">10,000원</span> <span>~</span> <span id="monthlyText2">20,000원</span></p>
+										</div>
+										<!-- 20180322 요금제 찾기 위치 변경 -->
+										<div class="main-btn-wrap">
+											<button class="btn-round gauge-search"><span>요금제 찾기</span></button>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>		
+						
+					</div>					
+				</div>
+			</div>
+			
+			<!-- #SK 7mobile을 선택해야 하는 이유 -->
+			<div class="main-brand">
+				<div class="main-inner">
+					<h3>SK7mobile을 선택해야 하는 이유</h3>
+					<ul>
+						<li class="mbrand1"><span>믿을 수 있는<br> SK통신기업</span></li>
+						<li class="mbrand2"><span>SK텔레콤 통화품질<br> 100% 그대로</span></li>
+						<li class="mbrand3"><span>믿을 수 있는<br> 직영 SHOP</span></li>
+						<li class="mbrand4"><span>다이렉트만의<br> 특별한 혜택</span></li>
+						<li class="mbrand5"><span>안전하고<br> 빠른개통</span></li>
+					</ul>
+					
+					<div class="main-btn-wrap"><!-- edit180312 only-d 클래스 삭제 -->
+						<a href="http://www.sktelink.com/os/bu/ph_mo_infomation_view.do" class="brand-more" target="_blank" title="새창"><span>SK7mobile 브랜드소개 바로가기</span></a>
+					</div>
+				</div>		
+			</div>
+
+			<!-- #메인 고객센터 안내 -->
+			<div class="main-csinfo">
+				<!-- 20180323 고객센터 안내 위치변경 추가 -->
+				<div class="main-outer">
+					<ul class="csinfo-list">
+						<li class="csinfo-list1"><a href="#">고객센터 안내</a></li>
+						<li class="csinfo-list2"><a href="#">자주하는 질문</a></li>
+						<li class="csinfo-list3"><a href="#">1:1고객상담</a></li>
+						<li class="csinfo-list4"><a href="#">서식다운로드</a></li>
+						<li class="csinfo-list5"><a href="#">오프라인매장안내</a></li>
+					</ul>
+				</div>
+							
+				<div class="main-inner">
+					<div class="csinfo-etc">
+						<!-- 20180321 재반영, 20180313 삭제 -->
+						<dl>
+							<dt>고객상담</dt>
+							<dd><ul>
+									<li>T. 114(무료)</li>
+									<li>T. 1599-0999(유료)</li>
+									<li>T. 080-899-0999(무료)</li>
+									<li>평일 09:00~18:00 (주말/공휴일휴무)</li>
+								</ul>
+							</dd>
+						</dl>
+						<div class="main-notice">
+							<h3>공지사항</h3>
+							<ul>
+								<!-- edit180312 공지사항 제목 a태그로 변경 -->
+								<li><a href="#" class="tit">이동전화 개인정보처리방침 변경안내</a> <em class="date">2018.01.02</em></li>
+							</ul>
+							<a href="#" class="notice-more"><span class="hide">공지사항 더보기</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			// 메인프로모션배너
+			var promoBNR = $('.promo-banner'),				
+				$btn_autostop = $('.main-banner .promo-banner-stop'),
+				$btn_autoplay = $('.main-banner .promo-banner-play');
+
+			promoBNR.owlCarousel({
+				items: 1,
+				loop: true,
+				nav: false,
+				margin:0,
+				autoplay:true,				
+				dots: true,
+				dotsEach: false,
+				dotsData: true,
+				dotsContainer:'.promo-dots',
+				dotsSpeed: true,
+				autoplayTimeout:5000
+			});
+
+			$btn_autostop.on('click',function(){
+				promoBNR.trigger('stop.owl.autoplay');
+				$btn_autostop.removeClass('on');
+				$btn_autoplay.addClass('on');
+			});
+
+			$btn_autoplay.on('click',function(){
+				promoBNR.trigger('play.owl.autoplay',[1000]);				
+				$btn_autoplay.removeClass('on');
+				$btn_autostop.addClass('on');			
+				
+			});
+
+			var $mainBnr_dots = $('.promo-dots'),
+				$dots_idx = $mainBnr_dots.children('.owl-dot').length;
+			
+			if ($dots_idx === 4) {
+				$mainBnr_dots.addClass('item4');
+			} else if($dots_idx === 3) {
+				$mainBnr_dots.addClass('item3');
+			} else if($dots_idx === 2) {
+				$mainBnr_dots.addClass('item2');
+			} 
+
+			
+			// 메인제품배너 20180327 dots false, 20180222 nav옵션 추가, 웹접근성, 
+			var productBNR = $('.product-banner');
+			productBNR.owlCarousel({
+				center:true,
+				loop: true,
+				nav: true,
+				navElement: 'button',
+				navText:["이전 제품 보기", "다음 제품 보기"],
+				items: 9,
+				autoplay:true,
+				dots: false,
+				margin: 10,
+				autoWidth:true,
+				stagePadding: 100,
+				responsive:{
+					0:{
+						items:2,
+						center:false,
+						margin: 0,
+						stagePadding: 0,
+					},
+					360:{
+						items:2,
+						center:false,
+						margin: 0,
+						stagePadding: 0,
+					},
+					414:{
+						items:2,
+						center:false,
+						margin: 0,
+						stagePadding: 0,
+					},
+					1024:{
+						items:9,
+						center:true,
+						margin: 10,
+						stagePadding: 100,
+					}
+				}
+			});
+			// edit20180220 웹접근성 추가
+			$('.owl-dot').attr('tabindex','0').focus();
+			$('.promo-btns > a').attr('tabindex','0').focus();
+
+			
+			$plugins.uiTab({ id:'mainpmTab', current:0 });
+
+			/* 음성+데이터로 찾기 PC ONLY */
+			$(".range-box-vertical > div").each(function(){
+                var $slider = $(this),
+                    unit1 = "분",
+					unit2 = "GB";
+				
+                $slider.slider({
+					orientation: "vertical",
+                    range: "min",
+                    value: $slider.attr("id") == "rangeSlide1" ? "" != null ? "" : 0 : "" != null ? "" : 0,
+                    min: 0,
+                    max: $slider.attr("id") == "rangeSlide1" ? 330 : 8.5,
+                    step: $slider.attr("id") == "rangeSlide1" ? 30 : 0.5,
+					value : $slider.attr("id") == "rangeSlide1" ? 60 : 2.5,
+                    create: function(event, ui){
+                        this.$state = $(ui.handle).find(".ui-slider-value");
+                        this.$state.css("display") != "block" ? this.$state.show() : null;						
+                    },
+                    start: function(event, ui) {
+                        this.$state = $(ui.handle).find(".ui-slider-value");
+                        this.$state.html(ui.value + ($slider.attr("id") == "rangeSlide1" ? unit1 : unit2));
+                        this.$state.css("display") != "block" ? this.$state.show() : null;
+						
+                    },
+                    slide: function(event, ui) {
+						if($slider.attr("id") == "rangeSlide1"){
+							var uiVal = ui.value != 330 ? ui.value + unit1 : ui.value - 30 + unit1 + " <em>이상</em>";
+							this.$state.html(uiVal);
+						}
+						else{
+							var uiVal = ui.value;
+							uiVal = uiVal != 8.5 ? uiVal + unit2 :  "8GB <em>이상</em>";
+							this.$state.html(uiVal);
+						}
+					}					
+				});
+			});
+
+			/* 음성+데이터로 찾기 MOBILE ONLY */
+			$(".range-box > div").each(function(){
+				var $sliderH = $(this),
+					unit1 = "분",
+					unit2 = "GB",
+					unit3 = "원";
+
+				$sliderH.slider({
+					orientation: "horizontal",
+					range: "min",
+					value: $sliderH.attr("id") == "rangeSlideH1" ? "" != null ? "" : 0 : "" != null ? "" : 0,
+					min: 0,
+					max: $sliderH.attr("id") == "rangeSlideH1" ? 330 : 8.5,
+					step: $sliderH.attr("id") == "rangeSlideH1" ? 30 : 0.5,
+					value : $sliderH.attr("id") == "rangeSlideH1" ? 60 : 2.5,
+					create: function(event, ui){
+						this.$state = $(ui.handle).find(".ui-slider-value");
+						this.$state.css("display") != "block" ? this.$state.show() : null;						
+					},
+					start: function(event, ui) {
+						this.$state = $(ui.handle).find(".ui-slider-value");
+						this.$state.html(ui.value + ($sliderH.attr("id") == "rangeSlideH1" ? unit1 : unit2));
+						this.$state.css("display") != "block" ? this.$state.show() : null;
+						
+					},
+					slide: function(event, ui) {
+						if($sliderH.attr("id") == "rangeSlideH1"){
+							var uiVal = ui.value != 330 ? ui.value + unit1 : ui.value - 30 + unit1 + " <em>이상</em>";
+							this.$state.html(uiVal);
+							$("#callvalue").html(uiVal);
+						} else{
+							var uiVal = ui.value;
+							uiVal = uiVal != 8.5 ? uiVal + unit2 : "8GB <em>이상</em>";
+							this.$state.html(uiVal);
+							$("#datavalue").html(uiVal);
+						}
+					}
+				});
+
+				$slt_slider_handle = $('.slt-range .ui-slider-handle');
+
+				/* 월 납부요금으로찾기 */
+				$('#paymentSlider').slider({
+						orientation: "horizontal",
+						range: "min",
+						min: 0,
+						max: 70000,
+						step : 10000,
+						value: 10000,
+						slide: function(event, ui) {
+							var uiVal1 = ui.value,
+								uiStep = 10000;
+								uiVal2 = uiVal1 + uiStep;
+
+							uiVal1 = uiVal1 != 70000 ? uiVal1 + unit3 : uiVal1 + unit3 + " 이상";
+							uiVal2 = uiVal2 != 80000 ? uiVal2 + unit3 : "";
+							$("#monthlyText1").text(uiComma(uiVal1));
+							$("#monthlyText2").text(uiComma(uiVal2));
+						}
+					});
+					function uiComma(n) {
+						var parts = n.toString().split(".");
+							return parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",") + (parts[1] ? "." + parts[1] : "");
+					}				
+			});
+			
+			// 기변대상 팝업
+			( !$plugins.uiCookieGet({ name:'poplayC1' }) ) ? $plugins.uiModal({ id:'changePhoneInfo', width:570}) : '';
+			$('#cookie1').change(function(){
+				var _this = $(this);
+				if(_this.is(":checked")) {
+					$plugins.uiCookieSet({ name:'poplayC1', term:1, value:1 });
+				} else {
+					var expireDate = new Date();
+					expireDate.setDate(expireDate.getDate() - 1);
+					document.cookie = poplayC1 + "= " + "; expires=" + expireDate.toGMTString();
+				}
+			});
+			
+			// 범용공지 팝업
+			( !$plugins.uiCookieGet({ name:'poplayC2' }) ) ? $plugins.uiModal({ id:'layerPopup', width:570}) : '';
+			$('#cookie2').change(function(){
+				var _this = $(this);
+				if(_this.is(":checked")) {
+					$plugins.uiCookieSet({ name:'poplayC2', term:1, value:1 });
+				} else {
+					var expireDate = new Date();					
+					expireDate.setDate(expireDate.getDate() - 1);
+					document.cookie = poplayC2 + "= " + "; expires=" + expireDate.toGMTString();
+				}
+			});
+		});
+	})(jQuery, window, document);
+
+	
+	</script>
+</body>
+</html>

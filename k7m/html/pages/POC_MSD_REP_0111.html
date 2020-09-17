@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico"> 
+
+	<title>임대폰 신청 | SK 7mobile</title>
+
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+<body>
+	<div class="skip" id="skip">
+		<ul>
+			<li><a href="#main">본문 바로가기</a></li>
+		</ul>
+	</div>
+    <div class="baselayer" id="baseLayer">
+        <section class="ui-modal" id="termModal1" role="dialog" aria-hidden="true">
+            <div class="ui-modal-wrap modal-black-wrap">
+                <header class="ui-modal-tit">
+                    <h1>개인정보활용 동의(필수)</h1>
+                    <button type="button" class="ui-modal-close btn-close">닫기</button>
+                </header>
+                <div class="ui-modal-cont">
+                    <div class="term-box">
+                        <h3>제 1 장 총칙</h3>
+                        <h4>제 1 조 (목적)</h4>
+                        <p>본 약관은 SK 텔링크 주식회사(이하 "회사"라 합니다)에서 제공하는 7mobile 관련 서비스 이용을 위한 회원과 회사간의 권리, 의무 및 책임사항 등 기본적인 사항의 규정을 목적으로 합니다.</p>
+                        <h4>제 2 조 (용어의 정의)</h4>
+                        <ul>
+                            <li>① 본 약관에서 사용하는 용어의 정의는 다음과 같습니다.
+                                <ol>
+                                    <li>1. 서비스 : sk7mobile.com 및 모바일 7mobile app. 이외에 sk7mobile.com 과 직접
+                                    연동되어 온라인에서 이용할 수 있는 서비스</li>
+                                    <li>2. 회원 : 사이트에 접속하여 본 약관에 동의하고, ID 정책에 따른 ID(고유번호)와 
+                                    Password(비밀번호)를 발급 받은 고객. 회원의 자격 및 권한 등은 본 약관에서
+                                    정한 바에 따라 일부 제한될 수 있습니다</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-wrap">
+                        <button type="button" class="ui-modal-close btn-line">확인</button>
+                    </div>
+                </div>                                
+            </div>
+        </section>
+        <section class="ui-modal" id="termModal2" role="dialog" aria-hidden="true">
+            <div class="ui-modal-wrap modal-black-wrap">
+                <header class="ui-modal-tit">
+                    <h1>약정사항 동의(필수)</h1>
+                    <button type="button" class="ui-modal-close btn-close">닫기</button>
+                </header>
+                <div class="ui-modal-cont">
+                    <div class="term-box">
+                        <h3>제 1 장 총칙</h3>
+                        <h4>제 1 조 (목적)</h4>
+                        <p>본 약관은 SK 텔링크 주식회사(이하 "회사"라 합니다)에서 제공하는 7mobile 관련 서비스 이용을 위한 회원과 회사간의 권리, 의무 및 책임사항 등 기본적인 사항의 규정을 목적으로 합니다.</p>
+                        <h4>제 2 조 (용어의 정의)</h4>
+                        <ul>
+                            <li>① 본 약관에서 사용하는 용어의 정의는 다음과 같습니다.
+                                <ol>
+                                    <li>1. 서비스 : sk7mobile.com 및 모바일 7mobile app. 이외에 sk7mobile.com 과 직접
+                                    연동되어 온라인에서 이용할 수 있는 서비스</li>
+                                    <li>2. 회원 : 사이트에 접속하여 본 약관에 동의하고, ID 정책에 따른 ID(고유번호)와 
+                                    Password(비밀번호)를 발급 받은 고객. 회원의 자격 및 권한 등은 본 약관에서
+                                    정한 바에 따라 일부 제한될 수 있습니다</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-wrap">
+                        <button type="button" class="ui-modal-close btn-line">확인</button>
+                    </div>
+                </div>
+            </div>
+        </section>   
+    </div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+            <div class="contents-wrap">
+                <section>
+                    <h2 class="h2">임대폰 신청</h2>
+                </section>
+                <section>
+                    <div class="agree-box">
+                        <fieldset class="div-wrap" role="group">
+                            <legend>약관동의 선택</legend>
+                            <span class="top-all">
+                                <input type="checkbox" id="agr_0">
+                                <!-- edit180312 문구수정 -->
+                                <label class="lb-check all sck" for="agr_0"><span>이용약관 및 개인정보의 수집 &middot; 이용 &middot; 제공에 일괄 동의합니다.</span></label>
+                            </span>
+                            <span>
+                                <input type="checkbox" id="agr_1" class="agr_0">
+                                <label class="lb-check sck" for="agr_1"><span>[필수] 개인정보활용 동의</span></label>
+                                 <button type="button" class="btn-ico-pop" aria-haspopup="true" onclick="$plugins.uiModal({ id:'termModal1' });"><span><i>[필수] 개인정보활용 동의 약관 팝업</i></span></button>
+                            </span>
+                            <span>
+                                <input type="checkbox" id="agr_2" class="agr_0">
+                                <label class="lb-check sck" for="agr_2"><span>[필수] 약정사항 동의</span></label>
+                                 <button type="button" class="btn-ico-pop" aria-haspopup="true" onclick="$plugins.uiModal({ id:'termModal2' });"><span><i>[필수] 약정사항 동의 팝업</i></span></button>
+                            </span>
+                        </fieldset>
+                    </div>
+                </section>
+                
+                <section>
+                    <h3 class="h3tit">만 19세 미만 미성년자 및 법정대리인 본인인증</h3>
+
+                    <ul class="tbl-wrap form-wrap"><!-- edit180228 form-wrap 추가 -->
+                        <li class="style-line"><!-- edit180228 style-line 클래스 변경 -->
+                            <div class="dt">이름(명의자)</div>
+                            <div class="dd">홍길동</div>
+                        </li>                        
+                        <li class="style-line"><!-- edit180228 style-line 클래스 변경 -->
+                            <div class="dt">주민등록번호</div>
+                            <div class="dd">990101-*******</div>
+                        </li>
+                        <li class="style">
+                            <div class="dt">법정대리인 이름<sup>*<span class="hide">필수</span></sup></div>
+                            <div class="dd"><input type="text" class="inputbox-s" id="user_name" title="법정대리인 이름"></div>
+                        </li>
+                        <li class="style">
+                            <div class="dt">법정대리인 주민등록번호<sup>*<span class="hide">필수</span></sup></div>
+                            <div class="dd input-wrap">
+                                <input type="text" class="inputbox-s" maxlength="6" title="법정대리인 주민등록번호 앞자리">
+                                <em class="swung">-</em>
+                                <input type="text" class="inputbox-s" maxlength="7" title="법정대리인 주민등록번호 뒷자리">
+                            </div>
+                        </li>
+                        <li class="style">
+                            <div class="dt">신청 고객과의 관계<sup>*<span class="hide">필수</span></sup></div>
+                            <div class="dd">
+                                <fieldset class="div-wrap" role="group">
+                                    <legend>신청 고객과의 관계</legend>  
+                                        <input type="radio" name="r1" id="r1_1" checked="checked" title="부">
+                                        <label class="lb-radio checked" for="r1_1"><span>부</span></label>
+                                        <input type="radio" name="r1" id="r1_2" title="모">
+                                        <label class="lb-radio" for="r1_2"><span>모</span></label>
+                                        <input type="radio" name="r1" id="r1_3" title="기타">
+                                        <label class="lb-radio" for="r1_3"><span>기타</span></label>
+                                </fieldset>
+                            </div>
+                        </li>
+                        <li class="style">
+                            <div class="dt">연락처<sup>*<span class="hide">필수</span></sup></div>
+                            <div class="dd call-wrap">
+                                 <select class="selectbox-xs" title="연락처 지역번호 및 앞자리">
+                                    <option>010</option>
+                                    <option>011</option>                                    
+                                    <option>016</option>
+                                    <option>017</option>
+                                    <option>018</option>
+                                    <option>019</option>
+                                </select>
+                                <em class="swung">-</em>
+                                <input type="text" class="inputbox-xs" title="연락처 중간자리">
+                                <em class="swung">-</em>
+                                <input type="text" class="inputbox-xs" title="연락처 뒷자리">
+                                <span>※ 고객님과 연락 가능한 전화번호를 기재해주세요.</span>
+                            </div>
+                        </li>
+                        <li class="style">
+                            <div class="dt">법정대리인 확인<sup>*<span class="hide">필수</span></sup></div>
+                            <div class="dd reg-wrap">
+                                <div>
+                                    <fieldset class="div-wrap" role="group">
+                                        <legend>법정대리인 확인</legend>  
+                                            <input type="radio" name="r2" id="r2_1" checked="checked" title="주민등록증">
+                                            <label class="lb-radio checked" for="r2_1"><span>주민등록증</span></label>
+                                            <input type="radio" name="r2" id="r2_2" title="운전면허증">
+                                            <label class="lb-radio" for="r2_2"><span>운전면허증</span></label>
+                                    </fieldset>
+                                </div>
+                                <div class="radio-con radio-con1 on">
+                                    <span><b>- 발급일자</b> <input type="text" class="date inputbox" id="datepicker1" placeholder="발급일자">
+                                        <label for="datepicker1" class="datepicker"><span class="hide">발급일자</span></label>
+                                    </span>
+                                </div>
+                                <div class="radio-con radio-con2">
+                                    <span><b>- 발급일자</b> <input type="text" class="date inputbox" id="datepicker1" placeholder="발급일자">
+                                        <label for="datepicker1" class="datepicker"><span class="hide">발급일자</span></label>
+                                    </span>
+                                    <span><b>- 면허번호</b> <select class="selectbox-xs" title="면허번호 지역번호 앞자리">
+                                                <option>010</option>
+                                                <option>011</option>
+                                                <option>016</option>
+                                                <option>017</option>
+                                                <option>018</option>
+                                                <option>019</option>
+                                            </select>
+                                            <em class="swung">-</em>
+                                            <input type="text" class="inputbox-xs" title="면허번호 두번째 자리">
+                                            <em class="swung">-</em>
+                                            <input type="text" class="inputbox-xs" title="면허번호 세번째 자리">
+                                            <em class="swung">-</em>
+                                            <input type="text" class="inputbox-xs" title="면허번호 마지막 자리">
+                                    </span>
+                                </div>
+                                <p>※ 현재 정보 확인이 어려운 경우 해피콜 상담원에게 정확한 정보를 알려주시기 바랍니다.</p>
+                            </div>
+                        </li>
+                        <li class="style">
+                            <div class="dt">가족관계증명서<sup>*<span class="hide">필수</span></sup><br>(최대 3장 첨부가능)</div>
+                            <div class="dd">
+                                <div class="inp-file ui-file" id="addfile1">
+                                    <span class="fc-point">(필수)</span>
+                                    <button type="button" class="btn-inbase1 ui-file-btn"><span>파일선택</span></button>
+                                </div>
+                                <div class="inp-file ui-file" id="addfile2">
+                                    <span class="fc-point">(필수)</span>
+                                    <button type="button" class="btn-inbase1 ui-file-btn"><span>파일선택</span></button>
+                                </div>
+                                <div class="inp-file ui-file" id="addfile3">
+                                    <span class="fc-point">(필수)</span>
+                                    <button type="button" class="btn-inbase1 ui-file-btn"><span>파일선택</span></button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <p class="list-dot-txt fc-point">* 만 19세 미만 미성년자의 경우, 법정대리인 본인인증과 필수서류 첨부가 필요합니다. (온라인에서 법정대리인 본인인증이 불가능한 경우, 1599-0610으로 문의하세요.)</p>
+
+                    <p class="txt mgt-xxl">본인인증 시 입력하는 정보는 해당 인증기관에서 직접 수집하므로 인증 이외의 용도로 이용 또는 저장되지 않습니다.</p>
+                    <div class="ui-tab item3 mgt-s" id="certTab">
+                        <div class="ui-tab-btns" role="tablist">
+                            <button type="button" class="ui-tab-btn" role="tab" id="certTab0" aria-controls="chargeTabPnl0" aria-selected="true"><i>휴대폰 인증</i></button>
+                            <button type="button" class="ui-tab-btn" role="tab" id="certTab1" aria-controls="chargeTabPnl1" aria-selected="false"><i>아이핀(i-PIN) 인증</i></button>
+                            <button type="button" class="ui-tab-btn" role="tab" id="certTab2" aria-controls="chargeTabPnl2" aria-selected="false"><i>체크/신용카드 인증</i></button>
+                        </div>
+
+                        <div class="ui-tab-pnls">
+                            <section class="ui-tab-pnl" role="tabpanel" id="chargeTabPnl0" aria-labelledby="certTab0" aria-hidden="true" tabindex="-1">
+                                <h2 class="hide">휴대폰 인증</h2>
+                                <div class="txt-con">
+                                    <p>휴대폰 인증하기 버튼을 클릭하십시오. (법정대리인의 휴대폰만 가능)</p>
+                                    <span class="fc-point">* 인증을 위해서는 브라우저 팝업차단을 반드시 해제 시켜야 합니다. </span>
+                                </div>
+                                <div class="btn-wrap">
+                                    <button type="button" class="btn-darkblue-round">휴대폰 인증하기</button>
+                                </div>
+                                <!-- 인증완료 후 완료 메시지 -->
+                                <div class="txt-con">
+                                    <p>휴대폰 인증이 완료되었습니다.<br>아래 '다음' 버튼을 클릭하십시오.</p>
+                                </div>
+                                <div class="btn-wrap">
+                                    <a href="../pages/POC_MSD_REP_0120.html" class="btn-next-round">다음</a>
+                                </div>
+                            </section>
+                            <section class="ui-tab-pnl" role="tabpanel" id="chargeTabPnl1" aria-labelledby="certTab2" aria-hidden="false">
+                                <h2 class="hide">아이핀(i-PIN) 인증</h2>
+                                <div class="txt-con">
+                                    <p>아이핀 인증하기 버튼을 클릭하십시오.</p>
+                                    <span class="fc-point">* 인증을 위해서는 브라우저 팝업차단을 반드시 해제 시켜야 합니다. </span>
+                                </div>
+                                <div class="btn-wrap">
+                                    <button type="button" class="btn-darkblue-round">아이핀 인증하기</button>
+                                </div>
+
+                                <!-- 인증완료 후 완료 메시지 -->
+                                <div class="txt-con">
+                                    <p>아이핀 인증이 완료되었습니다.<br>아래 '다음' 버튼을 클릭하십시오.</p>
+                                </div>
+                                <div class="btn-wrap">
+                                    <a href="../pages/POC_MSD_REP_0120.html" class="btn-next-round">다음</a>
+                                </div>
+                            </section>
+                             <section class="ui-tab-pnl" role="tabpanel" id="chargeTabPnl2" aria-labelledby="certTab3" aria-hidden="false">
+                                <h2 class="hide">체크/신용카드 인증</h2>
+                                <div class="txt-con">
+                                    <p>본인 인증하기 버튼을 클릭하십시오.</p>
+                                    <span class="fc-point">* 인증을 위해서는 브라우저 팝업차단을 반드시 해제 시켜야 합니다. </span>
+                                </div>
+                                <div class="btn-wrap">
+                                    <button type="button" class="btn-darkblue-round">본인 인증하기</button>
+                                </div>
+
+                                <!-- 인증완료 후 완료 메시지 -->
+                                <div class="txt-con">
+                                    <p>인증이 완료되었습니다.<br>아래 '다음' 버튼을 클릭하십시오.</p>
+                                </div>
+                                <div class="btn-wrap">
+                                    <a href="../pages/POC_MSD_REP_0120.html" class="btn-next-round">다음</a>
+                                </div>
+
+                            </section>
+                        </div>
+                    </div>
+                </section>
+
+            </div><!-- //.contents-wrap -->
+		</main>
+		<div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+	
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+            $plugins.uiTab({ id:'certTab', current:0});
+
+            $("input[name='r2']:radio").click(function(){
+                if($(this).attr("id") == 'r2_1'){
+                    $('.radio-con').removeClass('on');
+                    $('.radio-con1').addClass('on');
+                }else if($(this).attr("id") == 'r2_2'){
+                    $('.radio-con').removeClass('on');
+                    $('.radio-con2').addClass('on');
+                }
+            });
+
+            // 파일업로드
+            $plugins.uiFileUpload({ id:'addfile1'});
+            $plugins.uiFileUpload({ id:'addfile2'}); 
+            $plugins.uiFileUpload({ id:'addfile3'});
+
+            // 임대폰 신청 약관동의
+			$plugins.uiForm({ id: 'agr_0', all: true, callback: allCheckCallback});
+            function allCheckCallback(v){}
+
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

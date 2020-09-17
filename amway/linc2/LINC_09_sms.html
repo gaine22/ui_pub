@@ -1,0 +1,115 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+    <!-- page common -->
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <META http-equiv="Expires" content="0"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- //page common -->
+
+    <meta name="keywords">
+<meta name="description">
+<meta content="noindex,follow" name="robots">
+<meta content="True" name="HandheldFriendly">
+<meta content="320" name="MobileOptimized">
+<meta content="telephone=no" name="format-detection">
+<title>문자 채팅</title>
+    
+<link rel="stylesheet" href="http://www.abnkorea.co.kr/_ui/mobile/common/css/default.css">
+
+<link rel="stylesheet" href="http://www.abnkorea.co.kr/_ui/mobile/common/css/main.css" />
+    <script type="text/javascript">
+//<![CDATA[
+    try {
+        document.domain = "abnkorea.co.kr";   
+    } catch(e) {}
+    
+    var COMMON_RESOUCE_PATH = "http://www.abnkorea.co.kr/_ui/mobile/common";
+    var IMAGE_RESOUCE_PATH = "http://www.abnkorea.co.kr/_ui/mobile/images";
+    var WEBSITE_AKLSITE_HTTP = "http://mobile.abnkorea.co.kr";
+    var WEBSITE_AKLSITE_HTTPS = "https://mobile.abnkorea.co.kr";
+
+    // PILOT_LIMITED
+    var PILOT_LIMITED_BUGREPORT_URL = "https://board.abnkorea.co.kr/bbs/board.php?bo_table=pilot_mboard";
+    var PILOT_LIMITED_ABO_MESSAGE = "ABO 유저만 사용할 수 있는 기능입니다.";
+    var PILOT_LIMITED_IS_LOGIN = (true || false);
+    var PILOT_LIMITED_IS_ABO = true;
+    var PILOT_LIMITED_ENCODE_ABO_NO = "NzQ4MDAwMg%3D%3D";
+//]]>
+</script>
+
+<!-- common js -->
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/jquery-1.8.3.min.js"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/jquery.validate.min.js"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/jquery.placeholder.min.js"></script>
+
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/jquery.touchSlider.js"></script>
+    <script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/jquery.touchSlider2.js"></script>
+<script src="pbCommon.js"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/pbCommonEcm.js"></script>
+<script src="pbLayerPopup.js"></script>
+
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/jquery.event.drag-1.5.min.js"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/jquery.cookie.js?_=2017052911"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/lynx.messages.js?_=2017052911"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/lynx.common.js?_=2017052911"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/lynx.buynow.js?_=2017052911"></script>
+<!-- <script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/lynx.autocomplete.js?_=2017052911"></script> -->
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/lynx.smartorder.js?_=2017052911"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/beta.fix.js?_=2017052911"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/netfunnel.js" charset="UTF-8"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/netfunnel-skin.js" charset="UTF-8"></script>
+    
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/pbMain.js"></script>
+
+        <script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/barcode39_min.js?_=2017052911"></script>
+            <script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/am.certify.js?_=2017052911"></script>
+            <script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/am.common.js?_=2017052911"></script>    
+            <script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/am.validation.js?_=2017052911"></script>
+            <script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/am.personalInfo.js?_=2017052911"></script>
+            <script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/so.hyperstore.js?_=2017052911"></script>
+        <script type="text/javascript">
+
+    // ABO login
+    var COOKIE_ABO_FIRST_LOGIN_ANALYTICS = "COOKIE_ABO_FIRST_LOGIN_ANALYTICS";
+    if($.trim($.cookieUtil.get(COOKIE_ABO_FIRST_LOGIN_ANALYTICS)).length >=1 ){
+        dataLayer.event = {"name"   : "abo_login"};
+        //console.log("login abo");
+        $.cookieUtil.remove(COOKIE_ABO_FIRST_LOGIN_ANALYTICS);
+    }
+
+   var isPilotLimited = "false";
+
+   $(document).ready(function() {
+       $.buynow.data.urlHttps = "https://mobile.abnkorea.co.kr";
+    });
+</script>
+<link rel="stylesheet" href="style.css" />
+<style>
+    #pbHeader .headCont a:visited{color:#fff;}
+</style>
+</head>
+
+<body style="background:#f8f8f8"><div id="pbWrap">
+    <!-- container -->
+    <div id="pbContainer" style="margin-bottom:0">
+        <!-- content -->
+        <section id="pbContent">
+            <div style="position:fixed;top:0;left:0;z-index:2;width:100%;"><img src="images/linc_09_img01.jpg" alt="채팅 상단 고정" style="width:100%;opacity:0.95"></div>
+            <div style="position:relative;margin-top:15%;-webkit-overflow-scrolling:touch;overflow-scrolling:touch;overflow:auto">
+                <img src="images/linc_09_img03.jpg" alt="채팅리스트" style="width:100%">
+                <a href="LINC_10_gift.html" style="position:absolute;background:url(http://www.abnkorea.co.kr/_ui/_noticeImg/res/trans.gif) 0 0 repeat;width:40.3%;height:10.7%;bottom:4.4%;left:34.5%"><span class="hide">연결</span></a>
+            </div>
+            <div style="position:fixed;bottom:0;left:0;z-index:2;width:100%;"><img src="images/linc_09_img02.jpg" alt="채팅 하단 고정" style="width:100%"></div>
+        </section>
+        <!-- //content -->
+    </div>
+    <!-- container -->
+</div>
+
+</body>
+</html>

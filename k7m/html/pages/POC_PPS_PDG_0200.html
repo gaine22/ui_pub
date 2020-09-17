@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico">
+
+	<title>선불 잔액 선물하기 | SK 7mobile</title>
+
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+
+<body>
+	<div class="skip" id="skip"></div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+			<div class="contents-wrap">
+				<section>
+				    <h2 class="h2">선불 잔액 선물하기</h2>
+					<ol class="step-wrap">
+						<li class="step1" aria-selected="false">
+							<span>STEP 01</span>
+							<strong>약관동의</strong>
+						</li>
+						<li class="step2" aria-selected="true">
+							<span>STEP 02</span>
+							<strong>선물금액선택</strong>
+						</li>
+						<li class="step3" aria-selected="false">
+							<span>STEP 03</span>
+							<strong>선물완료</strong>
+						</li>
+					</ol>
+                </section>
+				<section>
+					<p class="top-text-s ">아래 선물방법을 선택하여 주시기 바랍니다.</p><!-- 20180315 : 수정 -->
+                    <ul class="form-wrap mtb-line">
+						<li class="line">
+							<dl>
+								<dt><label for="gift-phonenum">선물할 휴대폰번호<sup>*<span class="hide">필수</span></sup></label></dt>
+								<dd><input type="text" class="inputbox" id="gift-phonenum" placeholder="휴대폰번호 '-'없이 입력하세요"></dd>
+							</dl>
+						</li>
+                        <li class="line">
+							<dl>
+								<dt>선물가능금액<sup>*<span class="hide">필수</span></sup></dt>
+								<dd><p class="text">100,000원</p></dd>
+							</dl>
+						</li>
+						<li class="line">
+							<dl>
+								<dt><label for="gift-money">선물금액<sup>*<span class="hide">필수</span></sup></label></dt>
+								<dd>
+									<div class="selsubbox">
+										<select title="선물금액" id="gift-money">
+											<option>5,000원</option>
+											<option>10,000원</option>
+											<option>15,000원</option>
+										</select>
+                                        <p class="select-sub">원</p>
+									</div>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+					<p class="bot-sub-text fc-red">※ 선물이 진행 된 이후 취소가 불가능 합니다.</p>
+					<div class="txt-box bg">
+                        <div class="line">
+                            <input type="checkbox" id="c_agree" name="c_agree_n">
+							<!-- 180306 : 텍스트 수정 -->
+                            <label class="lb-check sck" for="c_agree"><span>선물을 위한 입력정보를 확인하였으며, 선물진행에 동의합니다.</span></label>
+                            <div class="btn-right">
+								<span><a href="#none" class="btn btn-gray">취소</a></span><!-- 20180315 : 순서변경 -->
+                                <span><a href="#none" class="btn btn-point">선물하기</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+			</div><!-- .contents-wrap -->
+		</main>
+        <div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+
+	<script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

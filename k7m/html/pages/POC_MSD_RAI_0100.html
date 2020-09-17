@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico"> 
+
+	<title>이용 요금 조회 | SK 7mobile</title>
+	
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+<body>
+	<div class="skip" id="skip">
+		<ul>
+			<li><a href="#main">본문 바로가기</a></li>
+		</ul>
+	</div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+            <div class="contents-wrap">
+                <section>
+                    <h2 class="h2">요금조회</h2>
+                    <div class="select-top-area">                        
+                        <span class="lb-select"><label for="hpnumber">휴대폰번호</label> : 1개</span>
+                        <div class="select-wrap1">
+                            <select class="selectbox-l" title="보유휴대폰" id="hpnumber">
+                                <option>010-1234-5678</option>
+                            </select>
+                        </div>
+                        <!-- 20180321 조회월 레이블 추가 모바일 only -->
+                        <span class="lb-select only-m"><label for="sltMonth">조회월</label></span>
+                        <div class="select-wrap2">
+                            <select class="selectbox-l" title="조회 월 선택" id="sltMonth">
+                                <option>2018년 1월</option>
+                                <option>2018년 2월</option>
+                            </select>
+                        </div>                    
+                        <button type="button" class="btn-inquiry">조회</button>
+                        <!-- 20180321 버튼클래스 변경 -->
+                        <a href="#" class="btn-right btn-bluegreen"><span class="arr">온라인 요금 납부</span></a>
+                    </div>
+
+                    <div class="ui-tab item2">
+                        <div class="ui-tab-btns">
+                            <a href="../pages/POC_MSD_RAI_0100.html" class="ui-tab-btn" aria-selected="true"><i>이용 요금 조회</i></a>
+                            <a href="../pages/POC_MSD_RAI_0200.html" class="ui-tab-btn"><i>실시간 요금 조회</i></a>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="plan-box">
+                        <div class="plan-txt">
+                            <!-- 20180321 이용기간 위치변경 -->
+                            <span class="plan-date"><strong>12월</strong></span>
+                            <span class="plan-date-txt">청구금액은 <strong class="plan-price">150,0000원</strong> 입니다.</span>
+                            <em><strong>이용기간 : </strong>2017-12-01 ~ 2017-12-31</em>
+                            <em>납부방법 : 은행자동납부</em>
+                        </div>
+                         <div class="plan-list">
+                            <strong class="plan-list-tit">청구내역</strong>
+                            <ul>
+                                <li><strong>기본요금</strong> <span>25,000원</span></li>
+                                <li><strong>휴대폰 할부금<sup>*<span class="hide">필수</span></sup></strong> <span>0원</span></li>
+                                <li><strong>부가세 총액<sup>*<span class="hide">필수</span></sup></strong> <span>2,500원</span></li>
+                            </ul>
+                         </div>
+                    </div>
+                </section>
+                <section>
+                    <h3 class="h3tit">납부내역</h3>
+                    <span class="sub-txt">* 최근 6개월간 납부하신 금액 정보입니다.</span>
+                    <table class="tbl-base">
+                        <caption>납부내역</caption>
+                        <colgroup>
+                            <col style="width:20%">
+                            <col style="width:20%">
+                            <col style="width:20%">
+                            <col style="width:20%">
+                            <col style="width:20%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">수납처리일</th>
+                                <th scope="col">청구일</th>
+                                <th scope="col">청구금액</th>
+                                <th scope="col">납부금액</th>
+                                <th scope="col">납부방법</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2017-12-27</td>
+                                <td>2017-12-27</td>
+                                <td>33,690원</td>
+                                <td>33,690원</td>
+                                <td>은행자동납부</td>
+                            </tr>
+                            <tr>
+                                <td>2017-11-28</td>
+                                <td>2017-11-28</td>
+                                <td>33,690원</td>
+                                <td>33,690원</td>
+                                <td>은행자동납부</td>
+                            </tr>
+                            <tr>
+                                <td>2017-10-27</td>
+                                <td>2017-10-27</td>
+                                <td>33,690원</td>
+                                <td>33,690원</td>
+                                <td>은행자동납부</td>
+                            </tr>
+                            <tr>
+                                <td>2017-09-27</td>
+                                <td>2017-09-27</td>
+                                <td>33,690원</td>
+                                <td>33,690원</td>
+                                <td>은행자동납부</td>
+                            </tr>
+                        </tbody>
+					</table>
+                    <!-- 20180322 : 유의사항 수정 -->
+                    <div class="note-box">
+                        <h3 class="ico-note">유의사항</h3>
+                        <ol>
+                            <li>청구요금은 표기된 이용기간 동안 이용된 요금으로 월 중 가입하신 경우, 각각 일할 계산됩니다.</li>
+                            <li>금월 명세서는 매월 8일 경부터 조회 가능합니다.</li>
+                            <li>조회되는 연체가산금은 전전월 청구금액 납부미납으로 발생된 금액을 말합니다.</li>
+                            <li>자동납부로 납부하는 경우 납부내역은 영업일 기준 3~4일 이후 확인 가능합니다.</li>
+                            <li>6개월 이전 납부내역 확인이 필요한 경우 고객센터 &lt;1599-0999(유료)/휴대폰 114&gt; 에서 확인 가능합니다.</li>
+                        </ol>
+                    </div>
+                    <!-- // 20180322 : 유의사항 수정 -->
+                </section>
+            </div><!-- //.contents-wrap -->
+		</main>
+		<div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+	
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			
+			
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

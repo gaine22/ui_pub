@@ -1,0 +1,193 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>월간 코어 보너스 조회 - ABN Korea</title>
+<link rel="stylesheet" type="text/css" href="http://www.abnkorea.co.kr/_ui/mobile/common/css/default.css">
+<link rel="stylesheet" type="text/css" href="http://www.abnkorea.co.kr/_ui/mobile/common/css/main.css">
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/jquery-1.8.3.min.js"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/pbCommon.js"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/pbCommonEcm.js"></script><!-- ECM 1.5 전용 (20160517추가) -->
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/pbLayerPopup.js"></script>
+<style>
+    /*20170721 PF18 추가*/
+    /*http://www.abnkorea.co.kr/_ui/mobile/common/css/content_oad.css 마지막에 추가*/
+    /*볼륨 성장 보너스 시뮬레이션*/
+    .volumeBonusContent .imgP img{width:100%}
+    .volumeBonusContent .myDataEnter .longline{border:1px solid #e3e3e3;background-color:#fff;width:auto !important;float:none;margin:14px;padding:14px}
+    .volumeBonusContent .myDataEnter .longline label,
+    .volumeBonusContent .myDataEnter .longline select,
+    .volumeBonusContent .myDataEnter .longline input{display:inline-block;width:48%}
+    .volumeBonusContent .myDataEnter .longline label{width:48%;letter-spacing:-1px}
+    /*//20170721 PF18 추가*/
+</style>
+
+</head>
+<body class="uiGnbM2">
+<div id="pbSkipNavi"><a href="#pbContent">본문 바로가기</a><a href="#uiAllMenuOpen">전체메뉴 바로가기</a><a href="#pbGnb">주메뉴 바로가기</a></div>
+<div id="pbWrap">
+    <!-- header --><header id="pbHeader">header include</header><!-- //header -->
+    <!-- container -->
+    <div id="pbContainer">
+        <!-- pageLocation -->
+        <div id="pageLocation"><!-- 20150410 : 메뉴구조 변경으로 class 삭제(class="uiMenu0202") -->
+            /mobile/html/pl_business.html include
+        </div>
+        <!-- //pageLocation -->
+        <!-- content -->
+        <section id="pbContent">
+            <h1 class="hide">월간 코어 보너스 조회</h1>
+            
+            <!-- 볼륨 성장 보너스 시뮬레이션 -->
+            <section class="coreBonusWrapper" id="coreBonus">
+            
+                <!-- tab -->
+                <div class="tabWrap">
+                    <span class="hide">탭 메뉴</span>
+                    <ul class="tabDepth1 hAuto"><!-- 2016.09.28 일시숨김처리 : 프로모션 숨김처리시 .tNum2 추가 -->
+                        <li style="letter-spacing:-1px;word-spacing:-1px;width:24%"><a href="#none">월간 코어<br>보너스</a></li>
+                        <li style="letter-spacing:-1px;word-spacing:-1px;width:37%"><a href="#none">여행 점수 성장<br>보너스 시뮬레이션</a></li>
+                        <li class="on" style="letter-spacing:-1px;word-spacing:-1px;width:39%"><strong>볼륨 성장<br>보너스 시뮬레이션</strong></li>
+                    </ul>
+                </div>
+                <h2 class="hide">볼륨 성장 시뮬레이션</h2>
+                <!-- //tab -->
+                
+                <!-- 볼륨 성장 보너스 -->
+                <div class="volumeBonusContent">
+                    <!-- 볼륨 성장 시뮬레이션 -->
+                    <div class="collapsibleList">
+                        <!-- 시뮬레이션 -->
+                        <div class="toggleBox on">
+                            <strong class="tggTit"><a href="#none">볼륨 성장 보너스 시뮬레이션 하기</a></strong>
+                            <div class="tggCnt">
+                            
+                                <!-- 데이터 입력하기 -->
+                                <div class="simulationCotent">
+                                    <p>
+                                        <b>국내 사업 핀과 월간 코어 보너스를 입력</b>하시면, 볼륨 성장 보너스를 시뮬레이션 하실 수 있습니다.
+                                    </p>
+                                    
+                                    <!-- 입력 -->
+                                    <div class="myDataEnter">
+                                        <div class="longline">
+                                            <label for="volumeData01">국내 사업 핀 :</label>
+                                            <select name="volumeData01" id="volumeData01">
+                                                <option value="">다이아몬드</option>
+                                                <option value="">플레티늄</option>
+                                                <option value="">ABO</option>
+                                            </select><br>
+                                            <label for="volumeData02" class="last">국내 Q12 레그수 :</label>
+                                            <input type="text" name="volumeData02" id="volumeData02">
+                                        </div>
+                                        <div class="hide"></div>
+                                        <div style="width:49%">
+                                            <label for="dataPV">후원수당</label>
+                                            <span><input type="text" id="dataPV"><em>원</em></span>
+                                        </div>
+                                        <div style="width:49%">
+                                            <label for="dataBonus" class="longTxt">리더십 보너스<br>(대리후원 포함)</label>
+                                            <span><input type="text" id="dataBonus"><em>원</em></span>
+                                        </div>
+                                        <div style="width:49%">
+                                            <label for="dataLeadership" class="mgtS">루비 보너스</label>
+                                            <span><input type="text" id="dataLeadership"><em>원</em></span>
+                                        </div>
+                                        <div style="width:49%">
+                                            <label for="dataLeadershipDeputy" class="mgtS">MD 보너스</label>
+                                            <span><input type="text" id="dataLeadershipDeputy"><em>원</em></span>
+                                        </div>
+                                    </div>
+                                    <!-- //입력 -->
+                                    
+                                    <!-- 계산법 -->
+                                    <div class="mgbS">
+                                        <h3 class="titW">볼륨 성장 보너스 계산법</h3>
+                                        <p class="imgP">
+                                            <img src="http://www.abnkorea.co.kr/_ui/mobile/images/content/img_m020900320_bonus.gif" alt="보너스 금액 = 월간 코어 보너스 평균 X 핀 구간 & 성장률에 따른 지급 비율">
+                                        </p>
+                                    </div>
+                                    <!-- //계산법 -->
+                                    
+                                    <div class="btnWrap aBlock pdSideNone">
+                                        <a href="#none" class="btnBasicBL">보너스 시뮬레이션하기</a>
+                                    </div>
+                                </div> 
+                                <!-- //데이터 입력하기 -->
+                            
+                            
+                                <!-- 시뮬레이션 결과 -->
+                                <div class="simulationCotent">
+                                    <div class="myDataEnter result">
+                                        <p><b>홍길동</b>님의 월간 코어 보너스는 
+                                            총합 <b>72,000,000원</b> 평균 <b>6,000,000원</b>입니다.
+                                            <b>다이아몬드</b> 핀 기준 다이아몬드 그룹 BV 성장률
+                                            에 따른 보너스 금액은 아래와 같습니다.
+                                        </p>
+                                    </div>
+                                    
+                                    <div class="chartWrapper">
+                                        <p class="goalPoint">
+                                            <span><em>볼륨 성장 보너스 금액</em></span>
+                                        </p>
+                                        
+                                        <!-- 차트 -->
+                                        <div class="barChartBox">
+                                            <p class="textR">[만원]</p>
+                                            <div class="axisHorizontal">
+                                                <div class="yAxisMaximum"><span class="textR">6,000</span></div><!-- 최고치 -->
+                                                <div class="yAxisHalf" style="top:33.3%"><span class="textR">4,000</span></div><!-- 2/3 -->
+                                                <div class="yAxisHalf" style="top:66.6%"><span class="textR">2,000</span></div><!-- 3/3 -->
+                                                <div class="yAxisMinimum"><span style="width:70px" class="textR">0</span></div><!-- 시작 -->
+                                                <div class="yAxisMinimum" style="bottom:-35px"><span style="width:75px;letter-spacing:-1px;font-size:11px" class="textR">다이아몬드<br>그룹 BV 성장률</span></div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <strong class="chartLegend" style="letter-spacing:-1px">1% 이상<br>~5% 미만</strong>
+                                                    <div class="chartBar"><em class="chartNum">3,600</em><span><img src="http://www.abnkorea.co.kr/_ui/desktop/images/content/img_chartcolor_achieve.gif" style="height:45%" alt="1% 이상 ~ 5% 미만"></span></div>
+                                                </li>
+                                                <li>
+                                                    <strong class="chartLegend" style="letter-spacing:-1px">5% 이상<br>~ 10% 미만</strong>
+                                                    <div class="chartBar"><em class="chartNum">4,200</em><span><img src="http://www.abnkorea.co.kr/_ui/desktop/images/content/img_chartcolor_apply.gif" style="height:70%" alt="5% 이상 ~ 10% 미만"></span></div>
+                                                </li>
+                                                <li>
+                                                    <strong class="chartLegend" style="letter-spacing:-1px">10% 이상</strong>
+                                                    <div class="chartBar"><em class="chartNum">4,800</em><span><img src="http://www.abnkorea.co.kr/_ui/desktop/images/content/img_chartcolor_goal.gif" style="height:75%" alt="10% 이상"></span></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- //차트 -->
+                                    </div>
+                                    
+                                    <div class="btnWrap aBlock pdSideNone">
+                                        <a href="#none" class="btnBasicBL">보너스 시뮬레이션 다시하기</a>
+                                    </div>
+                                </div>
+                                <!-- //시뮬레이션 결과 -->
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- //시뮬레이션 -->
+                    
+                    
+                </div>
+                <!-- //볼륨 성장 보너스 -->
+                
+                
+            </section>
+            <!-- //볼륨 성장 보너스 시뮬레이션 -->
+            
+            
+        </section>
+        <!-- //content -->
+    </div>
+    <!-- container -->
+
+    <!-- footer -->footer include<!-- //footer -->
+</div>
+</body>
+</html>
+

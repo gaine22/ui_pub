@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico"> 
+
+	<title>청구/ 납부방법 변경 | SK 7mobile</title>
+
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+<body>
+	<div class="skip" id="skip">
+		<ul>
+			<li><a href="#main">본문 바로가기</a></li>
+		</ul>
+	</div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+            <div class="contents-wrap">
+                <section>
+                    <h2 class="h2">청구/ 납부방법 변경</h2>
+                    <div class="select-top-area">
+                        <span class="lb-select"><label for="hpnumber">휴대폰번호</label> : 1개</span>
+                        <select class="selectbox-l" title="보유휴대폰" id="hpnumber">
+                            <option>010-1234-5678</option>
+                        </select>
+                    </div>
+                </section>
+
+                <section>                    
+                    <h3 class="h3tit">현재 이용중인 납부방법입니다.</h3>
+                    <ul class="tbl-wrap">
+                        <li>
+                            <div class="dt">납부방법</div>
+                            <div class="dd">신용카드 자동납부 <a href="../pages/POC_MSD_CLS_0210.html" class="btn-inbase">납부방법 변경</a></div>
+                        </li>
+                        <li>
+                            <div class="dt">납부일자</div>
+                            <div class="dd">27일</div>
+                        </li>
+                        <li>
+                            <div class="dt">예금주명</div>
+                            <div class="dd">홍*동</div>
+                        </li>
+                        <li>
+                            <div class="dt">자동납부 정보</div>
+                            <div class="dd">우리은행 / 100244929*****</div>
+                        </li>
+                        <li>
+                            <div class="dt">명세서 수령방법</div>
+                            <div class="dd">우편명세서 <button type="button" class="btn-inbase">명세서유형 변경</button></div>
+                        </li>
+                        <li>
+                            <div class="dt">청구지 정보</div>
+                            <div class="dd">서울시 마포구 서교동 ******</div>
+                        </li>
+                    </ul>
+
+                    <h3 class="h3tit">변경하시려는 청구방법을 선택하세요.</h3>
+                    <span class="sub-txt mg">* 최근 6개월간 납부하신 금액 정보입니다.</span>
+                    <ul class="tbl-wrap">
+                        <li class="style2">
+                            <fieldset class="div-wrap" role="group">
+                                <legend>청구방법 선택</legend>
+                                    <input type="radio" name="statement" id="statement_1" checked="checked" title="문자명세서">
+                                    <label class="lb-radio checked" for="statement_1"><span>문자명세서</span></label>
+                                    <input type="radio" name="statement" id="statement_2" title="이메일명세서">
+                                    <label class="lb-radio" for="statement_2"><span>이메일명세서</span></label>
+                                    <input type="radio" name="statement" id="statement_3" title="우편명세서">
+                                    <label class="lb-radio" for="statement_3"><span>우편명세서</span></label>
+                            </fieldset>
+                        </li>
+                       <li class="style radio-con radio-con1 on">
+                            <div class="dt">문자청구지 정보</div>
+                            <div class="dd">010-1234-5678</div>
+                        </li>                        
+                        <li class="style radio-con radio-con2">
+                            <div class="dt m-block">e-mail청구지 정보</div>
+                            <div class="dd mailform-wrap">
+                                <input type="text" class="inputbox-s email" placeholder="이메일 아이디" title="이메일 아이디">
+                                <span class="unit-s">@</span>
+                                <input type="text" class="inputbox-s" title="이메일 공급자">
+                                <select class="selectbox-m" title="이메일공급자">
+                                    <option>직접입력</option>
+                                    <option>naver.com</option>
+                                    <option>gmail.com</option>
+                                    <option>nate.com</option>
+                                    <option>daum.net</option>
+                                    <option>hanmail.net</option>
+                                </select>                  
+                            </div>
+                        </li>
+                        <li class="style radio-con radio-con3">
+                            <div class="dt m-block">우편청구지 정보</div>
+                            <div class="dd address-wrap">
+                                <div class="inp-addr1">
+                                    <input type="text" class="inputbox addr" id="addr" disabled="disabled"> <button type="button" class="btn-inbase">우편번호찾기</button>
+                                </div>
+                                <div class="inp-addr2">
+                                    <input type="text" class="inputbox" id="addr2">
+                                    <input type="text" class="inputbox" id="addr3">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <div class="txt-box bg">
+                        <div class="line">
+                            <input type="checkbox" id="chReport" name="chReport_n">
+                            <!-- edit180312 문구수정 -->
+                            <label class="lb-check sck" for="chReport"><span>신청정보를 확인하였으며, 변경진행에 동의합니다.</span></label>
+                            <div class="btn-right">
+                                <button type="button" class="btn-point"><i>변경</i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 20180322 : 유의사항 수정 -->
+                    <div class="note-box">
+                        <h3 class="ico-note">유의사항</h3>
+                        <ol>
+                            <li>은행계좌 자동이체로 납부방법을 변경하시려면 고객센터를 통해 신청 가능합니다.</li>
+                            <li>납부방법 변경시 인출일정을 확인해 주세요.
+                                <ul>
+                                <li>* 지로/은행 &rarr; 카드로 변경 시 : 매월 5일까지 신청 시 당월 인출일(26일)에 반영</li>
+                                <li>* 카드 &rarr; 카드로 변경 시 : 인출일(26일) 4일(주말 공휴일 제외) 전까지 신청 시 당월 인출일에 반영</li>
+                                <li>※ 매월 5일 이후 납부방법 변경 시, 당월 요금 인출은 기존 납부수단으로 인출될 수 있습니다.</li>
+                                </ul>
+                            </li>
+                            <li>자동납부 방법 변경시, 신청결과 반영에 2-3일이 소요될 수 있습니다.</li>
+                            <li>법인/사업자 등록시 고객센터&lt;1599-0999(유료)/휴대폰 114&gt;로 문의바랍니다.</li>
+                            <li>우편 청구지 정보 등록/변경시 상세주소 확인 및 우편번호 확인이 필요합니다.</li>
+                            <li>이메일청구서 신청시, 일부 도메인의 경우 불완전한 서비스로 부달이 발생 될 수 있으니 참고 부탁드립니다.</li>
+                            <li>이메일청구서의 경우에는 해당 이메일 주소가 비사용중이거나 메일함의 용량초과로 부달될 수 있습니다.</li>
+                            <li>일정기간 이후에도 청구서를 받지 못하셨다면 청구지 주소, 이메일 주소, 휴대폰 번호가 잘못 등록되어 있을 가능성이 높습니다.</li>
+                            <li>우편청구서는 매월 15일경 발행되므로 매월 18~20일경 우편으로 받아보실 수 있으며, 이메일청구서는 매월 15일경 발송되어 받아보실 수 있습니다.</li>
+                            <li>문자청구서 이용시, 서비스 정지(발,수신정지)시에는 다른유형으로 변경되어 문자청구서가 발행됩니다.</li>
+                        </ol>
+                    </div>
+                    <!--// 20180322 : 유의사항 수정 -->
+                </section>
+            </div><!-- //.contents-wrap -->
+		</main>
+		<div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+	
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+            $("input[name='statement']:radio").click(function(){
+                if($(this).attr("id") == 'statement_1'){
+                    $('.radio-con').removeClass('on');
+                    $('.radio-con1').addClass('on');
+                }else if($(this).attr("id") == 'statement_2'){
+                    $('.radio-con').removeClass('on');
+                    $('.radio-con2').addClass('on');
+                }else if($(this).attr("id") == 'statement_3'){
+                    $('.radio-con').removeClass('on');
+                    $('.radio-con3').addClass('on');
+                }
+            });
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

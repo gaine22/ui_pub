@@ -1,0 +1,92 @@
+<section class="ui-modal modal-usim" id="pageFot0700" role="dialog" aria-hidden="true">
+    <div class="ui-modal-wrap">
+        <header class="ui-modal-tit">
+            <h1>법인 개통 문의</h1>
+            <button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id: 'pageFot0700' });">닫기</button>
+        </header>
+        <div class="ui-modal-cont">
+            <p class="list-dot">법인 개통 문의 시 아래 양식에 맞추어 문의 주시면 담당자가 확인하여 빠르고 상세히 안내 드리겠습니다.</p>
+
+            <div class="modal-form">
+                <ul class="company-form form-wrap tb-line">
+                    <li class="line">
+                        <dl>
+                            <dt><label for="companyName">법인명<sup>*<span class="hide">필수</span></sup></label></dt>
+                            <dd>
+                                <div>
+                                    <input type="text" class="inputbox" id="companyName">
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="line">
+                        <dl>
+                            <dt><label for="companyNum">법인등록번호</label></dt>
+                            <dd>
+                                <div>
+                                    <input type="text" class="inputbox" id="companyNum" placeholder="'-'없이 숫자만 입력">
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="line">
+                        <dl>
+                            <dt><label for="inquiryCon">문의내용<sup>*<span class="hide">필수</span></sup></label></dt>
+                            <dd>
+                                <div>
+                                    <textarea class="textarea" id="inquiryCon"></textarea>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="line">
+                        <dl>
+                            <dt><label for="personName">담당자명<sup>*<span class="hide">필수</span></sup></label></dt>
+                            <dd>
+                                <div>
+                                    <input type="text" class="inputbox" id="personName">
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="line">
+                        <dl>
+                            <dt><label for="personPhone">담당자연락처<sup>*<span class="hide">필수</span></sup></label></dt>
+                            <dd>
+                                <div>
+                                    <input type="text" class="inputbox" id="personPhone" placeholder="'-'없이 숫자만 입력">
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="line">
+                        <dl>
+                            <dt><label for="userMail">이메일<sup>*<span class="hide">필수</span></sup></label></dt>
+                            <dd>
+                                <div class="mailform-wrap">
+                                    <span>
+                                        <input type="text" class="inputbox-s email" title="이메일 아이디">
+                                        <span class="unit-s">@</span>
+                                        <input type="text" class="inputbox-s email" title="이메일 공급자">
+                                    </span>
+                                    <select class="selectbox-m" title="이메일공급자">
+                                        <option>직접입력</option>
+                                        <option>naver.com</option>
+                                        <option>gmail.com</option>
+                                        <option>nate.com</option>
+                                        <option>daum.net</option>
+                                        <option>hanmail.net</option>
+                                    </select>   
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+            <p class="txt fc-red">* 법인등록번호 기재 시 보다 빠른 상담이 가능합니다. </p>
+            <div class="btn-wrap">
+                <button type="button" class="btn btn-point-m"><i>접수하기</i></button>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico">
+	<!-- 180316 : 텍스트 수정 -->
+	<title>휴대폰번호 인증 | SK 7mobile</title>
+
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+
+<body>
+	<div class="skip" id="skip"></div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<div class="base-layer" id="baseLayer"></div>
+		<main class="main" id="main" role="main">
+			<div class="contents-wrap">
+				<section class="pocppshci0000">
+					<!-- 180316 : 텍스트 수정 -->
+				    <h2 class="h2">휴대폰번호 인증</h2>
+                    <div class="agree-box">
+                        <fieldset class="div-wrap" role="group">
+                            <legend>약관동의 선택</legend>
+                            <span class="top-all">
+                                <input type="checkbox" id="agr_0">
+								<!-- 180305 : 텍스트 수정 -->
+                                <label class="lb-check all sck" for="agr_0"><span>이용약관 및 개인정보의 수집 &middot; 이용 &middot; 제공에 모두 동의합니다. </span></label>
+                            </span>
+							<!-- 20180315 : 제거
+                            <span>
+                                <input type="checkbox" id="agr_1" class="agr_0">
+                                <label class="lb-check sck" for="agr_1"><span>[필수] SK 7mobile 이용약관 및 개인정보 취급방침 동의</span></label>
+                                 <button type="button" class="btn-ico-pop" aria-haspopup="true" onclick="$plugins.uiModal({ id:'termModal1' });"><span><i>[필수] SK 7mobile 이용약관 및 개인정보 취급방침 동의 팝업</i></span></button>
+                            </span>
+							-->
+                            <span>
+                                <input type="checkbox" id="agr_2" class="agr_0">
+                                <label class="lb-check sck" for="agr_2"><span>[필수] 개인 정보 수집 , 이용 동의</span></label>
+                                 <button type="button" class="btn-ico-pop" aria-haspopup="true" onclick="$plugins.uiModal({ id:'termModal2' });"><span><i>[필수] 개인 정보 수집 , 이용 동의 팝업</i></span></button>
+                            </span>
+                        </fieldset>
+                    </div>
+					<ul class="form-wrap">
+						<li class="line">
+							<dl>
+								<dt><label for="phonenumber">휴대폰번호<sup>*<span class="hide">필수</span></sup></label></dt>
+								<dd>
+                                    <div class="cert-box">
+                                        <input type="text" class="inputbox" id="phonenumber" placeholder="휴대폰번호 '-'없이 입력하세요">
+										<!-- 180227 : button i태그 추가 -->
+                                        <button type="button" class="btn-inbase"><i>인증번호 받기</i></button><!-- 180315 : 텍스트 수정 -->
+                                    </div>
+                                </dd>
+							</dl>
+						</li>
+                        <li class="line">
+							<dl>
+								<dt><label for="certnum">인증번호<sup>*<span class="hide">필수</span></sup></label></dt>
+								<dd>
+                                    <div class="cert-box">
+                                        <input type="text" class="inputbox-s" id="certnum">
+										<!-- 180227 : button i태그 추가 -->
+                                        <button type="button" class="btn-inbase"><i>인증번호 확인</i></button><!-- 180315 : 텍스트 수정 -->
+                                    </div>
+                                </dd>
+							</dl>
+						</li>
+					</ul>
+					<div class="btn-wrap">
+						<a href="#none" class="btn btn-point"><i>확인</i></a>
+					</div>
+				</section>
+				
+			</div><!-- .contents-wrap -->
+		</main>
+        <div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+
+	<script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			// 약관동의
+			$plugins.uiForm({ id: 'agr_0', all: true, callback: allCheckCallback});
+            function allCheckCallback(v){}
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

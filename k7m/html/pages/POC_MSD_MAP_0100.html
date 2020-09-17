@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico"> 
+
+	<title>휴대폰결제 | SK 7mobile</title>
+	
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+<body>
+	<div class="skip" id="skip"><ul><li><a href="#main">본문 바로가기</a></li></ul></div>
+    <div class="base-layer" id="baseLayer">
+        <!-- POC_MSD_MAP_0110 휴대폰결제 이용불가 사유 -->
+        <section class="ui-modal" id="POC_MSD_MAP_0110" role="dialog" aria-hidden="true">
+            <div class="ui-modal-wrap">
+                <header class="ui-modal-tit">
+                    <h1>이용불가 사유</h1>
+                    <button type="button" class="ui-modal-close btn-close">닫기</button>
+                </header>
+                <div class="ui-modal-cont">
+                    
+                    <h3>휴대폰결제 이용불가 사유</h3>
+                    <div class="box-line">
+                        <!-- edit180309 문구 수정 -->
+                        <ul class="list-dot">
+                            <li>미성년자 회원은 휴대폰결제 사용이 불가능 합니다.</li>
+                            <li>법인 회원은 휴대폰결제 사용이 불가능 합니다.</li>
+                            <li>요금 납부가 연체된 고객님은 납부 후 휴대폰결제 사용이 가능합니다.
+                                <p class="list-note">※ 납부완료 후 익일부터 휴대폰 결제가능</p>
+                            </li>
+                            <li>휴대폰결제 사용이 불가능합니다.<br>
+                            자세한 내용은 고객센터(1599-0999 또는 114)로 문의바랍니다.</li>
+                        </ul>
+                    </div>
+                    <div class="btn-wrap">
+                        <span><button type="button" class="ui-modal-close btn btn-point">확인</button></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+                        
+        
+        <!-- POC_MSD_MAP_0120 휴대폰결제 이용한도 변경 -->
+        <section class="ui-modal" id="POC_MSD_MAP_0120" role="dialog" aria-hidden="true">
+            <div class="ui-modal-wrap">
+                <header class="ui-modal-tit">
+                    <h1>휴대폰결제 이용한도 변경</h1>
+                    <button type="button" class="ui-modal-close btn-close">닫기</button>
+                </header>
+                <div class="ui-modal-cont">
+                    <div class="con-box">
+                        <div>
+                            <h3>휴대폰결제 이용한도</h3>
+                            <span class="fc-red">150,000원</span>
+                        </div>
+                        <div>
+                            <p><span class="fc-red">변경하실 이용한도</span>를 선택하세요.</p>
+                            <select class="selectbox-xs" title="휴대폰결제 이용한도 선택">                               
+                                <option>150,000</option>
+                                <option>60,000</option>
+                                <option>50,000</option>
+                                <option>30,000</option>
+                            </select><em class="unit">원</em>
+                        </div>
+                    </div>
+                    
+                    <ul class="list-dot-txt">
+                        <li>* 휴대폰결제 이용한도 증액은 월 1회만 신청 가능합니다.</li>
+                        <li>* 휴대폰결제 이용한도 변경은 휴대폰 인증 또는 공인인증서 인증 후 가능합니다.</li>
+                    </ul>
+
+                    <div class="btn-wrap">
+                        <span><button type="button" class="btn btn-point">확인</button></span>
+                        <span><button type="button" class="ui-modal-close btn btn-gray">취소</button></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POC_MSD_MAP_0130 휴대폰결제 이용한도 변경 본인인증 -->
+        <section class="ui-modal" id="POC_MSD_MAP_0130" role="dialog" aria-hidden="true">
+            <div class="ui-modal-wrap">
+                <header class="ui-modal-tit">
+                    <h1>휴대폰결제 이용한도 변경 본인인증</h1>
+                    <button type="button" class="ui-modal-close btn-close">닫기</button>
+                </header>
+                <div class="ui-modal-cont">
+                    <div class="ui-tab item2" id="certTab">
+						<div class="ui-tab-btns" aria-label="인증서" role="tablist">
+							<button type="button" class="ui-tab-btn" role="tab" id="certTab0" aria-controls="certTabPnl0" aria-selected="true"><i>휴대폰 인증</i></button>
+							<button type="button" class="ui-tab-btn" role="tab" id="certTab1" aria-controls="certTabPnl1" aria-selected="false"><i>아이핀(i-PIN) 인증</i></button>
+						</div>
+						<div class="ui-tab-pnls">
+							<section class="ui-tab-pnl" role="tabpanel" id="certTabPnl0" aria-labelledby="certTab0" aria-hidden="false">
+								<h3 class="hide">휴대폰 인증</h3>
+                                <ul class="tbl-wrap form-wrap mw110"><!-- edit180309 form-wrap 클래스 추가 -->
+                                    <li class="style">
+                                        <div class="dt"><label for="cert_name">이름<sup>*<span class="hide">필수</span></sup></label></div>
+                                        <div class="dd input-wrap"><input type="text" class="inputbox" id="cert_name" title="이름"></div>
+                                    </li>
+                                    <li class="style">
+                                        <div class="dt"><label for="cert_ph1">휴대폰번호<sup>*<span class="hide">필수</span></sup></label></div>
+                                        <div class="dd input-wrap"><input type="text" class="inputbox-m" id="cert_ph1" placeholder="휴대폰번호 '-'없이 입력" title="휴대폰번호"> <button type="button" class="btn-inbase1 mgt-xs">인증번호 받기</button></div><!-- edit180309 btn-inbase1 클래스 변경 -->
+                                    </li>
+                                    <li class="style">
+                                        <div class="dt"><label for="cert_num1">인증번호<sup>*<span class="hide">필수</span></sup></label></div>
+                                        <div class="dd input-wrap"><input type="text" class="inputbox-xs" id="cert_num1" title="인증번호">
+                                        <button type="button" class="btn-inbase1">인증번호 확인</button></div><!-- edit180309 btn-inbase1 클래스 변경 -->
+                                    </li>
+                                </ul>
+							</section>
+                            <section class="ui-tab-pnl" role="tabpanel" id="certTabPnl1" aria-labelledby="certTab1" aria-hidden="false">
+								<h3 class="hide">아이핀(i-PIN) 인증</h3>
+								
+							</section>
+						</div>
+					</div>
+                   
+                    <div class="btn-wrap">
+                        <span><button type="button" class="btn btn-point">확인</button></span>
+                        <span><button type="button" class="ui-modal-close btn btn-gray">취소</button></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+        
+		<main class="main" id="main" role="main">
+            <div class="contents-wrap">
+                <section>
+                    <h2 class="h2">휴대폰결제</h2>
+
+                    <section class="select-top-area noline">
+                        <span class="lb-select"><label for="hpnumber">휴대폰번호</label> : 1개</span>
+                        <select class="selectbox-l" title="보유휴대폰" id="hpnumber">
+                            <option>010-1234-5678</option>
+                        </select>
+                        <!-- 20180321 버튼클래스 변경 -->
+                        <a href="#" class="btn-right btn-bluegreen"><span class="arr">휴대폰결제 내역 바로가기</span></a>
+                    </section>
+                </section>
+                <section>
+                    <div class="top-box">                        
+                        <div class="box nobg">
+                            <h3>휴대폰결제 이용여부</h3>
+                            <span class="state">이용가능</span>
+                            <button type="button" class="btn-inbase"><i>이용 중으로 변경</i></button>
+                        </div>
+                        <div class="box">
+                            <div class="n1">
+                                <h4>이용한도</h4>
+                                <span class="fc-red">150,000원</span>
+                                <button type="button" class="btn-inbase" aria-haspopup="true" onclick="$plugins.uiModal({ id:'POC_MSD_MAP_0120', home:'baseModal', width:520});"><i>이용한도 변경</i></button>
+                            </div>
+                            <div class="n2">
+                                <h4>잔여한도</h4>
+                                <span class="fc-red">100,000원</span>
+                            </div>
+
+                            <p class="sub">
+                                <!-- 단회선일경우: 최대 이용한도 금액은 30만원입니다.--> 
+                                <!-- 다회선일경우: --> 다회선 고객님의 회선당 최대 한도 금액은 30만원이며,<br>
+                                회선총합 최대한도는 50만원 입니다.</p>
+                        </div>
+                    </div>
+
+                    <div class="ico-box">
+                        <h4>휴대폰결제 비밀번호 서비스</h4>
+                        <!-- edit180309 줄바꿈 수정 -->
+                        <p>휴대폰결제 서비스를 안전하게 이용하기 위해<br class="mbr"> <strong>추가 결제확인 비밀번호 서비스</strong>입니다.<br>
+                        고객님께서 <strong>직접 비밀번호를 설정</strong>하여<br class="mbr"> 이용하실 수 있습니다.</p>
+                        <a href="../pages/POC_MSD_MAP_0211.html" class="btn-inbase">휴대폰결제 비밀번호 서비스 신청/해지</a>
+                    </div>
+
+                    <div class="ico-box in-box">
+                        <div class="box">
+                            <h4>자동결제 여부</h4>
+                            <span class="selfclearing">사용</span>
+                            <!-- 미사용일 경우
+                            <span class="selfclearing off">미사용</span>
+                            -->
+                        </div>
+                        <h4>자동결제 이용여부 설정</h4>
+                        <!-- edit180309 줄바꿈 수정 -->
+                        <p>매월 정기적으로 결제가 필요한 서비스가 있을 경우<br class="mbr"> 해당 서비스를 사용하시면<br class="wbr">
+                        매월 자동으로 결제가 이루어 집니다. <br>원하지 않으실 경우 미사용 으로 변경하실 수 있습니다.</p>
+
+                        <button type="button" class="btn-inbase self"><i>미사용 상태로 변경</i></button>
+                    </div>
+
+                    <div class="dl-wrap">
+                        <dl>
+                            <dt class="tit"><strong>휴대폰결제 상세안내</strong></dt>
+                            <dd class="pnl">
+                                <!-- edit180309 문구 수정 -->
+                                <ol>
+                                    <li>
+                                        <h5>01. 휴대폰결제 이용여부</h5>
+                                        <ul class="list-dash-txt">
+                                            <li>- 휴대폰결제는 19세 이상의 개인고객만 이용이 가능합니다. (미성년자, 법인고객 이용불가)</li>
+                                            <li>- 장기 미사용자는 <span class="fc-red">1년 이상 휴대폰결제를 사용하지 않은 고객</span>으로, 스미싱 등 휴대폰결제 피해 예방을 위해 결제가 자동 차단된 상태입니다. '휴대폰결제 이용제한 변경' 메뉴에서 이용제한을 해제하시면 정상적으로 이용하실 수 있습니다.</li>
+                                            <li>- <span class="fc-red">구글 플레이스토어, T store의 콘텐츠 결제</span>는 휴대폰결제가 아닌 콘텐츠이용료로 써 서비스가 제공되지 않습니다.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h5>02. 휴대폰결제 이용한도 변경</h5>
+                                        <ul class="list-dash-txt">
+                                            <li>- 휴대폰결제 [이용한도변경] 버튼을 클릭 하시면, 휴대폰결제 이용금액 한도 조정이 가능합니다.</li>
+                                            <li>- 휴대폰결제 이용한도 변경은 월 1회만 신청 가능합니다.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h5>03. 휴대폰결제 이용안내</h5>
+                                        <ul class="list-dash-txt">
+                                            <li>- 휴대폰결제 이용한도 변경은 <span class="fc-red">휴대폰 인증 또는 아이핀(i-PIN) 인증</span> 후 가능합니다.</li>
+                                            <li>- 미납고객의 경우 휴대폰결제 이용한도 변경을 할 수 없으니 <span class="fc-red"></span>미납금액 수납 후 변경</span>하시기 바랍니다.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h5>04. 휴대폰결제 이용한도 조정</h5>
+                                        <ul class="list-dash-txt">
+                                            <li>- 휴대폰결제 이용한도 <span class="fc-red">상향 신청</span>의 경우 고객님의 이용한도에서 <span class="fc-red">1단계만 조정 가능</span>하며, <span class="fc-red">하향 신청</span>의 경우 <span class="fc-red">단계에 관계없이 조정 가능</span>합니다.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h5>05. 휴대폰결제 비밀번호</h5>
+                                        <ul class="list-dash-txt">
+                                            <li>- 휴대폰결제 비밀번호 결제가 가능한 서비스 제공업체는 지속적으로 확대될 예정입니다.
+                                                2018년 4월 기준 이용 범위: ARS 소액결제, 멜론, 게임 관련 상거래 건 (넥슨, 한게임, 엔씨소프트, 넷마블, 아이템베이, 아이템매니아 등)</li>
+                                            <li>- 휴대폰결제 비밀번호를 설정하신 것만으로 <span class="fc-red">안전하게 결제가 진행되는 것은 아니며</span>, 휴대폰결제 시 <span class="fc-red">휴대폰결제 비밀번호를 추가 입력해야만 안전한 결제가 가능</span>합니다.</li>
+                                        </ul>
+                                    </li>
+
+                                </ol>
+                            </dd>
+                        </dl>
+                    </div>                   
+                </section>
+
+                <!-- 내부팝업 -->
+                <section class="mgt-l">
+                    <p class="mgb">개발참고: 내부팝업</p>
+                     <button type="button" class="btn-inbase" aria-haspopup="true" onclick="$plugins.uiModal({ id:'POC_MSD_MAP_0110', home:'baseModal', width:520});"><i>이용불가 사유</i></button>       
+                    <button type="button" class="btn-inbase" id="btnCert" aria-haspopup="true" onclick="$plugins.uiModal({ id:'POC_MSD_MAP_0130', home:'baseModal', width:520});"><i>휴대폰결제 이용한도 변경 본인인증</i></button>
+                    
+                </section>
+               
+
+            </div><!-- //.contents-wrap -->
+		</main>
+		<div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+	
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+            $('#btnCert').on('click', function(){
+                $plugins.uiTab({ id:'certTab', current:0 });
+            });
+           
+            $('.self').on('click', function(){
+                var $self = $('.selfclearing');
+
+                $self.toggleClass('off');
+                if($self.hasClass('off')){
+                    $self.text('미사용');
+                    $(this).html('사용 상태로 변경');
+                } else {
+                    $self.text('사용');
+                    $(this).html('미사용 상태로 변경');
+                }
+            });
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

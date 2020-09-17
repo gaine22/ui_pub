@@ -1,0 +1,67 @@
+{
+	"items" : [
+		{
+			"shade" : "light",
+			"background" : "black",
+			"color" : "#fff",
+			"en" : "Life is something that everyone should try at least once.",
+			"kr" : "인생이란 누구나 한 번쯤 시도해 볼 만한 것이다.",
+			"name" :"Henry J. Tillman",
+			"link" :"#1"
+		},
+		{
+			"shade" : "light",
+			"background" : "gold",
+			"color" : "",
+			"en" : "Life's a voyage that's homeward bound.",
+			"kr" : "인생은 집을 향한 여행이다.",
+			"name" :"Herman Melville",
+			"link" :"#2"
+		},
+		{
+			"shade" : "dark",
+			"background" : "#dfdfdf",
+			"color" : "",
+			"en" : "Observe Everything. Communicate Well. Draw, Draw, Draw.",
+			"kr" : "모든것을 관찰하세요. 소통을 잘 하세요. 그림을 그리고, 그리고 , 또 그리세요.",
+			"name" :"Frank Thomas",
+			"link" :"#3"
+		},
+		{
+			"shade" : "light",
+			"background" : "blue",
+			"color" : "#fff",
+			"en" : "The face is the mirror of the mind, and eyes without speaking confess the secrets of the heart.",
+			"kr" : "얼굴은 마음의 거울이며, 눈은 말없이 마음의 비밀을 고백한다.",
+			"name" :"Saint Jerome",
+			"link" :"#4"
+		},
+		{
+			"shade" : "light",
+			"background" : "#d5e6a7",
+			"color" : "",
+			"en" : "All people want is someone to listen.",
+			"kr" : "사람들이 원하는 모든 것은 자신의 얘기를 들어줄 사람이다.",
+			"name" :"Hugh Elliott",
+			"link" :"#5"
+		},
+		{
+			"shade" : "light",
+			"background" : "#f9c6d8",
+			"color" : "",
+			"en" : "Everything in your world is created by what you think.",
+			"kr" : "세상 모든 일은 여러분이 무엇을 생각하느냐에 따라 일어납니다.",
+			"name" :"Oprah Winfrey",
+			"link" :"#6"
+		},
+		{
+			"shade" : "light",
+			"background" : "#4f4f4f",
+			"color" : "#fff",
+			"en" : "The journey is the reward.",
+			"kr" : "그 여정이 바로 보상이다.",
+			"name" :"Steve Jobs",
+			"link" :"#7"
+		}
+	]
+}

@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	
+	<title>The&middot;K 한국교직원 공제회</title>
+	
+	<link rel="stylesheet" href="./resources/css/ui.base.css">
+	<style>
+		/* 스크롤 css */
+        .mCustomScrollBox{position: relative;overflow:hidden;height: 100%;max-width: 100%;outline: none;direction:rtl;}
+        .mCSB_inside > .mCSB_container {margin-right:0;}
+        .mCSB_container{overflow: hidden;width: auto;height:auto;}
+        .mCSB_scrollTools{opacity: 0.75;filter: "alpha(opacity=75)";-ms-filter: "alpha(opacity=75)";}
+        .mCSB_scrollTools{position:absolute;width:16px;height: auto;left:auto;top:0;right:0;bottom:0;}
+        .mCSB_scrollTools .mCSB_draggerContainer{position: absolute;top:40px;left:0;bottom:40px;right:0;height:auto;}
+        .mCSB_scrollTools .mCSB_dragger{cursor: pointer;width: 100%;height: auto;z-index: 1;}
+        .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color: #000;background-color: rgba(0,0,0,0.35);filter: "alpha(opacity=75)";-ms-filter: "alpha(opacity=75)";}
+        .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{position: relative;width: 4px;height:100%;margin:0 auto;-webkit-border-radius: 16px;-moz-border-radius: 16px;border-radius: 16px;text-align: center;}
+        .mCSB_scrollTools .mCSB_draggerRail{background-color: #000;background-color: rgba(0,0,0,0.2);filter: "alpha(opacity=40)";-ms-filter: "alpha(opacity=40)";}
+        .mCSB_scrollTools .mCSB_draggerRail{width: 2px;height: 100%;margin: 0 auto;-webkit-border-radius: 16px;-moz-border-radius: 15px;border-radius: 16px;}
+        .mCSB_scrollTools,
+        .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+        .mCSB_scrollTools .mCSB_buttonUp, .mCSB_scrollTools .mCSB_buttonDown,
+        .mCSB_scrollTools .mCSB_buttonLeft, 
+        .mCSB_scrollTools .mCSB_buttonRight{-webkit-transition: opacity .2s ease-in-out, background-color .2s ease-in-out;-moz-transition: opacity .2s ease-in-out, background-color .2s ease-in-out;-o-transition: opacity .2s ease-in-out, background-color .2s ease-in-out;transition: opacity .2s ease-in-out, background-color .2s ease-in-out;}
+	
+		.easyBtn { position: absolute; left: 560px; top: 198px; width: 112px; height: 33px; color: rgba(0,0,0,0); background-color: rgba(0,0,0,0); }
+		.easySec { position: fixed; top: -100%; width: 100%; height: 100%; z-index: 1000; opacity: 0; background-color: #f4f5f8; }
+		.easySec .easyStep { position: absolute; top: 0; z-index: 1; width: 852px; text-align: center; }
+		.easySec .easyWrap { position: relative; }
+		.easySec .easyWrap .item { display: none; position: absolute; top: 0; }
+		.easySec .easyWrap .easyCtrl { position: absolute; top: 544px; width: 852px; text-align: center; }
+		.easySec .easyWrap .easyCtrl button { margin: 0 5px; }
+		.easySec .easyWrap .easyCtrl button.consult,
+		.easySec .easyWrap .easyCtrl button.myBox { display: none; }
+		.easySec .easyWrap .easyCtrl button.myBox { position: absolute; top: 0; left: 660px; }
+		.easySec .dimm { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 999; }
+		.easySec .dimm .layerPop { position: absolute; left: 50%; top: 50%; margin: -80px 0 0 -29px; cursor: pointer; }
+	</style>
+</head>
+<body>
+	<!-- 모바일 -->
+	<button type="button" class="mobView" data-href="mobile1.html">모바일 보기</button>
+	<div class="dimWrap">
+		<div class="mob scroll" id="mScroll"></div>
+	</div>
+	<div class="mobData"></div>
+	<!-- //모바일 -->
+	
+	<div class="wrap page1" id="wrap">
+		<header class="header">
+			<img src="./resources/img/left.png" alt="">
+			<button type="button" class="btn" id="btn_gnb"></button>
+			<button type="button" class="btn2" id="btn_mypage"></button>
+			<a href="main.html" class="btn_link n1">main</a>
+			<a href="main2.html" class="btn_link n2">보험제도</a>
+			<a href="main3.html" class="btn_link n3">행복서비스</a>
+			<a href="main4.html" class="btn_link n4" target="_blank">대한민국 스승상</a>
+			<a href="main5.html" class="btn_link n5" target="_blank">ENG</a>
+		</header>
+		<div class="gnb_menu_wrap">
+			<img src="./resources/img/gnbmenu.png" alt="" class="gnb_menu">
+			<button class="btn_close"></button>
+		</div>
+		<div class="layer_mypage">
+		    <img src="./resources/img/layer_mypage.png" alt="">
+		    <a href="mypage.html" class="link"></a>
+		    <button class="close"></button>
+		</div>
+		<main class="main">
+		    <div class="dim"></div>
+			<div class="ui-parallax-wrap" id="uiParallax">
+				<div class="ui-parallax-item">
+					<img src="./resources/img/main01_01.png" alt="">
+					<button type="button" class="easyBtn">나를 위한 상품찾기</button>
+				</div>
+				<div class="ui-parallax-item" style="background:#1e292b">
+					<div class="ui-position" id="exeFix1">
+						<div class="ui-position-wrap">
+							<img src="./resources/img/main01_08.png" alt="">
+						</div>
+					</div>
+					
+					<div id="mainSlide" class="main_slide">
+			            <img src="./resources/img/main_quickmenu.png" alt=" " class="quick_menu">
+			            <ul>
+			                <li><img src="./resources/img/mainslide_01.png" alt=" "></li>
+			                <li><img src="./resources/img/mainslide_02.png" alt=" "></li>
+			                <li><img src="./resources/img/mainslide_03.png" alt=" "></li>
+			            </ul>
+			            <p class="paging">
+			                <a href="#none" class="page-01"></a>
+			                <a href="#none" class="page-02 on"></a>
+			                <a href="#none" class="page-03"></a>
+			            </p>
+			        </div>
+			        <div style="padding-bottom:280px; background:#f4f5f8">
+			        	<img src="./resources/img/main01_07.png" alt="">
+			        </div>
+			        
+				</div>
+				<div class="ui-parallax-item" style="padding-bottom:100px; background:#f4f5f8">
+					<img src="./resources/img/main01_03.png" alt="">
+				</div>
+				<div class="ui-parallax-item" style="padding-bottom:100px; background:#f4f5f8">
+					<img src="./resources/img/main01_04.png" alt="">
+				</div>
+				<div class="ui-parallax-item" style="padding-bottom:100px; background:#f4f5f8">
+					<img src="./resources/img/main01_05.png" alt="">
+				</div>
+				<div class="ui-parallax-item" style="background:#fff">
+					<img src="./resources/img/main01_06.png" alt="">
+				</div>
+			</div>
+			
+			
+			<style>
+				
+			</style>
+			<div class="easySec">
+				<div class="easyStep"><img src="./resources/img/easy_step1.png" alt=""></div>
+				<div class="easyWrap">
+					<div class="item" style="display: block;"><img src="./resources/img/easy_content01.png" alt=""></div>
+					<div class="item"><img src="./resources/img/easy_content02.png" alt=""></div>
+					<div class="item"><img src="./resources/img/easy_content03.png" alt=""></div>
+					<div class="item"><img src="./resources/img/easy_content04.png" alt=""></div>
+					<div class="item"><img src="./resources/img/easy_content05.png" alt=""></div>
+					<div class="item"><img src="./resources/img/easy_content06.png" alt=""></div>
+					<div class="item"><img src="./resources/img/easy_content07.png" alt=""></div>
+					<div class="item"><img src="./resources/img/easy_content08.png" alt=""></div>
+					<div class="easyCtrl">
+						<button type="button" class="btn prev"><img src="./resources/img/easy_btn_prev.png" alt="이전"></button>
+						<button type="button" class="btn next"><img src="./resources/img/easy_btn_next.png" alt="다음"></button>
+						<button type="button" class="btn consult"><img src="./resources/img/easy_btn_consult.png" alt="상담신청"></button>
+						<button type="button" class="btn myBox"><img src="./resources/img/easy_btn_mybox.png" alt="내설게함에 담기"></button>
+					</div>
+				</div>
+				<div class="dimm">
+					<div class="layerPop"><img src="./resources/img/easy_layer.png" alt=""></div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<img src="./resources/img/footer.png" alt="">
+		</footer>
+	</div>
+
+	<script src="./resources/js/lib/jquery-1.12.4.min.js"></script>
+	<script src="./resources/js/lib/jquery.easing.min.js"></script>
+	<script src="./resources/js/lib/gambit-smoothscroll-min.js"></script>
+	<script src="./resources/js/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+	
+	<script src="./resources/js/ui.common.js"></script>
+	
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			
+			$plugins.uiParallax({ id:'uiParallax', callback: callbackParallax })
+			function callbackParallax(v){
+				console.log(v);
+				
+				if(v.index === 0){
+					$('#' + v.id).find('.ui-parallax-item').eq(v.index + 1).css('margin-top', (v.v/2) * -1);
+				} else if(v.index > 0 && v.index < 5){
+					$('#' + v.id).find('.ui-parallax-item').eq(v.index + 1).css('margin-top', ((v.v - v.h)  /2) * -1);
+				}
+			}
+			
+			//fixed
+			NETIVE.uiFollow.inner({ id: 'exeFix1', ps: 'top', fix: false  });
+			
+			//slide
+			$._mainSlide.init({id : 'mainSlide'});
+
+			//easy
+			var easyn = 0;
+			$('.easyBtn').off('click.easy').on('click.easy',function(){
+				$('body').css('overflow','hidden');
+				$('.easySec').animate({
+					'top' : 0,
+					'opacity' : 1
+				},600,'easeInOutQuint', function(){
+					if (easyn === 0) {
+						slideFn.init();
+					}
+					
+				});
+			});
+			var slideFn = {
+				idx : null,
+				init : function(){
+					o = this;
+					o.idx = 0;
+					easyn = 1;
+					
+					$('.easyCtrl .prev').off('click.easy').on('click.easy',function(){
+						if($('.item:animated').length) return;
+						
+						if(o.idx == 0) return;
+						$('.easyWrap').find('.item').eq(o.idx).stop().animate({
+							left : '100%',
+							opacity: 0
+						},1000,'easeInOutQuint');
+						o.idx = o.idx - 1;
+						$('.easyWrap').find('.item').eq(o.idx).show().css('left','-100%').stop()
+						.animate({
+							left : 0,
+							opacity: 1
+						},1000,'easeInOutQuint',function(){
+							$('.easyWrap').find('.item').eq(o.idx+1).hide();
+						});
+
+						if(o.idx == 6){
+							$('.easyStep > img').attr('src','./resources/img/easy_step2.png');
+							$('.easyCtrl .next').fadeIn()
+							$('.easyCtrl .consult').hide();
+							$('.easyCtrl .myBox').hide();
+						} else if(o.idx == 7){
+							$('.easyStep > img').attr('src','./resources/img/easy_step3.png');
+							$('.easyCtrl .next').hide(500)
+							$('.easyCtrl .consult').fadeIn(500);
+							$('.easyCtrl .myBox').fadeIn(500);
+						} else {
+							$('.easyStep > img').attr('src','./resources/img/easy_step1.png');
+							$('.easyCtrl .next').fadeIn(500)
+							$('.easyCtrl .consult').hide(500);
+							$('.easyCtrl .myBox').hide(500);
+						}
+					});
+					
+					$('.easyCtrl .next').off('click.easy').on('click.easy',function(){
+						if($('.item:animated').length) return;
+						
+						if(o.idx == 7) return;
+						$('.easyWrap').find('.item').eq(o.idx).stop().animate({
+							left : '-100%',
+							opacity: 0
+						},1000,'easeInOutQuint',function(){
+							$('.easyWrap').find('.item').eq(o.idx-1).hide();
+						});
+						o.idx = o.idx + 1;
+						$('.easyWrap').find('.item').eq(o.idx).show().css('left','100%').stop()
+						.animate({
+							left : 0,
+							opacity: 1
+						},1000,'easeInOutQuint');
+						
+						if(o.idx == 6){
+							$('.easyStep > img').attr('src','./resources/img/easy_step2.png');
+							$('.easyCtrl .next').fadeIn()
+							$('.easyCtrl .consult').hide();
+							$('.easyCtrl .myBox').hide();
+						} else if(o.idx == 7){
+							$('.easyStep > img').attr('src','./resources/img/easy_step3.png');
+							$('.easyCtrl .next').hide()
+							$('.easyCtrl .consult').fadeIn(500);
+							$('.easyCtrl .myBox').fadeIn(500);
+						} else {
+							$('.easyStep > img').attr('src','./resources/img/easy_step1.png');
+							$('.easyCtrl .next').fadeIn(500)
+							$('.easyCtrl .consult').hide(500);
+							$('.easyCtrl .myBox').hide(500);
+						}
+						
+					});
+					$(document).off('click.easy').on('click.easy','.easyCtrl .myBox',function(){
+						$('.easySec .dimm').css('opacity',0).show().stop().animate({
+							'opacity': 1
+						},500);
+						$('.easySec .layerPop').stop().animate({
+							'margin-top':'-115px'
+						},300,function(){
+							$(this).click(function(){
+								$('.easySec .dimm').fadeOut(200);
+								$('.easySec').stop().animate({
+									'top':'-100%',
+									'opacity' : 0
+								},300);
+								$('body').css('overflow','visible');
+							});
+						});
+					});
+				}
+			}
+			
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

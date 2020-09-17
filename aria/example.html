@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta charset="UTF-8">
+	<title>WAI-ARIA 연습용 페이지</title>
+	<style>
+		.box { padding: 10px; border: 1px solid #999; }
+		.box .boxTitle { margin: 0 0 10px 0; padding: 0; border-bottom: 1px solid #aaa; }
+		.box code { display: block; width: 100%; margin-top: 10px; padding: 10px; overflow-x: auto; font-size: 12px; background-color: #f0f0f0;  box-sizing: border-box; white-space: nowrap; }
+		.box code .pColor { color: red; }
+	</style>
+</head>
+<body>
+<h1>WAI-ARIA</h1>
+<p>WAI-ARIA 는 웹 콘텐츠 및 응용 프로그램의 액세스 가능성 및 상호 운용성을 개선하기위한 프레임 워크를 제공하는 기술 사양입니다.</p>
+
+<hr>
+
+<h2>Roles</h2>
+
+<div class="box">
+	<h3 class="boxTitle">heading</h3>
+	<h4>헤딩</h4>
+	<span role="heading" aria-level="4">헤딩</span>
+	<code aria-hidden="true">
+		&lt;h4&gt;헤딩&lt;/h4&gt;<br>
+		&lt;span <span class="pColor">role="heading" aria-level="4"</span>&gt;헤딩&lt;/span&gt;
+	</code>
+</div>
+
+<hr>
+
+<div class="box">
+	<h3 class="boxTitle">button</h3>
+	<a href="#">GO</a><br>
+	<a href="#" role="button">GO</a>
+	<code aria-hidden="true">
+		&lt;a href="#"&gt;GO&lt;/a&gt;<br>
+		&lt;a href="#" <span class="pColor">role="button"</span>&gt;GO&lt;/a&gt;
+	</code>
+</div>
+
+<hr>
+
+<div class="box">
+	<h3 class="boxTitle">menubar, menuitem, menu</h3>
+	<style>
+		.depthWrap div { padding-left: 10px; margin-bottom: 10px; font-size: 0.8em; }
+		.depthWrap div a { display: block; }
+	</style>
+	<div class="depthWrap">
+		<a href="#">회사소개</a>
+		<div>
+			<a href="#">인사말</a>
+			<a href="#">비전</a>
+		</div>
+		<a href="#">포트폴리오</a>
+		<div>
+			<a href="#">2017년</a>
+			<a href="#">2018년</a>
+		</div>
+	</div>
+	
+	<div role="menubar" class="depthWrap">
+		<a href="#" id="d1" role="menuitem">회사소개</a>
+		<div role="menu" aria-labelledby="d1">
+			<a href="#" role="menuitem">인사말</a>
+			<a href="#" role="menuitem">비전</a>
+		</div>
+		<a href="#" id="d2" role="menuitem">포트폴리오</a>
+		<div role="menu" aria-labelledby="d2">
+			<a href="#" role="menuitem">2017년</a>
+			<a href="#" role="menuitem">2018년</a>
+		</div>
+	</div>
+	<code aria-hidden="true">
+		&lt;div class="depthWrap"&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;회사소개&lt;/a&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;인사말&lt;/a&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;비전&lt;/a&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;포트폴리오&lt;/a&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;2017년&lt;/a&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;2018년&lt;/a&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+		&lt;/div&gt;<br>
+		&lt;div <span class="pColor">role="menubar"</span> class="depthWrap"&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#" id="d1" <span class="pColor">role="menuitem"</span>&gt;회사소개&lt;/a&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="pColor">role="menu"</span> aria-labelledby="d1"&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#" <span class="pColor">role="menuitem"</span>&gt;인사말&lt;/a&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#" <span class="pColor">role="menuitem"</span>&gt;비전&lt;/a&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#" id="d2" <span class="pColor">role="menuitem"</span>&gt;포트폴리오&lt;/a&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="pColor">role="menu"</span> aria-labelledby="d2"&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#" <span class="pColor">role="menuitem"</span>&gt;2017년&lt;/a&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#" <span class="pColor">role="menuitem"</span>&gt;2018년&lt;/a&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+		&lt;/div&gt;
+	</code>
+</div>
+
+<hr>
+
+<div class="box">
+	<h3 class="boxTitle">menuitemcheckbox, menuitemradio</h3>
+
+	<a href="#" role="menuitemcheckbox">동의함</a><br>
+	<a href="#" role="menuitemradio">동의함</a>
+
+	<code aria-hidden="true">
+		&lt;a href="#" <span class="pColor">role="menuitemcheckbox"</span>&gt;동의함&lt;/a&gt;<br>
+		&lt;a href="#" <span class="pColor">role="menuitemradio"</span>&gt;동의함&lt;/a&gt;
+	</code>
+</div>
+
+<hr>
+
+<div class="box">
+	<h3 class="boxTitle">presentation, none</h3>
+
+	<img src="https://www.w3schools.com/images/compatible_chrome.gif" alt="크롬"><br>
+	<img src="https://www.w3schools.com/images/compatible_chrome.gif" alt="크롬" role="presentation"><br>
+	<img src="https://www.w3schools.com/images/compatible_chrome.gif" alt="크롬" role="none">
+
+	<code aria-hidden="true">
+		&lt;img src="chrome.gif" alt="크롬"&gt;<br>
+		&lt;img src="chrome.gif" alt="크롬" <span class="pColor">role="presentation"</span>&gt;<br>
+		&lt;img src="chrome.gif" alt="크롬" <span class="pColor">role="none"</span>&gt;
+	</code>
+
+	<h2>헤딩</h2>
+	<h2 role="presentation">헤딩</h2>
+	<h2 role="none">헤딩</h2>
+	
+	<ol>
+		<li>목록</li>
+		<li>목록</li>
+	</ol>
+	<ol role="presentation">
+		<li>목록</li>
+		<li>목록</li>
+	</ol>
+	<ol role="none">
+		<li>목록</li>
+		<li>목록</li>
+	</ol>
+</div>
+
+<hr>
+
+<div class="box">
+	<h3 class="boxTitle">tree, treeitem</h3>
+	
+	<ul>
+		<li>
+			<span>과일</span>
+			<ul>
+				<li>사과</li>
+				<li>딸기</li>
+			</ul>
+		</li>
+		<li>
+			<span>쥬스</span>
+			<ul>
+				<li>포도</li>
+				<li>바나나</li>
+			</ul>
+		</li>
+	</ul>
+	<ul role="tree">
+		<li role="treeitem">
+			<span>과일</span>
+			<ul role="group">
+				<li role="treeitem">사과</li>
+				<li role="treeitem">딸기</li>
+			</ul>
+		</li>
+		<li role="treeitem">
+			<span>쥬스</span>
+			<ul role="group">
+				<li role="treeitem">포도</li>
+				<li role="treeitem">바나나</li>
+			</ul>
+		</li>
+	</ul>
+	
+	<code aria-hidden="true">
+		&lt;ul&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;과일&lt;/span&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;사과&lt;/li&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;딸기&lt;/li&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;쥬스&lt;/span&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;포도&lt;/li&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;바나나&lt;/li&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br>
+		&lt;/ul&gt;<br>
+		&lt;ul <span class="pColor">role="tree"</span>&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="pColor">role="treeitem"</span>&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;과일&lt;/span&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul <span class="pColor">role="group"</span>&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="pColor">role="treeitem"</span>&gt;사과&lt;/li&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="pColor">role="treeitem"</span>&gt;딸기&lt;/li&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="pColor">role="treeitem"</span>&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;쥬스&lt;/span&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul <span class="pColor">role="group"</span>&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="pColor">role="treeitem"</span>&gt;포도&lt;/li&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="pColor">role="treeitem"</span>&gt;바나나&lt;/li&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br>
+		&lt;/ul&gt;
+	</code>
+</div>
+	
+<hr>
+
+<div class="box">
+	<h3 class="boxTitle">list, listitem</h3>
+	
+	<strong>과일</strong>
+	<ul>
+		<li>수박</li>
+		<li>포도</li>
+		<li>딸기</li>
+	</ul>
+	<strong id="ariaList" role="heading" aria-level="2">과일</strong>
+	<ul role="list" aria-labelledby="ariaList">
+		<li role="listitem">수박</li>
+		<li role="listitem">포도</li>
+		<li role="listitem">딸기</li>
+	</ul>
+	
+	<code aria-hidden="true">
+		&lt;strong&gt;과일&lt;/strong&gt;<br>
+		&lt;ul&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;수박&lt;/li&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;포도&lt;/li&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;딸기&lt;/li&gt;<br>
+		&lt;/ul&gt;<br>
+		&lt;strong <span class="pColor">id="ariaList" role="heading" aria-level="2"</span>&gt;과일&lt;/strong&gt;<br>
+		&lt;ul <span class="pColor">role="list" aria-labelledby="ariaList"</span>&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="pColor">role="listitem"</span>&gt;수박&lt;/li&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="pColor">role="listitem"</span>&gt;포도&lt;/li&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="pColor">role="listitem"</span>&gt;딸기&lt;/li&gt;<br>
+		&lt;/ul&gt;
+	</code>
+</div>
+
+<hr>
+
+<div class="box">
+	<h3 class="boxTitle">listbox, option</h3>
+
+	<ul role="listbox">
+		<li role="option">green</li>
+		<li role="option">red</li>
+		<li role="option">blue</li>
+	</ul>
+	
+	<code aria-hidden="true">
+		&lt;ul <span class="pColor">role="listbox"</span>&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="pColor">role="option"</span>&gt;green&lt;/li&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="pColor">role="option"</span>&gt;red&lt;/li&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="pColor">role="option"</span>&gt;blue&lt;/li&gt;<br>
+		&lt;/ul&gt;
+	</code>
+</div>
+
+<hr>
+
+<div class="box">
+	<h3 class="boxTitle">tablist, tab, tabpanel</h3>
+	<script>
+		function tabShow1(){
+			var gTab1 = document.getElementById('tab01');
+			var gTab2 = document.getElementById('tab02');
+			var gTab3 = document.getElementById('tab03');
+			var sPanelId;
+			var gTab = document.getElementsByClassName('tabA');
+			var gTabPanel = document.getElementsByClassName('tabPanelA');
+			
+			for(var k=0; k<gTab.length; k++){
+				gTab[k].onclick = function(){
+					sPanelId = this.getAttribute('aria-controls');
+					for(var i=0; i<gTabPanel.length; i++){
+						gTab[i].setAttribute('aria-selected','false');
+						gTabPanel[i].setAttribute('aria-hidden','true');
+						
+					}
+					this.setAttribute('aria-selected','true');
+					document.getElementById(''+sPanelId+'').setAttribute('aria-hidden','false');
+				}
+			}
+		}
+	</script>
+	<div class="tabArea">
+		<div role="tablist">
+			<div id="tab01" class="tabA" role="tab" aria-controls="panel01" aria-selected="true">첫번째</div>
+			<div id="tab02" class="tabA" role="tab" aria-controls="panel02" aria-selected="false">두번째</div>
+			<div id="tab03" class="tabA" role="tab" aria-controls="panel03" aria-selected="false">세번째</div>
+		</div>
+		<div id="panel01" class="tabPanelA" aria-labelledby="tab01" role="tabpanel" aria-hidden="false">
+			<div>첫번째 탭 페널입니다.</div>
+		</div>
+		<div id="panel02" class="tabPanelA" aria-labelledby="tab02" role="tabpanel" aria-hidden="true">
+			<div>두번째 탭 페널입니다.</div>
+		</div>
+		<div id="panel03" class="tabPanelA" aria-labelledby="tab03" role="tabpanel" aria-hidden="true">
+			<div>세번째 탭 페널입니다.</div>
+		</div>
+	</div>
+	
+	<code aria-hidden="true">
+		&lt;div <span class="pColor">role="tablist"</span>&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;div id="tab01" class="tabA" <span class="pColor">role="tab"</span> aria-controls="panel01" aria-selected="true"&gt;첫번째&lt;/div&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;div id="tab02" class="tabA" <span class="pColor">role="tab"</span> aria-controls="panel02" aria-selected="false"&gt;두번째&lt;/div&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;div id="tab03" class="tabA" <span class="pColor">role="tab"</span> aria-controls="panel03" aria-selected="false"&gt;세번째&lt;/div&gt;<br>
+		&lt;/div&gt;<br>
+		&lt;div id="panel01" class="tabPanelA" aria-labelledby="tab01" <span class="pColor">role="tabpanel"</span> aria-hidden="false"&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;첫번째 탭 페널입니다.&lt;/div&gt;v
+		&lt;/div&gt;<br>
+		&lt;div id="panel02" class="tabPanelA" aria-labelledby="tab02" <span class="pColor">role="tabpanel"</span> aria-hidden="true"&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;두번째 탭 페널입니다.&lt;/div&gt;<br>
+		&lt;/div&gt;<br>
+		&lt;div id="panel03" class="tabPanelA" aria-labelledby="tab03" <span class="pColor">role="tabpanel"</span> aria-hidden="true"&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;세번째 탭 페널입니다.&lt;/div&gt;<br>
+		&lt;/div&gt;
+	</code>
+</div>
+
+<hr>
+
+<div class="box">
+	<h3 class="boxTitle">tooltip</h3>
+
+	<style>
+		.exTip { position: relative; }
+		.exTip [role="tooltip"] { display: none; position: absolute; left: 30px; top: 30px; padding: 5px; font-size: 12px; background-color: #fff; border: 2px solid green; border-radius: 5px; }
+	</style>
+	<script>
+		function exTipFn(v){
+			var gId = v.getAttribute('aria-describedby');
+			var gTarget = document.getElementById(''+gId+'');
+			gTarget.style.display!='block' ? gTarget.style.display='block' : gTarget.style.display='none';
+		}
+	</script>
+	<div class="exTip">
+		<label>
+			ID : 
+			<input type="text" id="UserName" aria-describedby="tip1" onfocus="exTipFn(this);" onblur="exTipFn(this);">
+		</label>
+		<div id="tip1" role="tooltip" aria-hidden="true">영문, 숫자 포함 8자리 이상</div>
+	</div>
+	
+	<code aria-hidden="true">
+		&lt;label&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;ID : <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="UserName" aria-describedby="tip1"&gt;<br>
+		&lt;/label&gt;<br>
+		&lt;div id="tip1" <span class="pColor">role="tooltip"</span> aria-hidden="true"&gt;영문, 숫자 포함 8자리 이상&lt;/div&gt;
+	</code>
+</div>
+
+<hr>
+
+<div class="box">
+	<h3 class="boxTitle">img</h3>
+
+	<div role="img" aria-label="크롬" style="width: 30px; height:30px; background: url(https://www.w3schools.com/images/compatible_chrome.gif) no-repeat;"></div>
+	
+	<code aria-hidden="true">
+		&lt;div <span class="pColor">role="img"</span> aria-label="크롬" style="width: 30px; height:30px; background: url(compatible_chrome.gif) no-repeat;"&gt;&lt;/div&gt;
+	</code>
+</div>
+
+<hr>
+
+<div class="box">
+	<h3 class="boxTitle">dialog</h3>
+
+	<button type="button" id="btn" onclick="openFn('btn')">dialog 열기</button>
+	<style>
+		#dialog { display: none; position: absolute; width:60%; padding: 10px; left: 50%; transform: translateX(-50%); background-color: #fff; border: 1px solid #000; }
+	</style>
+	<script>
+		function openFn(rf){
+			var gId = document.getElementById('dialog');
+			var gBtn = gId.getElementsByTagName('button')[0];
+			var returnFocus = document.getElementById(rf);
+			gId.style.display = 'block';
+			gId.setAttribute('tabindex','0');
+			gId.focus();
+			gBtn.onclick = function(){
+				gId.style.display = 'none';
+				return returnFocus.focus();
+			}
+		}
+	</script>
+	
+	<div id="dialog" role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
+		<h2 id="dialog1Title">알려드립니다.</h2>
+		<p id="dialog1Desc">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세.</p>
+		<button type="button">닫기</button>
+	</div>
+	
+	<code aria-hidden="true">
+		&lt;div id="dialog" <span class="pColor">role="dialog"</span> aria-labelledby="dialog1Title" aria-describedby="dialog1Desc"&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 id="dialog1Title"&gt;알려드립니다.&lt;/h2&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;p id="dialog1Desc"&gt;동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세.&lt;/p&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type="button"&gt;닫기&lt;/button&gt;<br>
+		&lt;/div&gt;
+	</code>
+</div>
+
+<hr>
+
+<div class="box">
+	<h3 class="boxTitle">dialog</h3>
+
+	<style>
+		#alertdialog { position: relative; width:60%; padding: 10px; left: 50%; transform: translateX(-50%); background-color: #fff; border: 1px solid #000; }
+	</style>
+	<div id="alertdialog" role="alertdialog" aria-labelledby="dialog1Title1" aria-describedby="dialog1Desc1">
+		<h2 id="dialog1Title1">세션 종료</h2>
+		<p id="dialog1Desc1">세션이 종료되었습니다. OK버튼을 클릭하세요.</p>
+		<button>OK</button>
+	</div>
+	
+	<code aria-hidden="true">
+		&lt;div id="alertdialog" <span class="pColor">role="alertdialog"</span> aria-labelledby="dialog1Title1" aria-describedby="dialog1Desc1"&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 id="dialog1Title1"&gt;세션 종료&lt;/h2&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;p id="dialog1Desc1"&gt;세션이 종료되었습니다. OK버튼을 클릭하세요.&lt;/p&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;button&gt;OK&lt;/button&gt;<br>
+		&lt;/div&gt;
+	</code>
+</div>
+
+<hr>
+
+<h2>Attribute</h2>
+
+<div class="box">
+	<h3 class="boxTitle">aria-haspopup</h3>
+
+	<button type="button">dialog 열기</button>
+	<button type="button" aria-haspopup="true">dialog 열기</button>
+	
+	
+	<code aria-hidden="true">
+		&lt;button type="button"&gt;dialog 열기&lt;/button&gt;<br>
+		&lt;button type="button" <span class="pColor">aria-haspopup="true"</span>&gt;dialog 열기&lt;/button&gt;
+	</code>
+</div>
+
+<hr>
+
+<div class="box">
+	<h3 class="boxTitle">aria-live</h3>
+
+	<style>
+		.tabArea * { box-sizing: content-box; }
+		.tabArea [aria-hidden=true] { display: none; }
+		.tabArea [aria-hidden=false] { display: block; background-color: yellow; }
+		[role=tablist] { display: table; width: 100%; }
+		[role=tab] { display: table-cell; border: 1px solid #000; border-left-width: 0; cursor: pointer; }
+		[role=tab]:first-child { border-left-width: 1px; }
+		[role=tablist] > [aria-selected=true] { background: yellow; }
+		[role=tabpanel] { padding: 10px; border: 1px solid #000; }
+	</style>
+	<script>
+		function tabShow(){
+			var gTab1 = document.getElementById('tab1');
+			var gTab2 = document.getElementById('tab2');
+			var gTab3 = document.getElementById('tab3');
+			var sPanelId;
+			var gTab = document.getElementsByClassName('tab');
+			var gTabPanel = document.getElementsByClassName('tabPanel');
+			
+			for(var k=0; k<gTab.length; k++){
+				gTab[k].onclick = function(){
+					sPanelId = this.getAttribute('aria-controls');
+					for(var i=0; i<gTabPanel.length; i++){
+						gTab[i].setAttribute('aria-selected','false');
+						gTabPanel[i].setAttribute('aria-hidden','true');
+						gTabPanel[i].setAttribute('aria-live','off');
+						
+					}
+					this.setAttribute('aria-selected','true');
+					document.getElementById(''+sPanelId+'').setAttribute('aria-hidden','false');
+					document.getElementById(''+sPanelId+'').setAttribute('aria-live','polite');
+					// aria-live="assertive||polite||off(default)" 중요도 순위, 높고 낮음
+				}
+			}
+		}
+		window.onload = function(){
+			tabShow();
+			tabShow1();
+		}
+	</script>
+	<div class="tabArea">
+		<div role="tablist">
+			<div id="tab1" class="tab" role="tab" aria-controls="panel1" aria-selected="true">나탭1</div>
+			<div id="tab2" class="tab" role="tab" aria-controls="panel2" aria-selected="false">나탭2</div>
+			<div id="tab3" class="tab" role="tab" aria-controls="panel3" aria-selected="false">나탭3</div>
+		</div>
+		<div id="panel1" class="tabPanel" aria-labelledby="tab1" role="tabpanel" aria-hidden="false">
+			<div>1번 탭 내용 들어감</div>
+		</div>
+		<div id="panel2" class="tabPanel" aria-labelledby="tab2" role="tabpanel" aria-hidden="true">
+			<div>2번 탭 내용 들어감</div>
+		</div>
+		<div id="panel3" class="tabPanel" aria-labelledby="tab3" role="tabpanel" aria-hidden="true">
+			<div>3번 탭 내용 들어감</div>
+		</div>
+	</div>
+	
+	<code aria-hidden="true">
+		aria-live="assertive||polite||off(default)" 중요도 순위, 높고 낮음
+	</code>
+</div>
+
+<hr>
+
+<div class="box">
+	<h3 class="boxTitle">etc</h3>
+	
+	<code aria-hidden="true">
+		aria-checked="true||false"<br>
+		aria-hidden="true||false"<br>
+		aria-expanded="true||false"<br>
+		aria-selected="true||false"
+	</code>
+</div>
+	
+</body>
+</html>

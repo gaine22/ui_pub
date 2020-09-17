@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico"> 
+
+	<title>SK 7mobile</title>
+	
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+<body>
+	<div class="skip" id="skip">
+		<ul>
+			<li><a href="#main">본문 바로가기</a></li>
+		</ul>
+	</div>
+	<div class="base-layer" id="baseLayer"></div>
+	<div class="wrapper">
+		<div id="topBanner" class="topbanner"></div>
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>		
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+            <div class="contents-wrap">
+				<!--  mobile padding:0 10px -->
+				<section>
+					<br>
+					<h2>foot 팝업 </h2>
+					<br>
+					<button type="button" class="btn-inbase btn-base ui-laypop" aria-haspopup="true" onclick="$plugins.uiModal({ id:'pageFot0300', link:'../pages/POC_COM_FOT_0300.html',width:520, height:650 });"><span><i>개인정보이용내역</i></span></button>
+					<button type="button" class="btn-inbase btn-base ui-laypop" aria-haspopup="true" onclick="$plugins.uiModal({ id:'pageFot0311', link:'../pages/POC_COM_FOT_0311.html',width:520 });"><span><i>이동전화 서비스 조회</i></span></button>
+					<button type="button" class="btn-inbase btn-base ui-laypop" aria-haspopup="true" onclick="$plugins.uiModal({ id:'pageFot0321', link:'../pages/POC_COM_FOT_0321.html',width:520 });"><span><i>통신자료 제공사실 열람신청 조회</i></span></button>
+
+					<br><br>
+					<button type="button" class="btn-inbase btn-base ui-laypop" aria-haspopup="true" onclick="$plugins.uiModal({ id:'pageFot0700', link:'../pages/POC_COM_FOT_0700.html',width:770 });"><span><i>법인 개통 문의</i></span></button>
+					<br><br>
+
+					<h2>추천인/추천대리점 팝업 </h2>
+					<br>
+					<a href="#none" class="btn-inbase btn-base ui-laypop" id="btnRecdPopup" aria-haspopup="true" onclick="$plugins.uiModal({ id:'recdPopup', link:'../pages/POC_PPS_PRR_0000.html',width:520 });"><i>추천인/추천대리점 팝업</i></a>
+
+					<br><br>
+					<h1>휴대폰상세</h1><br>
+					<a href="#none" class="btn-inbase btn-base ui-laypop" aria-haspopup="true" onclick="$plugins.uiModal({ id:'pagePho0140', link:'../pages/POC_DIS_PHO_0140.html',width:640 });"><i>신청내역확인</i></a>
+					<a href="#none" class="btn-inbase btn-base ui-laypop" aria-haspopup="true" onclick="$plugins.uiModal({ id:'pagePho0150', link:'../pages/POC_DIS_PHO_0150.html',width:500 });"><i>로그인</i></a>
+					<a href="#none" class="btn-inbase btn-base ui-laypop" id="btnAnohterPlan" aria-haspopup="true"><i>다른요금제선택</i></a>
+
+					<br><br>
+					<h1>고객센터 확인방식선택</h1><br>
+					<a href="#none" class="btn-inbase btn-base ui-laypop" aria-haspopup="true" onclick="$plugins.uiModal({ id:'pageCscCcs0221', link:'../pages/POC_CSC_CCS_0221.html',width:500 });"><i>확인방식선택</i></a>
+					<a href="#none" class="btn-inbase btn-base ui-laypop" aria-haspopup="true" onclick="$plugins.uiModal({ id:'pageCscCcs0222', link:'../pages/POC_CSC_CCS_0222.html',width:500 });"><i>본인확인(로그인)</i></a>
+					<a href="#none" class="btn-inbase btn-base ui-laypop" aria-haspopup="true" onclick="$plugins.uiModal({ id:'pageCscCcs0223', link:'../pages/POC_CSC_CCS_0223.html',width:600 });"><i>본인확인(비로그인)</i></a>
+
+
+					<!-- dialog-confirm -->
+					<h2 class="mgt-l">Dialog-confirm</h2>
+					<div id="dialog-confirm" class="dialog-content" title="모달 타이틀이 들어갑니다.">
+						<p>문구가 들어갑니다.<br>문구가 들어갑니다.</p>
+					</div>
+					
+					<h2 class="mgt-l">브라우저 이용안내</h2><br>
+					<button type="button" class="btn-inbase btn-base ui-laypop" id="btnBroswerInfo" aria-haspopup="true"><span><i>브라우저 이용안내</i></span></button>
+					
+					<br><br>
+				</section>
+				
+				<!--  mobile full 100% -->
+				<section class="mw100">
+					<div class="inner">
+
+					</div>
+				</section>	
+			</div><!-- //.contents-wrap -->
+		</main>
+		<div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+	
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			// 다른요금제 선택 pop
+			$('#btnAnohterPlan').click(function(){
+				$plugins.uiModal({ 
+					id:'pagePho0130',
+					link:'../pages/POC_DIS_PHO_0130.html',
+					width : 770,
+					height: 650,
+					callback: function(){
+						$plugins.uiForm();
+						$plugins.uiTab({ id:'pmTab1', current:0});
+					}
+				});
+			});
+
+			$( "#dialog-confirm" ).dialog({
+				resizable: false,
+				height: "auto",
+				width: 400,
+				modal: true,
+				buttons: {
+					"확인": function() {
+						$( this ).dialog( "close" );
+					
+					},
+					"취소" : function() {
+						$( this ).dialog( "close" );
+					}
+				}
+			});
+
+			// 브라우저 이용안내
+			$('#btnBroswerInfo').click(function(){
+				$plugins.uiModal({
+					id:'broswerInfo',
+					link: '../pages/POC_MAI_BIP_0000.html',
+					width: 520,
+					callback : function(){
+						$plugins.uiForm();
+					}
+				});
+			});
+
+			( !$plugins.uiCookieGet({ name:'browserLayC1' }) ) ? $plugins.uiModal({ id:'broswerInfo', width:520}) : '';
+			$('#cookie2').change(function(){
+				var _this = $(this);
+				if(_this.is(":checked")) {
+					$plugins.uiCookieSet({ name:'browserLayC1', term:1, value:1 });
+				} else {
+					var expireDate = new Date();					
+					expireDate.setDate(expireDate.getDate() - 1);
+					document.cookie = poplayC2 + "= " + "; expires=" + expireDate.toGMTString();
+				}
+			});
+
+			$('.btn-application').on('click', function(){
+                $plugins.uiModal({
+                    id:'pocDisCpr0120',
+                    width:770,
+                    height:2100,
+                    full:false,
+                    callback: function(v){
+                        function allCheckCallback(v){
+                            //console.log(110)
+                        }
+                    }
+                })
+            })
+
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

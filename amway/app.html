@@ -1,0 +1,84 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>앱 접근 권한 안내</title>
+<link rel="stylesheet" href="http://www.abnkorea.co.kr/_ui/mobile/common/css/default.css" />
+<link rel="stylesheet" href="http://www.abnkorea.co.kr/_ui/mobile/common/css/main.css" />
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/jquery-1.8.3.min.js"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/pbCommon.js"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/pbLayerPopup.js"></script>
+
+<!-- 앱 접근권한 CSS 170816 -->
+<!-- https://www.abnkorea.co.kr/_ui/mobile/common/css/layout.css 실 서버 반영함 -->
+<style>
+/*앱 접근권한 레이어 팝업 170816*/
+/*.pbLayerContent.pblayerAppAccess, .pblayerAppAccess{padding-top:0;text-align:center;position:relative;}
+.pblayerAppAccess .popAccessMain{width:100%;}
+.pblayerAppAccess .popAccessBtns{position:absolute;bottom:0;left:0;width:100%;background-color:#052546;padding:0.8em 0;line-height:1;color:#ccc;min-height:1em;text-align:left}
+.popAccessBtns .chkGroup{padding-left:1em;white-space:nowrap;}
+.popAccessBtns .closeBtn{position:absolute;bottom:0.95em;right:1em;font-size:13px;color:#ccc;}
+.popAccessBtns .closeBtn img{width:0.7em;height:0.7em;vertical-align:baseline;margin-right:3px}
+
+@media screen and (max-width:359px){
+    .pblayerAppAccess .popAccessBtns{letter-spacing:-1px;padding:0.4em 0}
+    .pblayerAppAccess .popAccessBtns label{margin-left:3px;font-size:12px;}
+    .popAccessBtns .chkGroup{padding-left:0.8em}
+    .popAccessBtns .closeBtn{font-size:12px;bottom:0.55em;right:0.8em}
+}
+
+@media screen and (min-width:430px){
+    .pblayerAppAccess .popAccessBtns{padding:1em 0}
+    .pblayerAppAccess .popAccessBtns label{margin-left:3px;font-size:15px;}
+    .popAccessBtns .chkGroup{padding-left:1.2em}
+    .popAccessBtns .closeBtn{font-size:15px;bottom:1em;right:1.2em}
+}*/
+/*//앱 접근권한 레이어 팝업 170816*/
+</style>
+
+<!-- //앱 접근권한 CSS 170816 -->
+
+</head>
+<body>
+<!-- include 영역 -->
+    <!-- 앱 접근권한 레이어 팝업 170816 -->
+    <div class="pbLayerContent pblayerAppAccess">
+        <img class="popAccessMain" src="http://www.abnkorea.co.kr/_ui/mobile/images/content/layer_pop_app_access_main.gif" alt="앱 접근 권한 안내 : 한국암웨이 앱(sABN) 사용 하실 때 다음과 같은 권한이 필요합니다.">
+        <div class="hide">
+            <p><strong>필수적 접근 권한</strong></p>
+            <dl>
+                <dt>저장 공간</dt>
+                <dd>앱 관련 정보를 읽고 저장</dd>
+            </dl>
+            <p><strong>선택적 접근 권한</strong></p>
+            <dl>
+                <dt>기기 ID 및 통화 상태</dt>
+                <dd>PUSH 알림 서비스 및 보이는 ARS 이용</dd>
+                <dt>사진, 영상, 파일</dt>
+                <dd>이벤트 및 사진 수집 동의 사진 첨부 및 촬영</dd>
+                <dt>알림</dt>
+                <dd>PUSH 알림 서비스 이용</dd>
+                <dt>Wi-Fi 연결정보</dt>
+                <dd>서비스 최적화 이용</dd>
+            </dl>
+            <p>※ 선택 접근 권한은 해당기능을 사용할 때 허용이 필요하며 비허용 시에도 해당 기능 외 서비스 이용이 가능합니다.</p>
+            <p><strong>접근 권한 변경방법</strong></p>
+            <p>핸드폰 설정 &gt; 앱 또는 어플리케이션 관리</p>
+        </div>
+        <div class="popAccessBtns">
+            <div class="chkGroup">
+                <input type="checkbox" id="appAccessPopChk">
+                <label for="appAccessPopChk">다시 보지 않기</label>
+            </div>
+
+            <a href="#" class="closeBtn">
+                <img src="http://www.abnkorea.co.kr/_ui/mobile/images/content/layer_pop_app_access_close.png" alt="">닫기
+            </a>
+        </div>
+    </div>
+    <!-- //앱 접근권한 레이어 팝업 170816 -->
+<!-- //include 영역 -->
+</body>
+</html>

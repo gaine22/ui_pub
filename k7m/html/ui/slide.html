@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../resources/img/common/ico_favicon.ico"> 
+
+	<title>SKTELINK</title>
+	
+	<script src="../resources/js/ui.init.js"></script>
+	<link rel="stylesheet" href="../resources/css/ui.base.css">
+	<style>
+	/* style */
+	.ui-slide-wrap,
+	.ui-slide-itemWrap,
+	.ui-slide-item{width:100%; height:300px;}
+	.ui-slide-item.n1{background:#fac2c2}
+	.ui-slide-item.n2{background:#dcc2fa}
+	.ui-slide-item.n3{background:#c2f5fa}
+	.ui-slide-item.n4{background:#dafac2}
+	.ui-slide-item.n5{background:#fac2c2}
+	.ui-slide-item.n6{background:#dcc2fa}
+	.ui-slide-item.n7{background:#c2f5fa}
+	.ui-slide-item.n8{background:#dafac2}
+	
+	.ui-slide-multi .ui-slide-item.n1{width:200px}
+	.ui-slide-multi .ui-slide-item.n2{width:100px}
+	.ui-slide-multi .ui-slide-item.n3{width:300px}
+	.ui-slide-multi .ui-slide-item.n4{width:80px}
+	.ui-slide-multi .ui-slide-item.n5{width:150px}
+	.ui-slide-multi .ui-slide-item.n6{width:200px}
+	.ui-slide-multi .ui-slide-item.n7{width:300px}
+	.ui-slide-multi .ui-slide-item.n8{width:200px}
+	</style>
+</head>
+
+<body class="page-form">
+	<div class="base-skip" id="baseSkip"></div>
+	<div class="base-modal" id="baseModal"></div>
+	<div class="base-wrapper">
+		<header class="base-header" id="baseHeader"></header>
+		<main class="base-main" id="baseMain" role="main">
+			<div class="base-content">
+				<div class="base-tit">
+					<h1 class="h1">Carousel Slider</h1>
+				</div>
+				<section class="mgb-l">
+					<h2 class="h2">Single Item Slide Effect</h2>
+					
+					<section class="ui-slide mgb-m" id="slide1">
+						<h1 class="ui-slide-tit">slide 제목</h1>
+						<div class="ui-slide-wrap">
+							<div class="ui-slide-itemWrap">
+								<div class="ui-slide-item n1">
+									<h2 class="ui-slide-itemTit">아이템 제목 1</h2>
+									<p>item 1</p>
+								</div>
+								<div class="ui-slide-item n2" style="height:500px">
+									<h2 class="ui-slide-itemTit">아이템 제목 2</h2>
+									<p>item 2</p>
+								</div>
+								
+								<div class="ui-slide-item n3">
+									<h2 class="ui-slide-itemTit">아이템 제목 3</h2>
+									<p>item 3</p>
+								</div>
+							</div>
+						</div>
+					</section>
+					
+					<section class="ui-slide mgb-m" id="slide2">
+						<h1 class="ui-slide-tit">slide 제목</h1>
+						<div class="ui-slide-wrap">
+							<div class="ui-slide-itemwrap">
+								<div class="ui-slide-item n1">
+									<h2 class="ui-slide-itemTit">아이템 제목 1</h2>
+									<p>item 1</p>
+								</div>
+								
+								<div class="ui-slide-item n2">
+									<h2 class="ui-slide-itemTit">아이템 제목 2</h2>
+									<p>item 2</p>
+								</div>
+								
+								<div class="ui-slide-item n3">
+									<h2 class="ui-slide-itemTit">아이템 제목 3</h2>
+									<p>item 3</p>
+								</div>
+								
+								<div class="ui-slide-item n4">
+									<h2 class="ui-slide-itemTit">아이템 제목 4</h2>
+									<p>item 4</p>
+								</div>
+							</div>
+						</div>
+					</section>
+					
+					<section class="ui-slide mgb-m" id="slide3">
+						<h1 class="ui-slide-tit">slide 제목</h1>
+						<div class="ui-slide-wrap">
+							<div class="ui-slide-itemwrap">
+								<div class="ui-slide-item n1">
+									<h2 class="ui-slide-itemTit">아이템 제목 1</h2>
+									<p>item 1</p>
+								</div>
+								<div class="ui-slide-item n2">
+									<h2 class="ui-slide-itemTit">아이템 제목 2</h2>
+									<p>item 2</p>
+								</div>
+								<div class="ui-slide-item n3">
+									<h2 class="ui-slide-itemTit">아이템 제목 3</h2>
+									<p>item 3</p>
+								</div>
+								<div class="ui-slide-item n4">
+									<h2 class="ui-slide-itemTit">아이템 제목 4</h2>
+									<p>item 4</p>
+								</div>
+								<div class="ui-slide-item n5">
+									<h2 class="ui-slide-itemTit">아이템 제목 5</h2>
+									<p>item 1</p>
+								</div>
+								<div class="ui-slide-item n6">
+									<h2 class="ui-slide-itemTit">아이템 제목 6</h2>
+									<p>item 2</p>
+								</div>
+								<div class="ui-slide-item n7">
+									<h2 class="ui-slide-itemTit">아이템 제목 7</h2>
+									<p>item 3</p>
+								</div>
+								<div class="ui-slide-item n8">
+									<h2 class="ui-slide-itemTit">아이템 제목 8</h2>
+									<p>item 4</p>
+								</div>
+							</div>
+						</div>
+					</section>
+					
+					<section class="ui-slide" id="slide4">
+						<h1 class="ui-slide-tit">slide 제목</h1>
+						<div class="ui-slide-wrap">
+							<div class="ui-slide-itemwrap">
+								<div class="ui-slide-item n1">
+									<h2 class="ui-slide-itemTit">아이템 제목 1</h2>
+									<p>item 1</p>
+								</div>
+								<div class="ui-slide-item n2">
+									<h2 class="ui-slide-itemTit">아이템 제목 2</h2>
+									<p>item 2</p>
+								</div>
+								<div class="ui-slide-item n3">
+									<h2 class="ui-slide-itemTit">아이템 제목 3</h2>
+									<p>item 3</p>
+								</div>
+								<div class="ui-slide-item n4">
+									<h2 class="ui-slide-itemTit">아이템 제목 4</h2>
+									<p>item 4</p>
+								</div>
+								<div class="ui-slide-item n5">
+									<h2 class="ui-slide-itemTit">아이템 제목 5</h2>
+									<p>item 1</p>
+								</div>
+								<div class="ui-slide-item n6">
+									<h2 class="ui-slide-itemTit">아이템 제목 6</h2>
+									<p>item 2</p>
+								</div>
+								<div class="ui-slide-item n7">
+									<h2 class="ui-slide-itemTit">아이템 제목 7</h2>
+									<p>item 3</p>
+								</div>
+								<div class="ui-slide-item n8">
+									<h2 class="ui-slide-itemTit">아이템 제목 8</h2>
+									<p>item 4</p>
+								</div>
+							</div>
+						</div>
+					</section>
+				</section>
+			</div>
+<pre><xmp class="code mgb_l">
+NETIVE.uiSlide.init({
+	id: 'slide1',
+	current: 0,
+	dot: true,
+	eff: 'slide',
+	speed: 500
+});
+
+</xmp></pre>
+		</main>
+		<footer class="base-footer" id="baseFooter"></footer>
+	</div>
+
+	<script src="../resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../resources/js/ui.plugins.js"></script>
+	<script src="../resources/js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+           
+            $plugins.uiSlide({
+				id: 'slide1',
+				current: 0,
+				dot: true,
+				eff: 'slide',
+				speed: 300
+			});
+			
+			$plugins.uiSlide({
+				id: 'slide2',
+				eff: 'fade',
+				dot: true,
+				speed: 350
+			});
+			
+			$plugins.uiSlide({
+				id: 'slide3',
+				multi: true,
+				margin: 10
+			});
+			
+			$plugins.uiSlide({
+				id: 'slide4',
+				items: 3,
+				margin: 10
+            }); 
+            
+
+		
+		});
+
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

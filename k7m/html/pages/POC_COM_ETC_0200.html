@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico"> 
+
+	<title>약관 동의 | SK 7mobile</title>
+	
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+<body>
+	<div class="skip" id="skip">
+        <ul>
+			<li><a href="#main">본문 바로가기</a></li>
+		</ul>
+    </div>
+    <div class="baselayer" id="baseLayer">
+        <section class="ui-modal" id="termModal1" role="dialog" aria-hidden="true">
+            <div class="ui-modal-wrap modal-black-wrap">
+                <header class="ui-modal-tit">
+                    <h1>약관 동의</h1>
+                    <button type="button" class="ui-modal-close btn-close">닫기</button>
+                </header>
+                <div class="ui-modal-cont">
+                    <div class="term-box">
+                        <h3>제 1 장 총칙</h3>
+                        <h4>제 1 조 (목적)</h4>
+                        <p>본 약관은 SK 텔링크 주식회사(이하 "회사"라 합니다)에서 제공하는 7mobile 관련 서비스 이용을 위한 회원과 회사간의 권리, 의무 및 책임사항 등 기본적인 사항의 규정을 목적으로 합니다.</p>
+                        <h4>제 2 조 (용어의 정의)</h4>
+                        <ul>
+                            <li>① 본 약관에서 사용하는 용어의 정의는 다음과 같습니다.
+                                <ol>
+                                    <li>1. 서비스 : sk7mobile.com 및 모바일 7mobile app. 이외에 sk7mobile.com 과 직접
+                                    연동되어 온라인에서 이용할 수 있는 서비스</li>
+                                    <li>2. 회원 : 사이트에 접속하여 본 약관에 동의하고, ID 정책에 따른 ID(고유번호)와 
+                                    Password(비밀번호)를 발급 받은 고객. 회원의 자격 및 권한 등은 본 약관에서
+                                    정한 바에 따라 일부 제한될 수 있습니다</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-wrap">
+                        <button type="button" class="ui-modal-close btn-line">확인</button>
+                    </div>
+                </div>                                
+            </div>
+        </section>
+    </div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+            <div class="contents-wrap">
+                <section>
+                    <h2 class="h2">약관내용 레이어 팝업</h2>
+                    <button type="button" class="btn-inbase" onclick="$plugins.uiModal({ id:'termModal1' });"><span><i>약관 동의</i></span></button>
+                </section>
+
+
+            </div><!-- //.contents-wrap -->
+		</main>
+		<footer class="footer" id="footer"></footer>
+	</div>
+	
+	<script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+            
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

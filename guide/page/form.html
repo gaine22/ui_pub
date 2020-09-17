@@ -1,0 +1,308 @@
+<h1 class="g_h1">FORM STYLE guide</h1>
+
+<h2 class="g_h2">placeholder</h2>
+<div class="ex_div">
+	<input type="text" placeholder="그대가 꺾어준 꽃" x-webkit-speech>
+	<input type="password" placeholder="시들 때 까지 들여다 보았네">
+	<input type="text" value="그대가 남기고 간 시든 꽃" placeholder="그대가 남기고 간 시든 꽃">
+	<input type="text" placeholder="다시 필 때까지" disabled="disabled">
+	<input type="text" value="첫사랑" placeholder="첫사랑 / 이윤학" disabled="disabled">
+</div>
+		
+<div class="ex_div2">	
+	<h3 class="g_h3">HTML Code</h3>
+			
+<pre><xmp class="code">
+<input type="text" placeholder="그대가 꺾어준 꽃">
+
+/////////////// placeholder 미지원일 경우 아래와 같이 적용됨. /////////////// 
+<span class="ph_wrap">
+	<span class="ph_item">그대가 꺾어준 꽃</span>
+	<input type="text" placeholder="그대가 꺾어준 꽃">
+</span>
+
+$('input[type="text"], input[type="password"]').uiPlaceholder();
+</xmp></pre>
+</div>			
+
+
+<h2 class="g_h2">radio / checkbox</h2>
+<div class="ex_div">
+	<h3 class="g_h3">Radio</h3>
+	<input type="radio" name="radio_1" id="radio_1_1">
+	<label for="radio_1_1">사람과 사람 사이에</label>
+	
+	<input type="radio" name="radio_1" id="radio_1_2" checked="checked">
+	<label for="radio_1_2">섬이 있다.</label>
+	
+	<input type="radio" name="radio_1" id="radio_1_3" disabled="disabled">
+	<label for="radio_1_3">그 섬에 가고 싶다.</label>
+	
+	<input type="radio" name="radio_2" id="radio_1_4" checked="checked" disabled="disabled">
+	<label for="radio_1_4">가고 싶다.</label>
+	
+	<br><br>
+	<h3 class="g_h3">Checkbox</h3>
+	
+	<input type="checkbox" id="check_all" data-all-check="check_group_name">
+	<label for="check_all">전체체크</label>
+	
+	<input type="checkbox" name="check_group_name" id="check_1_1" checked="checked">
+	<label for="check_1_1">자세히 보아야</label>
+	
+	<input type="checkbox" name="check_group_name" id="check_1_2">
+	<label for="check_1_2">예쁘다</label>
+	
+	<input type="checkbox" id="check_1_3">
+	<label for="check_1_3">오래 보아야</label>
+	
+	<input type="checkbox" id="check_1_4">
+	<label for="check_1_4">사랑스럽다</label>
+	
+	<input type="checkbox" id="check_1_5" disabled="disabled">
+	<label for="check_1_5">너도</label> 
+	
+	<input type="checkbox" id="check_1_6" checked="checked" disabled="disabled">
+	<label for="check_1_6">그렇다.</label>
+</div>
+		 
+<div class="ex_div2">	
+	<h3 class="g_h3">HTML Code</h3>
+	<pre><xmp class="code">
++Radio
+<input type="radio" name="radio_1" id="radio_1_2" checked="checked">
+<label for="radio_1_2">label name</label>
+/////////////// 스크립트 적용 후 label /////////////// 
+<label for="radio_1_1" class="ui_radio" ui-name="radio_1" ui-id="radio_1_1">label name</label>
+
++Checkbox
+<input type="checkbox" id="check_1_1" checked="checked">
+<label for="check_1_1">label name</label>
+/////////////// 스크립트 적용 후 label /////////////// 
+<label for="check_1_1" class="ui_checkbox checked" ui-id="check_1_1">label name</label>
+
++All Check
+<input type="checkbox" id="check_all" data-all-check="check_group_name">
+<label for="check_all">전체체크</label>
+
+<input type="checkbox" name="check_group_name" id="check_1_1">
+<label for="check_1_1">1</label>
+<input type="checkbox" name="check_group_name" id="check_1_2">
+<label for="check_1_2">1</label>
+.
+.
+.
+
+$('elements').uiRadioCheck();
+</xmp></pre>
+
+	<h3 class="g_h3">label Elements</h3>
+	<table class="tbl_type">
+	<caption></caption>
+	<colgroup>
+		<col style="width:20%">
+		<col style="width:20%">
+		<col style="width:auto">
+	</colgroup>
+	<thead>
+		<tr>
+		<th scope="col">attributes</th>
+		<th scope="col">base value</th>
+		<th scope="col">note</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+		<th scope="row" rowspan="4">class</th>
+		<td>ui_radio, ui_checkbox</td>
+		<td>기본상태, 기본 유지되는 class</td>
+		</tr>
+		
+		<tr>
+		<td>data-all-check="group name"</td>
+		<td>전체체크 사용시 해당 input check box 에 name 속성 추가하여 data-all-check 와 동일한 name 설정</td>
+		</tr>
+		
+		<tr>
+		<td>checked</td>
+		<td>checked="checked" 상태</td>
+		</tr>
+
+		<tr>
+		<td>disabled</td>
+		<td>disabled="disabled" 상태</td>
+		</tr>
+
+		<tr>
+		<td>foucs</td>
+		<td>focus 상태</td>
+		</tr>
+		
+		<tr>
+		<th scope="row">ui-name</th>
+		<td>input의 name 값</td>
+		<td>radio일때 생성</td>
+		</tr>
+		
+		<tr>
+		<th scope="row">ui-id</th>
+		<td>input의 id 값</td>
+		<td>radio, checkbox 생성</td>
+		</tr>
+	</tbody>
+	</table>
+</div>
+
+
+<h2 class="g_h2">select</h2>
+<div class="ex_div">
+	<h3 class="g_h3">Javascript type</h3>
+	<label for="sel_label_1" data-select-label="sel_1">label name1</label>
+	<select title="test" class="exe_select" data-select-id="sel_1" id="sel_label_1">
+		<option selected="selected" disabled="disabled">view more</option>
+		<optgroup label="View activity by policy:">
+			<option value="1">Life Insurance - Whole Life Select Policy #3866750</option>
+			<option value="2">Auto Insurance - NJ Motorcycle Policy #899812XYZ</option>
+			<option value="3">View all activity</option>
+		</optgroup>
+		<optgroup label="View all activity Credit:">
+			<option value="4">View all activity Credit/Debit Card</option>
+			<option value="5">Credit/Debit Card</option>
+			<option value="6">Bank Account</option>
+			<option value="7">555555555</option>
+			<option value="8">Billing Statements</option>
+			<option value="9">Payments</option>
+		</optgroup>
+		<option value="10">Refunds</option>
+		<option value="11">Payments</option>
+	</select>
+	<label for="sel_label_2" data-select-label="sel_2">label name2</label>
+	<select title="지역선택" class="exe_select" data-select-id="sel_2" id="sel_label_2">
+		<option value="0">서울</option>
+		<option value="1" disabled="disabled">경기도</option>
+		<option value="2" selected="selected">인천</option>
+		<option value="3">대전</option>
+	</select>
+	<button type="button" id="sel_add" class="btn_base">항목 신규 추가</button>
+	<br><br>
+	
+	<h3 class="g_h3">Css3 type</h3>
+	<label for="sel_label_3" data-select-label="sel_3">label name3</label>
+	<select title="test" id="sel_label_3">
+		<option selected="selected" disabled="disabled">view more</option>
+		<optgroup label="View activity by policy:">
+			<option value="1">Life Insurance - Whole Life Select Policy #3866750</option>
+			<option value="2">Auto Insurance - NJ Motorcycle Policy #899812XYZ</option>
+			<option value="3">View all activity</option>
+		</optgroup>
+		<optgroup label="View all activity Credit:">
+			<option value="4">View all activity Credit/Debit Card</option>
+			<option value="5">Credit/Debit Card</option>
+			<option value="6">Bank Account</option>
+			<option value="7">555555555</option>
+			<option value="8">Billing Statements</option>
+			<option value="9">Payments</option>
+		</optgroup>
+		<option value="10">Refunds</option>
+		<option value="11">Payments</option>
+	</select>
+	
+	<label for="sel_label_4" data-select-label="sel_4">label name4</label>
+	<select title="지역선택" id="sel_label_4">
+		<option value="0">서울</option>
+		<option value="1" disabled="disabled">경기도</option>
+		<option value="2" selected="selected">인천</option>
+		<option value="3">대전</option>
+	</select>
+	
+</div>
+
+<div class="ex_div2">	
+	<h3 class="g_h3">Html Code</h3>
+<pre><xmp class="code">
+<select title="지역 선택" data-select-id="sel_2">
+	<option value="0">서울</option>
+	<option value="1" disabled="disabled">경기</option>
+	<option value="2" selected="selected">인천</option>
+	<option value="3">대전</option>
+</select>
+
+////// ie일 경우 아래와 같이 적용됨.
+<div class="select_clone sel_2" id="sel_2" style="width:172px">
+	<button type="button" class="clone_btn">
+		<em>인천</em> <span> 선택됨 </span>
+		지역 선택 <span class="ui_state">열기</span>
+	</button>
+	<div class="clone_list">
+		<button class="clone_opt " type="button" value="0">서울</button>
+		<button class="clone_opt disabled" type="button" value="1" disabled="disabled">경기</button>
+		<button class="clone_opt selected" type="button" value="2" aria-selected="true">인천</button>
+		<button class="clone_opt " type="button" value="3">대전</button>
+	</div>
+</div>
+
+$('elements').uiSelect({ option : value });
+</xmp></pre>
+			
+	<h3 class="g_h3">Elements</h3>
+	<table class="tbl_type">
+	<caption></caption>
+	<colgroup>
+		<col style="width:20%">
+		<col style="width:20%">
+		<col style="width:auto">
+	</colgroup>
+	<thead>
+		<tr>
+		<th scope="col">attributes</th>
+		<th scope="col">base value</th>
+		<th scope="col">note</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+		<th scope="row">data-select-id</th>
+		<td>unique id </td>
+		<td>유니크한 id값으로 clone select 생성 및 동기화</td>
+		</tr>
+		
+		<tr>
+		<th scope="row">title</th>
+		<td>select title</td>
+		<td>clone select의 제목값으로 설정</td>
+		</tr>
+	</tbody>
+	</table>
+	
+	<h3 class="g_h3">Option</h3>
+	<table class="tbl_type">
+	<caption></caption>
+	<colgroup>
+		<col style="width:20%">
+		<col style="width:20%">
+		<col style="width:auto">
+	</colgroup>
+	<thead>
+		<tr>
+		<th scope="col">option</th>
+		<th scope="col">base value</th>
+		<th scope="col">note</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+		<th scope="row">id</th>
+		<td>data-select-id 값</td>
+		<td>동적인 option 추가 및 수정에 인한 리셋이 필요한 셀렉트 </td>
+		</tr>
+		
+		<tr>
+		<th scope="row">reset</th>
+		<td>true</td>
+		<td>true or false</td>
+		</tr>
+	</tbody>
+	</table>
+
+</div>
+

@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico">
+
+	<title>가입신청 | SK 7mobile</title>
+
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+
+<body>
+	<div class="skip" id="skip"></div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+			<div class="contents-wrap">
+				<section>
+				    <h2 class="h2">가입신청</h2>
+                    <div class="step-wrap item4">
+                        <ol>
+                            <li class="step1" aria-selected="false">
+                                <span>STEP 01</span>
+                                <strong>약관동의 및 본인인증</strong>
+                            </li>
+                            <li class="step2" aria-selected="true">
+                                <span>STEP 02</span>
+                                <strong>신청정보<br class="mbr">입력</strong>
+                            </li>
+                            <li class="step3" aria-selected="false">
+                                <span>STEP 03</span>
+                                <strong>부가서비스 선택</strong> <!-- 20180308 : 텍스트수정 -->
+                            </li>
+                            <li class="step4" aria-selected="false">
+                                <span>STEP 04</span>
+                                <strong>신청 완료</strong>
+                            </li>
+                        </ol>
+                        <div class="progress-bar three-quater"> <!-- 20180320 : 클래스 추가  50% = half, 75% = three-quater, 100% = whole -->
+                            <i></i><i></i><span class="on">75% 작성 중 입니다.</span><i></i>
+                        </div>
+                    </div>
+                    <h3 class="h3 pdt-xl">요금청구 &middot; 납부 방법</h3>
+                    <ul class="form-wrap mtb-line">
+						<li class="line">
+							<dl>
+								<dt>청구서종류<sup>*<span class="hide">필수</span></sup></dt>
+								<dd>
+                                    <input type="radio" name="bill1" id="bill1_1" checked="checked" title="문자청구서">
+                                    <label class="lb-radio checked" for="bill1_1"><span>문자청구서</span></label>
+                                    <input type="radio" name="bill1" id="bill1_2" title="이메일청구서">
+                                    <label class="lb-radio" for="bill1_2"><span>이메일청구서</span></label>
+                                    <p class="sub-info fc-red block">
+                                        ※ 문자청구서는 단말기 기종에 따라 MMS 또는 LMS로 발송되며, 청구서 유형 변경을 원하시는 경우 고객센터(114)를 통해 문의바랍니다.
+                                    </p>
+								</dd>
+							</dl>
+						</li>
+                        <li class="line">
+							<dl>
+								<dt>납부방법<sup>*<span class="hide">필수</span></sup></dt>
+								<dd>
+                                    <input type="radio" name="bill2" id="bill2_1" checked="checked" title="자동납부">
+                                    <label class="lb-radio checked" for="bill2_1"><span>자동납부</span></label>
+								</dd>
+							</dl>
+						</li>
+                        <li class="line">
+							<dl>
+								<dt>자동이체방법<sup>*<span class="hide">필수</span></sup></dt>
+								<dd>
+                                    <div>
+                                        <input type="radio" name="bill3" id="bill3_1" checked="checked" title="신용카드">
+                                        <label class="lb-radio checked" for="bill3_1"><span>신용카드</span></label>
+                                        <input type="radio" name="bill3" id="bill3_2" title="계좌이체">
+                                        <label class="lb-radio" for="bill3_2"><span>계좌이체</span></label>
+                                    </div>
+                                    <div class="group">
+                                        <span class="dt"><label for="cardnum1">카드번호</label></span>
+                                        <div class="dd num-wrap">
+                                            <input type="text" name="cardnum" id="cardnum1" class="inputbox-xs" title="카드번호 앞자리 "> <em class="swung">-</em> <input type="text" name="cardnum" id="cardnum2" class="inputbox-xs" title="카드번호 두번째자리"> <em class="swung">-</em> <input type="text" name="cardnum" id="cardnum3" class="inputbox-xs" title="카드번호 세번째자리"> <em class="swung">-</em> <input type="text" name="cardnum" id="cardnum4" class="inputbox-xs" title="카드번호 마지막자리">
+                                        </div>
+                                    </div>
+                                    <div class="group">
+                                        <span class="dt">카드사명</span>
+                                        <div class="dd">&nbsp;</div>
+                                    </div>
+                                    <div class="group">
+                                        <span class="dt"><label for="expiry">유효기간</label></span>
+                                        <div class="dd select-wrap">
+                                            <select class="selectbox-xs" id="expiry" title="연도">
+                                                <option>2020</option>
+                                                <option>2019</option>
+                                                <option>2018</option>
+                                            </select> <em>년</em>
+                                            <select class="selectbox-xs" title="월">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                                <option>8</option>
+                                                <option>9</option>
+                                                <option>10</option>
+                                                <option>11</option>
+                                                <option>12</option>
+                                            </select> <em>월</em>
+                                        </div>
+                                    </div>
+                                    <div class="group">
+                                        <span class="dt"><label for="cardPw">비밀번호 앞 2자리</label></span>
+                                        <div class="dd cardPW-wrap"><input type="password" class="inputbox-xxs" id="cardPw" maxlength="2" title="비밀번호 앞 2자리"> <em>**</em> <button type="button" class="btn-inbase1"><i>카드번호 인증</i></button></div>
+                                    </div>
+								</dd>
+							</dl>
+						</li>
+					</ul>	
+
+                    <div class="txt-agree-box">
+                        <p>본인(예금주/카드소유주)은 납부할 요금에 대해 별도의 통지 없이, 자동이체방법으로 선택한 수단으로 지정된 출금일에 인출 또는 결제 되는 것에 동의합니다.</p>
+                        <input type="checkbox" id="agree1">
+                        <label class="lb-check sck" for="agree1"><span>위 내용에 동의합니다.</span></label>
+                    </div>
+
+                    <h3 class="h3">휴대폰 일시불 결제</h3>
+                    <ul class="form-wrap mtb-line">
+						<li class="line">
+							<dl>
+								<dt>결제방법<sup>*<span class="hide">필수</span></sup></dt>
+								<dd>
+                                    <input type="radio" name="bill4" id="bill4_1" checked="checked" title="신용카드">
+                                    <label class="lb-radio checked" for="bill4_1"><span>신용카드</span></label>
+                                    <input type="radio" name="bill4" id="bill4_2" title="실시간 계좌이체">
+                                    <label class="lb-radio" for="bill4_2"><span>실시간 계좌이체</span></label>
+                                    <p class="sub-info fc-red block">
+                                        ※ 선택하신 결제방법에 알맞은 결제시스템(PG사)이 생성됩니다.
+                                    </p>
+								</dd>
+							</dl>
+						</li>
+                    </ul>
+
+                    <h3 class="h3">추천인 정보</h3>
+                    <ul class="form-wrap mtb-line">
+						<li class="line">
+							<dl>
+								<dt>추천인<sup>*<span class="hide">필수</span></sup></dt>
+								<dd>
+                                    <input type="radio" name="recommend" id="recommend1" checked="checked" title="신용카드">
+                                    <label class="lb-radio checked" for="recommend1"><span>등록함</span></label>
+                                    <input type="radio" name="recommend" id="recommend2" title="실시간 계좌이체">
+                                    <label class="lb-radio" for="recommend2"><span>등록하지 않음</span></label>
+                                    <p class="sub-info fc-red block">
+                                        ※ 이벤트 : 추천인/피추천인 모두에게 혜택이 !!!
+                                    </p>
+                                    <div class="group m-group">
+                                        <span class="text2"><label for="recoId"></label>추천인 아이디</label></span>
+                                        <input type="text" id="recoId" class="inputbox-xs">
+                                    </div>
+								</dd>
+							</dl>
+						</li>
+                    </ul>
+
+                    <!-- 20180320 : 버튼 클래스 수정 회색/주황/빨강 순 -->
+                    <div class="btn-wrap item3">
+                        <span><button type="button" class="btn btn-darkgray"><i>이전</i></button></span>
+						<span><button type="button" class="btn btn-orange"><i>임시저장</i></button></span>
+						<span><button type="button" class="btn btn-point"><i>다음</i></button></span>
+					</div>
+				</section>
+			</div><!-- .contents-wrap -->
+		</main>
+        <div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+
+	<script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+            
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

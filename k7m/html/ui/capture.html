@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../resources/img/common/ico_favicon.ico"> 
+
+	<title>SKTELINK</title>
+	
+	<script src="../resources/js/ui.init.js"></script>
+	<link rel="stylesheet" href="../resources/css/ui.base.css">
+	<style>
+	.capSct{width:400px; margin:0 0 2.0rem; overflow:hidden; background:#fff}
+	.capSct h1{font-size:1.8rem}
+	.capSct p{font-size:1.4rem; margin:0 0 0.2rem}
+	.capSct img{width:100%}
+	.capSct div{width:100%; margin:0}
+	</style>
+</head>
+
+<body class="page-codinglist">
+	<div class="base-skip" id="baseSkip"></div>
+	<div class="base-modal" id="baseModal"></div>
+	<div class="base-wrapper">
+		<header class="base-header" id="baseHeader"></header>
+		<main class="base-main" id="baseMain" role="main">
+			<div class="base-content">
+				<h1 class="h1">Capture</h1>
+
+				<article id="capSct" class="capSct">
+					<img src="../resources/img/codeghost/codeghost.png" alt="CODE GHOST">
+					<h1>CODE GHOST</h1>
+					<p>네티브 UI개발그룹원들 중 자신의 의지로 선착순으로 선발되어 프로젝트에 참여하게 되었습니다.</p>
+					<p>CODE GHOST 프로젝트는 front-end framework를 개발을 목표로 잡고 있습니다. 아직 준비한것도 진행한것도 부족하지만 한걸음씩 나아가다 보면 언제가는 목적지에 도착하는 마음으로 작업을 하여 2018년 6월에 1차 완료가 목표입니다. </p>
+				</article>
+				<button type="button" class="btn-base" id="uiCaptureBtn"><span>캡쳐하기</span></button>
+			
+<div class="box-code">
+<pre>
+<code>
+$plugins<span class="na">.uiCapture</span>({ <span class="si">id:'capSct'</span> });
+<span class="c">// id:'캡쳐할 영역의 아이디'</span>
+</code>
+</pre>
+</div>
+			</div>
+		</main>
+
+	</div>
+
+	<script src="../resources/js/lib/jquery-3.2.1.min.js"></script>
+
+	<script src="../resources/js/lib/canvas-toBlob.js"></script>
+	<script src="../resources/js/lib/FileSaver.js"></script>
+	<script src="../resources/js/lib/html2canvas.js"></script> 
+
+	<script src="../resources/js/ui.plugins.js"></script>
+	<script src="../resources/js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			
+			$plugins.uiCapture();
+
+			$('#uiCaptureBtn').on('click',function(){
+				$plugins.uiCapture({ id: 'capSct' });
+			});
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

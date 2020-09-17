@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico">
+
+	<title>선불충전하기 | SK 7mobile</title>
+
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+
+<body>
+	<div class="skip" id="skip"></div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+			<div class="contents-wrap">
+				<section>
+				    <h2 class="h2">선불 충전하기</h2>
+					<ol class="step-wrap">
+						<li class="step1" aria-selected="false">
+							<span>STEP 01</span>
+							<strong>약관동의 및 휴대폰번호확인</strong>
+						</li>
+						<li class="step2" aria-selected="true">
+							<span>STEP 02</span>
+							<strong>충전정보입력</strong>
+						</li>
+						<li class="step3" aria-selected="false">
+							<span>STEP 03</span>
+							<strong>충전완료</strong>
+						</li>
+					</ol>
+                </section>
+				<section>
+					<!-- 20180315 : 문구제거 
+					<ul class="list-dot only-d">
+						<li>상담시간은 평일 9:00 ~ 18:00 입니다. (단, 휴일 상담 신청은 익일 평일에 바로 처리해드리겠습니다.)</li>
+					</ul>-->
+                    <ul class="form-wrap mtb-line">
+						<li class="line">
+							<dl>
+								<dt>휴대폰번호</dt>
+								<dd>
+									<p class="text">010-12**-56**</p>
+								</dd>
+							</dl>
+						</li>
+						<li class="line">
+							<dl>
+								<dt><label for="sel-charge">충전금액<sup>*<span class="hide">필수</span></sup></label></dt>
+								<dd>
+									<div class="selsubbox">
+										<select title="충전금액" id="sel-charge">
+											<option>5,000</option>
+											<option>10,000</option>
+											<option>15,000</option>
+										</select>
+										<p class="select-sub">원</p>
+									</div>
+								</dd>
+							</dl>
+						</li>
+						<li class="line">
+							<dl>
+								<!-- 180306 : 텍스트 수정 -->
+								<dt><label for="chargeHow">충전방법<sup>*<span class="hide">필수</span></sup></label></dt>
+								<dd>
+									<fieldset class="div-wrap" role="group">
+										<legend>성별</legend>
+											<input type="radio" name="rdoChargeHow" id="chargeHow" checked="checked" title="신용카드">
+											<label class="lb-radio checked" for="chargeHow"><span>신용카드</span></label>
+											<input type="radio" name="rdoChargeHow" id="chargeHow2" title="계좌이체">
+											<label class="lb-radio" for="chargeHow2"><span>계좌이체</span></label>
+											<input type="radio" name="rdoChargeHow" id="chargeHow3" title="선불(PPS)카드 충전">
+											<label class="lb-radio" for="chargeHow3"><span>선불(PPS)카드 충전</span></label>
+									</fieldset>
+								</dd>
+							</dl>
+						</li>
+						<!-- 20180315 영역수정 -->
+						<li class="line">
+							<dl>
+								<dt class="vert-middle">선불카드<br class="wbr">정보입력<sup>*<span class="hide">필수</span></sup></dt>
+								<dd>
+									<div class="group bd-none pdt-n">
+										<span class="text2"><label for="card-number">카드번호</label></span>
+										<input type="text" class="inputbox" id="card-number">
+									</div>
+									<div class="group ">
+										<span class="text2"><label for="pass-number">비밀번호</label></span>
+										<input type="text" class="inputbox" id="pass-number">
+									</div>
+								</dd>
+							</dl>
+						</li>
+						<!-- // 20180315 영역수정 -->
+					</ul>
+					<!-- 180306 : 텍스트 수정 -->
+					<p class="bot-sub-text fc-red">※ 충전완료 후 취소는 당일만 가능합니다.</p>
+					<div class="txt-box bg">
+                        <div class="line">
+                            <input type="checkbox" id="c_agree" name="c_agree_n">
+							<!-- 180306 : 텍스트 수정 -->
+                            <label class="lb-check sck" for="c_agree"><span>결제정보를 확인하였으며, 구매진행에 동의합니다.</span></label>
+                            <div class="btn-right">
+								<!-- 180306 : 수정 -->
+								<span><a href="#none" class="btn btn-gray">취소</a></span>
+                                <span><a href="#none" class="btn btn-point">충전하기</a></span>
+                            </div>
+                        </div>
+                    </div>
+					<h3 class="h3tit">선불(PPS)카드 번호 확인방법</h3><span class="sub-tit txt-l">선불이동전화카드의 뒷면의 스크래치 부분을 긁은 후<br class="mbr"> 카드번호 11자리 입력</span>
+					<div class="pps-box">
+						<img src="../images/desktop/img_pps1.png" alt="선불(PPS)카드 앞면">
+						<img src="../images/desktop/img_pps2.png" alt="선불(PPS)카드 뒷면">
+					</div>
+                </section>
+			</div><!-- .contents-wrap -->
+		</main>
+        <div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+
+	<script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

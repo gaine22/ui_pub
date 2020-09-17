@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../resources/img/common/ico_favicon.ico"> 
+
+	<title>SKTELINK</title>
+	
+	<script src="../resources/js/ui.init.js"></script>
+	<link rel="stylesheet" href="../resources/css/ui.base.css">
+</head>
+
+<body class="page-form">
+	<div class="base-skip" id="baseSkip"></div>
+	<div class="base-modal" id="baseModal"></div>
+	<div class="base-wrapper">
+		<header class="base-header" id="baseHeader"></header>
+		<main class="base-main" id="baseMain" role="main">
+			<div class="base-content">
+				<div class="base-tit">
+					<h1 class="h1">List - Card type</h1>
+				</div>
+				
+				<section class="mgb-l">
+					<h2 class="h2">Card Type</h2>
+					
+					<div class="ui-cardlist" role="list" id="uiListcard1">
+						<ul class="ui-cardlist-wrapper">
+							<li class="ui-cardlist-item" role="listitem">
+								<div><img src="../resources/img/dummy/project_1.png" alt=""></div>
+								<strong>프로젝트 1</strong>
+							</li>
+							
+							<li class="ui-cardlist-item" role="listitem">
+								<div><img src="../resources/img/dummy/project_2.png" alt=""></div>
+								<strong>프로젝트 2</strong>
+							</li>
+							
+							<li class="ui-cardlist-item" role="listitem">
+								<div><img src="../resources/img/dummy/project_3.png" alt=""></div>
+								<strong>프로젝트 3</strong>
+							</li>
+							
+							<li class="ui-cardlist-item" role="listitem">
+								<div><img src="../resources/img/dummy/project_4.png" alt=""></div>
+								<strong>프로젝트 4</strong>
+							</li>
+							
+							<li class="ui-cardlist-item" role="listitem">
+								<div><img src="../resources/img/dummy/project_5.png" alt=""></div>
+								<strong>프로젝트 5</strong>
+							</li>
+							
+							<li class="ui-cardlist-item" role="listitem">
+								<div><img src="../resources/img/dummy/project_6.png" alt=""></div>
+								<strong>프로젝트 6</strong>
+							</li>
+							
+							<li class="ui-cardlist-item" role="listitem">
+								<div><img src="../resources/img/dummy/project_7.png" alt=""></div>
+								<strong>프로젝트 7</strong>
+							</li>
+							
+							<li class="ui-cardlist-item" role="listitem">
+								<div><img src="../resources/img/dummy/project_8.png" alt=""></div>
+								<strong>프로젝트 8</strong>
+							</li>
+							
+							<li class="ui-cardlist-item" role="listitem">
+								<div><img src="../resources/img/dummy/project_9.png" alt=""></div>
+								<strong>프로젝트 9</strong>
+							</li>
+							
+							<li class="ui-cardlist-item" role="listitem">
+								<div><img src="../resources/img/dummy/project_10.png" alt=""></div>
+								<strong>프로젝트 10</strong>
+							</li>
+						</ul>
+						
+						<button type="button" class="btn-base ui-add">추가</button>
+					</div>
+				</section>	
+			</div>
+
+		</main>
+		<footer class="base-footer" id="baseFooter"></footer>
+	</div>
+	
+	<script src="../resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../resources/js/ui.plugins.js"></script>
+	<script src="../resources/js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			
+			//console guide
+			$plugins.uiCardList();
+			$plugins.uiCardListRow();
+			
+			//$('.ui-cardlist').imagesLoaded(function(){
+				$plugins.uiCardList({ id:'uiListcard1', margin:10, response:true });
+			//});
+			
+			$('.ui-cardlist .ui-add').on('click', function () {
+				var add = '<li class="ui-cardlist-item" role="listitem">' +
+					'<div><img src="../resources/img/dummy/project_11.png" alt=""></div>' +
+					'<strong>프로젝트 11</strong>' +
+					'</li>' +
+					'<li class="ui-cardlist-item" role="listitem">' +
+					'<div><img src="../resources/img/dummy/project_12.png" alt=""></div>' +
+					'<strong>프로젝트 12</strong>' +
+					'</li>' +
+					'<li class="ui-cardlist-item" role="listitem">' +
+					'<div><img src="../resources/img/dummy/project_13.png" alt=""></div>' +
+					'<strong>프로젝트 13</strong>' +
+					'</li>' +
+					'<li class="ui-cardlist-item" role="listitem">' +
+					'<div><img src="../resources/img/dummy/project_14.png" alt=""></div>' +
+					'<strong>프로젝트 14</strong>' +
+					'</li>' +
+					'<li class="ui-cardlist-item" role="listitem">' +
+					'<div><img src="../resources/img/dummy/project_15.png" alt=""></div>' +
+					'<strong>프로젝트 15</strong>' +
+					'</li>';
+
+				$(this).closest('.ui-cardlist').find('.ui-cardlist-wrapper').append(add);
+				$plugins.uiCardListRow({ id: 'uiListcard1' });
+			});
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

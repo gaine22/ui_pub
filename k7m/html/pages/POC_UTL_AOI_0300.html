@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico"> 
+
+	<title>신청내역조회 | SK 7mobile</title>
+	
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+<body>
+	<div class="skip" id="skip">
+		<ul>
+			<li><a href="#main">본문 바로가기</a></li>
+		</ul>
+	</div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+            <div class="contents-wrap">
+				<section>
+                    <h2 class="h2">신청내역조회</h2>
+                    <div class="txt-gray-box2">
+                        <p>
+                            안녕하세요. 홍길동 고객님! <br>
+                            고객님께서 <span class="fc-red">2018-02-30</span>에 주문하신 신청현황과 내용은 아래와 같습니다.
+                        </p>
+                    </div>
+                    <div class="ui-tab item2">
+                        <div class="ui-tab-btns">
+                            <a href="../pages/POC_UTL_AOI_0200.html" class="ui-tab-btn"><i>신청진행현황</i></a>
+                            <a href="../pages/POC_UTL_AOI_0300.html" class="ui-tab-btn" aria-selected="true"><i>신청서 조회</i></a>
+                        </div>
+                    </div>     
+                    <section>
+                        <h3 class="hide">신청서 조회</h3>
+                        <h4 class="h3tit">고객정보</h4>
+                        <div class="rows tbl-col2">
+                            <div class="cols">
+                                <ul class="tbl-wrap">
+                                    <li>
+                                        <div class="dt">이름</div>
+                                        <div class="dd">XXX</div>
+                                    </li>
+                                    <li>
+                                        <div class="dt">주민등록번호</div>
+                                        <div class="dd">**0124*******</div>
+                                    </li>
+                                    <li>
+                                        <div class="dt">본인확인방법</div>
+                                        <div class="dd"></div>
+                                    </li>
+                                    <li>
+                                        <div class="dt">휴대폰번호</div>
+                                        <div class="dd">010-2889-1641</div>
+                                    </li>
+                                    <li>
+                                        <div class="dt">이메일주소</div>
+                                        <div class="dd">tnsvy88@naver.com</div>
+                                    </li>
+                                    <li>
+                                        <div class="dt">주소</div>
+                                        <div class="dd">(03043) 서울특별시 종로구 효자로9길 26 (창성동, 1) 나머지주소 XXXX</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="cols">
+                                <ul class="tbl-wrap">
+                                    <li>
+                                        <div class="dt">자동이체방법</div>
+                                        <div class="dd line">
+                                            <div>[신용카드]</div>
+                                            <div>NH카드</div>
+                                            <div>5461********9445</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="dt">납부결제일자</div>
+                                        <div class="dd">26 일</div>
+                                    </li>
+                                    <li>
+                                        <div class="dt">고객복지구분</div>
+                                        <div class="dd">해당없음</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 미성년자가입신청인 경우 -->
+                        <h4 class="h3tit">법정대리인 정보</h4>
+                        <ul class="tbl-wrap">
+                            <li>
+                                <div class="dt">법정대리인 이름</div>
+                                <div class="dd">홍철수</div>
+                            </li>
+                            <li>
+                                <div class="dt">신청 고객과의 관계</div>
+                                <div class="dd">부</div>
+                            </li>
+                            <li>
+                                <div class="dt">주민등록번호 </div>
+                                <div class="dd">600101-*******</div>
+                            </li>
+                            <li>
+                                <div class="dt">연락처</div>
+                                <div class="dd">010-1236-4567</div>
+                            </li>
+                            <li>
+                                <div class="dt">가족관계증명서<sup class="fc-red">*</sup><br>(최대 3장 첨부가능)</div>
+                                <div class="dd line file-area">
+                                    <div class="inp-file ui-file"  id="addfile1">
+                                        (필수) <button type="button" class="btn-inbase ui-file-btn"><i>파일선택</i></button> <span class="name ui-file-txt">증명서01.jpg</span><!-- 새파일첨부시 삭제요청--> 
+                                    </div>
+                                    <div class="inp-file ui-file"  id="addfile2">
+                                        (필수) <button type="button" class="btn-inbase ui-file-btn"><i>파일선택</i></button> <span class="name">증명서01.jpg</span> 
+                                    </div>
+                                    <div class="inp-file ui-file"  id="addfile3">
+                                        (필수) <button type="button" class="btn-inbase ui-file-btn"><i>파일선택</i></button> <span class="name">증명서01.jpg</span> 
+                                    </div>
+                                    <div class="file clear">
+                                        <button type="button" class="btn-inquiry"><i>재첨부</i></button>
+                                        <span class="fc-red txt">* 파일을 다시 첨부하실 경우 파일을 다시 선택하신 후 반드시 ‘재첨부’ 버튼을 클릭 또는 탭하셔야 합니다. <br> ‘재첨부’ 버튼을 클릭 또는 탭하시지 않을 경우 파일이 바뀌지 않습니다.</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- // 미성년자가입신청인 경우 -->
+
+                        <div class="rows tbl-col2">
+                            <div class="cols">
+                                <h4 class="h3tit">상품정보</h4>
+                                <ul class="tbl-wrap">
+                                    <li>
+                                        <div class="dt">휴대폰명</div>
+                                        <div class="dd">RE_갤럭시S7_32G</div>
+                                    </li>
+                                    <li>
+                                        <div class="dt">색상</div>
+                                        <div class="dd">블랙 오닉스</div>
+                                    </li>
+                                    <li>
+                                        <div class="dt">요금제</div>
+                                        <div class="dd">LTE 온라인 음성 S6</div>
+                                    </li>
+                                    <li>
+                                        <div class="dt">약정유형</div>
+                                        <div class="dd">기본 약정, 요금(스페셜) 약정</div>
+                                    </li>
+                                    <li>
+                                        <div class="dt">약정개월수</div>
+                                        <div class="dd">24 개월</div>
+                                    </li>
+                                    <li>
+                                        <div class="dt">가입유형</div>
+                                        <div class="dd">번호이동</div>
+                                    </li>
+                                    <li>
+                                        <div class="dt">유심유형</div>
+                                        <div class="dd">일반유심</div>
+                                    </li>
+                                    <li>
+                                        <div class="dt">무선데이터이용여부</div>
+                                        <div class="dd">이용</div>
+                                    </li>
+                                    <!-- 20180323 신규추가 -->
+                                    <li>
+                                        <div class="dt">선택 추천부가서비스</div>
+                                        <div class="dd">컬러링, 콜키퍼</div>
+                                    </li>
+                                    <!-- 20180323 신규추가 -->
+                                </ul>
+                            </div>
+                            <div class="cols">
+                                <h4 class="h3tit">배송정보</h4>
+                                <ul class="tbl-wrap">
+                                    <li>
+                                        <div class="dt">수령인</div>
+                                        <div class="dd">XXX</div>
+                                    </li>
+                                    <li>
+                                        <div class="dt">연락처</div>
+                                        <div class="dd">02-374-1641</div>
+                                    </li>
+                                    <li>
+                                        <div class="dt">다른연락번호</div>
+                                        <div class="dd">010-9357-1641</div>
+                                    </li>
+                                    <li>
+                                        <div class="dt">배송주소</div>
+                                        <div class="dd">(03043) 서울특별시 종로구 효자로9길 26 (창성동, 1) 나머지주소 XXXX</div>
+                                    </li>
+                                    <li>
+                                        <div class="dt">요천사항</div>
+                                        <div class="dd">운영개발자 테스트</div>
+                                    </li>
+                                    <li>
+                                        <div class="dt">배송번호</div>
+                                        <div class="dd">XXXXXXXXX</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="btn-wrap item3">
+                            <span><a href="#" class="btn btn-darkblue"><i>메인화면으로이동</i></a></span>
+                            <span><button type="button" class="btn btn-darkgray"><i>인쇄하기</i></button></span>
+                            <span><button type="button" class="btn btn-gray"><i>주문취소</i></button></span>
+                        </div>
+                    </section>             
+				</section>
+			</div><!-- //.contents-wrap -->
+		</main>
+		<div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+	
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+            $plugins.uiFileUpload({ id:'addfile1' }); 
+			$plugins.uiFileUpload({ id:'addfile2' }); 
+			$plugins.uiFileUpload({ id:'addfile3' }); 
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

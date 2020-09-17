@@ -1,0 +1,144 @@
+@charset "utf-8";
+/* ---------------------------------------
+	Description : 공통요소
+	Author	: netive
+	date	: 2013.01.25
+	modify	:
+   --------------------------------------- */
+
+* { padding:0; margin:0;}
+body { padding:0; margin:0; color:#444; background:#FFFFFF; font-size:12px; line-height:normal; font-family:'돋움',Dotum,'굴림',Gulim,Verdana,'Trebuchet MS',Tahoma,Arial,'Sans-Serif'; word-wrap:break-word; word-break:break-all; -webkit-text-size-adjust:none;}
+div, h1, h2, h3, h4, h5, h6, p, pre, blockquote, abbr, acronym, address, code, del, dfn, th, td, map, iframe	{ margin:0; padding:0;}
+dl, dt, dd, ul, ol, li	{ list-style:none; margin:0; padding:0;}
+
+form, fieldset, legend, input, textarea, select	{ margin:0; padding:0; vertical-align:middle;}
+fieldset, legend	{ border:0;}
+input, textarea, select	{ color:#444; font-size:11px; font-family:'돋움',Dotum,'굴림',Gulim,Verdana,'Trebuchet MS',Tahoma,Arial,'Sans-Serif';}
+table	{ table-layout:fixed; border-spacing:0; *border-collapse:collapse;}
+h4, h5, h6	{ font-size:12px;}
+em, address		{ font-weight:normal; font-style:normal;}
+legend, caption, hr	{ display:none;}
+label	{ cursor:pointer; cursor:hand; display:inline-block;}
+area	{ cursor:pointer; cursor:hand;}
+img		{ vertical-align:top; border:0; font-size:0; *line-height:1;}
+
+/* 본문스타일 */
+.guideWrap {padding:20px;}
+.guideWrap h1 { font-size:28px; text-align:center; color:#222;  padding-bottom:15px; font-family:Malgun,"맑은 고딕",Verdana,Arial;}
+
+.guideWrap span.ico { display:inline-block; background:#e3e3e3; font-size:10px; font-family:Verdana,Arial,"Sans-serif"; border-radius:4px; color:#FFF; min-width:30px; height:14px;*height:13px; padding:2px 5px 0 5px; *padding:3px 7px 0 7px; margin:0 3px 0 0; letter-spacing:-0.05em; line-height:11px; text-align:center; vertical-align:middle;}
+.guideWrap .ico.ing	{ background:#5d9b1a;}
+.guideWrap .ico.done { background:#1f78bd;}
+.guideWrap .ico.edit { background:#ff2d2d;}
+.guideWrap .ico.finish { background:#4e4e4e;}
+
+.h1Info { background-color:#646464; color:#fff; font-size:11px; padding:10px 0 7px 0; text-align:center; }
+.notice{ border:1px solid #dcdcdc; overflow:hidden; padding:0; }
+.notice h2 { font-size:12px; padding-bottom:10px;}
+.notice section {padding:20px 0 10px 30px; border-left:1px solid #dcdcdc;}
+.notice li{ position:relative; padding:0 0 7px 8px; font-size:11px; line-height:14px; }
+.notice li strong {color:#1a5599;}
+.notice li a { color:#444;}
+.notice .bul{position:absolute; top:5px; left:0; width:2px; height:2px; background:#626262;}
+
+.modifyList li {border-top:1px solid #ccc; padding-top:5px;}
+.modifyList li:first-child { border-top:0; padding-top:0;}
+.modifyList li em { display:inline-block; margin-right:5px; color:#fff;}
+.modifyList li:nth-of-type(odd) em{color:#096 !important; font-weight:bold;}
+.modifyList li:nth-of-type(even) em{color:#36F !important; font-weight:bold;}
+
+.siteInfo { overflow:hidden; border-bottom:1px solid #dcdcdc; padding:20px 10px 10px 0;}
+.siteInfo li {position:relative; padding:0 0 15px 8px; overflow:hidden; }
+.siteInfo li  em{ font-size:11px; color:#666; }
+.siteInfo strong {display:inline-block; float:left; text-align:center; padding-right:5px;}
+.siteInfo span { float:left;}
+
+.siteInfo.prdt { border-bottom:1px solid #dcdcdc; padding:20px 10px 10px 20px;}
+.siteInfo.prdt > div { border-bottom:1px dashed #ddd; padding-bottom:15px; margin-bottom:20px}
+.siteInfo ul { overflow:hidden; margin-top:0}
+.siteInfo ul li { min-height:40px; float:left; padding:0 10px 0 0;}
+.siteInfo ul li strong {display:block; min-width:50px; margin-right:10px; padding:0; text-align:left;}
+.siteInfo ul li.wide strong { min-width:80px;}
+.siteInfo ul li span {display:block;}
+.siteInfo.prdt ul li strong:first-child{ margin-left:0;}
+.siteInfo.prdt strong{ margin-left:0;}
+
+.guideWrap .siteInfo .ico {font-size:14px; height:20px; line-height:15px; padding:2px 8px 0 8px; border-radius:0px;}
+.guideWrap .siteInfo .total,
+.guideWrap .siteInfo .totalCnt,
+.guideWrap .siteInfo .rate,
+.guideWrap .siteInfo .asis,
+.guideWrap .siteInfo .mig,
+.guideWrap .siteInfo .tHealth,
+.guideWrap .siteInfo .tBeauty,
+.guideWrap .siteInfo .tBath,
+.guideWrap .siteInfo .tHome,
+.guideWrap .siteInfo .tOnefOne,
+.guideWrap .siteInfo .tETC,
+.guideWrap .siteInfo .delivery,
+.guideWrap .siteInfo .tDel{color:#000 !important; height:18px; background-color:#f0f0f0; border:1px solid #ccc; font-weight:bold;}
+.guideWrap .siteInfo .rate { font-weight:normal;}
+.guideWrap .siteInfo strong{ margin-left:35px;}
+.guideWrap .siteInfo li strong:first-child{ margin-left:10px;}
+
+/* tab :기본 */
+.tabWrap{position:relative; height:42px; margin-top:30px;}
+.tabDepth1 {overflow:hidden; border-bottom:2px solid #f00; height:40px; border-bottom:2px solid #444; }
+.tabDepth1 li{float:left; background-color:#fafafa; border:1px solid #dedede; border-bottom:none; height:38px; padding:1px ; margin-left:-1px;}
+.tabDepth1 li a {color:#444; display:block; padding:13px 30px 0 30px; font-size:14px; height:25px; font-weight:bold; text-align:center; text-decoration:none}
+.tabDepth1 li:first-child { margin-left:0px;}
+.tabDepth1 li.on { background-color:#444; border:1px solid #444;color:#fff;}
+.tabDepth1 li.on a{ color:#fff;}
+
+.goPrdtList { position:absolute; top:0; right:0; display:block; border:1px solid #1e5072; border-width:1px 1px 0; width:350px; color:#fff; background:#4c91d7; padding:14px 0 0 0; font-size:14px; height:25px; font-weight:bold; text-align:center; text-decoration:none;}
+.goAbnList  { position:absolute; top:0; right:0; display:block; border:1px solid #703d83; border-width:1px 1px 0; width:350px; color:#fff; background:#925ea5; padding:14px 0 0 0; font-size:14px; height:25px; font-weight:bold; text-align:center; text-decoration:none;}
+
+/* table-outer */
+#tabCont1 h2, #tabCont2 h2, #tabCont3 h2 { font-size:14px; padding:10px;}
+
+.tblList { width:100%; table-layout:fixed; margin-bottom:40px;border-bottom:1px solid #ccc;}
+.tblList th	{ color:#FFF; text-align:center; font-weight:bold;}
+.tblList th:first-child, .tblList td:first-child	{ border-left:0;}
+.tblList thead th { border-top:1px solid #464646; border-bottom:1px solid #464646; padding:9px 0 5px 0; border-left:1px solid #464646; background:#646464; line-height:120%; }
+.tblList thead th > span { display:block; font-size:10px; font-weight:normal; font-family:verdana;}
+.tblList tr.title th { background:#d0dbeb; padding:10px 0 8px 12px; border-bottom:1px dashed #c1c7d0; color:#546786; text-align:left; cursor:pointer}
+.tblList td	{ padding:9px 5px 5px 5px; border-top:1px dashed #ccc;border-left:1px solid #ccc;line-height:16px; font-size:11px; }
+.tblList tbody tr:first-child td {border-top:none;}
+.tblList td a { color:#444;  text-decoration:none;}
+.tblList td a:hover	{ color:#2080eb; text-decoration:underline;}
+.tblList td.no { font-weight:bold; text-align:center;}
+.tblList td.owner {text-align:center;}
+.tblList td.deliveryD {text-align:center; font-weight:bold; color:#666; letter-spacing:0px;}
+.tblList td.finishD, .tblList td.editD {text-align:center; letter-spacing:0px;}
+.tblList td.link {font-weight:bold;letter-spacing:0px; padding-left:10px;}
+.tblList td.memo {color:#008000;}
+.tblList td.vpsCode {text-align:center; padding-left:0}
+.tblList th select { border:1px solid #333; padding:1px;margin:3px 5px 0 5px; }
+
+.tblList .depth1Tr td, .tblList .depth1Tr th { background-color:#c7dbeb; border-top:2px solid #666 !important; font-weight:bold; text-align:left; color:#444; font-size:11px; padding-left:5px}
+.tblList .depth1Tr td.no { text-align:center;}
+.tblList .depth2Tr td {border-top:1px solid #999;}
+
+.tblList .delCont td { background-color:#f0f0f0 !important; color:#999 !important; text-decoration:line-through;}
+.tblList .delCont td.memo { color:#f00 !important;}
+.tblList .delCont td a { color:#999;}
+.tblList .outCont td { background-color:#f0f0f0 !important; color:#999 !important;}
+.tblList .asisCont td { background-color:#eef5e9;}
+.tblList .migCont td { background-color:#f7ebf8; }
+.tblList .migCont td.memo {color:#b68ebb;}
+.tblList tbody tr:hover th,
+.tblList tbody tr:hover td {background-color:#fcfcdc;}
+.tblList .discontinue td { background-color:#f0f0f0}
+#tabCont1 .tblList td > p { margin-top:5px; padding-left:58px; color:#888}
+/*
+.tblList .asisCont {display:none;}
+.tblList .migCont {display:none;} */
+
+#toTop{display:none; position:fixed; bottom:0; width:100%;}
+#toTop a{display:block; padding:9px 10px; background:#333; color:#FFF; text-align:center;}
+
+@media screen and (max-width:940px){
+	.notice section,
+	.notice section:first-child {width:100%; float:none;}
+	.notice section:nth-of-type(2) { border:1px dashed #ccc; border-width:1px 0 0}
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="kor">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ING IR메뉴 추가 리스트</title>
+</head>
+<style type="text/css">
+table {width:100%; font-size:12px; margin-bottom:5px; border-top:1px solid #bbb; border-bottom:1px solid #bbb;}
+table th, table td {height:30px; vertical-align:middle; border:1px solid #ddd;}
+table thead th {padding:5px 0 4px; text-align:center; line-height:130%; color:#333; border-width:0 0 0 1px; background:#fbf9f9;}
+table thead tr th:first-child {border-width:0;}
+table tfoot th,
+table tfoot td {padding:5px 0 4px; color:#ff5000; border-width:1px 0 0 1px; background:#fbf9f9; font-weight:bold;}
+table tfoot td.
+table tfoot th:first-child {border-width:0 0 1px 0;}
+table tbody th {padding:5px 0 4px 12px; text-align:left; color:#333; border-width:1px 0 0 1px; background:#fbf9f9; border-left:0; line-height:130%; }
+table tbody td {padding:5px 0 4px; text-align:center; border-width:1px 0 0 1px; background:#fff; line-height:140%;}
+table tbody tr td:first-child {border-width:1px 0 0 0;}
+</style>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" charset="utf-8"></script>
+<body>
+  <h1>ING IR메뉴추가 코딩리스트</h1>
+  <table>
+    <thead>
+      <th scope="col">2dep</th>
+      <th scope="col">3dep</th>
+      <th scope="col">상태</th>
+      <th scope="col">국문</th>
+      <th scope="col">영문</th>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row" rowspan="2">주식정보 </th>
+        <td>주식정보/베당현황 </td>
+        <td></td>
+        <td>scwirmn010m.html</td>
+        <td>scwirmn010e.html</td>
+      </tr>
+      <tr>
+        <td>주식시세/현황 </td>
+        <td></td>
+        <td>scwirmn020m.html</td>
+        <td>scwirmn020e.html</td>
+      </tr>
+      <tr>
+        <th scope="row" rowspan="3">실적 및 보고서</th>
+        <td>요약재무정보 </td>
+        <td>v</td>
+        <td>scwirmn030m.html</td>
+        <td>scwirmn030e.html</td>
+      </tr>
+      <tr>
+        <td>사업보고서 목록 </td>
+        <td></td>
+        <td>scwirmn040m.html</td>
+        <td>scwirmn040e.html</td>
+      </tr>
+      <tr>
+        <td>경영실적발표자료 목록 </td>
+        <td></td>
+        <td>scwirmn050m.html</td>
+        <td>scwirmn050e.html</td>
+      </tr>
+      <tr>
+        <th scope="row" rowspan="4">IR 뉴스레터 및 공시</th>
+        <td>IR뉴스레터 목록 </td>
+        <td></td>
+        <td>scwirmn060m.html</td>
+        <td>scwirmn060e.html</td>
+      </tr>
+      <tr>
+        <td>IR공시 </td>
+        <td></td>
+        <td>scwirmn070m.html</td>
+        <td>scwirmn070e.html</td>
+      </tr>
+      <tr>
+        <td>정기경영공시 </td>
+        <td></td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>수시경영공시 </td>
+        <td></td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <th scope="row" rowspan="3">Corporate Governance</th>
+        <td>이사회 구성/이사회 내 위원회</td>
+        <td></td>
+        <td>scwirmn100m.html</td>
+        <td>scwirmn100e.html</td>
+      </tr>
+      <tr>
+        <td>주주총회 내용 </td>
+        <td></td>
+        <td>scwirmn120m.html</td>
+        <td>scwirmn120e.html</td>
+      </tr>
+      <tr>
+        <td>외부감사인 </td>
+        <td></td>
+        <td>scwirmn130m.html</td>
+        <td>scwirmn130e.html</td>
+      </tr>
+      <tr>
+        <th scope="row">IR일정 전체 목록 </th>
+        <td>-</td>
+        <td>v</td>
+        <td>scwirmn140m.html</td>
+        <td>scwirmn140e.html</td>
+      </tr>
+      <tr>
+        <th scope="row">IR문의처</th>
+        <td>-</td>
+        <td>v</td>
+        <td>scwirmn170m.html</td>
+        <td>scwirmn170e.html</td>
+      </tr>
+      <tr>
+        <th scope="row">공시정보관리규정 </th>
+        <td>-</td>
+        <td></td>
+        <td>scwirmn180m.html</td>
+        <td>scwirmn180e.html</td>
+      </tr>
+    </tbody>
+
+  </table>
+  <script type="text/javascript">
+    $(function(){
+      var $table = $('table'),
+          $tr = $table.find('tr'),
+          $td_m = $tr.find('td:nth-last-child(2)'),
+          $td_e = $tr.find('td:nth-last-child(1)'),
+          e_href = '_ing_prj2017e/',
+          m_href = '_ing_prj2017/';
+
+          $td_m.wrapInner(function(){
+            if( $(this).text() === '-'){
+              return false;
+            }
+            return "<a href='"+m_href+$(this).text()+"'></a>";
+          });
+
+          $td_e.wrapInner(function(){
+            if( $(this).text() === '-'){
+              return false;
+            }
+            return "<a href='"+e_href+$(this).text()+"'></a>";
+          });
+
+    });
+  </script>
+</body>
+
+</html>

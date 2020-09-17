@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../resources/img/common/ico_favicon.ico"> 
+
+	<title>SKTELINK</title>
+	
+	<script src="../resources/js/ui.init.js"></script>
+	<link rel="stylesheet" href="../resources/css/ui.base.css">
+</head>
+
+<body class="page-form">
+	<div class="base-skip" id="baseSkip"></div>
+	<div class="base-modal" id="baseModal"></div>
+	<div class="base-wrapper">
+		<header class="base-header" id="baseHeader"></header>
+		<main class="base-main" id="baseMain" role="main">
+			<div class="base-content">
+				
+				<h1 class="h1">Form</h1>
+				<p class="txt-lead">radio와 checkbox의 명시적 표기법으로 스타일을 반영 및 checkbox 전체체크 기능.</p>
+
+				<section class="mgb-l">
+					<h2 class="h2">Radio</h2>
+					<fieldset class="div-wrap" role="group">
+						<legend>인증선택</legend>
+							<input type="radio" name="r2" id="r2_1" checked="checked">
+							<label class="lb-radio" for="r2_1"><span>공인인증</span></label>
+							<input type="radio" name="r2" id="r2_2">
+							<label class="lb-radio" for="r2_2"><span>카드인증</span></label>
+							<input type="radio" name="r2" id="r2_3">
+							<label class="lb-radio" for="r2_3"><span>I-PIN인증</span></label>
+					</fieldset>
+					<fieldset class="div-wrap mgt" role="group">
+						<legend>구분선택</legend>
+							<input type="radio" name="r3" id="r3_1" checked="checked">
+							<label class="lb-radio" for="r3_1"><span>일반용</span></label>
+							<input type="radio" name="r3" id="r3_2">
+							<label class="lb-radio" for="r3_2"><span>영업용</span></label>
+							<input type="radio" name="r3" id="r3_3" disabled="disabled">
+							<label class="lb-radio" for="r3_3"><span>장애용</span></label>
+					</fieldset>
+				</section>
+<div class="box-code">
+<pre>
+<code>
+&lt;input <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"r2"</span> <span class="na">id=</span><span class="s">"r2_1"</span> <span class="na">checked=</span>"checked"&gt;
+&lt;label <span class="na">class=</span><span class="s">"lb-radio"</span> <span class="na">for=</span><span class="s">"r2_1"</span>&gt;&lt;span&gt;공인인증&lt;/span&gt;&lt;/label&gt;
+
+$plugins<span class="na">.uiForm</span>();
+
+
+<span class="c">// id:'코딩리스트 정보가 들어갈 영역 아이디명'</span>
+<span class="c">// url:'json파일 경로'</span>
+<span class="c">// typo:'문서타입 json or html 등' </span>
+</code>
+</pre>
+</div>	
+				
+				<section class="mgb-l">
+					<h2 class="h2">Checkbox</h2>
+					<fieldset class="div-wrap" role="group">
+						<legend>연료선택</legend>
+							<input type="checkbox" id="c1_1">
+							<label class="lb-check" for="c1_1"><span>가솔린</span></label>
+							<input type="checkbox" id="c1_2">
+							<label class="lb-check" for="c1_2"><span>디젤</span></label>
+							<input type="checkbox" id="c1_3" disabled="disabled">
+							<label class="lb-check" for="c1_3"><span>LPG</span></label>
+							<input type="checkbox" id="c1_4" disabled="disabled" checked="checked">
+							<label class="lb-check" for="c1_4"><span>하이브리드</span></label>
+					</fieldset>
+					
+					<fieldset class="div-wrap mgt-m" role="group">
+						<legend>차종선택</legend>
+							<input type="checkbox" id="c2_0">
+							<label class="lb-check all" for="c2_0"><span>전체차종</span></label>
+							<input type="checkbox" id="c2_1" class="c2_0">
+							<label class="lb-check" for="c2_1"><span>경형</span></label>
+							<input type="checkbox" id="c2_2" class="c2_0">
+							<label class="lb-check" for="c2_2"><span>소형</span></label>
+							<input type="checkbox" id="c2_3" class="c2_0">
+							<label class="lb-check" for="c2_3"><span>중형</span></label>
+					</fieldset>
+					
+					<fieldset class="div-wrap mgt-m" role="group">
+						<legend>제조사</legend>
+							<input type="checkbox" id="c5_0">
+							<label class="lb-check all" for="c5_0"><span>전체제조사</span></label>
+							<input type="checkbox" id="c5_1" class="c5_0">
+							<label class="lb-check" for="c5_1"><span>현대</span></label>
+							<input type="checkbox" id="c5_2" class="c5_0">
+							<label class="lb-check" for="c5_2"><span>기아</span></label>
+							<input type="checkbox" id="c5_3" class="c5_0">
+							<label class="lb-check" for="c5_3"><span>쉐보레</span></label>
+					</fieldset>
+					
+					<fieldset class="div-wrap mgt-m" role="group">
+						<legend>약관동의 선택</legend>
+						<div>
+							<input type="checkbox" id="c3_0">
+							<label class="lb-check all" for="c3_0"><span>개인(신용)정보 선택 동의</span></label>
+							<br>
+							<input type="checkbox" id="c3_1" class="c3_0">
+							<label class="lb-check" for="c3_1"><span>개인정보 필수적 제공</span></label>
+							<br>
+							<input type="checkbox" id="c3_2" class="c3_0">
+							<label class="lb-check" for="c3_2"><span>개인(신용)정보 선택적 수집,이용</span></label>
+							<br>
+							<input type="checkbox" id="c3_3" class="c3_0">
+							<label class="lb-check" for="c3_3"><span>(1)금융거래관련 상품서비스 안내를 위한 수집∙이용</span></label>
+							<br>
+							<input type="checkbox" id="c3_4" class="c3_0">
+							<label class="lb-check" for="c3_4"><span>(2)기타 부수서비스 안내 등을 위한 수집·이용</span></label>
+						</div>
+						
+						<div class="mgt" id="aaa">
+							<input type="checkbox" id="c4_4" disabled="disabled">
+							<label class="lb-check" for="c4_4"><span>전화</span></label>
+							<input type="checkbox" id="c4_5" disabled="disabled">
+							<label class="lb-check" for="c4_5"><span>SMS</span></label>
+							<input type="checkbox" id="c4_6" disabled="disabled">
+							<label class="lb-check" for="c4_6"><span>이메일/앱 푸쉬</span></label>
+							<input type="checkbox" id="c4_7" disabled="disabled">
+							<label class="lb-check" for="c4_7"><span>서면</span></label>
+						</div>
+						
+					</fieldset>
+				</section>
+			</div>
+			
+<pre><xmp class="code mgb-l">
+//전체 기본실행
+NETIVE.uiForm.init(); 
+
+------------------------------------------
+
+//개별 콜백추가
+NETIVE.uiForm.init({ 
+	id: 'idname', 
+	callback: function(v){console.log(v)} 
+});
+
+//전체 체크추가
+NETIVE.uiForm.init({ 
+	id: 'idname', 
+	all: true, 
+	callback: function(v){console.log(v)} 
+});
+
+//체크 이벤트
+NETIVE.uiForm.check({ 
+	id: 'c2_0', 
+	callback: function(v){console.log(v)} 
+}); 
+
+</xmp></pre>
+			
+
+		</main>
+		<footer class="base-footer" id="baseFooter"></footer>
+	</div>
+	
+	<script src="../resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../resources/js/ui.plugins.js"></script>
+	<script src="../resources/js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			$plugins.uiForm();
+			$plugins.uiFormCheck();
+
+			$plugins.uiForm({ id: 'c2_0', all: true, callback: allCheckCallback });
+			$plugins.uiForm({ id: 'c5_0', all: true, callback: allCheckCallback });
+			$plugins.uiForm({ id: 'c3_0', all: true, callback: allCheckCallback });
+			$plugins.uiForm({ id: 'c3_4', callback: inpCheckCallback });
+			
+			function allCheckCallback(v){
+				console.log(v);
+			}
+
+			function inpCheckCallback(v){
+				console.log(v);
+				if (v.value) {
+					$('#aaa input').prop('disabled', false).prop('checked', true).removeAttr('disabled');
+					$('#aaa label').removeClass('disabled').addClass('checked');
+				} else {
+					$('#aaa input').prop('disabled', true).prop('checked', false).attr('disabled');
+					$('#aaa label').removeClass('checked').addClass('disabled');
+				}
+			}
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

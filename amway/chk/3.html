@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"> -->
+<!-- <meta http-equiv="Pragma" content="no-cache"> -->
+<!-- <meta http-equiv="Expires" content="0"> -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta content="width=device-width, target-densitydpi=160, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport">
+<title>2017 XS Night Run 참여자 정보 입력</title>
+<link rel="stylesheet" href="https://www.abnkorea.co.kr/_ui/mobile/common/css/default.css">
+<!-- <link rel="stylesheet" href="https://www.abnkorea.co.kr/_ui/mobile/common/css/common.css">
+<link rel="stylesheet" href="https://www.abnkorea.co.kr/_ui/mobile/common/css/layout.css">
+<link rel="stylesheet" href="https://www.abnkorea.co.kr/_ui/mobile/common/css/table.css">
+<link rel="stylesheet" href="https://www.abnkorea.co.kr/_ui/mobile/common/css/content.css">
+<link rel="stylesheet" href="https://www.abnkorea.co.kr/_ui/mobile/common/css/product.css">
+<link rel="stylesheet" href="https://www.abnkorea.co.kr/_ui/mobile/common/css/popup.css"> -->
+<style>
+@font-face {font-family:"Free 3 of 9 Regular";
+	src:url("font/FREE3OF9.eot?");
+	src:local(※),
+	url("font/FREE3OF9.eot?") format("eot"),
+	url("font/FREE3OF9.woff") format("woff"),
+	url("font/FREE3OF9.ttf") format("truetype"),
+	url("font/FREE3OF9.svg#font/Free3of9") format("svg");
+	font-weight:normal;font-style:normal;}
+
+body{background-color:#030303;font-size:13px;color:#fff;}
+.os-pop-wrap {width:100%;min-width:320px; margin:0 auto;}
+.os-pop-wrap .mgtM{margin-top:14px !important}
+.os_img-wrapImg{margin:0;padding:0;font-size:0}
+.os-pop-wrap * {box-sizing:border-box;}
+.os-pop-wrap img {width:100%;}
+
+.os-frm-wrap {width:100%;height:auto;min-height:200px;margin:0;padding:0;background:url(https://www.abnkorea.co.kr/_ui/_noticeImg/2017/05/0502_nr_pop/m_bg_input.jpg) 0 0 repeat;margin-bottom:30px;border:1px solid #333;border-top:0 none;}
+
+.os-frm-wrap.type04 {padding-top:20px;}
+.os-frm-wrap.type05 {padding-bottom:20px;}
+
+.os-frm-list {padding:20px 0 0;}
+.os-frm-item {overflow:hidden;}
+.os-frm-label-before {position:absolute; top:-5px; left:10%;}
+.os-frm-label-before img{width:5px}
+.os-frm-label-after {position:absolute; top:0; right:10px;}
+.os-frm-label {position:relative;float:left; padding-left:5%; width:34%; height:22px; line-height:22px; color:#fff; cursor:pointer;letter-spacing: -1px;word-spacing:-1px}
+.os-frm-label.type02 {width:34%}
+.os-frm-label.type03 {width:42%}
+.os-frm-label.type03 .os-frm-label-before {left:6.5%;}
+.os-frm-label img{vertical-align: middle;}
+.os-frm-input {line-height:22px;width:auto;}
+.os-frm-input.type02 {padding-left:34%}
+.os-frm-input input {padding:0; width:23%; height:22px; border:0; background-color:#fff; vertical-align:top; line-height:22px;}
+.os-frm-input select {padding:0; width:20%; height:22px; border:0; background-color:#fff; vertical-align:top; line-height:22px;}
+.os-frm-input input.type02{width:57%}
+.os-frm-input-num {overflow:hidden;}
+.os-frm-input-num span {margin-left:2%;font-weight:bold}
+.os-frm-input-num .dash {width:auto;}
+.os-frm-input-num span:first-child {margin-left:0;}
+.os-frm-input-num .long {width:228px}
+.os-frm-input-txt input{width:63.5%;height:22px;padding-left:5px;}
+.os-frm-input-chk input[type=checkbox]{width:20px;height:20px;background:#fff;vertical-align:middle;margin:0;}
+.os-frm-input-chk label{margin-right:10px}
+.os-frm-input-chk span{white-space: nowrap;}
+.os-frm-submit .os_btn01 {background:url(https://www.abnkorea.co.kr/_ui/_noticeImg/2017/05/0502_nr_pop/m_btn01.jpg) 0 0 no-repeat;background-size:contain;margin:0;padding:0;border:0 none;font-size:0;width:263px;height:29px;}
+.os-frm-submit .os_btn02 {background:url(https://www.abnkorea.co.kr/_ui/_noticeImg/2017/05/0502_nr_pop/m_btn02.jpg) 0 0 no-repeat;background-size:contain;margin:0;padding:0;border:0 none;font-size:0;width:263px;height:29px;}
+.os-frm-input .os_btn03 {background:url(https://www.abnkorea.co.kr/_ui/_noticeImg/2017/05/0502_nr_pop/m_btn03.jpg) 0 0 no-repeat;background-size:contain;margin:0;padding:0;border:0 none;font-size:0;width:51px;height:22px;margin-left:5%;}
+.os-frm-submit .os_btn04 {background:url(https://www.abnkorea.co.kr/_ui/_noticeImg/2017/05/0502_nr_pop/m_btn04.jpg) 0 0 no-repeat;background-size:contain;margin:0;padding:0;border:0 none;font-size:0;width:263px;height:29px;margin-bottom:5%}
+.os-frm-submit .os_btn05 {background:url(https://www.abnkorea.co.kr/_ui/_noticeImg/2017/05/0502_nr_pop/m_btn05.jpg) 0 0 no-repeat;background-size:contain;margin:0;padding:0;border:0 none;font-size:0;width:263px;height:29px;margin-bottom:5%}
+.os-txt-remain{color:#bcbfc2;padding-left:35%;line-height:22px}
+.os-agree-wrap{margin:20px 0 0 5%;width:89%}
+.os-agree-wrap .title{margin:0;padding:0}
+.os-box-wrap {width:100%;height:147px;background:#fff;overflow:hidden;overflow-y:auto;color:#303030;}
+.os-box-wrap .para{margin:0;padding:20px 10px 10px 20px;}
+.os-txt-group{margin:10px;padding:10px;border-top:1px solid #aaa;border:1px solid #434343;}
+.os-txt-group ul{margin-left:5px}
+.os-agree-radio{text-align:center;margin-top:15px;}
+.os-agree-radio input[type="checkbox"] + label, .os-agree-radio input[type="radio"] + label{color:#fff;margin-left:0;margin-right:10px}
+.os-barcode-img{width:87.4%;height:120px;line-height:120px;margin:0 auto;padding:0;text-align:center;background:#fff;color:#000;font-family:'Free 3 of 9 Regular';}
+
+/* 좁은 화면 바코드 사이즈 */
+.os-barcode-img{font-size:50px;}
+
+.os-barcode-num{margin-top:20px;padding:0 0 0 6%;line-height:16px;height:16px;color:#fff;font-size:15px;}
+.os-barcode-num span{letter-spacing:1px}
+.os-notice-txt{padding:20px 5% 0 5%;}
+.os-notice-txt .title img{width:auto;}
+.os-border-line img{width:100%;height:1px;}
+.os-notice-list{color:#a7a7a7;line-height:1.5;}
+.os-notice-list li{margin-left:0.6em;text-indent:-0.6em;margin-bottom:2px}
+.os-notice-list span{color:#e6f913;text-indent:0}
+.mgtS{margin-top:10px !important;}
+.os-frm-label-before img{width:5px;min-width:auto}
+
+
+@media screen and (min-width:520px) {
+	body{font-size:18px}
+	.os-pop-wrap{width:100%;max-width:640px}
+	.os-frm-wrap{width:100%;max-width:640px}
+	.os-frm-label.type03 {width:34%}
+	.os-frm-label.type03 .os-frm-label-before {left:10%;}
+	.os-frm-label-before img{width:5px;min-width:auto}
+	.os-frm-input select{height:30px}
+	.os-frm-input input{height:30px}
+
+	/* 넓은 화면 바코드 사이즈 */
+	.os-barcode-img{font-size:90px;}
+}
+</style>
+</head>
+<body>
+	<div class="os-pop-wrap os-mo">
+		<h1 class="os_img-wrapImg">
+			<img src="https://www.abnkorea.co.kr/_ui/_noticeImg/2017/05/0502_nr_pop/m_img01.jpg" alt="2017 XS Night Run 입장권 신청번호 확인">
+			<span class="hide">JAMSIL OLYMPIC STADIUM 2017.7.20. THU</span>
+		</h1>
+		<h2 class="os_img-wrapImg">
+			<img src="https://www.abnkorea.co.kr/_ui/_noticeImg/2017/05/0502_nr_pop/m_img03.jpg" alt="참여자 정보 입력">
+		</h2>
+		<div class="os-frm-wrap">
+			<ul class="os-frm-list">
+				<li class="os-frm-item">
+					<label class="os-frm-label" for="input1">
+						<span class="os-frm-label-before" title="필수입력"><img src="https://www.abnkorea.co.kr/_ui/_noticeImg/2017/05/0502_nr_pop/m_txt_star.png" alt="*"></span>
+						입장권 신청번호
+					</label>
+					<div class="os-frm-input os-frm-input-txt">
+						<input type="text" name="input1" id="input1">
+					</div>
+				</li>
+				<li class="os-frm-item mgtM">
+					<label class="os-frm-label type03">
+						<span class="os-frm-label-before" title="필수입력"><img src="https://www.abnkorea.co.kr/_ui/_noticeImg/2017/05/0502_nr_pop/m_txt_star.png" alt="*"></span>
+						암웨이 회원이십니까?
+					</label>
+					<div class="os-frm-input os-frm-input-chk">
+						<input type="checkbox" name="check_abo" id="check_abo_yes">
+						<label for="check_abo_yes">예</label>
+						<input type="checkbox" name="check_abo" id="check_abo_no">
+						<label for="check_abo_no">아니오</label>
+					</div>
+				</li>
+				<li class="os-frm-item mgtM">
+					<label class="os-frm-label" for="input2">
+						ABN NO
+					</label>
+					<div class="os-frm-input os-frm-input-txt">
+						<input type="text" name="input2" id="input2">
+					</div>
+				</li>
+				<li class="os-frm-item mgtM">
+					<label class="os-frm-label" for="input3">
+						<span class="os-frm-label-before" title="필수입력"><img src="https://www.abnkorea.co.kr/_ui/_noticeImg/2017/05/0502_nr_pop/m_txt_star.png" alt="*"></span>
+						이름
+					</label>
+					<div class="os-frm-input os-frm-input-txt">
+						<input type="text" name="input3" id="input3">
+					</div>
+				</li>
+				<li class="os-frm-item mgtM">
+					<label class="os-frm-label">
+						<span class="os-frm-label-before" title="필수입력"><img src="https://www.abnkorea.co.kr/_ui/_noticeImg/2017/05/0502_nr_pop/m_txt_star.png" alt="*"></span>
+						성별
+					</label>
+					<div class="os-frm-input os-frm-input-chk">
+						<input type="checkbox" name="check_gender" id="check_gender_male">
+						<label for="check_gender_male">남자</label>
+						<input type="checkbox" name="check_gender" id="check_gender_female">
+						<label for="check_gender_female">여자</label>
+					</div>
+				</li>
+				<li class="os-frm-item mgtM">
+					<label class="os-frm-label">
+						<span class="os-frm-label-before" title="필수입력"><img src="https://www.abnkorea.co.kr/_ui/_noticeImg/2017/05/0502_nr_pop/m_txt_star.png" alt="*"></span>
+						연령
+					</label>
+					<div class="os-frm-input os-frm-input-chk type02">
+						<span><input type="checkbox" name="check_gender" id="check_age_20">
+							<label for="check_age_20">20~25세</label></span>
+						<span><input type="checkbox" name="cage" id="check_age_26">
+							<label for="check_age_26">26~30세</label></span>
+						<span><input type="checkbox" name="cage" id="check_age_31">
+							<label for="check_age_31">31~35세</label></span>
+						<span><input type="checkbox" name="cage" id="check_age_36">
+							<label for="check_age_36">36~40세</label></span>
+						<span><input type="checkbox" name="cage" id="check_age_41">
+							<label for="check_age_41">41세 이상</label></span>
+					</div>
+				</li>
+				<li class="os-frm-item mgtM">
+					<label class="os-frm-label" for="input_tel">
+						<span class="os-frm-label-before" title="필수입력"><img src="https://www.abnkorea.co.kr/_ui/_noticeImg/2017/05/0502_nr_pop/m_txt_star.png" alt="*"></span>
+						휴대폰 번호
+					</label>
+					<div class="os-frm-input os-frm-input-num">
+						<select name="input_tel" id="input_tel">
+							<option value="010">010</option>
+							<option value="011">011</option>
+							<option value="016">016</option>
+							<option value="017">017</option>
+							<option value="018">018</option>
+							<option value="019">019</option>
+						</select>
+						<span class="dash">-</span> 
+						<input type="text">
+						<span class="dash">-</span> 
+						<input type="text">
+					</div>
+				</li>
+			</ul>
+			<div class="os-border-line mgtS">
+				<hr class="hide">
+				<img src="https://www.abnkorea.co.kr/_ui/_noticeImg/2017/05/0502_nr_pop/m_line.gif" alt="">
+			</div>
+
+			<div class="os-agree-wrap">
+				<h4 class="title">개인정보 수집 및 이용 동의</h4>
+				<div class="os-box-wrap mgtS">
+					<p class="para">
+						한국암웨이(이하 “회사”)는 개인정보보호법을 비롯하여 개인정보와 관련된 모든 법률을 준수하기 위해 개인정보 수집 및 이용에 관한 사항을 알리고 동의를 받고 있습니다.<br>
+						회사가 직/간접적으로 수집한 개인정보에 대해 기술적, 관리적 보호조치를 다하고 있으며, 사용 목적이 완료된 경우 지체 없이 수집한 정보를 파기합니다.<br>
+						<br>
+						개인정보 수집 및 이용에 관한 사항은 아래와 같습니다.
+					</p>
+					<div class="os-txt-group">
+						<ul>
+							<li>1. 개인정보의 수집 항목 및 이용 목적
+								<ul>
+									<li>1) 신청자 기본정보: ABO 번호(ABO인 경우만), 이름, 성별, 나이, 연락처
+										<ul>
+											<li>- 이벤트 신청자 식별 및 경품 당첨자 선정</li>
+											<li>- 이벤트 관련 문의 대응 및 안내사항 전달</li>
+											<li>- 기타 이벤트 운영을 위해 이용</li>
+										</ul>
+									</li>
+									<li>2) 영상정보 
+										<ul>
+											<li>- 회사에서 발간하는 인쇄물 게재</li>
+											<li>- 회사에서 운영하는 온라인(인터넷, 모바일) 웹사이트, SNS, APPs 게재</li>
+											<li>- 회사 사내 웹사이트 및 사내 게시판(오프라인 매장 포함) 게재</li>
+											<li>- 회사 주관 행사 시 상영(Display)</li>
+											<li>- 언론사 홍보기사 게재, 기타 YouTube, Webzine 게재</li>
+											<li>- 기타 회사에서 배포하는 홍보물(미디어 파일, 인쇄물, 스마트 TV등 매체를 통해 전달되는 컨텐츠)의 제작에 활용</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>2. 개인정보의 보유 및 이용 기간
+								<ul>
+									<li>- 신청자 기본정보: 이벤트 종료 후 1개월 동안 보유</li> 
+									<li>- 영상정보: 이벤트 종료 후 2년 동안 보유</li>
+								</ul>
+								 *단, 이미 게재 또는 배포된 경우를 제외한 원본파일을 삭제하여, 추가적으로 활용하지 않습니다.</li>
+							<li>3. 개인정보 취급 위탁에 관한 고지
+								<ul>
+									<li>- 수탁사: 오리콤</li>
+									<li>- 위탁 내용: 영상 촬영 및 편집</li>
+								</ul>
+							</li>
+						</ul>
+
+						<p>본 개인정보 수집 및 이용에 관한 동의를 거부할 권리가 있습니다.<br>
+						단, 거부 시 이벤트 참여가 제한됩니다.</p>
+					</div>
+					<p class="para"><strong>본인은 개인정보 수집 및 이용에 관해 동의합니다.</strong></p>
+				</div>
+				<div class="os-agree-radio">
+					<input type="radio" name="radio_agree" id="radio_agree_yes">
+					<label for="radio_agree_yes">동의</label>
+					<input type="radio" name="radio_agree" id="radio_agree_no">
+					<label for="radio_agree_no">동의안함</label>
+				</div>
+			</div>
+			<div class="os_img-wrapImg os_btn-wrap textC mgtL os-frm-submit">
+				<input type="button" class="os_btn04" value="티켓 확인">
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<section class="ui-modal modal-usim" id="pageFot0300" role="dialog" aria-hidden="true">
+    <div class="ui-modal-wrap">
+        <header class="ui-modal-tit">
+            <h1>개인정보 이용내역 조회</h1>
+            <button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id: 'pageFot0300' });">닫기</button>
+        </header>
+        <div class="ui-modal-cont">
+            <p class="term-txt">"정보통신망 이용촉진 및 정보보호 등에 관한 법률"에 따라 <br class="only-d">고객님께서 요청하신 SK알뜰폰 7Mobile MVNO 서비스 <br class="only-d">개인정보 이용내역을 조회하실 수 있습니다.</p>
+            <div class="term-box box-height1">
+                <p><strong>개인정보 이용내역 조회 관련 근거</strong></p>
+                <ol>
+                    <li>1. 정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령 제 17조<br> (개인정보 이용내역의 통지)</li>
+                    <li>2. 정보통신 서비스 제공자는 아래 내용을 연 1회 통지하여야 합니다.
+                        <ol>
+                            <li>1) 개인정보의 수집, 이용목적 및 수집한 고객정보의 항목</li>
+                            <li>2) 개인정보를 제공받은 자와 그 제공 목적 및 제공한 개인정보의 항목</li>
+                            <li>3) 개인정보 취급 위탁을 받은 자 및 그 취급위탁 업무의 내용</li>
+                        </ol>
+                        <p>* 단, 관련법률에 근거한 제공이나 통신 요금 정산, 단순 상담조회는 제외함.</p>
+                    </li>
+                </ol>
+            </div>
+            <h2 class="term-tit">조회하실 서비스 선택</h2>
+            <div class="term-agree">
+                <div>
+                    <input type="radio" name="choice" id="r1_1" checked="checked" title="이동전화 서비스">
+                    <label class="lb-radio checked" for="r1_1"><span>이동전화 서비스</span></label>
+                </div>
+                <div class="mgt-s">
+                    <input type="radio" name="choice" id="r1_2" title="통신자료 제공사실 열람신청">
+                    <label class="lb-radio" for="r1_2"><span>통신자료 제공사실 열람신청</span></label>
+                </div>
+            </div>
+            <div class="btn-wrap">
+                <span><button type="button" class="btn btn-point-m"><i>확인</i></button></span>
+                <span><button type="button" class="btn btn-gray-m" onclick="$plugins.uiModalClose({ id: 'pageFot0300'});"><i>취소</i></button></span>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    ;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			$plugins.uiForm();
+		});
+	})(jQuery, window, document);
+</script>

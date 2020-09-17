@@ -1,0 +1,29 @@
+@charset "utf-8"; 
+/************************************************ 
+Version : ING생명 1.0
+Date : 2015-01-06
+*************************************************/
+
+/***CEO MASSAGE***/
+#container > section.cont06 > div .left li b{display:inline-block; float:left; width:25%; font-weight:normal; vertical-align:top;}
+#container > section.cont06 > div .left li span {display:inline-block; float:left; width:75%; vertical-align:top;}
+
+@media only screen and (max-width :1350px) { 
+#container > section.cont06 > div .left li b{ width:30%; }
+#container > section.cont06 > div .left li span { width:70%; }
+} 
+
+@media only screen and (max-width :1200px) { 
+#container > section.cont06 > div .left li b{ width:25%; }
+#container > section.cont06 > div .left li span { width:75%; }
+} 
+ 
+@media only screen and (max-width :900px) { 
+#container > section.cont06 > div .left li b{ width:30%; }
+#container > section.cont06 > div .left li span { width:70%; }
+} 
+
+@media only screen and (max-width :680px) { 
+#container > section.cont06 > div .left li b{ width:25%; }
+#container > section.cont06 > div .left li span { width:75%; }
+} 

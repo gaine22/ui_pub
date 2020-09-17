@@ -1,0 +1,1046 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+    <!-- page common -->
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <META http-equiv="Expires" content="0"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- //page common -->
+
+    <meta name="keywords">
+<meta name="description">
+<meta content="noindex,follow" name="robots">
+<meta content="True" name="HandheldFriendly">
+<meta content="320" name="MobileOptimized">
+<meta content="telephone=no" name="format-detection">
+<title>회원가입 - ABN Korea</title>
+    
+<link rel="stylesheet" href="http://www.abnkorea.co.kr/_ui/mobile/common/css/default.css">
+
+<script type="text/javascript">
+//<![CDATA[
+    try {
+        document.domain = "abnkorea.co.kr";   
+    } catch(e) {}
+    
+    var COMMON_RESOUCE_PATH = "http://www.abnkorea.co.kr/_ui/mobile/common";
+    var IMAGE_RESOUCE_PATH = "http://www.abnkorea.co.kr/_ui/mobile/images";
+    var WEBSITE_AKLSITE_HTTP = "http://mobile.abnkorea.co.kr";
+    var WEBSITE_AKLSITE_HTTPS = "https://mobile.abnkorea.co.kr";
+
+    // PILOT_LIMITED
+    var PILOT_LIMITED_BUGREPORT_URL = "https://board.abnkorea.co.kr/bbs/board.php?bo_table=pilot_mboard";
+    var PILOT_LIMITED_ABO_MESSAGE = "ABO 유저만 사용할 수 있는 기능입니다.";
+    var PILOT_LIMITED_IS_LOGIN = (false || false);
+    var PILOT_LIMITED_IS_ABO = false;
+    var PILOT_LIMITED_ENCODE_ABO_NO = "YW5vbnltb3Vz";
+//]]>
+</script>
+
+<!-- common js -->
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/jquery-1.8.3.min.js"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/jquery.validate.min.js"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/jquery.placeholder.min.js"></script>
+
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/jquery.touchSlider.js"></script>
+    <script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/jquery.touchSlider2.js"></script>
+<script src="pbCommon.js"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/pbCommonEcm.js"></script>
+<!-- <script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/pbLayerPopup.js"></script> -->
+
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/jquery.event.drag-1.5.min.js"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/jquery.cookie.js?_=2017052913"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/lynx.messages.js?_=2017052913"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/lynx.common.js?_=2017052913"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/lynx.buynow.js?_=2017052913"></script>
+<!-- <script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/lynx.autocomplete.js?_=2017052913"></script> -->
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/lynx.smartorder.js?_=2017052913"></script>
+<!-- <script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/beta.fix.js?_=2017052913"></script> -->
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/netfunnel.js" charset="UTF-8"></script>
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/netfunnel-skin.js" charset="UTF-8"></script>
+
+
+<script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/am.certify.js?_=2017052913"></script>
+        <!-- <script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/am.common.js?_=2017052913"></script> -->
+        <script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/am.signup.js?_=2017052913"></script>         
+        <script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/am.validation.js?_=2017052913"></script>
+        <script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/apps/am.address.js?_=2017052913"></script>
+<style>
+    .labelSizeM{letter-spacing:-1px}
+    .titP{white-space:nowrap;}
+    #pbHeader .headCont a:visited{color:#fff;}
+</style>
+
+</head>
+
+<body >
+    <div id="pbSkipNavi"><a href="#pbContainer">본문 바로가기</a><a href="#uiAllMenuOpen">전체메뉴 바로가기</a><a href="#pbGnb">주메뉴 바로가기</a></div>
+        <div id="pbWrap">
+            
+    <script>
+    $('.appTopBnr').hide();
+   
+    $(document).ready(function(){
+        
+        $('.appTopBnrClose').on('click', function(e){           
+            $(this).parent().slideUp();
+            setCookie( "AppDownload", "done" , 1);
+            return false;
+        })        
+        
+        // android app 접근 여부체크
+        if(navigator.userAgent.match(/AMWAY_ANDROID_APP/i) != null && navigator.userAgent.match(/AMWAY_ANDROID_APP/i).length >= 1)
+        {
+            $('.appTopBnr').hide();
+        }
+         //ios app 접근 여부체크
+         else if(navigator.userAgent.match(/AMWAY_IOS_APP/i) != null && navigator.userAgent.match(/AMWAY_IOS_APP/i).length >= 1)
+        {
+             $('.appTopBnr').hide();
+        }
+        else
+        {
+           if ( getCookie('AppDownload') ==undefined)
+           {
+                $('.appTopBnr').show();
+            }
+        }
+        
+        $('.appTopBnrLink').on('click', function(e){       
+            
+             var strAppUrl = "";
+             var str = window.navigator.userAgent.toLowerCase();
+             
+             if(/iphone/.test(str)){                     
+                 strAppUrl ="http://itunes.apple.com/kr/app/id430140303";  
+                 document.location.href=strAppUrl;
+             }
+             else if(/android/.test(str)){
+                 strAppUrl ="https://play.google.com/store/apps/details?id=sABN.UI.SmartABNAndroid";
+                 document.location.href=strAppUrl;
+             }            
+        })
+    });
+    
+    function getCookie(c_name)
+    {
+        var i,x,y,ARRcookies=document.cookie.split(";");
+        for (i=0;i<ARRcookies.length;i++)
+        {
+          x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+          y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+          x=x.replace(/^\s+|\s+$/g,"");
+          if (x==c_name)
+            {
+            return unescape(y);
+            } 
+          }
+    }
+    
+    function setCookie(c_name,value,exdays)
+    {
+        var exdate=new Date();
+        exdate.setDate(exdate.getDate() + exdays);
+        
+        var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toGMTString());    
+        document.cookie=c_name + "=" + c_value;
+    }
+        
+    </script>
+    <header id="pbHeader">
+        <div class="headTop " >
+            <!-- Header CI -->
+            <h1><a href="http://www.abnkorea.co.kr/" ><img src="http://www.abnkorea.co.kr/medias/btn-logo2x-m.png?context=bWFzdGVyfHJvb3R8NTY2MHxpbWFnZS9wbmd8aGU5L2gyZC84ODg4MTQzNjc1NDIyLnBuZ3wxMDYyMzM3NTcxMmFmYWI5YTNiZGMyMGIzYTI1YTQ3NzIwZWI3ZDY4YWZmYjZmN2QzMGU5YWNmNzEyMWMwMmYw" alt=""></a></h1>
+
+<!--// Header  CI -->
+            <!-- Header Search -->
+            <div class="unitedSearch">
+                <form action="http://www.abnkorea.co.kr/search">
+                    <fieldset>
+                        <legend>검색어 입력폼</legend>
+                        <input type="text" title="검색어 입력" name="text" autocomplete="off" value=""><a href="#none" class="btnReset"><img src="http://www.abnkorea.co.kr/_ui/mobile/images/common/btn_reset.gif" alt="검색어 삭제"></a>
+                        <div class="searchAutoWrap">
+                            <strong class="hide">자동검색 결과</strong>
+                            <div class="autoText">
+                            </div>
+                            <div class="hotText">
+                <p class="titP">인기검색어</p>
+                <a href="http://www.abnkorea.co.kr/search?text=치약&sl=1">치약</a>
+                <a href="http://www.abnkorea.co.kr/search?text=글루코사민&sl=1">글루코사민</a>
+                <a href="http://www.abnkorea.co.kr/search?text=오메가&sl=1">오메가</a>
+                <a href="http://www.abnkorea.co.kr/search?text=녹차&sl=1">녹차</a>
+                <a href="http://www.abnkorea.co.kr/search?text=오메가젤리&sl=1">오메가젤리</a>
+                <a href="http://www.abnkorea.co.kr/search?text=정수기&sl=1">정수기</a>
+                <a href="http://www.abnkorea.co.kr/search?text=생리대&sl=1">생리대</a>
+                </div>
+        <div class="myText">
+                                <p class="titP">나의 검색어<a href="javascript:$.windowOpener('/static/search/search-guide', $.getWinName());" class="btnTbl" title="새창 열림">도움말</a></p>
+                            </div>
+                            <div class="searchClose">
+                                <a href="#none" class="btnTbl" title="자동검색어 닫기">닫기</a>
+                            </div>
+                        </div>
+                        <input type="image" src="http://www.abnkorea.co.kr/_ui/mobile/images/common/btn_search.gif" alt="검색" class="btnSearch">
+                    </fieldset>
+                    <input type="hidden" name="sl" value="1" />
+                </form>
+            </div>
+<!--// Header  Search -->
+            <!-- Header Button  -->
+            <a href="http://www.abnkorea.co.kr/account/login" class="btnLogin"><img src="http://www.abnkorea.co.kr/_ui/mobile/images/common/btn_login.gif" alt="로그인"></a>
+        <!--// Header Button  -->       
+        </div>
+        <section class="headCont">
+            <h2 class="btnMenuOpen" id="uiAllMenuOpen"><a href="#none"><img src="http://www.abnkorea.co.kr/_ui/mobile/images/common/btn_menuall.gif" alt="전체메뉴 열기"></a></h2>
+            <!-- Header Menu  -->
+            <nav id="pbGnb">
+                <h2 class="hide">주메뉴 시작</h2>
+                <ul>
+                    <li class="uiGnbM1"><a href="http://www.abnkorea.co.kr/shop" >쇼핑</a></li>
+                        <li class="uiGnbM2"><a href="http://www.abnkorea.co.kr/business" >비즈니스</a></li>
+                        <li class="uiGnbM3"><a href="http://www.abnkorea.co.kr/academy" >아카데미</a></li>
+                        </ul>
+            </nav>
+        <!-- // Header Menu  -->
+        </section>
+        <div class="allMenuWrap">
+            <!-- All menu -->
+            <div id="allMenu">
+                <!-- Header Utility -->
+                <div class="personal2" style="height:auto;">
+                <p>암웨이에 오신 것을 환영합니다.
+                        <a href="http://www.abnkorea.co.kr/account/login" class="login">로그인</a>
+                        <a href="#" class="closeMega">메가메뉴 닫기</a><!-- 수정 2016.09.05 : 닫기버튼 추가 -->
+                    </p>
+                    
+                    <div class="personMenu">
+                        <a href="http://www.abnkorea.co.kr/account/signup-guide?access=mega">회원가입</a>
+                        <a href="http://www.abnkorea.co.kr/account/find/id">ID찾기</a>
+                        <a href="http://www.abnkorea.co.kr/account/find/password">PW찾기</a>
+                        <a href="http://www.abnkorea.co.kr/static/introduction/amway-korea/now">회사소개</a>
+                    </div>
+                </div><!--// Header Utility -->
+                <!-- Header GNB  -->
+                <!-- navigationbarcollectioncomponent -->
+        <ul class="depthM2">
+                <!-- navigationbarcomponent -->
+    <li><a href="#none" class="uiGnbM1" title="하위메뉴 열기">쇼핑</a>  
+                    <ul>
+                            <li><a href="#none">나의 쇼핑정보</a>
+                                                    <ul>
+                                                        <li><a href="http://www.abnkorea.co.kr/shop/myorder" id="">나의 주문내역</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/myorder/return" id="">나의 반품내역</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/wishlist" id="">위시리스트</a></li>
+                                                            </ul>
+                                                </li>
+                                            <li><a href="#none">제품소식</a>
+                                                    <ul>
+                                                        <li><a href="http://www.abnkorea.co.kr/shop/news/product" id="">신제품</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/news/promotion" id="">프로모션</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/news/tna-cancel-nla" id="">일시품절/해지/단종</a></li>
+                                                            </ul>
+                                                </li>
+                                            <li><a href="#none">영양건강</a>
+                                                    <ul>
+                                                        <li><a href="http://www.abnkorea.co.kr/shop/nutrition-health/c/NH" id="">영양건강 홈</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/nutrition-health/basic-nutrition/c/NH01" id="">기초영양</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/nutrition-health/functional-nutrition/c/NH02" id="">기능성</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/nutrition-health/kids/c/NH03" id="">어린이</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/nutrition-health/foods-beverages/c/NH04" id="">식품/음료</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/nutrition-health/program/c/NH05" id="">프로그램</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/nutrition-health/xs-energy/c/NH07" id="">XS 에너지</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/nutrition-health/dietary-supplements/c/NH08" id="">보조용품</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/nutrition-health/giftset/c/NH06" id="">선물세트</a></li>
+                                                            </ul>
+                                                </li>
+                                            <li><a href="#none">뷰티</a>
+                                                    <ul>
+                                                        <li><a href="http://www.abnkorea.co.kr/shop/beauty/c/BT" id="">뷰티 홈</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/beauty/skincare/c/BT01?showcategory=BT0107" id="">스킨케어</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/beauty/makeup/c/BT02?showcategory=BT0201" id="">메이크업</a></li>
+                                                            </ul>
+                                                </li>
+                                            <li><a href="#none">배스바디</a>
+                                                    <ul>
+                                                        <li><a href="http://www.abnkorea.co.kr/shop/bath-body/c/BB" id="">배스바디 홈</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/bath-body/oral-care/c/BB01" id="">오랄케어</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/bath-body/hair-care/c/BB02" id="">헤어케어</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/bath-body/body-care/c/BB03" id="">바디케어</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/bath-body/supplements/c/BB05" id="">보조용품</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/bath-body/giftset/c/BB04" id="">선물세트</a></li>
+                                                            </ul>
+                                                </li>
+                                            <li><a href="#none">홈리빙</a>
+                                                    <ul>
+                                                        <li><a href="http://www.abnkorea.co.kr/shop/home-living/c/HL" id="">홈리빙 홈</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/home-living/water-purifier/c/HL02" id="">정수기</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/home-living/air-cleaner/c/HL04" id="">공기청정기</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/home-living/kitchen/c/HL07" id="">주방용품</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/home-living/detergent-cleanser/c/HL06" id="">세제용품</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/home-living/others/c/HL09" id="">기타</a></li>
+                                                            </ul>
+                                                </li>
+                                            <li><a href="#none">원포원</a>
+                                                    <ul>
+                                                        <li><a href="http://www.abnkorea.co.kr/shop/one-for-one/c/OF" id="">원포원 홈</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/one-for-one/coffee-drinks-tea/c/OF01" id="">커피/음료/차</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/one-for-one/food/c/OF02" id="">식품</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/one-for-one/tissue-paper/c/OF06" id="">제지</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/one-for-one/women-s-product/c/OF03" id="">여성용품</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/one-for-one/baby-care/c/OF05" id="">유아용품</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/one-for-one/seasonal-product-and-others/c/OF07" id="">시즌용품 및 기타</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/one-for-one/red-ginseng/c/OF04" id="">홍삼</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/one-for-one/giftset/c/OF09" id="">선물세트</a></li>
+                                                            </ul>
+                                                </li>
+                                            <li><a href="#none">사업보조용품</a>
+                                                    <ul>
+                                                        <li><a href="http://www.abnkorea.co.kr/shop/sales-aids/magazine-guide-book/c/SA01" id="">매거진 & 가이드북</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/sales-aids/sales-supplement/c/SA02" id="">판매보조키트</a></li>
+                                                            </ul>
+                                                </li>
+                                            <li><a href="#none">플러스샵</a>
+                                                    <ul>
+                                                        <li><a href="http://www.abnkorea.co.kr/shop/brand-category/c/BRAND" id="">브랜드존</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/gift-product-category/c/GIFT" id="">선물세트</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/shop/order/sop" id="">스마트 오더 프로그램</a></li>
+                                                            </ul>
+                                                </li>
+                                            <li><a href="http://www.abnkorea.co.kr/shop/cart"  id="">장바구니</a></li>
+                                            <li><a href="#none">암웨이 주문가이드</a>
+                                                    <ul>
+                                                        <li><a href="http://www.abnkorea.co.kr/static/shop/order-guide" id="">암웨이 주문가이드 홈</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/static/shop/order-guide/information" id="">주문안내</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/static/shop/order-guide/payment" id="">대금결제</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/static/shop/order-guide/delivery" id="">배송방법</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/static/shop/order-guide/cancel-return" id="">취소/반품</a></li>
+                                                            </ul>
+                                                </li>
+                                            </ul>
+                    <!--// navigationbarcomponent --><!-- navigationbarcomponent -->
+    <li><a href="http://www.abnkorea.co.kr/business" class="uiGnbM2">비즈니스</a>
+                    <!--// navigationbarcomponent --><!-- navigationbarcomponent -->
+    <li><a href="http://www.abnkorea.co.kr/academy" class="uiGnbM3">아카데미</a>
+                    <!--// navigationbarcomponent --><!-- navigationbarcomponent -->
+    <li><a href="#none" class="uiGnbMcs" title="하위메뉴 열기">통합고객센터</a> 
+                    <ul>
+                            <li><a href="http://www.abnkorea.co.kr/customer/notification"  id="">공지사항</a></li>
+                                            <li><a href="#none">온라인 고객센터</a>
+                                                    <ul>
+                                                        <li><a href="http://www.abnkorea.co.kr/customer/faq" id="">자주 묻는 질문 (FAQ)</a></li>
+                                                            </ul>
+                                                </li>
+                                            <li><a href="http://www.abnkorea.co.kr/static/customer/call-center"  id="">콜센터</a></li>
+                                            <li><a href="#none">암웨이 서비스 센터</a>
+                                                    <ul>
+                                                        <li><a href="http://www.abnkorea.co.kr/static/customer/service-center/info" id="">서비스 센터 안내</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/static/customer/service-center/technical-support-center" id="">기술지원센터</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/static/customer/service-center/additional-service" id="">부가서비스</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/static/customer/service-center/quality-assurance-system" id="">품질 보증제도</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/customer/after-service" id="">서비스 신청/조회</a></li>
+                                                            </ul>
+                                                </li>
+                                            <li><a href="http://www.abnkorea.co.kr/customer/amwayplaza"  id="">암웨이 플라자</a></li>
+                                            <li><a href="http://www.abnkorea.co.kr/static/customer/brand/experience"  id="">암웨이 브랜드 체험센터</a></li>
+                                            </ul>
+                    <!--// navigationbarcomponent --><!-- navigationbarcomponent -->
+    <li><a href="#none" class="uiGnbMcomply" title="하위메뉴 열기">컴플라이언스 센터</a>  
+                    <ul>
+                            <li><a href="http://www.abnkorea.co.kr/compliance/terms/termsofuse"  id="">이용약관</a></li>
+                                            <li><a href="http://www.abnkorea.co.kr/compliance/terms/infopolicy"  id="">개인정보처리방침</a></li>
+                                            <li><a href="#none">계약 동의서/유의사항</a>
+                                                    <ul>
+                                                        <li><a href="http://www.abnkorea.co.kr/compliance/terms/aboregist" id="">ABO 계약 동의서</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/compliance/terms/abomustread" id="">ABO 유의사항</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/compliance/terms/memberregist" id="">Member 계약동의서</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/compliance/terms/membermustread" id="">Member 유의사항</a></li>
+                                                            </ul>
+                                                </li>
+                                            <li><a href="http://www.abnkorea.co.kr/static/compliance/certification-activity"  id="">인증활동</a></li>
+                                            <li><a href="http://www.abnkorea.co.kr/compliance/security"  id="">정보보호 가이드</a></li>
+                                            </ul>
+                    <!--// navigationbarcomponent --><!-- navigationbarcomponent -->
+    <li><a href="#none" class="uiGnbMamway" title="하위메뉴 열기">암웨이 소개</a>  
+                    <ul>
+                            <li><a href="#none">한국암웨이</a>
+                                                    <ul>
+                                                        <li><a href="http://www.abnkorea.co.kr/static/introduction/amway-korea/now" id="">한국암웨이의 시작과 현재</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/static/introduction/amway-korea/overview" id="">한국암웨이 개요</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/static/introduction/amway-korea/ceo" id="">한국암웨이 CEO 인사말</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/static/introduction/amway-korea/history" id="">한국암웨이 연혁</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/static/introduction/amway-korea/museum" id="">암웨이 미술관</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/static/introduction/amway-korea/rdc" id="">부산 아시아 물류 허브 센터</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/static/introduction/amway-korea/one-for-one" id="">원포원 프로젝트</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/static/introduction/amway-korea/process" id="">프로세스로 보는 암웨이</a></li>
+                                                            </ul>
+                                                </li>
+                                            <li><a href="#none">글로벌 암웨이</a>
+                                                    <ul>
+                                                        <li><a href="http://www.abnkorea.co.kr/static/introduction/amway-global/beginnings" id="">암웨이의 시작</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/static/introduction/amway-global/vision" id="">암웨이 비전과 핵심가치</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/static/introduction/amway-global/history" id="">글로벌 암웨이 연혁</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/static/introduction/amway-global/leadership" id="">암웨이 창업자/경영진</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/static/introduction/amway-global/hq" id="">암웨이 본사 및 계열사</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/static/introduction/amway-global/map" id="">지도로 보는 암웨이</a></li>
+                                                            </ul>
+                                                </li>
+                                            <li><a href="#none">사회공헌</a>
+                                                    <ul>
+                                                        <li><a href="http://www.abnkorea.co.kr/static/introduction/citizenship/campaign" id="">원바이원 글로벌 캠페인</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/static/introduction/citizenship/csr-activities" id="">사회공헌 프로그램</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/static/introduction/citizenship/sponsorships" id="">후원사업</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/introduction/news/csr" id="">사회공헌 뉴스</a></li>
+                                                            </ul>
+                                                </li>
+                                            </ul>
+                    <!--// navigationbarcomponent --><!-- navigationbarcomponent -->
+    <li><a href="#none" class="uiGnbMmy" title="하위메뉴 열기">마이페이지</a>  
+                    <ul>
+                            <li><a href="http://www.abnkorea.co.kr/mypage"  id="">마이페이지 홈</a></li>
+                                            <li><a href="#none">회원정보 변경</a>
+                                                    <ul>
+                                                        <li><a href="http://www.abnkorea.co.kr/mypage/personalinfo/basicInfoSearch" id="">기본정보 수정</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/mypage/password/change" id="">비밀번호 변경</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/mypage/personalinfo/use-agreement?prePage=mypage" id="">개인정보 활용동의 변경</a></li>
+                                                            <li><a href="http://www.abnkorea.co.kr/mypage/paymentinfo" id="">계좌관리</a></li>
+                                                            </ul>
+                                                </li>
+                                            <li><a href="http://www.abnkorea.co.kr/mypage/address/shipping"  id="">배송지 관리</a></li>
+                                            <li><a href="http://www.abnkorea.co.kr/mypage/resign/agree"  id="">회원탈퇴</a></li>
+                                            </ul>
+                    <!--// navigationbarcomponent --></ul>
+        <!--// navigationbarcollectioncomponent --><!--// Header GNB  -->
+                <!-- Header Set Main  -->
+                <!--// Header Set Main  -->
+            </div>
+            <a href="#none" class="btnMenuClose"><img src="http://www.abnkorea.co.kr/_ui/mobile/images/common/btn_menuall_close.gif" alt="메가메뉴 닫기"></a>
+            <!--// All menu -->
+        </div>
+        <!-- cart form -->
+        <form id="addToCartForm" action="http://www.abnkorea.co.kr/account/signup-guide" method="POST"><input type="hidden" name="CSRFToken" value="8208c8ed-4042-4528-b1e9-dcfd1e3c8d3f" />
+</form><!-- wishlist form -->
+        <form id="addToWishListForm" action="http://www.abnkorea.co.kr/account/signup-guide" method="post"><input type="hidden" name="CSRFToken" value="8208c8ed-4042-4528-b1e9-dcfd1e3c8d3f" />
+</form><!-- addToSmartOrder Form -->
+        <form id="addToSmartOrderForm" action="http://www.abnkorea.co.kr/account/signup-guide" method="POST"><input type="hidden" name="CSRFToken" value="8208c8ed-4042-4528-b1e9-dcfd1e3c8d3f" />
+</form></header><!-- container -->
+    <div id="pbContainer">
+        
+        <div id="pageLocation">
+            <!-- breadcrumb component area -->
+            <!-- //breadcrumb component area -->
+            <!-- lnb component area -->
+            <!-- //lnb component area -->   
+        </div>    
+        <!-- content -->
+        <section id="pbContent">
+            <h1 class="topTit">회원가입</h1>
+            <ul class="stepList numb4">
+                <li><strong>01 <span>약관및계약서동의</span></strong></li>
+                <li><strong>02 <span>본인확인</span></strong></li>
+                <li><strong>03 <span>배우자공동ABO등록</span></strong></li>
+                <li class="on"><strong>04 <span>회원정보 입력</span></strong></li>
+            </ul>
+            <!-- 20150424 : 문구수정 및 추가 -->
+            <h2 class="titW">회원정보 입력<span class="must"><img src="http://www.abnkorea.co.kr/_ui/mobile/images/common/ico_star_red.png" alt="필수" class="icoMust">는 필수항목입니다.</span></h2>
+            <h3 class="titP">1. 후원자 선택</h3>
+            <div class="toggleBox">
+                <strong class="tggTit"><a href="#none">후원자가 없으신가요?</a></strong>
+                <div class="tggCnt">
+                    <p class="txtPara">후원자는 한국암웨이 ABO로 등록하기 위해서 반드시 입력해야 할 사항입니다.</p>
+                    <p class="titB">만약 후원자가 없으실 경우 한국암웨이 고객센터 1588-0080 으로 전화 주시면 임의로 후원자를 알려드립니다.</p>
+                    <dl class="simpleList">
+                        <dt>ABO 회원 후원자</dt>
+                        <dd>암웨이 사업의 기회에 대한 상세 설명과 노하우를 전수해 주고, 글로벌 리더로서 이끌어 주는 소중한 멘토이자 파트너입니다.</dd>
+                        <dt>Member 회원 후원자</dt>
+                        <dd>암웨이 제품 사용 시 본인에게 딱 맞는 제품을 추천해 주고, 제품 정보 및 활용 팁을 알려주는 1:1 맞춤형 가이드입니다.</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="inputWrap mgtM">
+                <label class="labelSizeM" for="memeberCheck">후원자 ABO 번호<img src="http://www.abnkorea.co.kr/_ui/mobile/images/common/ico_star_red.png" alt="필수" class="icoMust"></label>
+                <p class="inputBox"><input type="number" id="memeberCheck"></p>
+                <p class="inputBtn sizeM"><input type="button" class="btnCont" value="후원자확인"></p>
+            </div>
+            <div class="inputWrap">
+                <label class="labelSizeM" for="namerCheck">후원자 이름</label>
+                <p class="inputBox"><input type="text" id="namerCheck"></p>
+            </div>
+            <p class="titB noLine">일반 ABO 가입자는 선택하지 않으시면 됩니다.</p>
+            <ul class="listDot">
+                <li>외국의 회원으로부터 국제적으로 후원을 받고 있는 경우에만 선택하여 주시기 바랍니다.</li>
+                <li>국제 후원자/국제 사업자를 지정하시면 국내후원자는 대리후원자가 됩니다.</li>
+            </ul>
+
+            <div class="toggleBox inter">
+                <strong class="tggTit"><a href="#none">국제후원자 입력</a></strong>
+                <div class="tggCnt">
+                    <div class="checkBox">
+                        <input type="radio" id="interSp" checked="checked"><label for="interSp">국제후원자</label>
+                        <input type="radio" id="interBz" class="mglS"><label for="interBz"><a href="#uiLayerPop_interBiz">국제사업자</a></label>
+                    </div>
+                    <!-- s: 국제사업자 클릭시 국제사업자 등록에 대한 안내 레이어 오픈 -->
+                    <div class="pbLayerPopup" id="uiLayerPop_interBiz">
+                        <div class="pbLayerHeader">
+                            <strong>한국암웨이 등록 시 국제사업자 등록에 대한 안내</strong>
+                        </div>
+                        <div class="pbLayerContent">
+                        <!-- 20160517 -->
+                            <p class="popTxt">국제사업자 등록을 희망하시는 경우 하기 조건을 만족하셔야 하며, 가까운 암웨이 플라자 또는 브랜드 센터를 방문하시어 국제사업자 등록을 위한 가입 신청을 진행하여 주시기 바랍니다.</p>
+                            <div class="grayBgWrap mgtM">
+                                <dl class="listDotHyphen mgtS mgbS">
+                                    <dt><strong>&bull; 유자격 플래티늄 자격 달성</strong></dt>
+                                    <dd>국제사업은 유자격 플래티늄 이상의 자격을 달성한 ABO에게만 허용됩니다. 따라서 국제사업 후원자로 지정하고자 하는 ABO의 자격이 최소 유자격 플래티늄 이상인 경우에만 국제사업자 등록이 가능합니다.
+                                    <p class="mgtS">※ 예외조건<br>
+                                    국제사업 신청자 본인 또는 배우자가 현재 대한민국에 거주 중임을 입증할 수 있거나, 대한민국에 직계가족(부모,형제,자녀)이 거주 중인 경우 유자격 플래티늄 이상 ABO가 아니어도 국제사업 등록이 가능합니다.</p>
+                                    <p class="mgtS">* 단, 중국암웨이의 경우 자국에서 다이아몬드 이상 자격을 달성하고 국제사업 인증을 획득하는 경우에만 해외 시장에서 국제사업 등록이 가능합니다.</p></dd>
+                                </dl>
+                            </div>
+                        <!-- //20160517 -->
+                        </div>
+                        <a href="#none" class="btnPopClose"><img src="http://www.abnkorea.co.kr/_ui/mobile/images/common/btn_close.gif" alt="창 닫기"></a>
+                    </div>
+                    <!-- //20160517 -->
+                    <!-- e: 국제사업자 클릭시 국제사업자 등록에 대한 안내 레이어 오픈 -->
+                    <div class="inputWrap">
+                        <label class="labelSizeL" for="name">성명</label>
+                        <p class="inputBox"><input type="text" id="name"></p>
+                    </div>
+                    <div class="inputWrap">
+                        <label class="labelSizeL" for="naCode">국가코드</label>
+                        <p class="selectBox">
+                            <select id="naCode">
+                                <option>국가코드</option>
+                            </select>
+                        </p>
+                    </div>
+
+                    <div class="inputWrap">
+                        <label class="labelSizeL" for="memeberCheck2">후원자 ABO 번호</label>
+                        <p class="inputBox"><input type="number" id="memeberCheck2"></p>
+                        <!-- 20150616 : 버튼 추가 -->
+                        <p class="inputBtn"><input type="button" class="btnCont" value="확인"></p>
+                        <!-- <p class="inputBtn"><input type="button" class="btnCont" value="취소"></p> -->
+                    </div>
+                    <p class="titB">본인은 국제 후원자와 대리 후원자(국내 후원자)를 상단에 기입하였으며, 하기 내용이 사실임을 확인합니다.</p>
+                    <p class="listDot mgtS">
+                        아래 내용을 읽고 확인하신 후, 체크박스 안에 V 표시를 하시기 바라며, 이는 자필로 기재하고 서명 또는 기명날인 하신 것과 동일한 효력을 갖습니다.
+                    </p>
+                    <ul class="inputList">
+                        <li><input id="spon01" type="checkbox"><label for="spon01">본인의 국제 후원자를 개인적으로 알고 있습니다.</label></li>
+                        <li><input id="spon02" type="checkbox"><label for="spon02">국제 후원자로부터 직접 암웨이 사업에 대해 소개를 받았습니다.</label></li>
+                        <li><input id="spon03" type="checkbox"><label for="spon03">본인의 사업을 운영함에 있어 국제 후원자는 국외에서, 대리 후원자는 국내에서 지원을 제공함을 인지합니다.</label></li>
+                        <li><input id="spon04" type="checkbox"><label for="spon04">본인은 명시된 국제 후원자와 지정한 대리 후원자로부터 후원을 받는 것에 동의합니다.</label></li>
+                    </ul>
+                </div>
+            </div>
+            <h3 class="titP mgtM">2. 기본정보 입력</h3>
+            <div class="inputWrap">
+                <strong class="labelSizeM smalltxt"><span>주사업자</span> 한글성명</strong>
+                <p class="textBox">암웨이</p>
+            </div>
+            <div class="inputWrap">
+                <label class="labelSizeM smalltxt" for="majorNameEng"><span>주사업자</span> 영문성명<img src="http://www.abnkorea.co.kr/_ui/mobile/images/common/ico_star_red.png" alt="필수" class="icoMust"></label>
+                <p class="inputBox" style=""><input type="text" id="majorNameEng" placeholder="Hong Gil Dong"></p>
+            </div>
+            <!-- 20170328 추가 -->
+            <div class="inputWrap">
+                <label class="labelSizeM smalltxt" for="birth"><span>주사업자</span> 생년월일<img src="http://www.abnkorea.co.kr/_ui/mobile/images/common/ico_star_red.png" alt="필수" class="icoMust"></label>
+                <div>
+                        <input type="text" id="birth" style="width:60px">년
+                        <input type="text" id="" style="width:40px">월
+                        <input type="text" id="" style="width:40px">일
+                </div>
+
+                <!-- <p class="inputBox"><input type="text" id="birth">년 <input type="text" id="">월<input type="text" id="">일</p> -->
+            </div>
+            <div class="inputWrap lineB">
+                <label class="labelSizeM">성별<img src="http://www.abnkorea.co.kr/_ui/mobile/images/common/ico_star_red.png" alt="필수" class="icoMust"></label>
+                <p class="inputBox checkBox">
+                    <input type="radio" id="userTypeM"><label for="userTypeM" class="mgSet">남자</label><input type="radio" id="userTypeW" ><label for="userTypeW">여자</label>
+                </p>
+            </div>
+            <!-- 20170328 추가 -->
+            <!-- <div class="inputWrap">
+                <strong class="labelSizeM smalltxt"><span>부사업자</span> 한글성명</strong>
+                <p class="textBox">가길순</p>
+            </div>
+            <div class="inputWrap lineB">
+                <label class="labelSizeM smalltxt" for="subNameEng"><span>부사업자</span> 영문성명</label>
+                <p class="inputBox"><input type="text" id="subNameEng" placeholder="Hong Gil Dong"></p>
+            </div>
+            <p class="titB noLine">회원님의 안전한 비밀번호로 영문/숫자 조합 6 ~ 8자리 사이로 설정해주세요.</p>
+            <div class="toggleBox">
+                <strong class="tggTit"><a href="#none">비밀번호 설정시 유의사항</a></strong>
+                <div class="tggCnt">
+                    <ul class="listTxt">
+                        <li>4번 이상 반복되는 문자나 숫자, 생년월일, 전화번호는 사용이 불가합니다.</li>
+                        <li>타 사이트와는 다른 비밀번호를 사용하고, 비밀번호는 주기적으로 변경해 주세요.</li>
+                    </ul>
+                </div>
+            </div> -->
+
+            <div class="inputWrap">
+                <label class="labelSizeM" for="pw">비밀번호<img src="http://www.abnkorea.co.kr/_ui/mobile/images/common/ico_star_red.png" alt="필수" class="icoMust"></label>
+                <p class="inputBox"><input type="password"  id="pw"></p>
+            </div>
+            <div class="inputWrap">
+                <label class="labelSizeM" for="pwOk">비밀번호 확인<img src="http://www.abnkorea.co.kr/_ui/mobile/images/common/ico_star_red.png" alt="필수" class="icoMust"></label>
+                <p class="inputBox"><input type="password"  id="pwOk" placeholder="비밀번호와 동일하게 입력"></p>
+            </div>
+            <div class="inputWrap lineT">
+                <strong class="labelBlock smalltxt"><span>주사업자</span> 휴대폰번호<img src="http://www.abnkorea.co.kr/_ui/mobile/images/common/ico_star_red.png" alt="필수" class="icoMust"></strong>
+                <!-- 20150803 : 문구 추가 --><p class="note">회원가입 완료 직후, ABO 고유번호가 주사업자의 휴대폰번호로 전송됩니다.<br>이미 등록된 타인의 정보를 입력하실 경우, 회사가 전송하는 정보의 수신이 원활하지 않을 수 있습니다.</p>
+                <div class="inputBoxBlock">
+                    <div class="inputNum3">
+                        <span><select title="주사업자 휴대폰 식별번호">
+                        <option value="" selected="selected">010</option>
+                        <option value="">011</option>
+                        <option value="">016</option>
+                        <option value="">017</option>
+                        <option value="">018</option>
+                        <option value="">019</option>
+                        <option value="">0130</option>
+                    </select> </span>
+                        <span><input type="tel" title="주사업자 휴대폰번호 앞자리"></span>
+                        <span><input type="tel" title="주사업자 휴대폰번호 뒷자리"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="inputWrap">
+                <div class="agreeCheck">
+                    <span class="info"><input type="checkbox" id="numberAgree"><label for="numberAgree">주사업자 전화번호 수집 및 국외이전에 동의합니다.</label></span> <!-- 20150522 : 문구수정 -->
+                    <span class="btn"><a href="#uiLayerPop_number01" class="btnTbl" >약관보기</a></span> <!-- 20150522 : 레이어 팝업 onclick 추가 -->
+                </div>
+                <!-- S: 주사업자 전화번호 수집 레이어 -->
+                <div class="pbLayerPopup" id="uiLayerPop_number01">
+                    <div class="pbLayerHeader">
+                        <strong><em class="myInfoB">[선택]</em> 전화번호 수집/이용 및 국외이전 동의</strong>
+                    </div>
+                    <div class="pbLayerContent">
+                        <p class="pbLayerh2"><strong class="chk">[선택]</strong> 개인정보 수집/이용</p>
+                        <table class="tblCont">
+                        <caption>개인정보 수집/이용에 대한 안내</caption>
+                        <colgroup>
+                            <col style="width:44%">
+                            <col style="width:18%">
+                            <col style="width:38%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th scope="col">목적</th>
+                            <th scope="col">항목</th>
+                            <th scope="col">이용&middot;보유기간</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>고객 상담 및 응대, 고객 불만접수 및 민원처리, 고지사항 전달, 배송 시 연락처</td>
+                            <td>전화번호</td>
+                            <td>동의 철회 시 / 회원탈퇴 시</td>
+                        </tr>
+                        </tbody>
+                        </table>
+                        <p class="pbLayerh2"><strong class="chk">[선택]</strong> 개인정보의 국외 이전</p>
+                        <table class="tblInput">
+                        <caption>개인정보의 국외 이전에 대한 안내</caption>
+                        <colgroup>
+                            <col style="width:32%">
+                            <col style="width:70%">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th scope="row">이전목적</th>
+                            <td>시스템 유지보수</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">이전국가 및 이전받는 자</th>
+                            <td>USA (미국 Alticor)<br>관리책임자 : Jim Redd (<a href="mailto:alticor_privacy@alticor.com" title="메일보내기">alticor_privacy@alticor.com</a>)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">이전항목</th>
+                            <td>전화번호</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">이전시점</th>
+                            <td>동의 시</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">이전방법</th>
+                            <td>온라인 전송</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">보유기간</th>
+                            <td>동의 철회 시 / 회원탈퇴 시</td>
+                        </tr>
+                        </tbody>
+                        </table>
+                        <!-- //20150615 : pc/mobile 동일 -->
+                    </div>
+                    <a href="#none" class="btnPopClose"><img src="http://www.abnkorea.co.kr/_ui/mobile/images/common/btn_close.gif" alt="창 닫기"></a>
+                </div>
+                <!-- //S: 주사업자 전화번호 수집 레이어 -->
+                <strong class="labelBlock smalltxt"><span>주사업자</span> 전화번호</strong>
+                <div class="inputBoxBlock">
+                    <div class="inputNum3">
+                        <span><select title="지역번호 선택">
+                                    <option value="" selected="selected">02</option>
+                                    <option value="">031</option>
+                                    <option value="">032</option>
+                                    <option value="">033</option>
+                                    <option value="">041</option>
+                                    <option value="">043</option>
+                                    <option value="">044</option>
+                                    <option value="">051</option>
+                                    <option value="">052</option>
+                                    <option value="">053</option>
+                                    <option value="">054</option>
+                                    <option value="">055</option>
+                                    <option value="">061</option>
+                                    <option value="">062</option>
+                                    <option value="">063</option>
+                                    <option value="">064</option>
+                                </select></span>
+                        <span><input type="tel" title="주사업자 전화번호 앞자리"></span>
+                        <span><input type="tel" title="주사업자 전화번호 뒷자리"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="inputWrap lineB">
+                <div class="agreeCheck">
+                    <span class="info"><input type="checkbox" id="numberAgree02"><label for="numberAgree02">부사업자 휴대폰번호 수집 및 국외이전에 동의합니다.</label></span> <!-- 20150522 : 문구수정 -->
+                    <span class="btn"><a href="#uiLayerPop_number02" class="btnTbl" >약관보기</a></span> <!-- 20150522 : 레이어 팝업 onclick 추가 -->
+                </div>
+                <!-- S: 부사업자 전화번호 수집 레이어, 20150522 : 내용수정 -->
+                <div class="pbLayerPopup" id="uiLayerPop_number02">
+                    <div class="pbLayerHeader">
+                        <strong class="txtS"><em class="myInfoB txtS">[선택]</em>휴대폰 번호 수집/이용 및 국외이전 동의</strong>
+                    </div>
+                    <div class="pbLayerContent">
+                        <p class="pbLayerh2"><strong class="chk">[선택]</strong> 개인정보 수집/이용</p>
+                        <table class="tblCont">
+                        <caption>개인정보 수집/이용에 대한 안내</caption>
+                        <colgroup>
+                            <col style="width:44%">
+                            <col style="width:17%">
+                            <col style="width:39%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th scope="col">목적</th>
+                            <th scope="col">항목</th>
+                            <th scope="col">이용&middot;보유기간</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>고객 상담 및 응대, 고객 불만접수 및 민원처리, 고지사항 전달, 배송 시 연락처</td>
+                            <td>휴대폰 번호</td>
+                            <td>동의 철회 시 / 배우자 삭제  요청 시</td>
+                        </tr>
+                        </tbody>
+                        </table>
+                        <p class="pbLayerh2"><strong class="chk">[선택]</strong> 개인정보의 국외 이전</p>
+                        <table class="tblInput">
+                        <caption>개인정보의 국외 이전에 대한 안내</caption>
+                        <colgroup>
+                            <col style="width:32%">
+                            <col style="width:70%">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th scope="row">이전목적</th>
+                            <td>시스템 유지보수</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">이전국가 및 이전받는 자</th>
+                            <td>USA (미국 Alticor)<br>관리책임자 : Jim Redd (<a href="mailto:alticor_privacy@alticor.com" title="메일보내기">alticor_privacy@alticor.com</a>)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">이전항목</th>
+                            <td>휴대폰번호</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">이전시점</th>
+                            <td>동의시</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">이전방법</th>
+                            <td>온라인 전송</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">보유기간</th>
+                            <td>동의 철회 시 /  배우자 삭제 요청 시</td>
+                        </tr>
+                        </tbody>
+                        </table>
+                        <!-- //20150615 : pc/mobile 동일 -->
+                    </div>
+                    <a href="#none" class="btnPopClose"><img src="http://www.abnkorea.co.kr/_ui/mobile/images/common/btn_close.gif" alt="창 닫기"></a>
+                </div>
+                <!-- //S: 부사업자 전화번호 수집 레이어, 20150522 : 내용수정 -->
+                <strong class="labelBlock smalltxt"><span>부사업자</span> 휴대폰번호</strong>
+                <div class="inputBoxBlock">
+                    <div class="inputNum3">
+                        <span><select title="부사업자 휴대폰 식별번호">
+                        <option value="" selected="selected">010</option>
+                        <option value="">011</option>
+                        <option value="">016</option>
+                        <option value="">017</option>
+                        <option value="">018</option>
+                        <option value="">019</option>
+                        <option value="">0130</option>
+                    </select> </span>
+                        <span><input type="tel" title="부사업자 휴대폰번호 앞자리"></span>
+                        <span><input type="tel" title="부사업자 휴대폰번호 뒷자리"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inputWrap lineB">
+                <strong class="labelBlock">이메일 주소<img src="http://www.abnkorea.co.kr/_ui/mobile/images/common/ico_star_red.png" alt="필수" class="icoMust"></strong>
+                <div class="inputBoxBlock">
+                    <div class="inputNumBtn">
+                        <span><input type="email" id="email" title="이메일 주소 입력"></span>
+                        <span><input type="button" class="btnCont" value="인증"></span>
+                    </div>
+                 </div>
+            </div>
+            <div class="inputWrap lineB">
+                <strong class="labelBlock">주소<img src="http://www.abnkorea.co.kr/_ui/mobile/images/common/ico_star_red.png" alt="필수" class="icoMust"></strong>
+                <div class="btnWrap aNumb2">
+                    <span><a href="#uiLayerPop_address1" class="btnTblL">지번주소로 찾기</a></span>
+                    <div class="pbLayerPopup" id="uiLayerPop_address1">
+                        /mobile/html/utility/m07_010_0020.html include
+                    </div>
+                    <span><a href="#uiLayerPop_address2" class="btnTblL">도로명주소로 찾기</a></span>
+                    <div class="pbLayerPopup" id="uiLayerPop_address2">
+                        /mobile/html/utility/m07_010_0060.html include
+                    </div>
+                </div>
+                <p class="addressInfo olnyBg">[000-000] 서울특별시 강남구 삼성동 120-8</p>
+            </div>
+            <div class="toggleBox">
+                <strong class="tggTit"><a href="#none"><span class="colorM">[선택]</span> 보너스 지급 계좌 등록</a></strong>
+
+                <div class="tggCnt">
+                    <p class="titB mgbS mgtS">판매실적에 따른 보너스 지급 및 반품 시 환불을 위하여 계좌번호는 반드시 입력하셔야 합니다.</p>
+                    <p class="titB mgbS mgtS">계좌번호는 '-' 없이 입력하여 주시고, 입력하신 계좌의 소유주와 예금주는 반드시 동일하여야 합니다.</p>
+                    <div class="inputWrap">
+                        <label class="labelSizeM" for="bankCode">거래은행</label>
+                        <p class="selectBox">
+                            <select id="bankCode">
+                                <option>경남은행</option>
+                                <option>광주은행</option>
+                                <option>국민은행</option>
+                                <option>농협중앙회</option>
+                                <option>단위농협</option>
+                                <option>단위축협</option>
+                                <option>대구은행</option>
+                                <option>유안타증권</option>
+                                <option>부산은행</option>
+                                <option>상호저축은행</option>
+                                <option>새마을금고</option>
+                                <option>수산업협동조합</option>
+                                <option>신한은행</option>
+                                <option>신협</option>
+                                <option>씨티은행</option>
+                                <option>외환은행</option>
+                                <option>우리은행</option>
+                                <option>우체국</option>
+                                <option>전북은행</option>
+                                <option>SC제일은행</option>
+                                <option>제주은행</option>
+                                <option>기업은행</option>
+                                <option>축산업협동조합</option>
+                                <option>하나은행</option>
+                                <option>산업은행</option>
+                                <option>수출입은행</option>
+                                <option>HSBC은행</option>
+                                <option>산림조합중앙회</option>
+                            </select>
+                            </p>
+                    </div>
+                    <div class="inputWrap">
+                        <label class="labelSizeM" for="accountNo">계좌번호</label>
+                        <p class="inputBox"><input type="number"  id="accountNo" placeholder="- 없이 입력"></p>
+                        <p class="inputBtn sizeM"><input type="button" class="btnCont" value="인증"></p>
+                    </div>
+                    <div class="inputWrap">
+                        <label class="labelSizeM" for="accountHolder">예금주</label>
+                        <p class="inputBox"><input type="text"  id="accountHolder"></p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="titP mgtM txtS">3. <strong class="myInfoB">[선택]</strong> 마케팅/홍보 목적 등의 개인정보 수집 및 이용 동의</h3>
+
+            <div class="infoAgree">
+                <p class="infoAgreeTxt">
+                    마케팅/홍보 및 후원수당의 산정 및 지급기준의 변경과 관련한 정보 수신을 위하여 귀하의 개인정보를 이용하는데 동의 하십니까?<br>
+                    동의 거부 시 제품 소개, 프로모션, 이벤트 안내 등의 마케팅/홍보 정보 제공이 제한되며, 후원수당의 산정 및 지급기준의 변경과 관련한 정보를 법률에 따라 우편으로 직접 발송합니다.
+                </p>
+
+                <table class="tblList lineLeft">
+                    <caption>마케팅/홍보 목적 등의 개인정보 수집 내용</caption>
+                    <colgroup>
+                        <col style="width:25%">
+                        <col style="width:25%">
+                        <col style="width:25%">
+                        <col style="width:25%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th scope="col">구분</th>
+                        <th scope="col">목적</th>
+                        <th scope="col">항목</th>
+                        <th scope="col">이용&middot;보유기간</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>광고성 정보 수신</td>
+                        <td>제품소개, 프로모션, 이벤트 안내</td>
+                        <td>주사업자 휴대폰번호, 주사업자 이메일 주소</td>
+                        <td>동의철회 시, 회원 탈퇴 시</td>
+                    </tr>
+                    <tr>
+                        <td>후원수당 관련 정보 수신</td>
+                        <td>후원수당 산정 및 지급기준의 변경과 관련한 정보 안내</td>
+                        <td>이메일 주소</td>
+                        <td>동의 철회 시 / 회원 탈퇴 시</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <ul class="listAgree addInfo lineB">
+                <li><strong><span>마케팅 홍보 목적의 </span> <span>휴대폰 문자 메시지 수신 동의</span></strong>
+                    <div class="radioGroup">
+                        <span><input type="radio" id="check01Yes" title="마케팅 홍보 목적의 휴대폰 문자 메시지 수신 동의함"><label for="check01Yes">동의</label></span>
+                        <span><input type="radio" id="check01No" title="마케팅 홍보 목적의 휴대폰 문자 메시지 수신 동의 안함"><label for="check01No">동의안함</label></span>
+                    </div>
+                </li>
+                <li><strong>후원수당의 산정 및 지급기준의 변경과 관련한 정보 및 마케팅 홍보 목적의 이메일 수신 동의</strong>
+                    <div class="radioGroup">
+                        <span><input type="radio" id="check02Yes" title="후원수당의 산정 및 지급기준의 변경과 관련한 정보 및 마케팅 홍보 목적의 이메일 수신 동의"><label for="check02Yes">동의</label></span>
+                        <span><input type="radio" id="check02No" title="후원수당의 산정 및 지급기준의 변경과 관련한 정보 및 마케팅 홍보 목적의 이메일 수신 동의 안함"><label for="check02No">동의안함</label></span>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="listDot">
+                <li>"마케팅/홍보 목적의 개인정보 이용 및 수신 동의"를 거부하시는 경우에도 한국암웨이 회원가입 및 서비스 이용이 가능합니다. </li>
+                <li>구매 및 서비스 관련 정보는 수신동의 여부와 상관없이 주사업자의 연락처로 발송됩니다.</li>
+                <li>이메일 수신 동의를 하지 않을 경우 후원수당의 산정 및 지급기준의 변경과 관련한 정보를  법률에 따라 우편으로 직접 발송합니다.</li>
+                <li>마케팅/홍보 목적의 정보 수신 동의 또는 거부 처리는 등록하신 휴대폰 번호 및 이메일 주소에 대해 적용되므로, 다른 회원과  동일한 정보로  등록된 경우 본인의 의사와 상관없이 수신 동의 또는 거부 처리될 수 있습니다.</li>
+            </ul>
+            <!-- //20150803 : 전체 수정 -->
+
+            <div class="btnWrap aNumb1">
+                <a href="#none" class="btnBasicBL">완료</a>
+            </div>
+
+
+        </section>
+        <!-- //content -->
+    </div>
+    <!-- container -->
+<!-- footer -->
+            <footer id="pbFooter">
+                <h1 class="hide">하단 footer</h1>
+                <!-- Utility -->
+                <SCRIPT LANGUAGE="JavaScript">
+$(document).ready(function(){
+        
+    var appdownShow ="Y";
+    if(navigator.userAgent.match(/AMWAY_ANDROID_APP/i) != null && navigator.userAgent.match(/AMWAY_ANDROID_APP/i).length >= 1)
+    {
+        appdownShow ="N";
+    }
+     //ios app 접근 여부체크
+     else if(navigator.userAgent.match(/AMWAY_IOS_APP/i) != null && navigator.userAgent.match(/AMWAY_IOS_APP/i).length >= 1)
+    {
+         appdownShow ="N";
+    }
+    
+    if (appdownShow =="N")
+    {
+        $(".footerMenu a").each(function(ndex){
+            var _urlString =$(this).html();
+            if(_urlString =="앱다운로드")
+            {
+                $(this).hide();
+            }
+        });
+    }
+    
+});
+    
+function fn_AppDwonload()
+{
+    var strAppUrl = "";
+    var str = window.navigator.userAgent.toLowerCase();
+
+    if(/iphone/.test(str)){
+        strAppUrl ="http://itunes.apple.com/kr/app/id430140303";
+        document.location.href=strAppUrl;
+    }
+    else if(/android/.test(str)){
+        strAppUrl ="https://play.google.com/store/apps/details?id=sABN.UI.SmartABNAndroid";
+        document.location.href=strAppUrl;
+    }   
+}
+
+</SCRIPT>
+            <div class="footerMenu">
+                    <a href="http://www.abnkorea.co.kr/static/introduction/amway-korea/now" >암웨이소개</a>
+                        <a href="http://www.abnkorea.co.kr/customer/amwayplaza" >암웨이 플라자</a>
+                        <a href="http://www.abnkorea.co.kr/compliance/terms/termsofuse" >이용약관</a>
+                        <a href="http://www.abnkorea.co.kr/compliance/terms/infopolicy" ><strong>개인정보처리방침</strong></a>
+                        <a href="http://www.abnkorea.co.kr/compliance/security" >컴플라이언스 센터</a>
+                        <a href="http://www.abnkorea.co.kr/customer/faq/sop?type=smartOrder" >온라인 고객센터</a>
+                        <a href="http://www.abnkorea.co.kr/sitemap" >사이트맵</a>
+                        <a href="javascript:fn_AppDwonload();" >앱다운로드</a>
+                        </div>
+            <!--// Utility -->
+                <!-- Copyright  --> 
+                <div class="footerCopyright">
+                <address><strong>(주)한국암웨이</strong> 서울특별시 강남구 영동대로 517, 27층(삼성동, 아셈타워) (대표이사:김장환)</address>
+        <span>사업자 등록번호 : 120-81-03391</span>
+        <span>통신판매업신고번호 : 제 강남-1179호</span><!-- 20150703 : 변경 - 제 03987호→제 강남-1179호 -->
+        <span>고객센터 : 1588-0080</span>
+        <span>FAX : 02-557-2566</span><!-- 20150709 : 변경 -->
+        <p class="hosting">호스팅제공자 : 한국암웨이(주) <a href="http://www.ftc.go.kr/info/bizinfo/communicationView.jsp?apv_perm_no=2000322008330201179&amp;area1=&amp;area2=&amp;currpage=2&amp;searchKey=01&amp;searchVal=암웨이&amp;stdate=&amp;enddate=" target="_blank">사업자정보공개페이지</a></p><!-- 20150722 : 추가 -->
+        <p><a href="https://www.macco.or.kr/ko/cn/KOCNMC01.action">소비자피해보상보험 가입사실확인</a></p><!-- 20150730 : 추가 -->
+        <p>All Contents Copyright 2017 Amway Korea Ltd. </p></div><!-- //Copyright  -->
+            </footer>
+            <a href="#pbWrap" class="btnTop"><img src="http://www.abnkorea.co.kr/_ui/mobile/images/common/btn_top.png" alt="TOP(맨위로가기)"></a>
+            <!--// footer --></div>     
+        <script src="http://www.abnkorea.co.kr/_ui/mobile/common/js/pbMobileAppPush.js"></script>
+
+            <div class="btnWrap aNumb1" style="border-top: 1px solid #dadada;padding-top:15px">
+                <a href="index.html" class="btnBasicGL goto_home" style="background-color:#00a1bb;border:1px solid #00a1bb;margin-bottom:20px">처음으로</a>
+            </div>
+            
+    <input type="hidden" id="aboNumber" value="anonymous" />
+    <input type="hidden" id="currentDateTime" value="20170529132649" />
+<!-- 시연용 스크립트 -->
+<script>
+$(function() {
+    $('.btnSearch').on('click', function(e) {
+        e.preventDefault();
+    });
+    $('a').filter(':not(.goto_home)').filter(':not(.btnTop)').removeAttr('href');
+    $('#pbGnb ul li a').off('click');
+    $('.btnMenuOpen').off('click');
+    $('#memeberCheck').val('7480002');
+    $('#namerCheck').val('암웨이');
+});
+</script>
+<!-- //시연용 스크립트 -->
+</body>
+</html>

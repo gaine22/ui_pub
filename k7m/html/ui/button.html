@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../resources/img/common/ico_favicon.ico"> 
+
+	<title>SKTELINK</title>
+	
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../resources/css/ui_guide.css">
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+
+<body class="page-codinglist">
+	<div class="base-skip" id="baseSkip"></div>
+	<div class="base-modal" id="baseModal"></div>
+	<div class="base-wrapper">
+		<header class="base-header" id="baseHeader"></header>		
+		<main class="base-main" id="baseMain" role="main">
+			<div class="base-content">
+			<div class="contents-wrap">
+				<div class="base-tit">
+					<h1 class="h1">Button</h1>
+				</div>
+				
+				<section class="mgb-l guide-con">
+					<div class="code-warning">
+						<p>* ie button press effect 제외 - Button 내 텍스트를 i tag로 감싸줄 것</p>
+						<p>* Button은 사용자 행동 유도 버튼, a 태그용 버튼은 페이지 이동 버튼</p>
+					</div>
+						
+					<h3>Box button</h3>
+					<p class="guide-txt">버튼의 의미에 따라 색깔으로 구분하며 사용 크기에 따라 Large(<span class="guide-code">-l</span>)/ Medium(<span class="guide-code">-m</span>)/ Small(<span class="guide-code">-s</span>)/ <span class="guide-code">-xs</span>으로 구분된다.
+					<p><span class="guide-tit">.btn </span>  btn 기본버튼 (크기 고정)</p>
+					<p><span class="guide-tit">.btn-<em>*</em></span> btn-의미 (글자길이버튼/min-width참고, 상단 클래스의 넓이 상속 100%)</p>
+					<p><span class="guide-tit">.btn btn-<em>*</em></span>  btn btn-컬러</p>
+					<p><span class="guide-tit">.btn btn-<em>*</em>-<em>*</em></span> btn btn-컬러-크기</p>
+
+					<hr class="hr">
+					<h3>고정크기 버튼</h3>					
+					<div class="btn-wrap">
+						<p class="code-box txt-c">a.btn</p>
+						<a href="#" class="btn">Button</a>
+					</div>
+					<div class="btn-wrap">
+						<p class="code-box txt-c">button.btn</p>
+						<button type="button" class="btn"><i>Button</i></button>
+					</div>
+					<div class="btn-wrap">
+						<p class="code-box txt-c">button.btn.btn-ok / button.btn.btn-cancel</p>
+						<span><button type="button" class="btn btn-ok"><i>확인</i></button></span>						
+						<span><button type="button" class="btn btn-cancel"><i>취소</i></button></span>
+					</div>
+
+					<p class="code-box txt-c">btn-wrap.item3</p>
+					<div class="btn-wrap item3">
+						<p class="code-box txt-c">button.btn.btn-bluegreen / button.btn.btn-darkgold / button.btn.btn-darkgray</p>
+						<span><button type="button" class="btn btn-point"><i>요금제 찾기</i></button></span>
+						<span><button type="button" class="btn btn-bluegreen"><i>요금제 찾기</i></button></span>
+						<span><button type="button" class="btn btn-darkgold"><i>요금제 변경</i></button></span>
+						<span><button type="button" class="btn btn-darkgray"><i>목록</i></button></span>
+					</div>
+
+					<p class="code-box txt-c">btn-wrap.item1-2</p>
+					<div class="btn-wrap item1-2">
+						<span><button type="button" class="btn btn-point-l"><i>요금제 찾기</i></button></span>
+						<span><button type="button" class="btn btn-bluegreen-l"><i>나에게 맞는 요금제 찾기</i></button></span>
+						<span><button type="button" class="btn btn-darkgold"><i>요금제 변경</i></button></span>
+						<span><button type="button" class="btn btn-darkgray"><i>목록</i></button></span>
+					</div>
+					
+					<div class="btn-wrap">
+						<p class="code-box txt-c">button.btn-bluegreen-l</p>
+						<button type="button" class="btn btn-bluegreen-l"><i>나에게 맞는 요금제 찾기</i></button>
+					</div>
+
+					<div class="btn-wrap">
+						<p class="code-box txt-c">button.btn-bluegreen-ico</p>
+						<button type="button" class="btn btn-bluegreen-ico"><i>나에게 맞는 요금제 찾기</i></button>
+					</div>
+					<div class="btn-wrap">
+						<p class="code-box txt-c">a.btn-bluegreen-ico</p>
+						<a href="#" class="btn btn-bluegreen-ico"><i>나에게 맞는 요금제 찾기</i></a>
+					</div>
+
+					<div class="btn-wrap">
+						<p class="code-box txt-c">button.btn.btn-darkblue-m / button.btn.btn-darkgold-m</p>
+						<span><button type="button" class="btn btn-darkblue-m"><i>자세히보기</i></button></span>
+						<span><button type="button" class="btn btn-darkgold-m"><i>요금제 변경</i></button></span>
+					</div>
+					
+					<p class="code-box">button.btn.btn-bluegreen-m / button.btn.btn-darkblue-m /  button.btn.btn-darkgold-m / button.btn.btn-darkgray-m</p><br>
+					<button type="button" class="btn btn-point-m"><i>자세히보기</i></button>
+					<button type="button" class="btn btn-bluegreen-m"><i>자세히보기</i></button>
+					<button type="button" class="btn btn-darkblue-m"><i>자세히보기</i></button>
+					<button type="button" class="btn btn-darkgold-m"><i>자세히보기</i></button>
+					<button type="button" class="btn btn-darkgray-m"><i>자세히보기</i></button>
+					<button type="button" class="btn btn-gray-m"><i>자세히보기</i></button>
+					<br>					
+					<br>
+					<p class="code-box">a.btn.btn-bluegreen-m / a.btn.btn-darkblue-m /  a.btn.btn-darkgold-m / a.btn.btn-darkgray-m</p><br>
+					<a href="#" class="btn btn-point-m"><i>자세히보기</i></a>
+					<a href="#" class="btn btn-bluegreen-m"><i>자세히보기</i></a>
+					<a href="#" class="btn btn-darkblue-m"><i>자세히보기</i></a>
+					<a href="#" class="btn btn-darkgold-m"><i>자세히보기</i></a>
+					<a href="#" class="btn btn-darkgray-m"><i>자세히보기</i></a>
+					<a href="#" class="btn btn-gray-m"><i>자세히보기</i></a>
+					<br>
+
+					<p class="code-box">button.btn-line /  button.btn-line.point</p><br>
+					<button type="button" class="btn-line"><i>인증번호받기</i></button>
+					<button type="button" class="btn-line point"><i>우편번호찾기</i></button>
+					<br>
+
+					<p class="code-box">button.btn-line.ss</p><br>
+					<button type="button" class="btn-line ss"><i>카드 인증</i></button>
+					
+	
+					
+					<hr class="hr">
+					<h3>정보 입력 테이블 내 버튼/비고정크기 버튼</h3>
+					<p class="code-box">button.btn-inbase</p>
+					<button type="button" class="btn-inbase"><i>인증번호받기</i></button>
+					<button type="button" class="btn-inbase"><i>카드 인증</i></button>
+					<button type="button" class="btn-inbase"><i>우편번호찾기</i></button>
+					<button type="button" class="btn-inbase point"><i>인증번호받기</i></button>
+					
+
+					<br>
+					<p class="code-box">a.btn-inbase</p>
+					<a href="#" class="btn-inbase"><i>페이지이동</i></a>
+					<a href="#" class="btn-inbase"><i>이름이 길어요길어요</i></a>
+					<a href="#" class="btn-inbase"><i>BTN</i></a>
+					<br>
+					<p class="code-box">button.btn-inbase2</p>
+					<button type="button" class="btn-inbase2"><i>인증번호 받기</i></button>
+					<button type="button" class="btn-inbase2"><i>인증번호 확인</i></button>
+					<a href="#" class="btn-inbase2"><i>인증번호 받기</i></a>
+					<br>
+
+					<p class="code-box">button.btn-darkblue</p>
+					<button type="button" class="btn-darkblue"><i>내게 맞는 유심은?</i></button>
+					<br>
+					<p class="code-box">button.btn-black</p>
+					<button type="button" class="btn-black"><i>#35373a</i></button>
+					<br>
+					<p class="code-box">a.btn-black</p>
+					<a href="#" class="btn-black"><i>#35373a</i></a>
+					<br><br>
+					<p class="code-box">a.btn-point</p>
+					<a href="#" class="btn-point"><i>버튼</i></a>
+					<br>
+					<br>
+					<p class="code-box">a.btn-seablue</p>
+					<a href="#" class="btn-seablue"><i>버튼</i></a>
+					<p class="code-box">button.btn-seablue</p>
+					<button type="button" class="btn-seablue"><i>버튼</i></button>
+					<br>
+					<p class="code-box">button.btn-inquiry</p>
+					<button type="button" class="btn-inquiry"><i>조회</i></button>
+					
+					<hr class="hr">
+					<p>width:100% - 상위 클래스로 간격조정</p>
+					<div class="btn-wrap">
+						<p class="code-box">btn-point-gray</p>
+						<a href="#" class="btn-point-gray">a.btn-point-gray</a>
+					</div>
+					<div class="btn-wrap">
+						<button type="button" class="btn-point-gray">button.btn-point-gray</button>
+					</div>
+					<div class="btn-wrap">
+						<p class="code-box">btn-point-red</p>
+						<button type="button" class="btn-point-red">button.btn-point-red</button>
+					</div>
+					<div class="btn-wrap">
+						<a href="#" class="btn-point-red">a.btn-point-red</a>
+					</div>
+
+					<div class="box-wrapper">
+						<div class="btn-wrap">
+							<a href="#" class="btn-point-gray">회원가입</a>
+						</div>
+						<div class="btn-wrap">
+							<button type="button" class="btn-point-red">로그인</button>
+						</div>
+					</div>
+				</section>
+
+			<div class="code-wrapper">
+<pre><xmp class="code">
+<div class="btn-wrap">
+	<span><button type="button" class="btn btn-ok"><i>확인</i></button></span>						
+	<span><button type="button" class="btn btn-cancel"><i>취소</i></button></span>
+</div>
+
+<div class="btn-wrap">
+	<span><button type="button" class="btn btn-bluegreen"><i>요금제 찾기</i></button></span>
+	<span><button type="button" class="btn btn-darkgold"><i>요금제 변경</i></button></span>
+	<span><button type="button" class="btn btn-darkgray"><i>목록</i></button></span>
+</div>
+
+<div class="btn-wrap">
+	<button type="button" class="btn btn-bluegreen-l"><i>나에게 맞는 요금제 찾기</i></button>
+</div>
+
+<div class="btn-wrap">
+	<button type="button" class="btn btn-bluegreen-ico"><i>나에게 맞는 요금제 찾기</i></button>
+</div>
+
+<div class="btn-wrap">
+	<a href="#" class="btn btn-bluegreen-ico"><i>나에게 맞는 요금제 찾기</i></a>
+</div>
+
+<button type="button" class="btn-inbase"><i>인증번호받기</i></button>
+<button type="button" class="btn-inbase"><i>카드 인증</i></button>
+<button type="button" class="btn-inbase"><i>우편번호찾기</i></button>
+<button type="button" class="btn-inbase point"><i>인증번호받기</i></button>
+
+<a href="#" class="btn-inbase"><i>페이지이동</i></a>
+<a href="#" class="btn-inbase"><i>이름이 길어요길어요</i></a>
+<a href="#" class="btn-inbase"><i>BTN</i></a>
+
+</xmp></pre>
+			</div>
+			
+		</div>
+			
+		</main>
+		<footer class="base-footer" id="baseFooter"></footer>
+	</div>
+
+	<script src="../resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../resources/js/ui.plugins.js"></script>
+	<script src="../resources/js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			
+			
+			
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	
+	<title>2017년 UI개발부</title>
+	
+	<link rel="stylesheet" href="/resources/css/ui.base.css">
+</head>
+<body>
+	<div class="wrap">
+		<header class="header">
+			<img src="/resources/img/left.png" alt="" >
+			<button tyle="button" class="btn" id="btn_gnb"></button>
+		</header>
+		<main class="main">
+			<div class="gnb_menu_wrap">
+				<img src="/resources/img/gnbmenu.png" alt="" class="gnb_menu">
+				<button class="btn_close"></button>
+			</div>
+		</main>
+	
+	</div>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="/resources/js/ui.common.js"></script>
+	<script>
+		$(function(){
+			
+			$('#btn_gnb').on('click', function(){
+				
+				if($('.gnb_menu_wrap').hasClass('show')){
+					$('.gnb_menu').stop().animate({
+							'margin-left' : -850 + 'px'
+						})
+					$('.gnb_menu_wrap').removeClass('show');
+				}else{
+					$('.gnb_menu').stop().animate({
+							'margin-left' : 0
+						}, function(){
+							$('.gnb_menu_wrap').addClass('show');
+						})
+					
+					
+				}
+				
+			})
+			$('.btn_close').on('click', function(){
+				$('.gnb_menu').stop().animate({
+						'margin-left' : -850 + 'px'
+					})
+				$('.gnb_menu_wrap').removeClass('show');
+			})
+		})
+	</script>
+</body>
+</html>

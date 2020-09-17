@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../resources/img/common/ico_favicon.ico"> 
+
+	<title>SKTELINK</title>
+	
+	<script src="../resources/js/ui.init.js"></script>
+	<link rel="stylesheet" href="../resources/css/ui.base.css">
+</head>
+
+<body class="page-codinglist">
+	<div class="base-skip" id="baseSkip"></div>
+	<div class="base-modal" id="baseModal"></div>
+	<div class="base-wrapper">
+		<header class="base-header" id="baseHeader"></header>		
+		<main class="base-main" id="baseMain" role="main">
+			<div class="base-content">
+				<div class="base-tit">
+					<h1 class="h1">Accordion Tab Guide</h1>
+				</div>
+
+				<section class="mgb-l">
+					<div class="ui-acco" role="group" id="exeAcco_1">
+						<dl class="ui-acco-wrap">
+							<dt class="ui-acco-tit">
+								<strong>acco1</strong>
+								<button type="button" class="ui-acco-btn"><span>열기</span></button>
+							</dt>
+							<dd class="ui-acco-pnl">
+								acco1 content
+							</dd>
+						</dl>
+						<dl class="ui-acco-wrap">
+							<dt class="ui-acco-tit">
+								<strong>acco2</strong>
+								<button type="button" class="ui-acco-btn"><span>열기</span></button>
+							</dt>
+							<dd class="ui-acco-pnl">
+								acco1 content
+							</dd>
+						</dl>
+						<dl class="ui-acco-wrap">
+							<dt class="ui-acco-tit">
+								<strong>acco3</strong>
+								<button type="button" class="ui-acco-btn"><span>열기</span></button>
+							</dt>
+							<dd class="ui-acco-pnl">
+								acco1 content
+							</dd>
+						</dl>
+					</div>
+				</section>
+				
+				<section class="mgb-l">
+					<button type="button" onclick="$plugins.uiAccordionToggle({ id:'exeAcco_2', current: 'all' })">전체열고닫기</button>
+					<div class="ui-acco" role="group" id="exeAcco_2">
+						<div class="ui-acco-wrap">
+							<div class="ui-acco-tit">
+								<strong>acco1</strong>
+								<button type="button" class="ui-acco-btn"><span>열기</span></button>
+							</div>
+							<div class="ui-acco-pnl">
+								acco1 content
+
+								<div class="ui-acco" role="group" id="exeAcco_3">
+									<dl class="ui-acco-wrap">
+										<dt class="ui-acco-tit">
+											<strong>acco1</strong>
+											<button type="button" class="ui-acco-btn"><span>열기</span></button>
+										</dt>
+										<dd class="ui-acco-pnl">
+											acco1 content
+										</dd>
+									</dl>
+									<dl class="ui-acco-wrap">
+										<dt class="ui-acco-tit">
+											<strong>acco2</strong>
+											<button type="button" class="ui-acco-btn"><span>열기</span></button>
+										</dt>
+										<dd class="ui-acco-pnl">
+											acco1 content
+										</dd>
+									</dl>
+									<dl class="ui-acco-wrap">
+										<dt class="ui-acco-tit">
+											<strong>acco3</strong>
+											<button type="button" class="ui-acco-btn"><span>열기</span></button>
+										</dt>
+										<dd class="ui-acco-pnl">
+											acco1 content
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<dl class="ui-acco-wrap">
+							<dt class="ui-acco-tit">
+								<strong>acco2</strong>
+								<button type="button" class="ui-acco-btn"><span>열기</span></button>
+							</dt>
+							<dd class="ui-acco-pnl">
+								acco1 content
+							</dd>
+						</dl>
+						<dl class="ui-acco-wrap">
+							<dt class="ui-acco-tit">
+								<strong>acco3</strong>
+								<button type="button" class="ui-acco-btn"><span>열기</span></button>
+							</dt>
+							<dd class="ui-acco-pnl">
+								acco1 content
+							</dd>
+						</dl>
+					</div>
+				</section>
+
+				
+
+			</div>
+<pre><xmp class="code mgb-l">
+// 기본실행
+NETIVE.uiAcco.init({ id: 'exeAcco_1', current: 0, aria: true, autoclose: false, callback: function(v){console.log(v)} });
+- aria : true // 기본값 false  : true일때 aria관련 아이디 자동 생성
+- autoclose : false // 기본값 false  : true일때 선택된 아이템 외는 닫힘
+
+// 선택 필요 시 
+NETIVE.uiAcco.toggle({ id: 'exeAcco_1', current: 1, callback: function(v){console.log(v)} });
+
+// 무조건 열기
+NETIVE.uiAcco.toggle({ id: 'exeAcco_1', current: 1, state: 'open', callback: function(v){console.log(v)} });
+
+// 무조건 닫기
+NETIVE.uiAcco.toggle({ id: 'exeAcco_1', current: 1, state: 'close', callback: function(v){console.log(v)} });
+</xmp></pre>
+			
+		</main>
+		<footer class="base-footer" id="baseFooter"></footer>
+	</div>
+	
+	<script src="../resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../resources/js/ui.plugins.js"></script>
+	<script src="../resources/js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			$plugins.uiAccordion();
+			$plugins.uiAccordionToggle();
+			
+			$plugins.uiAccordion({ id:'exeAcco_1', current:[0,2], callback:function(v){console.log(v)} });
+			$plugins.uiAccordion({ id:'exeAcco_2', current:[0,2], autoclose:true, callback:function(v){console.log(v)} });
+			$plugins.uiAccordion({ id:'exeAcco_3', current:null, autoclose:false });
+			
+			
+			
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

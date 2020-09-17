@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico"> 
+
+	<title>실시간 요금 조회 | SK 7mobile</title>
+
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+<body>
+	<div class="skip" id="skip">
+		<ul>
+			<li><a href="#main">본문 바로가기</a></li>
+		</ul>
+	</div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+            <div class="contents-wrap">
+                <section>
+                    <h2 class="h2">요금조회</h2>
+                    <div class="select-top-area">
+                        <span class="lb-select"><label for="hpnumber">휴대폰번호</label> : 1개</span>
+                        <select class="selectbox-l" title="보유휴대폰" id="hpnumber">
+                            <option>010-1234-5678</option>
+                        </select>
+                    </div>
+
+                    <div class="ui-tab item2">
+                        <div class="ui-tab-btns">
+                            <a href="../pages/POC_MSD_RAI_0100.html" class="ui-tab-btn"><i>이용 요금 조회</i></a>
+                            <a href="../pages/POC_MSD_RAI_0200.html" class="ui-tab-btn" aria-selected="true"><i>실시간 요금 조회</i></a>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <ul class="tbl-wrap2 mgt-xxl">
+                        <li>
+                            <div class="dt">요금제명</div>
+                            <div class="dd">LTE 온라인 6GB</div>
+                        </li>
+                        <li>
+                            <div class="dt">실시간 요금 기준</div>
+                            <div class="dd">2018.01.01 ~ 01.06</div>
+                        </li>
+                        <li>
+                            <div class="dt">이용금액</div>
+                            <div class="dd"><span class="fc-point">3,800원</span></div>
+                        </li>
+                    </ul>
+
+                    <h3 class="h3tit">실시간 이용요금 정보</h3>
+                    <dl class="tbl-style txt-l">
+                        <dt>기본요금</dt>
+                        <dd>2,800원</dd>
+                        <dt>음성통화료</dt>
+                        <dd>0원</dd>
+                        <dt>데이터 통화료</dt>
+                        <dd>0원</dd>
+                        <dt>휴대폰 할부금<sup>*<span class="hide">필수</span></sup></dt>
+                        <dd>1,000원</dd>
+                        <dt>10원미만 할인금액<sup>*<span class="hide">필수</span></sup></dt>
+                        <dd>0원</dd>
+                        <dt>부가세 총액<sup>*<span class="hide">필수</span></sup></dt>
+                        <dd>0원</dd>
+                        <dt class="ln2">두줄이상제목두줄이상두줄이상제목1<sup>*<span class="hide">필수</span></sup></dt>
+                        <dd class="ln2">0원</dd>
+                        <dt class="ln2 nodata"></dt>
+                        <dd class="ln2 nodata"></dd>
+                    </dl>
+                    <!-- 20180322 : 유의사항 수정 -->
+                    <div class="note-box">
+                        <h3 class="ico-note">유의사항</h3>
+                        <ol>
+                            <li>실시간 요금조회는 이번 달 1일 부터 오늘까지의 이용요금이 합산됩니다.</li>
+                            <li>시스템에서 데이터를 호출 할 때 시간에 따라 최근 이용하신 일부 통화료는 반영되지 않을 수 있습니다.</li>
+                            <li>국제전화통화료(00700엔 망내무제한 요금제의 국제전화 기본제공량 초과 이용 통화료 포함), 로밍통화료 등 일부 통화료는 반영되지 않을 수 있습니다.</li>
+                            <li>단말할부금에는 단말할부이자가 포함되어 있습니다.</li>
+                            <li>당월 1일부터 현재까지의 이동전화 요금을 확인하실 수 있으며, 실제 명세서와는 다를 수 있으므로 단순 참고용으로 활용하시기 바랍니다.</li>
+                            <li>스페셜약정할인 가입자인 경우, 약정할인 금액은 월말에 최종 산정되므로 청구요금에서 확인하실 수 있습니다.</li>
+                        </ol>
+                    </div>
+                    <!--// 20180322 : 유의사항 수정 -->
+                </section>
+            </div><!-- //.contents-wrap -->
+		</main>
+		<div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+	
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			
+			
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

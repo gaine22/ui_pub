@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../resources/img/common/ico_favicon.ico"> 
+
+	<title>SKTELINK</title>
+	
+	<script src="../resources/js/ui.init.js"></script>
+	<link rel="stylesheet" href="../resources/css/ui.base.css">
+	<link rel="stylesheet" href="../js/lib/assets/rangeslider.css">
+</head>
+
+<body class="page-form">
+	<div class="base-skip" id="baseSkip"></div>
+	<div class="base-modal" id="baseModal"></div>
+	<div class="base-wrapper">
+		<header class="base-header" id="baseHeader"></header>
+		<section class="base-main" id="baseMain" role="main">
+			<div class="base-content">
+				<div class="base-tit">
+					<h1 class="h1">Gauge Slider</h1>
+				</div>
+
+				<section class="mgb-l payplan-gauge">
+					<div class="ui-gauge type-single" id="uiGauge">
+							<div class="ui-gauge-wrap">
+								<input type="range" min="0" max="600" value="280" step="10" class="gauge">
+								<div class="gauge-bg"></div>
+								<div class="gauge-fill"></div>
+								<div class="gauge-mask"></div>								
+							</div>
+							<div class="gauge-value">280</div>
+							
+							<!--
+							<button class="ui-gauge-btn-s" data-btn="min" type="button" title="값 설정"><span class="ui-gauge-pretxt">음성</span>280<span class="ui-gauge-txt">분</span></button>
+							 <div class="ui-gauge-bg">
+								<div class="ui-gauge-bar"></div>
+							</div>
+							<div class="ui-gauge-div-wrap">
+								<span class="ui-gauge-div n0"><em>500 </em></span>
+								<span class="ui-gauge-div n1"><em>400 </em></span>
+								<span class="ui-gauge-div n2"><em>300 </em></span>
+								<span class="ui-gauge-div n3"><em>200 </em></span>
+								<span class="ui-gauge-div n4"><em>100 </em></span>
+							</div> -->
+						</div>
+					</div>
+					<!-- <div data-gaugeselect="uiGauge">
+						<select title="현재가격 선택" class="t1 ui-gauge-min">
+						</select>
+					</div> 
+					-->
+					
+					
+					 <div class="u-cf">
+				        <h2><code>data-orientation="vertical"</code></h2>
+				        <div class="u-left" style="height: 200px">
+				            <input type="range" min="0" max="5" data-rangeslider data-orientation="vertical">
+				        </div>
+				        <div class="u-left" style="height: 200px">
+				            <input type="range" min="0" max="5" style="-webkit-appearance: slider-vertical; min-height: 150px; max-height: 100%;">
+				        </div>
+				        <output class="u-text-left"></output>
+				    </div>
+				</section>
+				
+				
+			</div>
+		</section>
+		<footer class="base-footer" id="baseFooter"></footer>
+	</div>
+	
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/lib/rangeslider.min.js"></script>
+	<script src="../resources/js/ui.plugins.js"></script>
+	<script src="../resources/js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			
+			$('.gauge-value').html($('input.gauge').val())
+
+			$('input').change(function(){
+			    var cur = $('input.gauge').val();
+			    $(this).attr('gauge-value', cur );
+			    $('.gauge-value').html(cur);
+			});
+			
+			/* $('input[type="range"]').on('input', function () {
+	            var percent = Math.ceil(((this.value - this.min) / (this.max - this.min)) * 100);
+	            console.log(this.min);
+	            $(this).css('background', '-webkit-linear-gradient(left, green 0%, green ' + percent + '%, black ' + percent + '%)');
+	        }); */
+			$('input').on('input', function( ) {
+			  $( this ).css( 'background', 'linear-gradient(to right, green 0%, green '+this.value +'%, #fff ' + this.value + '%, white 100%)' );
+			} );
+		});
+		
+		 var $document = $(document);
+	        var selector = '[data-rangeslider]';
+	        var $element = $(selector);
+
+	        // For ie8 support
+	        var textContent = ('textContent' in document) ? 'textContent' : 'innerText';
+
+	        // Example functionality to demonstrate a value feedback
+	        function valueOutput(element) {
+	            var value = element.value;
+	            var output = element.parentNode.getElementsByTagName('output')[0] || element.parentNode.parentNode.getElementsByTagName('output')[0];
+	            output[textContent] = value;
+	        }
+
+	        $document.on('input', 'input[type="range"], ' + selector, function(e) {
+	            valueOutput(e.target);
+	        });
+
+	        // Example functionality to demonstrate disabled functionality
+	        $document .on('click', '#js-example-disabled button[data-behaviour="toggle"]', function(e) {
+	            var $inputRange = $(selector, e.target.parentNode);
+
+	            if ($inputRange[0].disabled) {
+	                $inputRange.prop("disabled", false);
+	            }
+	            else {
+	                $inputRange.prop("disabled", true);
+	            }
+	            $inputRange.rangeslider('update');
+	        });
+
+	        // Example functionality to demonstrate programmatic value changes
+	        $document.on('click', '#js-example-change-value button', function(e) {
+	            var $inputRange = $(selector, e.target.parentNode);
+	            var value = $('input[type="number"]', e.target.parentNode)[0].value;
+
+	            $inputRange.val(value).change();
+	        });
+
+	        // Example functionality to demonstrate programmatic attribute changes
+	        $document.on('click', '#js-example-change-attributes button', function(e) {
+	            var $inputRange = $(selector, e.target.parentNode);
+	            var attributes = {
+	                    min: $('input[name="min"]', e.target.parentNode)[0].value,
+	                    max: $('input[name="max"]', e.target.parentNode)[0].value,
+	                    step: $('input[name="step"]', e.target.parentNode)[0].value
+	                };
+
+	            $inputRange.attr(attributes);
+	            $inputRange.rangeslider('update', true);
+	        });
+
+	        // Example functionality to demonstrate destroy functionality
+	        $document
+	            .on('click', '#js-example-destroy button[data-behaviour="destroy"]', function(e) {
+	                $(selector, e.target.parentNode).rangeslider('destroy');
+	            })
+	            .on('click', '#js-example-destroy button[data-behaviour="initialize"]', function(e) {
+	                $(selector, e.target.parentNode).rangeslider({ polyfill: false });
+	            });
+
+	        // Example functionality to test initialisation on hidden elements
+	        $document
+	            .on('click', '#js-example-hidden button[data-behaviour="toggle"]', function(e) {
+	                var $container = $(e.target.previousElementSibling);
+	                $container.toggle();
+	            });
+
+	        // Basic rangeslider initialization
+	        $element.rangeslider({
+
+	            // Deactivate the feature detection
+	            polyfill: false,
+
+	            // Callback function
+	            onInit: function() {
+	                valueOutput(this.$element[0]);
+	            },
+
+	            // Callback function
+	            onSlide: function(position, value) {
+	                console.log('onSlide');
+	                console.log('position: ' + position, 'value: ' + value);
+	            },
+
+	            // Callback function
+	            onSlideEnd: function(position, value) {
+	                console.log('onSlideEnd');
+	                console.log('position: ' + position, 'value: ' + value);
+	            }
+	        });
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

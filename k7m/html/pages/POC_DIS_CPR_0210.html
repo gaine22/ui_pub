@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico">
+	<title>생활/가전 - 다이렉트샵 | SK 7mobile</title>
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+
+<body>
+	<div class="skip" id="skip"></div>
+    <div class="base-layer" id="baseLayer">
+        <!-- 휴대폰 상세 -->
+        <section class="ui-modal" id="popPhoneDetail" role="dialog" aria-hidden="true">
+            <div class="ui-modal-wrap">
+                <header class="ui-modal-tit">
+                    <h1>휴대폰 상세정보</h1>
+                    <button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id: 'popPhoneDetail' });">닫기</button>
+                </header>
+                <div class="ui-modal-cont">
+                    <div class="modal-img">
+                        <img src="../images/desktop/@sample_combiDetail.jpg" alt="휴대폰상세설명">
+                    </div>
+                    <div class="btn-wrap">
+                        <button type="button" class="ui-modal-close btn-black" holde="true">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 결합상품 상세 -->
+        <section class="ui-modal" id="popCombiDetail" role="dialog" aria-hidden="true">
+            <div class="ui-modal-wrap">
+                <header class="ui-modal-tit">
+                    <h1>결합상품 '소니 플레이스테이션4 SLIM' 상세정보</h1>
+                    <button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id: 'popCombiDetail' });">닫기</button>
+                </header>
+                <div class="ui-modal-cont">
+                    <div class="modal-img">
+                        <img src="../images/desktop/@sample_combiDetail.jpg" alt="휴대폰상세설명">
+                    </div>
+                    <div class="btn-wrap">
+                        <button type="button" class="ui-modal-close btn-black" holde="true">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 180309 : 툴팁 추가 -->
+        <!-- 가입유형 툴팁 -->
+        <div class="ui-tooltip" id="uiDrop1" role="tooltip" aria-hidden="true">
+            <span class="tt-arrow"></span>
+            <section>
+                <h2 class="title">가입유형안내</h2>
+                <dl>
+                    <dt>번호이동이란?</dt>
+                    <dd>현재 사용하시는 번호 그대로 통신사를 변경하시는 것을 의미합니다.</dd>
+                </dl>
+                <dl>
+                    <dt>신규가입이란?</dt>
+                    <dd>새로운 번호로 가입하는 것을 말합니다.</dd>
+                </dl>
+                <dl>
+                    <dt>기기변경이란?</dt>
+                    <dd>기존 7모바일 가입 고객이 휴대폰만 새롭게 구매합니다.</dd>
+                </dl>
+            </section>
+        </div>
+            <!-- 할인방법 툴팁 -->
+        <div class="ui-tooltip" id="uiDrop2" role="tooltip" aria-hidden="true">
+            <span class="tt-arrow"></span>
+            <h2 class="title">할인방법안내</h2>
+            <dl>
+                <dt>단말할인이란?</dt>
+                <dd>출고가에서 총 지원금(공시지원금, 추가지원금)이 할인된 금액으로 구매하실 수 있습니다.</dd>
+            </dl>
+            <dl>
+                <dt>요금할인이란?</dt>
+                <dd>LTE요금제 기본료의 25%를 매월 할인 받으실 수 있습니다.</dd>
+            </dl>
+        </div>
+        <!-- 제휴카드할인 툴팁 -->
+        <div class="ui-tooltip" id="uiDrop3" role="tooltip" aria-hidden="true">
+            <span class="tt-arrow"></span>
+            <h2 class="title">제휴카드 할인</h2>
+            <p class="tit-sub">SK 7mobile 제휴 카드 발급 후 자동 이체 연결 시 할인 혜택을 받으실 수 있습니다.</p>
+        </div>
+    </div> 
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+			<div class="contents-wrap">
+				<section>
+				    <h2 class="h2">생활/가전</h2>
+				</section>
+                <section class="direct-summary">
+                    <h2 class="model-name">공부의신by삼성갤럭시와이드2 <span>(SM-G950)</span></h2>
+                    <span class="sub-txt">삼성과 만나 더 강력해져 돌아왔다!</span>
+                    <!-- 20180322 : sns 수정 -->
+                    <div class="sns">
+                        <a href="#" class="s0">카카오톡 공유</a>
+                        <a href="#" class="s1">facebook 공유</a>
+                        <a href="#" class="s2">twitter 공유</a>
+                        <a href="#" class="s3">instagram 공유</a>
+                        <a href="#" class="s4">url 공유</a>
+                    </div>
+                    <!-- // 20180322 : sns 수정 -->
+                </section>
+                <section class="thumb-wrap mw100">
+                    <div class="thumb-view phone">
+                        <div class="phone-thumb">
+                            <div class="rotate_viewer">
+                                <div id="phoneRotate" class="threesixty phoneSpin">
+                                    <div class="spinner">
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="guide">
+                                        <img src="../images/desktop/ico_360spin.png" alt="" />
+                                    </div>
+                                    <ol class="rotate_images"></ol>
+                                </div>
+    					    </div>
+                            <div class="photo_viewer" style="display:none">
+                                <img src="../images/desktop/phone/A03Y_001_360_1.png" alt="상품이미지 명 정면" />
+                            </div>
+                            <ul class="thumbnail">
+                                <li class="on">
+                                    <a href="#none" class="rotate"><img src="../images/desktop/phone/A03Y_001_360_1.png" alt="상품이미지 명 정면" /><span class="guide"></span></a>
+                                </li>
+                                <li><a href="#none"><img src="../images/desktop/phone/A03Y_001_360_3.png" alt="상품이미지 명 우측"></a></li>
+                                <li><a href="#none"><img src="../images/desktop/phone/A03Y_001_360_5.png" alt="상품이미지 명 사선"></a></li>
+                                <li><a href="#none"><img src="../images/desktop/phone/A03Y_001_360_9.png" alt="상품이미지 명 후면"></a></li>
+                                <li class="text"><a href="#none"><span>실제 <br>사이즈</span>
+                                <img src="../images/desktop/phone/A03Y_001_360_5.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                        <!-- 결합상품 썸네일--> 
+                        <div class="combi-thumb">
+                             <div class="photo_viewer">
+                                <img src="../images/desktop/@sample_combi1.png" alt="상품이미지 명" />
+                            </div>
+                            <ul class="thumbnail">
+                                <li class="on"><a href="#none"><img src="../images/desktop/@sample_combi1.png" alt="상품이미지 명"></a></li>
+                                <li><a href="#none"><img src="../images/desktop/@sample_combi2.jpg" alt="상품이미지 명"></a></li>
+                                <li><a href="#none"><img src="../images/desktop/@sample_combi3.jpg" alt="상품이미지 명"></a></li>
+                            </ul>
+                        </div>
+                        <!-- // 결합상품 썸네일--> 
+                    </div>
+                    <div class="thumb-info ui-acco" id="accThumbInfoStep" role="group">
+                        <dl class="ui-acco-wrap step1">
+                            <dt class="ui-acco-tit"><strong><em>Step1</em> 가입조건 선택</strong><button type="button" class="ui-acco-btn"><span>열기</span></button></dt>
+                            <dd class="ui-acco-pnl">
+                                <dl class="line">
+                                    <dt class="vtm">휴대폰 색상</dt>
+                                    <dd>
+                                        <div class="color-box">
+                                            <button type="button" class="red">레드</button>
+                                            <button type="button" class="black on">미드나잇 블랙</button>
+                                            <button type="button" class="gray">그레이</button>
+                                            <p class="color-txt">미드나잇 블랙</p>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl class="line">
+                                    <dt class="vtt">가입유형<button type="button" class="btn-tip ui-tooltip-btn" aria-describedby="uiDrop1"><i>가입유형안내</i></button></dt>
+                                    <dd>
+                                        <div class="btn-area item3">
+                                            <button type="button" class="on">번호이동</button>
+                                            <button type="button">신규가입</button>
+                                            <button type="button">기기변경</button>
+                                        </div>
+                                        <p class="sub-txt">* 현재 사용하는 번호 그대로 7모바일로 통신사를 변경합니다.</p>
+                                    </dd>
+                                </dl>
+                                <dl class="line">
+                                    <dt>휴대폰할부기간</dt>
+                                    <dd>
+                                        <div class="btn-area item2">
+                                            <button type="button" class="on">24개월</button>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl class="line">
+                                    <dt>약정할인기간</dt>
+                                    <dd>
+                                        <div class="btn-area item2">
+                                            <button type="button" class="on">24개월</button>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </dd>
+                        </dl>
+                        <dl class="ui-acco-wrap step2">
+                            <dt class="ui-acco-tit"><strong><em>Step2</em> 요금제 선택</strong><button type="button" class="ui-acco-btn"><span>열기</span></button></dt>
+                            <dd class="ui-acco-pnl">
+                                <div class="product-info">
+                                    <span class="lb">추천</span>
+                                    <p class="title"><strong>LTE 음성 다 유심 300MB</strong><em class="sub-tit">(음성 150분 / 데이터 5.9GB)</em></p>
+                                </div>
+                                <div class="btn-wrap">
+                                    <button type="button" class="btn">다른요금제 선택</button>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl class="ui-acco-wrap step3">
+                            <dt class="ui-acco-tit"><strong><em>Step3</em> 할인방법 선택</strong><button type="button" class="ui-acco-btn"><span>열기</span></button></dt>
+                            <dd class="ui-acco-pnl">
+                                <dl class="line">
+                                    <dt>할인방법<button type="button" class="btn-tip ui-tooltip-btn" aria-describedby="uiDrop2"><i>할인방법안내</i></button></dt>
+                                    <dd>
+                                        <div class="btn-area item2">
+                                            <button type="button" class="on"><i>휴대폰요금할인<br class="wbr">(공시지원금)</i></button>
+                                            <button type="button"><i>통신요금할인<br class="wbr">(선택약정25%)</i></button>
+                                        </div>
+                                        <p class="sub-txt2">* 총 할인금액 : <em>50,000원</em> (24개월 기준)</p>
+                                    </dd>
+                                </dl>
+                                <dl class="line">
+                                    <dt>제휴카드<button type="button" class="btn-tip ui-tooltip-btn" aria-describedby="uiDrop3"><i>제휴카드안내</i></button></dt>
+                                    <dd>
+                                        <div class="btn-area item3">
+                                            <button type="button"><i>없음</i></button>
+                                            <button type="button" class="on"><i>KB국민 이지홈</i></button>
+                                            <button type="button"><i>하나 심플라이프</i></button>
+                                        </div>
+                                        <p class="sub-txt2">* -5,000원 할인(캐쉬백)</p>
+                                    </dd>
+                                </dl>
+                            </dd>
+                        </dl>
+                        <div class="price-expect">
+                            <dl class="prex-tit">
+                                <dt class="tit">월 예상 납부 금액 (A+B+C)<span class="only-m"> : </span></dt>
+                                <dd><em>40,000원</em>(부가세포함)</dd>
+                            </dl>
+                            <div class="btn-area">
+                                <button type="button" class="btn-acco"><i>계산 결과 전체 보기 <span>열기</span></i></button>
+                            </div>
+                            <div class="prex-con">
+                                <dl class="line">
+                                    <dt>월 휴대폰 요금(A)</dt><dd>0원</dd>
+                                </dl>
+                                <div class="prex-detail">
+                                    <strong class="hide">월 휴대폰 요금(A) 상세</strong>
+                                    <dl class="line">
+                                        <dt>휴대폰 출고가</dt><dd>344,300 원</dd>
+                                    </dl>
+                                    <dl class="line">
+                                        <dt>통신사 지원금</dt><dd>-330,000 원</dd>
+                                    </dl>
+                                    <dl class="line">
+                                        <dt>추가 지원금</dt><dd>-14,300 원</dd>
+                                    </dl>
+                                    <dl class="line">
+                                        <dt>할부 원금</dt><dd>0 원</dd>
+                                    </dl>
+                                    <dl class="line" >
+                                        <dt>할부 이자</dt><dd>0 원</dd>
+                                    </dl>
+                                </div>
+                                <dl class="line">
+                                    <dt>월 통신요금(B)</dt><dd>30,000원</dd>
+                                </dl>
+                                <div class="prex-detail">
+                                    <strong class="hide">월 통신요금(B) 상세</strong>
+                                    <dl class="line">
+                                        <dt>통신사 기본료</dt><dd>30,000 원</dd>
+                                    </dl>
+                                    <dl class="line">
+                                        <dt>총 요금할인</dt><dd>6,600 원</dd>
+                                    </dl>
+                                    <dl class="line">
+                                        <dt>스페셜 약정할인</dt><dd>-6,600 원</dd>
+                                    </dl>
+                                    <dl class="line">
+                                        <dt>요금 할인</dt><dd>0 원</dd>
+                                    </dl>
+                                    <dl class="line" >
+                                        <dt>제휴카드 할인</dt><dd>0 원</dd>
+                                    </dl>
+                                </div>
+                                <dl class="line">
+                                    <dt>결합상품 판매가 (C)</dt><dd>10,000원</dd>
+                                </dl>
+                                <div class="prex-detail">
+                                    <strong class="hide">결합상품 판매가 상세</strong>
+                                    <dl class="line">
+                                        <dt>결합상품 할부원금</dt><dd>10,000 원</dd>
+                                    </dl>
+                                    <dl class="line">
+                                        <dt>결합상품 할부이자</dt><dd>0 원</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-wrap type2">
+                            <button type="button" class="btn b1 blong"><i>온라인 신청</i></button>
+                            <button type="button" class="btn bs"><i>장바구니</i></button>
+                            <button type="button" class="btn bs"><i>위시리스트</i></button>
+                        </div>
+                    </div>
+                </section>
+                <!-- 결합상품 선택 -->
+                <section class="combi-wrap mw100">
+                    <div>
+                        <h3 class="tit">휴대폰선택</h3>
+                        <div class="combi-choice phone owl-carousel">
+                            <div class="item on"> <!-- 활성화시 클래스 on -->
+                                <div class="thumb"><img src="../images/desktop/@sample_product.png" alt="상품명"></div>
+                                <button type="button" class="choice"><i>휴대폰 선택</i></button>
+                                <strong class="name">RE_갤럭시S7엣지_32G</strong>
+                                <div class="btn-wrap">
+                                    <button type="button" class="btn btn-darkgray-m" onclick="$plugins.uiModal({ id:'popPhoneDetail', width:1000, height:700});"><i>휴대폰 정보보기</i></button>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb"><img src="../images/desktop/@sample_product.png" alt="상품명"></div>
+                                <button type="button" class="choice"><i>휴대폰 선택</i></button>
+                                <strong class="name">RE_갤럭시S7엣지_32G</strong>
+                                <div class="btn-wrap">
+                                    <button type="button" class="btn btn-darkgray-m" onclick="$plugins.uiModal({ id:'popPhoneDetail', width:1000, height:700});"><i>휴대폰 정보보기</i></button>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb"><img src="../images/desktop/@sample_product.png" alt="상품명"></div>
+                                <button type="button" class="choice"><i>휴대폰 선택</i></button>
+                                <strong class="name">RE_갤럭시S7엣지_32G</strong>
+                                <div class="btn-wrap">
+                                    <button type="button" class="btn btn-darkgray-m" onclick="$plugins.uiModal({ id:'popPhoneDetail', width:1000, height:700});"><i>휴대폰 정보보기</i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="tit">결합상품 선택</h3>
+                        <div class="combi-choice owl-carousel">
+                            <div class="item on"> <!-- 활성화시 클래스 on -->
+                                <div class="thumb"><img src="../images/desktop/@sample_combi1.png" alt="상품명"></div>
+                                <button type="button" class="choice"><i>결합상품 선택</i></button>
+                                <strong class="name">소니 플레이스테이션4 SLIM</strong>
+                                <dl class="txt-type1">
+                                    <dt>출고가</dt>
+                                    <dd>466,500원</dd>
+                                </dl>
+                                <dl class="txt-type2">
+                                    <dt>판매가</dt>
+                                    <dd>466,500원</dd>
+                                </dl>
+                                <div class="btn-wrap">
+                                    <button type="button" class="btn btn-darkgray-m" onclick="$plugins.uiModal({ id:'popCombiDetail', width:1000, height:700});"><i>결합상품 정보보기</i></button>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb"><img src="../images/desktop/@sample_combi1.png" alt="상품명"></div>
+                                <button type="button" class="choice"><i>결합상품 선택</i></button>
+                                <strong class="name">소니 플레이스테이션4 SLIM</strong>
+                                <dl class="txt-type1">
+                                    <dt>출고가</dt>
+                                    <dd>466,500원</dd>
+                                </dl>
+                                <dl class="txt-type2">
+                                    <dt>판매가</dt>
+                                    <dd>466,500원</dd>
+                                </dl>
+                                <div class="btn-wrap">
+                                    <button type="button" class="btn btn-darkgray-m" onclick="$plugins.uiModal({ id:'popCombiDetail', width:1000, height:700});"><i>결합상품 정보보기</i></button>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb"><img src="../images/desktop/@sample_combi1.png" alt="상품명"></div>
+                                <button type="button" class="choice"><i>결합상품 선택</i></button>
+                                <strong class="name">소니 플레이스테이션4 SLIM</strong>
+                                <dl class="txt-type1">
+                                    <dt>출고가</dt>
+                                    <dd>466,500원</dd>
+                                </dl>
+                                <dl class="txt-type2">
+                                    <dt>판매가</dt>
+                                    <dd>466,500원</dd>
+                                </dl>
+                                <div class="btn-wrap">
+                                    <button type="button" class="btn btn-darkgray-m" onclick="$plugins.uiModal({ id:'popCombiDetail', width:1000, height:700});"><i>결합상품 정보보기</i></button>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb"><img src="../images/desktop/@sample_combi1.png" alt="상품명"></div>
+                                <button type="button" class="choice"><i>결합상품 선택</i></button>
+                                <strong class="name">소니 플레이스테이션4 SLIM</strong>
+                                <dl class="txt-type1">
+                                    <dt>출고가</dt>
+                                    <dd>466,500원</dd>
+                                </dl>
+                                <dl class="txt-type2">
+                                    <dt>판매가</dt>
+                                    <dd>466,500원</dd>
+                                </dl>
+                                <div class="btn-wrap">
+                                    <button type="button" class="btn btn-darkgray-m" onclick="$plugins.uiModal({ id:'popCombiDetail', width:1000, height:700});"><i>결합상품 정보보기</i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- // 결합상품 선택 -->
+                <section class="ui-tab item3 usim" id="proInfoTab">
+                    <div class="ui-tab-btns">
+                        <button type="button" class="ui-tab-btn"><i>휴대폰 정보</i></button>
+                        <button type="button" class="ui-tab-btn"><i>휴대폰 사양</i></button>
+                        <button type="button" class="ui-tab-btn"><i>결합상품 정보</i></button>
+                    </div>
+                    <div class="ui-tab-pnls">
+                        <section class="ui-tab-pnl">
+                            <h3 class="hide">휴대폰 정보</h3>
+                            <div class="img100">
+                                상품정보이미지
+                            </div>
+                        </section>
+                        <section class="ui-tab-pnl">
+                            <h3 class="hide">휴대폰 사양</h3>     
+                            <table class="tbl-base">
+                                <caption>휴대폰사양</caption>
+                                <colgroup>
+                                    <col style="width:25%">
+                                    <col style="width:auto">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">휴대폰명</th>
+                                        <td>RE_갤럭시S6_64G</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">모델명</th>
+                                        <td>SM-G920S_64G</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">제조사</th>
+                                        <td>삼성전자 </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">색상</th>
+                                        <td class="color-box2">
+                                            <span><i class="gold"></i>플래티넘골드</span>
+                                            <span><i class="topaz"></i>토파즈</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">네트워크 종류</th>
+                                        <td>LTE</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">카메라</th>
+                                        <td>후면 1,600만 / 전면 500만 화소</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">디스플레이</th>
+                                        <td>5.1인치 Super AMOLED</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">메모리</th>
+                                        <td>3GB RAM, 내장 32GB / 외장 메모리 미지원</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">운영체제</th>
+                                        <td>안드로이드 5.0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">베터리</th>
+                                        <td>2,550 mAh 일체형</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">CPU</th>
+                                        <td>옥타코어 2.1GHz, 1.5GHz</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                        <section class="ui-tab-pnl">
+                            <h3 class="hide">결합상품 정보</h3>
+                            <div class="img100">
+                                상품정보이미지
+                            </div>
+                        </section>
+                    </div>
+                </section>
+                <section>
+                    <div class="detail-area">
+                        <div class="banner1">
+                            <a href="#none">휴대폰 및 유심 수령 후 <strong>휴대폰 설정 방법 안내</strong></a>
+                        </div>
+                        <div class="banner2">
+                            <a href="#none"><strong>빠른 배송, 빠른 개통</strong>으로 만나겠습니다.</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="thumb-layerbar fixed"> <!-- 20180314 : fixed 클래스 추가 -->
+                    <div class="layer-top">
+                        <span class="model-name">Galaxy S8</span>
+                        <span class="call-name"><em class="only-m">&#40;</em>LTE 온라인 6GB<em class="only-m">&#41;</em></span>
+                        <span class="price">
+                            <em>월 예상 납입 금액(A+B+C)<i class="only-m">&#58;</i></em>
+                            <strong>40,000<em>원(VAT 포함)</em></strong>
+                        </span>
+                        <div class="btn-area">
+                            <button type="button" class="b1">온라인신청</button>
+                            <button type="button" class="b2">전화로신청</button>
+                            <button type="button" class="b3">장바구니</button>
+                            <button type="button" class="b4">위시리스트</button>
+                        </div>
+                        <button type="button" class="btn-layer-cont">열기</button>
+                    </div>
+                    <!-- 20180322 : 전체 수정 -->
+                    <div class="layer-cont">
+                        <div class="price-box">
+                            <dl class="total">
+                                <strong><em>A</em>월 휴대폰 요금</strong>
+                                <span>11,950 원</span>
+                            </dl>
+                            <div class="detail">
+                                <dl>
+                                    <dt>휴대폰 출고가</dt>
+                                    <dd>470,000 원</dd>
+                                </dl>
+                                <dl>
+                                    <dt>- 통신사 지원금</dt>
+                                    <dd class="fc-red">- 200,000 원</dd>
+                                </dl>
+                                <dl>
+                                    <dt>- 추가지원금</dt>
+                                    <dd class="fc-red">- 0 원</dd>
+                                </dl>
+                                <div class="detail-type">
+                                    <dl>
+                                        <dt>할부 원금</dt>
+                                        <dd>270,000 원</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>할부이자</dt>
+                                        <dd>16,900 원</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price-box">
+                            <dl class="total">
+                                <strong><em>B</em>월 통신 요금</strong>
+                                <span>11,950 원</span>
+                            </dl>
+                            <div class="detail">
+                                <dl>
+                                    <dt>통신사 기본료</dt>
+                                    <dd>470,000 원</dd>
+                                </dl>
+                                <dl>
+                                    <dt>- 총 요금할인</dt>
+                                    <dd class="fc-red">- 200,000 원</dd>
+                                </dl>
+                                <dl>
+                                    <dt>- 스페셜약정할인</dt>
+                                    <dd class="fc-red">- 0 원</dd>
+                                </dl>
+                                <div class="detail-type">
+                                    <dl>
+                                        <dt>요금할인</dt>
+                                        <dd>270,000 원</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>제휴카드할인</dt>
+                                        <dd>16,900 원</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 20180328 : 수정 -->
+                        <div class="price-box">
+                             <dl class="total">
+                                <strong><em>C</em>결합상품</strong>
+                                <span>11,950 원</span>
+                            </dl>
+                            <div class="detail">
+                                <dl>
+                                    <dt>결합상품 할부원금</dt>
+                                    <dd>470,000 원</dd>
+                                </dl>
+                                <dl>
+                                    <dt>결합상품 할부이자</dt>
+                                    <dd class="fc-red">200,000 원</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="price-box">
+                            <dl class="total">
+                                <strong>가입비/유심비</strong>
+                            </dl>
+                            <div class="detail">
+                                <dl>
+                                    <dt>가입비</dt>
+                                    <dd class="fc-red">무료</dd>
+                                </dl>
+                                <dl>
+                                    <dt>일반유심<em>(최초1회)</em></dt>
+                                    <dd>200,000 원</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- // 20180328 : 수정 -->
+                    </div>
+                    <!-- // 20180322 : 전체 수정 -->
+                </section>
+			</div><!-- .contents-wrap -->
+		</main>
+        <!-- <div class="qucik" id="quick"></div> -->
+		<footer class="footer" id="footer"></footer>
+	</div>
+
+	<script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+    <!-- 180227 360 회전 슬라이더 추가 -->
+    <script src="../js/lib/threesixty.min.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+            $plugins.uiAccordion({ id:'accThumbInfoStep',current:[0], autoclose : false, callback:function(v){} });
+            $plugins.uiTab({ id:'proInfoTab', current:0});
+            var phone;       
+            function phoneSpin(){
+                phone = $('.phoneSpin').ThreeSixty({
+                    totalFrames: 16, // Total no. of image you have for 360 slider
+                    endFrame: 16, // end frame for the auto spin animation
+                    currentFrame: 1, // This the start frame for auto spin
+                    imgList: ".rotate_images", // selector for image list
+                    progress: ".spinner", // selector to show the loading progress
+                    imagePath:"../images/desktop/phone/", // path of the image assets
+                    filePrefix: "A03Y_001_360_", // file prefix if any
+                    ext: ".png", // extention for the assets                                        
+                    navigation: false,
+                    width: '100%',
+                    height: '100%'
+                });
+            }
+            phoneSpin()
+
+            /* 결합상품 선택 */
+			$('.combi-choice').owlCarousel({
+				nav: true,
+				navElement: 'button',
+				navText:["이전 제품 보기", "다음 제품 보기"],
+                navRewind: false,
+				items: 2,
+                margin: 20,
+                responsive: {
+                    0:{
+                        items: 2,
+                        margin: 5
+                    },
+                    1024:{
+						items: 2,
+                        margin: 20
+					}
+                }
+			});
+
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

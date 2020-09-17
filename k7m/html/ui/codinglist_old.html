@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico"> 
+
+	<title>CODELIST</title>
+	
+	<script src="../resources/js/ui.init.js"></script>
+	<link rel="stylesheet" href="../resources/css/ui.base.css">
+</head>
+
+<body class="page-codinglist">
+	<div class="base-skip" id="baseSkip"></div>
+	<div class="base-modal" id="baseModal"></div>
+	<div class="base-wrapper">
+		<header class="base-header" id="baseHeader"></header>
+		<main class="base-main" id="baseMain" role="main">
+			<div class="base-content">
+				<h1 class="h1">Coding List</h1>
+				<div class="btn-wrap">
+					<a href="../resources/data/codinglist.xlsx" class="btn-base"><span>샘플 코딩리스트 엑셀</span></a>
+				</div>
+
+				<div class="ui-codinglist" id="uiCodinglist"></div>
+			</div>
+		</main>
+	</div>
+
+	<script src="../resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../resources/js/ui.plugins.js"></script>
+	<script src="../resources/js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			
+			$plugins.uiCodinglist({
+				id : 'uiCodinglist',
+				url : '/html/resources/data/codinglist.json',
+				type : 'json'
+			});
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico"> 
+
+	<title>7 Point | SK 7mobile</title>
+	
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+<body>
+	<div class="skip" id="skip">
+		<ul>
+			<li><a href="#main">본문 바로가기</a></li>
+		</ul>
+	</div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+            <div class="contents-wrap">
+                <section>
+                    <h2 class="h2">7 Point</h2>
+
+                    <section class="select-top-area noline">
+                        <span class="lb-select"><label for="hpnumber">휴대폰번호</label> : 1개</span>
+                        <select class="selectbox-l" title="보유휴대폰" id="hpnumber">
+                            <option>010-1234-5678</option>
+                        </select>
+                    </section>
+
+                    <div class="plan-gray-box">
+                        <div class="plan-txt">
+                            <span class="tit">SK7mobile고객님을 위한 7Point</span>
+                        </div>
+                         <div class="plan-list">
+                            <strong class="point">10,000P</strong>
+                            <ul>
+                                <li>소멸예정</li>
+                                <li class="bar">-5,000 point (2018.11.01)</li>
+                            </ul>
+                         </div>
+                    </div>
+                    
+                    <h3 class="h3tit">포인트 사용/적립 내역</h3>
+                    <ul class="tbl-wrap">
+                        <li class="style">
+                            <div class="dt">포인트 내역 조회</span></div>
+                            <div class="dd date-wrap">
+                                <div>
+                                    <button type="button" class="btn-inbase">1주</button>
+                                    <button type="button" class="btn-inbase">1개월</button>
+                                    <button type="button" class="btn-inbase">3개월</button>
+                                </div>
+                                <div>
+                                    <input type="text" class="date inputbox-s" placeholder="2018-01-01" id="datepicker1">
+                                    <label for="datepicker1" class="datepicker"><span class="hide">포인트 내역조회 시작날짜</span></label>  
+                                        <em class="swung">~</em> 
+                                    <input type="text" class="date inputbox-s" placeholder="2018-02-01" id="datepicker2">
+                                    <label for="datepicker2" class="datepicker"><span class="hide">포인트 내역조회  완료날짜</span></label>
+                                   <button type="button" class="btn-inquiry"><i>조회</i></button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <!-- edit20180222 삭제 - SB 삭제
+                    <div class="only-m txt-box bg">
+                        <div class="line">
+                            <span class="tit">소액결제 이용금액</span>
+                            <span class="txt-right"><strong class="fc-red">500,000</strong>원</span>
+                        </div>
+                    </div>-->
+                    
+                    <table class="tbl-base">
+                        <caption>포인트 사용/적립 내역</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">일시</th>
+                                <th scope="col">포인트</th>
+                                <th scope="col">상세내역</th>
+                            </tr>
+                        </thead>                       
+                        <tbody>
+                            <tr>
+                                <td>2017-01-24 11:12:40</td>
+                                <td>+100,000p</td>
+                                <td>상품 후기 등록</td>
+                            </tr>
+                            <tr>
+                                <td>2017-01-24 11:12:40</td>
+                                <td>-100,000p</td>
+                                <td>이벤트 참여 &gt; 룰렛 이벤트</td>
+                            </tr>
+                            <tr>
+                                <td>2017-01-24 11:12:40</td>
+                                <td>+100,000p</td>
+                                <td>상품 후기 등록</td>
+                            </tr>
+                            <tr>
+                                <td>2017-01-24 11:12:40</td>
+                                <td>-100,000p</td>
+                                <td>이벤트 참여 &gt; 룰렛 이벤트</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="paging">
+                        <a class="direction" href="#">맨처음</a>
+                        <a class="direction prev" href="#">이전</a>
+                        <span class="paging-list">
+                            <a href="#" class="on">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#">7</a>
+                            <a href="#">8</a>
+                            <a href="#">9</a>
+                            <a href="#">10</a>
+                        </span>
+                        <a class="direction next" href="#">다음</a>
+                        <a class="direction end" href="#">맨뒤</a>
+                    </div>
+                </section>
+            </div><!-- //.contents-wrap -->
+		</main>
+		<div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+	
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			
+			
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <link rel="apple-touch-icon" href="../images/common/ico_app.png">
+    <link rel="shortcut icon" href="../images/common/ico_favicon.ico">
+
+    <title>1:1 고객상담 | SKTELINK</title>
+
+    <script src="../js/ui.init.js"></script>
+    <link rel="stylesheet" href="../css/ui_base.css">
+</head>
+
+<body>
+    <div class="skip" id="skip">
+        <ul>
+            <li>
+                <a href="#main">본문 바로가기</a>
+            </li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="toplink">
+            <a href="#" title="새창" target="_blank">SK Telink 바로가기</a>
+        </div>
+        <header class="header" id="header"></header>
+        <div class="base-layer" id="baseLayer"></div> 
+        <main class="main" id="main" role="main">
+            <div class="contents-wrap">
+                <section>
+                    <h2 class="h2">1 : 1 고객상담</h2>
+                    <div class="ui-tab item3" id="cusConsultTab"><!-- 20180320 클래스 m-item3-1 재삭제, 20180314 : 클래스 m-item3-1 추가 -->
+						<div class="ui-tab-btns">
+                             <!-- 20180320 : 레이블/타이틀 변경, 20180308 : 수정 -->
+                            <button type="button" class="ui-tab-btn"><i>다이렉트샵문의</i></button>
+                            <button type="button" class="ui-tab-btn"><i>휴대폰이용문의</i></button>
+                            <a href="#" class="btn-tab-pop ui-laypop" aria-haspopup="true" onclick="$plugins.uiModal({ id:'pageCscCcs0221', link:'/html/pages/POC_CSC_CCS_0221.html',width:500 });"><i>나의 상담내역</i></a>
+						</div>
+                        
+                        <div class="ui-tab-pnls">
+                            <section class="ui-tab-pnl">
+                                 <!-- 20180320 타이틀변경 -->
+                                <h3 class="hide">다이렉트샵문의</h3>
+                                <ul class="list-dot mgt-l">
+                                    <li>상담시간은 평일 9:00 ~ 18:00 입니다.<br class="mbr"> (단, 휴일 상담 신청은 익일 평일에 바로 처리해드리겠습니다.)</li>
+                                </ul>
+                                <!-- 180308 : 영역 수정 -->
+                                <ul class="form-wrap">
+                                    <li class="line">
+                                        <dl>
+                                            <dt>
+                                                <label for="q_type1">상담유형<sup>*<span class="hide">필수</span></sup></label>
+                                            </dt>
+                                            <dd>
+                                                <div>
+                                                    <select class="selectbox" title="상담유형" id="q_type1">
+                                                        <option>선택</option>
+                                                        <option>구매</option>
+                                                        <option>배송</option>
+                                                        <option>교환/반품</option>
+                                                        <option>기타</option>
+                                                    </select>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="line">
+                                        <dl>
+                                            <dt>
+                                                <label for="user_tel">휴대폰번호<sup>*<span class="hide">필수</span></sup></label>
+                                            </dt>
+                                            <dd>
+                                                <div>
+                                                    <input type="text" class="inputbox" id="user_tel" placeholder="'-'를 제외하고 입력하세요">
+                                                    <p>&#8251; SMS 알림으로 고객님의 답변완료를 알려드립니다.</p>
+                                                </div>
+
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="line">
+                                        <dl>
+                                            <dt>
+                                                <label for="user_pwd">비밀번호<sup>*<span class="hide">필수</span></sup></label>
+                                            </dt>
+                                            <dd>
+                                                <div>
+                                                    <input type="password" class="inputbox" id="user_pwd">
+                                                    <p>&#8251; 상담내역 조회 시 필요한 비밀번호 영문, 숫자 조합 10~20자리로 입력해주세요.</p>
+                                                </div>
+
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="line">
+                                        <dl>
+                                            <dt>
+                                                <label for="secure_txt">보안문자<sup>*<span class="hide">필수</span></sup></label>
+                                            </dt>
+                                            <dd>
+                                                <div>
+                                                    <span class="secure-area">
+                                                        <img src="../images/common/@secure.png" alt="956638">
+                                                    </span>
+                                                    <button type="button" class="btn-new">
+                                                        <span>보안문자 새로고침</span>
+                                                    </button>
+                                                    <button type="button" class="btn-audio">
+                                                        <span>보안문자 음성듣기</span>
+                                                    </button>
+                                                    <input type="text" class="inputbox-secure" id="secure_txt" placeholder="보안문자를 입력하세요">
+                                                </div>
+
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="line">
+                                        <dl>
+                                            <dt>
+                                                <label for="inqury_title">제목<sup>*<span class="hide">필수</span></sup></label>
+                                            </dt>
+                                            <dd>
+                                                <div>
+                                                    <input type="text" class="inputbox-l" id="inqury_title">
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="line">
+                                        <dl>
+                                            <dt>
+                                                <label for="inqury_con">내용<sup>*<span class="hide">필수</span></sup></label>
+                                            </dt>
+                                            <dd>
+                                                <div>
+                                                    <textarea class="textarea" id="inqury_con"></textarea>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <h4 class="h4">개인정보수집 동의</h4>
+                                <div class="txt-box">
+                                    <strong class="tit">온라인상담 관련 개인정보 수집/이용 동의</strong>
+                                    <ol>
+                                        <li>1. 수집항목 : 이동전화번호, 비밀번호, 상담내용</li>
+                                        <li>2. 이용목적 : 이동통신서비스 및 단말기 상담</li>
+                                        <li>3. 개인정보 보유기간 및 이용기간
+                                            <ul class="list-dash-txt">
+                                                <li>- 이용자가 '서비스'를 이용하는 기간에 한하여 보유 및 이용</li>
+                                                <li>- 법령에서 정하는경우 해당기간까지 보유<br class="mbr">(상세사항 개인정보처리방침)</li>
+                                            </ul>
+                                        </li>
+                                        <li>4. 개인정보 수집/이용에 동의하지 않을 시, 온라인상담 이용 불가</li>
+                                    </ol>
+                                </div>
+                                <div class="input-warp">
+                                    <input type="checkbox" id="agree1">
+                                    <label class="lb-check" for="agree1">
+                                        <span>위 내용을 숙지하였으며 이에 동의합니다.</span>
+                                    </label>
+                                </div>
+                                <div class="btn-wrap">
+                                    <!-- 20180320 취소, 확인 위치 변경 -->
+                                    <span>
+                                        <button type="button" class="btn btn-cancel">
+                                            <span>취소</span>
+                                        </button>
+                                    </span>
+                                    <span>
+                                        <button type="button" class="btn btn-ok">
+                                            <span>확인</span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </section>
+                            <section class="ui-tab-pnl">
+                                <!-- 20180320 타이틀변경 -->
+                                <h3 class="hide">휴대폰이용문의</h3>
+                                <ul class="list-dot mgt-l">
+                                    <li>상담시간은 평일 9:00 ~ 18:00 입니다.<br class="mbr"> (단, 휴일 상담 신청은 익일 평일에 바로 처리해드리겠습니다.)</li>
+                                </ul>
+                                <!-- 180308 : 영역 수정 -->
+                                <ul class="form-wrap">
+                                    <li class="line">
+                                        <dl>
+                                            <dt>
+                                                <label for="q_type2">상담유형<sup>*<span class="hide">필수</span></sup></label>
+                                            </dt>
+                                            <dd>
+                                                <div>
+                                                    <select class="selectbox" title="상담유형" id="q_type2">
+                                                        <option>선택</option>
+                                                        <option>일반상담 문의</option>
+                                                        <option>통화품질 문의</option>
+                                                        <option>유심 재발급</option>
+                                                    </select>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </li>
+
+                                    <li class="line">
+                                        <dl>
+                                            <dt>
+                                                <label for="user_tel_2">휴대폰번호<sup>*<span class="hide">필수</span></sup></label>
+                                            </dt>
+                                            <dd>
+                                                <div>
+                                                    <input type="text" class="inputbox" id="user_tel_2" placeholder="'-'를 제외하고 입력하세요">
+                                                    <p>&#8251; SMS 알림으로 고객님의 답변완료를 알려드립니다.</p>
+                                                </div>
+
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <!-- 상담유형 - > 유심 재발급 선택시 -->
+                                    <li class="line">
+                                        <dl>
+                                            <dt><label for="cscUsim1-1">유심 재발급 사유<sup>*<span class="hide">필수</span></sup></label></dt>
+                                            <dd>
+                                                <div>
+                                                    <fieldset class="div-wrap" role="group">
+                                                        <legend>유심 재발급 사유</legend>
+                                                            <input type="radio" name="cscUsim1" id="cscUsim1-1" checked="checked" title="분실">
+                                                            <label class="lb-radio checked" for="cscUsim1-1"><span>분실</span></label>
+                                                            <input type="radio" name="cscUsim1" id="cscUsim1-2" title="파손">
+                                                            <label class="lb-radio" for="cscUsim1-2"><span>파손</span></label>
+                                                            <input type="radio" name="cscUsim1" id="cscUsim1-3" title="중고단말구입">
+                                                            <label class="lb-radio" for="cscUsim1-3"><span>중고단말구입</span></label>
+                                                    </fieldset>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="line">
+                                        <dl>
+                                            <dt>
+                                                <label for="user_tel2">연락 가능한 번호<sup>*<span class="hide">필수</span></sup></label>
+                                            </dt>
+                                            <dd>
+                                                <div>
+                                                    <input type="text" class="inputbox" id="user_tel2" placeholder="'-'를 제외하고 입력하세요">
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="line">
+                                        <dl>
+                                            <dt>
+                                                <label for="usim-change">유심변경 회선선택<sup>*<span class="hide">필수</span></sup></label>
+                                            </dt>
+                                            <dd>
+                                                <div>
+                                                    <select class="selectbox" title="상담유형" id="usim-change">
+                                                        <option>010-1234-5678</option>
+                                                        <option>010-9876-5432</option>
+                                                    </select>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="line">
+                                        <dl>
+                                            <dt><label for="cscUsim2-1">유심형태<sup>*<span class="hide">필수</span></sup></label></dt>
+                                            <dd>
+                                                <div>
+                                                    <fieldset class="div-wrap" role="group">
+                                                        <legend>유심형태</legend>
+                                                            <input type="radio" name="cscUsim2" id="cscUsim2-1" checked="checked" title="일반유심(6,600원)">
+                                                            <label class="lb-radio checked" for="cscUsim2-1"><span>일반유심(6,600원)</span></label>
+                                                            <input type="radio" name="cscUsim2" id="cscUsim2-2" title="NFC(8,800원)">
+                                                            <label class="lb-radio" for="cscUsim2-2"><span>NFC(8,800원)</span></label>
+                                                    </fieldset>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="line">
+                                        <dl>
+                                            <dt><label for="cscUsim3-1">유심 종류<sup>*<span class="hide">필수</span></sup></label></dt>
+                                            <dd>
+                                                <div>
+                                                    <fieldset class="div-wrap" role="group">
+                                                        <legend>유심 종류</legend>
+                                                            <input type="radio" name="cscUsim3" id="cscUsim3-1" checked="checked" title="듀얼 SIZE 유심">
+                                                            <label class="lb-radio checked" for="cscUsim3-1"><span>듀얼 SIZE 유심</span></label>
+                                                            <input type="radio" name="cscUsim3" id="cscUsim3-2" title="나노 SIZE 유심">
+                                                            <label class="lb-radio" for="cscUsim3-2"><span>나노 SIZE 유심</span></label>
+                                                    </fieldset>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="line">
+                                        <dl>
+                                            <dt><label for="addr">유심 수령 주소<sup>*<span class="hide">필수</span></sup></label></dt>
+                                            <dd>
+                                                <div class="inp-addr1">
+                                                    <input type="text" class="inputbox addr" id="addr" disabled="disabled"> <button type="button" class="btn-inbase">우편번호찾기</button>
+                                                </div>
+                                                <div class="inp-addr2">
+                                                    <input type="text" class="inputbox-l" id="addr2">
+                                                    <input type="text" class="inputbox-l" id="addr3">
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <!-- //상담유형 - > 유심 재발급 선택시 -->
+                                    <li class="line">
+                                        <dl>
+                                            <dt>
+                                                <label for="inqury_title_usim">제목<sup>*<span class="hide">필수</span></sup></label>
+                                            </dt>
+                                            <dd>
+                                                <div>
+                                                    <input type="text" class="inputbox-l" id="inqury_title_usim">
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="line">
+                                        <dl>
+                                            <dt>
+                                                <label for="inqury_con">내용<sup>*<span class="hide">필수</span></sup></label>
+                                            </dt>
+                                            <dd>
+                                                <div>
+                                                    <textarea class="textarea" id="inqury_con"></textarea>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <p class="subtxt type1">유심카드 비용은 익월청구요금에 합산하여 청구됩니다.</p>
+                                <h4 class="h4">개인정보수집 동의</h4>
+                                <div class="txt-box">
+                                    <strong class="tit">온라인상담 관련 개인정보 수집/이용 동의</strong>
+                                    <ol>
+                                        <li>1. 수집항목 : 이동전화번호, 비밀번호, 상담내용</li>
+                                        <li>2. 이용목적 : 이동통신서비스 및 단말기 상담</li>
+                                        <li>3. 개인정보 보유기간 및 이용기간
+                                            <ul class="list-dash-txt">
+                                                <li>- 이용자가 '서비스'를 이용하는 기간에 한하여 보유 및 이용</li>
+                                                <li>- 법령에서 정하는경우 해당기간까지 보유<br class="mbr">(상세사항 개인정보처리방침)</li>
+                                            </ul>
+                                        </li>
+                                        <li>4. 개인정보 수집/이용에 동의하지 않을 시, 온라인상담 이용 불가</li>
+                                    </ol>
+                                </div>
+                                <div class="input-warp">
+                                    <input type="checkbox" id="agree1">
+                                    <label class="lb-check" for="agree1">
+                                        <span>위 내용을 숙지하였으며 이에 동의합니다.</span>
+                                    </label>
+                                </div>
+                                <div class="btn-wrap">
+                                    <!-- 20180320 취소, 확인 위치 변경 -->
+                                    <span>
+                                        <button type="button" class="btn btn-cancel">
+                                            <span>취소</span>
+                                        </button>
+                                    </span>
+                                    <span>
+                                        <button type="button" class="btn btn-ok">
+                                            <span>확인</span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- //.contents-wrap -->
+        </main>
+        <div class="qucik" id="quick"></div>
+        <footer class="footer" id="footer"></footer>
+    </div>
+
+    <script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+    <script>
+        ; (function ($, win, doc, undefined) {
+            $(doc).ready(function () {
+                /* 180308 : 수정 */
+                $plugins.uiTab({ id:'cusConsultTab', current:0}); // current:0 == 1:1 다이렉트샵 고객상담  ,  current:1 == 1:1 휴대폰 고객상담
+                $plugins.uiForm();
+            });
+        })(jQuery, window, document);
+    </script>
+</body>
+
+</html>

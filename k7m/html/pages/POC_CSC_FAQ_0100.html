@@ -1,0 +1,728 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico"> 
+
+	<title>자주하는 질문 | SKTELINK</title>
+	
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+<body>
+	<div class="skip" id="skip">
+		<ul>
+			<li><a href="#main">본문 바로가기</a></li>
+		</ul>
+	</div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+            <div class="contents-wrap">
+                <section>
+                    <h2 class="h2">자주묻는질문</h2>
+                    <section class="search-area">
+                        <select class="selectbox" title="검색구분" id="search">
+                            <option>질문</option>
+                            <option>내용</option>
+                            <option>질문+내용</option>
+                        </select>
+                        <input type="text" name="" id="" value="" placeholder="질문을 입력하세요.">
+                        <button type="button" class="btn-search"><span>검색</span></button>
+                    </section>
+                    <div class="ui-tab tab-page item10" id="faqTab">
+                        <div class="ui-tab-btns">
+                            <button type="button" class="ui-tab-btn"><i>TOP10</i></button>
+                            <button type="button" class="ui-tab-btn"><i>부가서비스</i></button>
+                            <button type="button" class="ui-tab-btn"><i>가입/변경/해지</i></button>
+                            <button type="button" class="ui-tab-btn"><i>요금제</i></button>
+                            <button type="button" class="ui-tab-btn"><i>단말기</i></button>
+                            <button type="button" class="ui-tab-btn"><i>요금관련</i></button>
+                            <button type="button" class="ui-tab-btn"><i>통화품질</i></button>
+                            <button type="button" class="ui-tab-btn"><i>홈페이지/APP</i></button>
+                            <button type="button" class="ui-tab-btn"><i>선불폰/요금제</i></button>
+                            <button type="button" class="ui-tab-btn"><i>분실/파손/임대폰</i></button>
+                        </div>
+                        <div class="ui-tab-pnls">
+                            <section class="ui-tab-pnl">
+                                <h3 class="hide">TOP10</h3>
+                                <!-- 180308 : section 태그 추가 -->
+                                <section class="txt-sort2">
+                                    <button type="button" class="on"><i>전체</i></button>
+                                    <button type="button"><i>주문/배송</i></button>
+                                    <button type="button"><i>교환/반품/주소</i></button>
+                                    <button type="button"><i>선택약정할인</i></button>
+                                    <button type="button"><i>결합상품</i></button>
+                                </section>
+                                <div class="ui-acco acco-faq" role="group" id="faqAcco1">
+                                    <dl class="ui-acco-wrap">
+                                        <dt class="ui-acco-tit">
+                                            <strong class="faq-que"><i class="ico-q">Q</i>요금제를 월 중에 변경 하면 기본료는 어떻게?</strong>
+                                            <button type="button" class="ui-acco-btn"><span>열기</span></button>
+                                        </dt>
+                                        <dd class="ui-acco-pnl">
+                                            <i class="ico-a">A</i>
+                                            <div class="faq-ans">
+                                                <p>고객님께서 월 중에 요금제를 변경하시면 변경전,후 요금제는 사용일만큼 일할계산되어 합산된금액이 청구 됩니다.</p>
+                                                <p>예를 들어 11월 3일 기본료 14,900원 요금제에서 기본료 8,900원 요금제로 변경할 경우 11월 1일~2일까지는 기본료 14,900원 요금제가 일할 적용되어 993원, 11월 3일~30일까지는 기본료 8,900원 요금제가 일할 계산되어 8,307원 청구 되며 두 금액을 합산 하면 총 9,300원이 청구 됩니다.</p>
+                                                <p>또한 기본 음성, 문자, 데이터 제공량도 일할 계산되어 사용 됩니다.</p>
+                                                <p>요금제를 변경 할 경우 위약금이 발생할 수 있으며 위약금은 기본료와 별개로 청구 됩니다.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="ui-acco-wrap">
+                                        <dt class="ui-acco-tit">
+                                            <strong class="faq-que"><i class="ico-q">Q</i>청구 기준 및 청구 방법은 어떻게 되나요?</strong>
+                                            <button type="button" class="ui-acco-btn"><span>열기</span></button>
+                                        </dt>
+                                        <dd class="ui-acco-pnl">
+                                            <i class="ico-a">A</i>
+                                            <div class="faq-ans">
+                                                <p>전월 1일부터 말일까지 사용하신 요금을 익월에 청구하는 후불방식이며, 청구서 발송은 이메일과 우편 또는 문자청구서 중 선택하실 수 있습니다.<br>
+                                                납부방법은 지로납부, 은행자동이체 납부, 신용카드(체크카드 포함) 자동이체, 가상계좌납부 방법이 있습니다.<br>
+                                                ※ 타사 서비스 (060, 국제전화 등등) 이용요금의 경우 타사의 청구 기준에 따라 달라질수있습니다.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="ui-acco-wrap">
+                                        <dt class="ui-acco-tit">
+                                            <strong class="faq-que"><i class="ico-q">Q</i>자동 납부 신청 하면 요금 인출일은 어떻게 되나요?</strong>
+                                            <button type="button" class="ui-acco-btn"><span>열기</span></button>
+                                        </dt>
+                                        <dd class="ui-acco-pnl">
+                                            <i class="ico-a">A</i>
+                                            <div class="faq-ans">
+                                                <p>요금 결제(인출)일은 매월 26일입니다. 26일 이후 은행자동이체는 3번의 추가 인출이 있고 카드는 1번의 추가 인출이 이루어집니다.<br>
+                                                    각 인출일은 아래와 같습니다.<br>
+                                                    1. 은행 자동이체 인출<br>
+                                                        1) 최초 인출일(D일) : 매월 26일<br>
+                                                        2) 추가 인출일 : D+3일, 익월 5일, 익월5일+3일<br>
+                                                        
+                                                    2. 카드인출 : 26일, 익월 5일<br>
+                                                        추가 인출 된 경우 익월에 인출 된 경우는 가산금이 추가 청구됩니다.<br>                                            
+                                                        인출/승인일이 토요일, 일요일, 공휴일 일 경우, 그 다음날 인출/승인 됩니다.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </section>
+                            <section class="ui-tab-pnl">
+                                <h3 class="hide">부가서비스</h3>
+                                <!-- 180308 : section 태그 추가 -->
+                                <section class="txt-sort2">
+                                    <button type="button" class="on"><i>전체</i></button>
+                                    <button type="button"><i>주문/배송</i></button>
+                                    <button type="button"><i>교환/반품/주소</i></button>
+                                    <button type="button"><i>선택약정할인</i></button>
+                                    <button type="button"><i>결합상품</i></button>
+                                </section>
+                                <div class="ui-acco acco-faq" role="group" id="faqAcco2">
+                                    <dl class="ui-acco-wrap">
+                                        <dt class="ui-acco-tit">
+                                            <strong class="faq-que"><i class="ico-q">Q</i>부가서비스 요금제를 월 중에 변경하면 기본료는 어떻게 청구되나요?</strong>
+                                            <button type="button" class="ui-acco-btn"><span>열기</span></button>
+                                        </dt>
+                                        <dd class="ui-acco-pnl">
+                                            <i class="ico-a">A</i>
+                                            <div class="faq-ans">
+                                                <p>고객님께서 월 중에 요금제를 변경하시면 변경전,후 요금제는 사용일만큼 일할계산되어 합산된금액이 청구 됩니다.</p>
+                                                <p>예를 들어 11월 3일 기본료 14,900원 요금제에서 기본료 8,900원 요금제로 변경할 경우 11월 1일~2일까지는 기본료 14,900원 요금제가 일할 적용되어 993원, 11월 3일~30일까지는 기본료 8,900원 요금제가 일할 계산되어 8,307원 청구 되며 두 금액을 합산 하면 총 9,300원이 청구 됩니다.</p>
+                                                <p>또한 기본 음성, 문자, 데이터 제공량도 일할 계산되어 사용 됩니다.</p>
+                                                <p>요금제를 변경 할 경우 위약금이 발생할 수 있으며 위약금은 기본료와 별개로 청구 됩니다.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="ui-acco-wrap">
+                                        <dt class="ui-acco-tit">
+                                            <strong class="faq-que"><i class="ico-q">Q</i>청구 기준 및 청구 방법은 어떻게 되나요?</strong>
+                                            <button type="button" class="ui-acco-btn"><span>열기</span></button>
+                                        </dt>
+                                        <dd class="ui-acco-pnl">
+                                            <i class="ico-a">A</i>
+                                            <div class="faq-ans">
+                                                <p>전월 1일부터 말일까지 사용하신 요금을 익월에 청구하는 후불방식이며, 청구서 발송은 이메일과 우편 또는 문자청구서 중 선택하실 수 있습니다.<br>
+                                                납부방법은 지로납부, 은행자동이체 납부, 신용카드(체크카드 포함) 자동이체, 가상계좌납부 방법이 있습니다.<br>
+                                                ※ 타사 서비스 (060, 국제전화 등등) 이용요금의 경우 타사의 청구 기준에 따라 달라질수있습니다.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="ui-acco-wrap">
+                                        <dt class="ui-acco-tit">
+                                            <strong class="faq-que"><i class="ico-q">Q</i>자동 납부 신청 하면 요금 인출일은 어떻게 되나요?</strong>
+                                            <button type="button" class="ui-acco-btn"><span>열기</span></button>
+                                        </dt>
+                                        <dd class="ui-acco-pnl">
+                                            <i class="ico-a">A</i>
+                                            <div class="faq-ans">
+                                                <p>요금 결제(인출)일은 매월 26일입니다. 26일 이후 은행자동이체는 3번의 추가 인출이 있고 카드는 1번의 추가 인출이 이루어집니다.<br>
+                                                각 인출일은 아래와 같습니다.<br>
+                                                1. 은행 자동이체 인출<br>
+                                                    1) 최초 인출일(D일) : 매월 26일<br>
+                                                    2) 추가 인출일 : D+3일, 익월 5일, 익월5일+3일<br>
+                                                    
+                                                2. 카드인출 : 26일, 익월 5일<br>
+                                                    추가 인출 된 경우 익월에 인출 된 경우는 가산금이 추가 청구됩니다.<br>                                            
+                                                    인출/승인일이 토요일, 일요일, 공휴일 일 경우, 그 다음날 인출/승인 됩니다.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </section>
+                            <section class="ui-tab-pnl">
+                                <h3 class="hide">가입/변경/해지</h3>
+                                <!-- 180308 : section 태그 추가 -->
+                                <section class="txt-sort2">
+                                    <button type="button" class="on"><i>전체</i></button>
+                                    <button type="button"><i>주문/배송</i></button>
+                                    <button type="button"><i>교환/반품/주소</i></button>
+                                    <button type="button"><i>선택약정할인</i></button>
+                                    <button type="button"><i>결합상품</i></button>
+                                </section>
+                                <div class="ui-acco acco-faq" role="group" id="faqAcco3">
+                                    <dl class="ui-acco-wrap">
+                                        <dt class="ui-acco-tit">
+                                            <strong class="faq-que"><i class="ico-q">Q</i>가입/변경/해지요금제를 월 중에 변경하면 기본료는 어떻게 청구되나요?</strong>
+                                            <button type="button" class="ui-acco-btn"><span>열기</span></button>
+                                        </dt>
+                                        <dd class="ui-acco-pnl">
+                                            <i class="ico-a">A</i>
+                                            <div class="faq-ans">
+                                                <p>고객님께서 월 중에 요금제를 변경하시면 변경전,후 요금제는 사용일만큼 일할계산되어 합산된금액이 청구 됩니다.</p>
+                                                <p>예를 들어 11월 3일 기본료 14,900원 요금제에서 기본료 8,900원 요금제로 변경할 경우 11월 1일~2일까지는 기본료 14,900원 요금제가 일할 적용되어 993원, 11월 3일~30일까지는 기본료 8,900원 요금제가 일할 계산되어 8,307원 청구 되며 두 금액을 합산 하면 총 9,300원이 청구 됩니다.</p>
+                                                <p>또한 기본 음성, 문자, 데이터 제공량도 일할 계산되어 사용 됩니다.</p>
+                                                <p>요금제를 변경 할 경우 위약금이 발생할 수 있으며 위약금은 기본료와 별개로 청구 됩니다.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="ui-acco-wrap">
+                                        <dt class="ui-acco-tit">
+                                            <strong class="faq-que"><i class="ico-q">Q</i>청구 기준 및 청구 방법은 어떻게 되나요?</strong>
+                                            <button type="button" class="ui-acco-btn"><span>열기</span></button>
+                                        </dt>
+                                        <dd class="ui-acco-pnl">
+                                            <i class="ico-a">A</i>
+                                            <div class="faq-ans">
+                                                <p>전월 1일부터 말일까지 사용하신 요금을 익월에 청구하는 후불방식이며, 청구서 발송은 이메일과 우편 또는 문자청구서 중 선택하실 수 있습니다.<br>
+                                                납부방법은 지로납부, 은행자동이체 납부, 신용카드(체크카드 포함) 자동이체, 가상계좌납부 방법이 있습니다.<br>
+                                                ※ 타사 서비스 (060, 국제전화 등등) 이용요금의 경우 타사의 청구 기준에 따라 달라질수있습니다.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="ui-acco-wrap">
+                                        <dt class="ui-acco-tit">
+                                            <strong class="faq-que"><i class="ico-q">Q</i>자동 납부 신청 하면 요금 인출일은 어떻게 되나요?</strong>
+                                            <button type="button" class="ui-acco-btn"><span>열기</span></button>
+                                        </dt>
+                                        <dd class="ui-acco-pnl">
+                                            <i class="ico-a">A</i>
+                                            <div class="faq-ans">
+                                                <p>요금 결제(인출)일은 매월 26일입니다. 26일 이후 은행자동이체는 3번의 추가 인출이 있고 카드는 1번의 추가 인출이 이루어집니다.<br>
+                                                    각 인출일은 아래와 같습니다.<br>
+                                                    1. 은행 자동이체 인출<br>
+                                                        1) 최초 인출일(D일) : 매월 26일<br>
+                                                        2) 추가 인출일 : D+3일, 익월 5일, 익월5일+3일<br>
+                                                        
+                                                    2. 카드인출 : 26일, 익월 5일<br>
+                                                        추가 인출 된 경우 익월에 인출 된 경우는 가산금이 추가 청구됩니다.<br>                                            
+                                                        인출/승인일이 토요일, 일요일, 공휴일 일 경우, 그 다음날 인출/승인 됩니다.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </section>
+                            <section class="ui-tab-pnl">
+                                <h3 class="hide">요금제</h3>
+                                <!-- 180308 : section 태그 추가 -->
+                                <section class="txt-sort2">
+                                    <button type="button" class="on"><i>전체</i></button>
+                                    <button type="button"><i>주문/배송</i></button>
+                                    <button type="button"><i>교환/반품/주소</i></button>
+                                    <button type="button"><i>선택약정할인</i></button>
+                                    <button type="button"><i>결합상품</i></button>
+                                </section>
+                                <div class="ui-acco acco-faq" role="group" id="faqAcco4">
+                                    <dl class="ui-acco-wrap">
+                                        <dt class="ui-acco-tit">
+                                            <strong class="faq-que"><i class="ico-q">Q</i>요금제를 월 중에 변경하면 기본료는 어떻게 청구되나요?</strong>
+                                            <button type="button" class="ui-acco-btn"><span>열기</span></button>
+                                        </dt>
+                                        <dd class="ui-acco-pnl">
+                                            <i class="ico-a">A</i>
+                                            <div class="faq-ans">
+                                                <p>고객님께서 월 중에 요금제를 변경하시면 변경전,후 요금제는 사용일만큼 일할계산되어 합산된금액이 청구 됩니다.</p>
+                                                <p>예를 들어 11월 3일 기본료 14,900원 요금제에서 기본료 8,900원 요금제로 변경할 경우 11월 1일~2일까지는 기본료 14,900원 요금제가 일할 적용되어 993원, 11월 3일~30일까지는 기본료 8,900원 요금제가 일할 계산되어 8,307원 청구 되며 두 금액을 합산 하면 총 9,300원이 청구 됩니다.</p>
+                                                <p>또한 기본 음성, 문자, 데이터 제공량도 일할 계산되어 사용 됩니다.</p>
+                                                <p>요금제를 변경 할 경우 위약금이 발생할 수 있으며 위약금은 기본료와 별개로 청구 됩니다.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="ui-acco-wrap">
+                                        <dt class="ui-acco-tit">
+                                            <strong class="faq-que"><i class="ico-q">Q</i>청구 기준 및 청구 방법은 어떻게 되나요?</strong>
+                                            <button type="button" class="ui-acco-btn"><span>열기</span></button>
+                                        </dt>
+                                        <dd class="ui-acco-pnl">
+                                            <i class="ico-a">A</i>
+                                            <div class="faq-ans">
+                                                <p>전월 1일부터 말일까지 사용하신 요금을 익월에 청구하는 후불방식이며, 청구서 발송은 이메일과 우편 또는 문자청구서 중 선택하실 수 있습니다.<br>
+                                                납부방법은 지로납부, 은행자동이체 납부, 신용카드(체크카드 포함) 자동이체, 가상계좌납부 방법이 있습니다.<br>
+                                                ※ 타사 서비스 (060, 국제전화 등등) 이용요금의 경우 타사의 청구 기준에 따라 달라질수있습니다.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="ui-acco-wrap">
+                                        <dt class="ui-acco-tit">
+                                            <strong class="faq-que"><i class="ico-q">Q</i>자동 납부 신청 하면 요금 인출일은 어떻게 되나요?</strong>
+                                            <button type="button" class="ui-acco-btn"><span>열기</span></button>
+                                        </dt>
+                                        <dd class="ui-acco-pnl">
+                                            <i class="ico-a">A</i>
+                                            <div class="faq-ans">
+                                                <p>요금 결제(인출)일은 매월 26일입니다. 26일 이후 은행자동이체는 3번의 추가 인출이 있고 카드는 1번의 추가 인출이 이루어집니다.<br>
+                                                각 인출일은 아래와 같습니다.<br>
+                                                1. 은행 자동이체 인출<br>
+                                                    1) 최초 인출일(D일) : 매월 26일<br>
+                                                    2) 추가 인출일 : D+3일, 익월 5일, 익월5일+3일<br>
+                                                    
+                                                2. 카드인출 : 26일, 익월 5일<br>
+                                                    추가 인출 된 경우 익월에 인출 된 경우는 가산금이 추가 청구됩니다.<br>                                            
+                                                    인출/승인일이 토요일, 일요일, 공휴일 일 경우, 그 다음날 인출/승인 됩니다.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </section>
+                            <section class="ui-tab-pnl">
+                                <h3 class="hide">단말기</h3>
+                                <!-- 180308 : section 태그 추가 -->
+                                <section class="txt-sort2">
+                                    <button type="button" class="on"><i>전체</i></button>
+                                    <button type="button"><i>주문/배송</i></button>
+                                    <button type="button"><i>교환/반품/주소</i></button>
+                                    <button type="button"><i>선택약정할인</i></button>
+                                    <button type="button"><i>결합상품</i></button>
+                                </section>
+                                <div class="ui-acco acco-faq" role="group" id="faqAcco5">
+                                    <dl class="ui-acco-wrap">
+                                        <dt class="ui-acco-tit">
+                                            <strong class="faq-que"><i class="ico-q">Q</i>단말기를 월 중에 변경하면 기본료는 어떻게 청구되나요?</strong>
+                                            <button type="button" class="ui-acco-btn"><span>열기</span></button>
+                                        </dt>
+                                        <dd class="ui-acco-pnl">
+                                            <i class="ico-a">A</i>
+                                            <div class="faq-ans">
+                                                <p>고객님께서 월 중에 요금제를 변경하시면 변경전,후 요금제는 사용일만큼 일할계산되어 합산된금액이 청구 됩니다.</p>
+                                                <p>예를 들어 11월 3일 기본료 14,900원 요금제에서 기본료 8,900원 요금제로 변경할 경우 11월 1일~2일까지는 기본료 14,900원 요금제가 일할 적용되어 993원, 11월 3일~30일까지는 기본료 8,900원 요금제가 일할 계산되어 8,307원 청구 되며 두 금액을 합산 하면 총 9,300원이 청구 됩니다.</p>
+                                                <p>또한 기본 음성, 문자, 데이터 제공량도 일할 계산되어 사용 됩니다.</p>
+                                                <p>요금제를 변경 할 경우 위약금이 발생할 수 있으며 위약금은 기본료와 별개로 청구 됩니다.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="ui-acco-wrap">
+                                        <dt class="ui-acco-tit">
+                                            <strong class="faq-que"><i class="ico-q">Q</i>청구 기준 및 청구 방법은 어떻게 되나요?</strong>
+                                            <button type="button" class="ui-acco-btn"><span>열기</span></button>
+                                        </dt>
+                                        <dd class="ui-acco-pnl">
+                                            <i class="ico-a">A</i>
+                                            <div class="faq-ans">
+                                                <p>전월 1일부터 말일까지 사용하신 요금을 익월에 청구하는 후불방식이며, 청구서 발송은 이메일과 우편 또는 문자청구서 중 선택하실 수 있습니다.<br>
+                                                납부방법은 지로납부, 은행자동이체 납부, 신용카드(체크카드 포함) 자동이체, 가상계좌납부 방법이 있습니다.<br>
+                                                ※ 타사 서비스 (060, 국제전화 등등) 이용요금의 경우 타사의 청구 기준에 따라 달라질수있습니다.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="ui-acco-wrap">
+                                        <dt class="ui-acco-tit">
+                                            <strong class="faq-que"><i class="ico-q">Q</i>자동 납부 신청 하면 요금 인출일은 어떻게 되나요?</strong>
+                                            <button type="button" class="ui-acco-btn"><span>열기</span></button>
+                                        </dt>
+                                        <dd class="ui-acco-pnl">
+                                            <i class="ico-a">A</i>
+                                            <div class="faq-ans">
+                                                <p>요금 결제(인출)일은 매월 26일입니다. 26일 이후 은행자동이체는 3번의 추가 인출이 있고 카드는 1번의 추가 인출이 이루어집니다.<br>
+                                                    각 인출일은 아래와 같습니다.<br>
+                                                    1. 은행 자동이체 인출<br>
+                                                        1) 최초 인출일(D일) : 매월 26일<br>
+                                                        2) 추가 인출일 : D+3일, 익월 5일, 익월5일+3일<br>
+                                                        
+                                                    2. 카드인출 : 26일, 익월 5일<br>
+                                                        추가 인출 된 경우 익월에 인출 된 경우는 가산금이 추가 청구됩니다.<br>                                            
+                                                        인출/승인일이 토요일, 일요일, 공휴일 일 경우, 그 다음날 인출/승인 됩니다.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </section>
+                            <section class="ui-tab-pnl">
+                                <h3 class="hide">요금관련</h3>
+                                <!-- 180308 : section 태그 추가 -->
+                                <section class="txt-sort2">
+                                    <button type="button" class="on"><i>전체</i></button>
+                                    <button type="button"><i>주문/배송</i></button>
+                                    <button type="button"><i>교환/반품/주소</i></button>
+                                    <button type="button"><i>선택약정할인</i></button>
+                                    <button type="button"><i>결합상품</i></button>
+                                </section>
+                                <div class="ui-acco acco-faq" role="group" id="faqAcco6">
+                                    <dl class="ui-acco-wrap">
+                                        <dt class="ui-acco-tit">
+                                            <strong class="faq-que"><i class="ico-q">Q</i>요금제를 월 중에 변경하면 기본료는 어떻게 청구되나요?</strong>
+                                            <button type="button" class="ui-acco-btn"><span>열기</span></button>
+                                        </dt>
+                                        <dd class="ui-acco-pnl">
+                                            <i class="ico-a">A</i>
+                                            <div class="faq-ans">
+                                                <p>고객님께서 월 중에 요금제를 변경하시면 변경전,후 요금제는 사용일만큼 일할계산되어 합산된금액이 청구 됩니다.</p>
+                                                <p>예를 들어 11월 3일 기본료 14,900원 요금제에서 기본료 8,900원 요금제로 변경할 경우 11월 1일~2일까지는 기본료 14,900원 요금제가 일할 적용되어 993원, 11월 3일~30일까지는 기본료 8,900원 요금제가 일할 계산되어 8,307원 청구 되며 두 금액을 합산 하면 총 9,300원이 청구 됩니다.</p>
+                                                <p>또한 기본 음성, 문자, 데이터 제공량도 일할 계산되어 사용 됩니다.</p>
+                                                <p>요금제를 변경 할 경우 위약금이 발생할 수 있으며 위약금은 기본료와 별개로 청구 됩니다.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="ui-acco-wrap">
+                                        <dt class="ui-acco-tit">
+                                            <strong class="faq-que"><i class="ico-q">Q</i>청구 기준 및 청구 방법은 어떻게 되나요?</strong>
+                                            <button type="button" class="ui-acco-btn"><span>열기</span></button>
+                                        </dt>
+                                        <dd class="ui-acco-pnl">
+                                            <i class="ico-a">A</i>
+                                            <div class="faq-ans">
+                                                <p>전월 1일부터 말일까지 사용하신 요금을 익월에 청구하는 후불방식이며, 청구서 발송은 이메일과 우편 또는 문자청구서 중 선택하실 수 있습니다.<br>
+                                                납부방법은 지로납부, 은행자동이체 납부, 신용카드(체크카드 포함) 자동이체, 가상계좌납부 방법이 있습니다.<br>
+                                                ※ 타사 서비스 (060, 국제전화 등등) 이용요금의 경우 타사의 청구 기준에 따라 달라질수있습니다.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="ui-acco-wrap">
+                                        <dt class="ui-acco-tit">
+                                            <strong class="faq-que"><i class="ico-q">Q</i>자동 납부 신청 하면 요금 인출일은 어떻게 되나요?</strong>
+                                            <button type="button" class="ui-acco-btn"><span>열기</span></button>
+                                        </dt>
+                                        <dd class="ui-acco-pnl">
+                                            <i class="ico-a">A</i>
+                                            <div class="faq-ans">
+                                                <p>요금 결제(인출)일은 매월 26일입니다. 26일 이후 은행자동이체는 3번의 추가 인출이 있고 카드는 1번의 추가 인출이 이루어집니다.<br>
+                                                각 인출일은 아래와 같습니다.<br>
+                                                1. 은행 자동이체 인출<br>
+                                                    1) 최초 인출일(D일) : 매월 26일<br>
+                                                    2) 추가 인출일 : D+3일, 익월 5일, 익월5일+3일<br>
+                                                    
+                                                2. 카드인출 : 26일, 익월 5일<br>
+                                                    추가 인출 된 경우 익월에 인출 된 경우는 가산금이 추가 청구됩니다.<br>                                            
+                                                    인출/승인일이 토요일, 일요일, 공휴일 일 경우, 그 다음날 인출/승인 됩니다.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </section>
+                            <section class="ui-tab-pnl">
+                                <h3 class="hide">통화품질</h3>
+                                <!-- 180308 : section 태그 추가 -->
+                                <section class="txt-sort2">
+                                    <button type="button" class="on"><i>전체</i></button>
+                                    <button type="button"><i>주문/배송</i></button>
+                                    <button type="button"><i>교환/반품/주소</i></button>
+                                    <button type="button"><i>선택약정할인</i></button>
+                                    <button type="button"><i>결합상품</i></button>
+                                </section>
+                                <div class="ui-acco acco-faq" role="group" id="faqAcco7">
+                                    <dl class="ui-acco-wrap">
+                                        <dt class="ui-acco-tit">
+                                            <strong class="faq-que"><i class="ico-q">Q</i>통화품질를 월 중에 변경하면 기본료는 어떻게 청구되나요?</strong>
+                                            <button type="button" class="ui-acco-btn"><span>열기</span></button>
+                                        </dt>
+                                        <dd class="ui-acco-pnl">
+                                            <i class="ico-a">A</i>
+                                            <div class="faq-ans">
+                                                <p>고객님께서 월 중에 요금제를 변경하시면 변경전,후 요금제는 사용일만큼 일할계산되어 합산된금액이 청구 됩니다.</p>
+                                                <p>예를 들어 11월 3일 기본료 14,900원 요금제에서 기본료 8,900원 요금제로 변경할 경우 11월 1일~2일까지는 기본료 14,900원 요금제가 일할 적용되어 993원, 11월 3일~30일까지는 기본료 8,900원 요금제가 일할 계산되어 8,307원 청구 되며 두 금액을 합산 하면 총 9,300원이 청구 됩니다.</p>
+                                                <p>또한 기본 음성, 문자, 데이터 제공량도 일할 계산되어 사용 됩니다.</p>
+                                                <p>요금제를 변경 할 경우 위약금이 발생할 수 있으며 위약금은 기본료와 별개로 청구 됩니다.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="ui-acco-wrap">
+                                        <dt class="ui-acco-tit">
+                                            <strong class="faq-que"><i class="ico-q">Q</i>청구 기준 및 청구 방법은 어떻게 되나요?</strong>
+                                            <button type="button" class="ui-acco-btn"><span>열기</span></button>
+                                        </dt>
+                                        <dd class="ui-acco-pnl">
+                                            <i class="ico-a">A</i>
+                                            <div class="faq-ans">
+                                                <p>전월 1일부터 말일까지 사용하신 요금을 익월에 청구하는 후불방식이며, 청구서 발송은 이메일과 우편 또는 문자청구서 중 선택하실 수 있습니다.<br>
+                                                납부방법은 지로납부, 은행자동이체 납부, 신용카드(체크카드 포함) 자동이체, 가상계좌납부 방법이 있습니다.<br>
+                                                ※ 타사 서비스 (060, 국제전화 등등) 이용요금의 경우 타사의 청구 기준에 따라 달라질수있습니다.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="ui-acco-wrap">
+                                        <dt class="ui-acco-tit">
+                                            <strong class="faq-que"><i class="ico-q">Q</i>자동 납부 신청 하면 요금 인출일은 어떻게 되나요?</strong>
+                                            <button type="button" class="ui-acco-btn"><span>열기</span></button>
+                                        </dt>
+                                        <dd class="ui-acco-pnl">
+                                            <i class="ico-a">A</i>
+                                            <div class="faq-ans">
+                                                <p>요금 결제(인출)일은 매월 26일입니다. 26일 이후 은행자동이체는 3번의 추가 인출이 있고 카드는 1번의 추가 인출이 이루어집니다.<br>
+                                                    각 인출일은 아래와 같습니다.<br>
+                                                    1. 은행 자동이체 인출<br>
+                                                        1) 최초 인출일(D일) : 매월 26일<br>
+                                                        2) 추가 인출일 : D+3일, 익월 5일, 익월5일+3일<br>
+                                                        
+                                                    2. 카드인출 : 26일, 익월 5일<br>
+                                                        추가 인출 된 경우 익월에 인출 된 경우는 가산금이 추가 청구됩니다.<br>                                            
+                                                        인출/승인일이 토요일, 일요일, 공휴일 일 경우, 그 다음날 인출/승인 됩니다.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </section>
+                            <section class="ui-tab-pnl">
+                                <h3 class="hide">홈페이지/APP</h3>
+                                <!-- 180308 : section 태그 추가 -->
+                                <section class="txt-sort2">
+                                    <button type="button" class="on"><i>전체</i></button>
+                                    <button type="button"><i>주문/배송</i></button>
+                                    <button type="button"><i>교환/반품/주소</i></button>
+                                    <button type="button"><i>선택약정할인</i></button>
+                                    <button type="button"><i>결합상품</i></button>
+                                </section>
+                                <div class="ui-acco acco-faq" role="group" id="faqAcco8">
+                                    <dl class="ui-acco-wrap">
+                                        <dt class="ui-acco-tit">
+                                            <strong class="faq-que"><i class="ico-q">Q</i>홈페이지/APP를 월 중에 변경하면 기본료는 어떻게 청구되나요?</strong>
+                                            <button type="button" class="ui-acco-btn"><span>열기</span></button>
+                                        </dt>
+                                        <dd class="ui-acco-pnl">
+                                            <i class="ico-a">A</i>
+                                            <div class="faq-ans">
+                                                <p>고객님께서 월 중에 요금제를 변경하시면 변경전,후 요금제는 사용일만큼 일할계산되어 합산된금액이 청구 됩니다.</p>
+                                                <p>예를 들어 11월 3일 기본료 14,900원 요금제에서 기본료 8,900원 요금제로 변경할 경우 11월 1일~2일까지는 기본료 14,900원 요금제가 일할 적용되어 993원, 11월 3일~30일까지는 기본료 8,900원 요금제가 일할 계산되어 8,307원 청구 되며 두 금액을 합산 하면 총 9,300원이 청구 됩니다.</p>
+                                                <p>또한 기본 음성, 문자, 데이터 제공량도 일할 계산되어 사용 됩니다.</p>
+                                                <p>요금제를 변경 할 경우 위약금이 발생할 수 있으며 위약금은 기본료와 별개로 청구 됩니다.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="ui-acco-wrap">
+                                        <dt class="ui-acco-tit">
+                                            <strong class="faq-que"><i class="ico-q">Q</i>청구 기준 및 청구 방법은 어떻게 되나요?</strong>
+                                            <button type="button" class="ui-acco-btn"><span>열기</span></button>
+                                        </dt>
+                                        <dd class="ui-acco-pnl">
+                                            <i class="ico-a">A</i>
+                                            <div class="faq-ans">
+                                                <p>전월 1일부터 말일까지 사용하신 요금을 익월에 청구하는 후불방식이며, 청구서 발송은 이메일과 우편 또는 문자청구서 중 선택하실 수 있습니다.<br>
+                                                납부방법은 지로납부, 은행자동이체 납부, 신용카드(체크카드 포함) 자동이체, 가상계좌납부 방법이 있습니다.<br>
+                                                ※ 타사 서비스 (060, 국제전화 등등) 이용요금의 경우 타사의 청구 기준에 따라 달라질수있습니다.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="ui-acco-wrap">
+                                        <dt class="ui-acco-tit">
+                                            <strong class="faq-que"><i class="ico-q">Q</i>자동 납부 신청 하면 요금 인출일은 어떻게 되나요?</strong>
+                                            <button type="button" class="ui-acco-btn"><span>열기</span></button>
+                                        </dt>
+                                        <dd class="ui-acco-pnl">
+                                            <i class="ico-a">A</i>
+                                            <div class="faq-ans">
+                                                <p>요금 결제(인출)일은 매월 26일입니다. 26일 이후 은행자동이체는 3번의 추가 인출이 있고 카드는 1번의 추가 인출이 이루어집니다.<br>
+                                                각 인출일은 아래와 같습니다.<br>
+                                                1. 은행 자동이체 인출<br>
+                                                    1) 최초 인출일(D일) : 매월 26일<br>
+                                                    2) 추가 인출일 : D+3일, 익월 5일, 익월5일+3일<br>
+                                                    
+                                                2. 카드인출 : 26일, 익월 5일<br>
+                                                    추가 인출 된 경우 익월에 인출 된 경우는 가산금이 추가 청구됩니다.<br>                                            
+                                                    인출/승인일이 토요일, 일요일, 공휴일 일 경우, 그 다음날 인출/승인 됩니다.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </section>
+                            <section class="ui-tab-pnl">
+                                <h3 class="hide">선불폰/요금제</h3>
+                                <!-- 180308 : section 태그 추가 -->
+                                <section class="txt-sort2">
+                                    <button type="button" class="on"><i>전체</i></button>
+                                    <button type="button"><i>주문/배송</i></button>
+                                    <button type="button"><i>교환/반품/주소</i></button>
+                                    <button type="button"><i>선택약정할인</i></button>
+                                    <button type="button"><i>결합상품</i></button>
+                                </section>
+                                <div class="ui-acco acco-faq" role="group" id="faqAcco9">
+                                    <dl class="ui-acco-wrap">
+                                        <dt class="ui-acco-tit">
+                                            <strong class="faq-que"><i class="ico-q">Q</i>선불폰/요금제를 월 중에 변경하면 기본료는 어떻게 청구되나요?</strong>
+                                            <button type="button" class="ui-acco-btn"><span>열기</span></button>
+                                        </dt>
+                                        <dd class="ui-acco-pnl">
+                                            <i class="ico-a">A</i>
+                                            <div class="faq-ans">
+                                                <p>고객님께서 월 중에 요금제를 변경하시면 변경전,후 요금제는 사용일만큼 일할계산되어 합산된금액이 청구 됩니다.</p>
+                                                <p>예를 들어 11월 3일 기본료 14,900원 요금제에서 기본료 8,900원 요금제로 변경할 경우 11월 1일~2일까지는 기본료 14,900원 요금제가 일할 적용되어 993원, 11월 3일~30일까지는 기본료 8,900원 요금제가 일할 계산되어 8,307원 청구 되며 두 금액을 합산 하면 총 9,300원이 청구 됩니다.</p>
+                                                <p>또한 기본 음성, 문자, 데이터 제공량도 일할 계산되어 사용 됩니다.</p>
+                                                <p>요금제를 변경 할 경우 위약금이 발생할 수 있으며 위약금은 기본료와 별개로 청구 됩니다.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="ui-acco-wrap">
+                                        <dt class="ui-acco-tit">
+                                            <strong class="faq-que"><i class="ico-q">Q</i>청구 기준 및 청구 방법은 어떻게 되나요?</strong>
+                                            <button type="button" class="ui-acco-btn"><span>열기</span></button>
+                                        </dt>
+                                        <dd class="ui-acco-pnl">
+                                            <i class="ico-a">A</i>
+                                            <div class="faq-ans">
+                                                <p>전월 1일부터 말일까지 사용하신 요금을 익월에 청구하는 후불방식이며, 청구서 발송은 이메일과 우편 또는 문자청구서 중 선택하실 수 있습니다.<br>
+                                                납부방법은 지로납부, 은행자동이체 납부, 신용카드(체크카드 포함) 자동이체, 가상계좌납부 방법이 있습니다.<br>
+                                                ※ 타사 서비스 (060, 국제전화 등등) 이용요금의 경우 타사의 청구 기준에 따라 달라질수있습니다.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="ui-acco-wrap">
+                                        <dt class="ui-acco-tit">
+                                            <strong class="faq-que"><i class="ico-q">Q</i>자동 납부 신청 하면 요금 인출일은 어떻게 되나요?</strong>
+                                            <button type="button" class="ui-acco-btn"><span>열기</span></button>
+                                        </dt>
+                                        <dd class="ui-acco-pnl">
+                                            <i class="ico-a">A</i>
+                                            <div class="faq-ans">
+                                                <p>요금 결제(인출)일은 매월 26일입니다. 26일 이후 은행자동이체는 3번의 추가 인출이 있고 카드는 1번의 추가 인출이 이루어집니다.<br>
+                                                    각 인출일은 아래와 같습니다.<br>
+                                                    1. 은행 자동이체 인출<br>
+                                                        1) 최초 인출일(D일) : 매월 26일<br>
+                                                        2) 추가 인출일 : D+3일, 익월 5일, 익월5일+3일<br>
+                                                        
+                                                    2. 카드인출 : 26일, 익월 5일<br>
+                                                        추가 인출 된 경우 익월에 인출 된 경우는 가산금이 추가 청구됩니다.<br>                                            
+                                                        인출/승인일이 토요일, 일요일, 공휴일 일 경우, 그 다음날 인출/승인 됩니다.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </section>
+                            <section class="ui-tab-pnl">
+                                <h3 class="hide">분실/파손/임대폰</h3>
+                                <!-- 180308 : section 태그 추가 -->
+                                <section class="txt-sort2">
+                                    <button type="button" class="on"><i>전체</i></button>
+                                    <button type="button"><i>주문/배송</i></button>
+                                    <button type="button"><i>교환/반품/주소</i></button>
+                                    <button type="button"><i>선택약정할인</i></button>
+                                    <button type="button"><i>결합상품</i></button>
+                                </section>
+                                <div class="ui-acco acco-faq" role="group" id="faqAcco10">
+                                    <dl class="ui-acco-wrap">
+                                        <dt class="ui-acco-tit">
+                                            <strong class="faq-que"><i class="ico-q">Q</i>분실/파손/임대폰를 월 중에 변경하면 기본료는 어떻게 청구되나요?</strong>
+                                            <button type="button" class="ui-acco-btn"><span>열기</span></button>
+                                        </dt>
+                                        <dd class="ui-acco-pnl">
+                                            <i class="ico-a">A</i>
+                                            <div class="faq-ans">
+                                                <p>고객님께서 월 중에 요금제를 변경하시면 변경전,후 요금제는 사용일만큼 일할계산되어 합산된금액이 청구 됩니다.</p>
+                                                <p>예를 들어 11월 3일 기본료 14,900원 요금제에서 기본료 8,900원 요금제로 변경할 경우 11월 1일~2일까지는 기본료 14,900원 요금제가 일할 적용되어 993원, 11월 3일~30일까지는 기본료 8,900원 요금제가 일할 계산되어 8,307원 청구 되며 두 금액을 합산 하면 총 9,300원이 청구 됩니다.</p>
+                                                <p>또한 기본 음성, 문자, 데이터 제공량도 일할 계산되어 사용 됩니다.</p>
+                                                <p>요금제를 변경 할 경우 위약금이 발생할 수 있으며 위약금은 기본료와 별개로 청구 됩니다.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="ui-acco-wrap">
+                                        <dt class="ui-acco-tit">
+                                            <strong class="faq-que"><i class="ico-q">Q</i>청구 기준 및 청구 방법은 어떻게 되나요?</strong>
+                                            <button type="button" class="ui-acco-btn"><span>열기</span></button>
+                                        </dt>
+                                        <dd class="ui-acco-pnl">
+                                            <i class="ico-a">A</i>
+                                            <div class="faq-ans">
+                                                <p>전월 1일부터 말일까지 사용하신 요금을 익월에 청구하는 후불방식이며, 청구서 발송은 이메일과 우편 또는 문자청구서 중 선택하실 수 있습니다.<br>
+                                                납부방법은 지로납부, 은행자동이체 납부, 신용카드(체크카드 포함) 자동이체, 가상계좌납부 방법이 있습니다.<br>
+                                                ※ 타사 서비스 (060, 국제전화 등등) 이용요금의 경우 타사의 청구 기준에 따라 달라질수있습니다.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="ui-acco-wrap">
+                                        <dt class="ui-acco-tit">
+                                            <strong class="faq-que"><i class="ico-q">Q</i>자동 납부 신청 하면 요금 인출일은 어떻게 되나요?</strong>
+                                            <button type="button" class="ui-acco-btn"><span>열기</span></button>
+                                        </dt>
+                                        <dd class="ui-acco-pnl">
+                                            <i class="ico-a">A</i>
+                                            <div class="faq-ans">
+                                                <p>요금 결제(인출)일은 매월 26일입니다. 26일 이후 은행자동이체는 3번의 추가 인출이 있고 카드는 1번의 추가 인출이 이루어집니다.<br>
+                                                각 인출일은 아래와 같습니다.<br>
+                                                1. 은행 자동이체 인출<br>
+                                                    1) 최초 인출일(D일) : 매월 26일<br>
+                                                    2) 추가 인출일 : D+3일, 익월 5일, 익월5일+3일<br>
+                                                    
+                                                2. 카드인출 : 26일, 익월 5일<br>
+                                                    추가 인출 된 경우 익월에 인출 된 경우는 가산금이 추가 청구됩니다.<br>                                            
+                                                    인출/승인일이 토요일, 일요일, 공휴일 일 경우, 그 다음날 인출/승인 됩니다.</p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </section>
+                            <div class="paging">
+                                <a class="direction" href="#">맨처음</a>
+                                <a class="direction prev" href="#">이전</a>
+                                <span class="paging-list">
+                                    <a href="#" class="on">1</a>
+                                    <a href="#">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">4</a>
+                                    <a href="#">5</a>
+                                    <a href="#">6</a>
+                                    <a href="#">7</a>
+                                    <a href="#">8</a>
+                                    <a href="#">9</a>
+                                    <a href="#">10</a>
+                                </span>
+                                <a class="direction next" href="#">다음</a>
+                                <a class="direction end" href="#">맨뒤</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div><!-- //.contents-wrap -->
+		</main>
+        <div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+	
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+            $plugins.uiTab({ id:'faqTab', current:0});
+            /* $plugins.uiTab({ id:'FaqTab1', current:0});  */
+            $plugins.uiAccordion({ id:'faqAcco1',autoclose : true, callback:function(v){} });
+            $plugins.uiAccordion({ id:'faqAcco2',autoclose : true, callback:function(v){} });
+            $plugins.uiAccordion({ id:'faqAcco3',autoclose : true, callback:function(v){} });
+            $plugins.uiAccordion({ id:'faqAcco4',autoclose : true, callback:function(v){} });
+            $plugins.uiAccordion({ id:'faqAcco5',autoclose : true, callback:function(v){} });
+            $plugins.uiAccordion({ id:'faqAcco6',autoclose : true, callback:function(v){} });
+            $plugins.uiAccordion({ id:'faqAcco7',autoclose : true, callback:function(v){} });
+            $plugins.uiAccordion({ id:'faqAcco8',autoclose : true, callback:function(v){} });
+            $plugins.uiAccordion({ id:'faqAcco9',autoclose : true, callback:function(v){} });
+            $plugins.uiAccordion({ id:'faqAcco10',autoclose : true, callback:function(v){} });
+			
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

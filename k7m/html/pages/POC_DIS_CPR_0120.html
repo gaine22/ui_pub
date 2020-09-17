@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico">
+
+	<title>가입신청 | SK 7mobile</title>
+
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+
+<body>
+	<div class="skip" id="skip"></div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+			<div class="contents-wrap">
+				<section>
+				    <h2 class="h2">가입신청</h2>
+                    <div class="step-wrap">
+                        <ol>
+                            <li class="step1" aria-selected="false">
+                                <span>STEP 01</span>
+                                <strong>가입고객인증</strong>
+                            </li>
+                            <li class="step2" aria-selected="true">
+                                <span>STEP 02</span>
+                                <strong>신청정보입력</strong>
+                            </li>
+                            <li class="step3" aria-selected="false">
+                                <span>STEP 03</span>
+                                <strong>신청 완료</strong>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="nsok-form-wrap">
+                        <h3 class="h3 pdt-n">약관동의</h3>
+                        <div class="agree-box">
+                            <fieldset class="div-wrap" role="group">
+                                <legend>약관동의 선택</legend>
+                                <span class="top-all">
+                                    <input type="checkbox" id="agr_0">
+                                    <label class="lb-check all sck" for="agr_0"><span>이용약관 및 개인정보의 수집 &middot; 이용 &middot; 제공에 일괄 동의합니다. </span></label>
+                                </span>
+                                <span>
+                                    <input type="checkbox" id="agr_1" class="agr_0">
+                                    <label class="lb-check sck" for="agr_1"><span>[필수] 서비스 이용약관 동의</span></label>
+                                    <button type="button" class="btn-ico-pop" aria-haspopup="true" onclick=""><span><i>[필수] 서비스 이용약관 동의</i></span></button>
+                                </span>
+                                <span>
+                                    <input type="checkbox" id="agr_2" class="agr_0">
+                                    <label class="lb-check sck" for="agr_2"><span>[필수] 개인정보이용동의</span></label>
+                                    <button type="button" class="btn-ico-pop" aria-haspopup="true" onclick=""><span><i>[필수] 개인정보이용동의</i></span></button>
+                                </span>
+                                <span>
+                                    <input type="checkbox" id="agr_3" class="agr_0">
+                                    <label class="lb-check sck" for="agr_3"><span>[필수] 개인신용정보처리 및 보험가입동의</span></label>
+                                    <button type="button" class="btn-ico-pop" aria-haspopup="true" onclick=""><span><i>[필수] 개인신용정보처리 및 보험가입동의</i></span></button>
+                                </span>
+                            </fieldset>
+                        </div>
+    
+                        <h3 class="h3">필수 고객정보</h3>
+                        <ul class="form-wrap">
+                            <li class="line">
+                                <dl>
+                                    <dt><label for="userName2">이름<sup>*<span class="hide">필수</span></sup></label></dt>
+                                    <dd>
+                                        <div>
+                                            <input type="text" class="inputbox" id="userName2">
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li class="line">
+                                <dl>
+                                    <dt><label for="userbirth">생년월일<sup>*<span class="hide">필수</span></sup></label></dt>
+                                    <dd>
+                                        <div class="inp-ssnumber">
+                                            <input type="number" class="inputbox" id="userbirth">
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li class="line">
+                                <dl>
+                                    <dt><label for="userPhone2">휴대폰번호<sup>*<span class="hide">필수</span></sup></label></dt>
+                                    <dd>
+                                        <div>
+                                            <input type="number" class="inputbox" id="userPhone2" placeholder="‘-’를 제외하고 입력하세요.">
+                                        </div>
+                                        <p class="sub-info block">
+                                            ※ 입력하신 번호로 NSOK 고객센터에서 연락합니다. <br class="mbr">정확한 번호를 입력해주세요.
+                                        </p>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li class="line">
+                                <dl>
+                                    <dt>이메일</dt>
+                                    <dd>
+                                       <div class="mailform-wrap2">
+                                            <span>
+                                                <input type="text" class="inputbox-s email" id="userMail2" title="이메일 아이디">
+                                                <span class="unit-s">@</span>
+                                                <input type="text" class="inputbox-s" title="이메일 공급자 직접입력">
+                                            </span>
+                                            <select class="selectbox-m" title="이메일공급자 선택">
+                                                <option>직접입력</option>
+                                                <option>naver.com</option>
+                                                <option>gmail.com</option>
+                                                <option>nate.com</option>
+                                                <option>daum.net</option>
+                                                <option>hanmail.net</option>
+                                            </select>                  
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li class="line">
+                                <dl>
+                                    <dt><label>출동지 구분</label></dt>
+                                    <dd>
+                                        <div>
+                                            <fieldset class="div-wrap radio-wrap" role="group">
+                                                <legend>출동지 구분</legend>
+                                                    <input type="radio" name="locationRdo" id="locationRdo1" checked="checked" title="자택">
+                                                    <label class="lb-radio checked" for="locationRdo1"><span>자택</span></label>
+                                                    <input type="radio" name="locationRdo" id="locationRdo2" title="영업점">
+                                                    <label class="lb-radio" for="locationRdo2"><span>영업점</span></label>
+                                            </fieldset>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li class="line">
+                                <dl class="addr">
+                                    <dt><label for="locationAddr">출동지 주소</label></dt>
+                                    <dd>
+    									<div class="inp-addr1">
+                                            <input type="text" class="inputbox addr" id="userAddr2" disabled="disabled" title="우편번호입력"> <button type="button" class="btn-inbase"><i>우편번호찾기</i></button>
+                                        </div>
+                                        <div class="inp-addr2">
+                                            <input type="text" class="inputbox-lg" id="addr2" title="주소입력">
+                                            <input type="text" class="inputbox-lg" id="addr3" title="상세주소입력">
+                                        </div>
+    								</dd>
+                                </dl>
+                            </li>
+                            <li class="line">
+                                <dl>
+                                    <dt><label>설치방법</label></dt>
+                                    <dd>
+                                        <div>
+                                            <fieldset class="div-wrap radio-wrap" role="group">
+                                                <legend>출동지 구분</legend>
+                                                    <input type="radio" name="setWay" id="setWay1" checked="checked" title="본인설치">
+                                                    <label class="lb-radio checked" for="setWay1"><span>본인설치</span></label>
+                                                    <input type="radio" name="setWay" id="setWay2" title="방문설치">
+                                                    <label class="lb-radio" for="setWay2"><span>방문설치</span></label>
+                                            </fieldset>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </li>
+                        </ul>
+    
+                        <h3 class="h3 mgt">추가 상품선택</h3>
+                        <ul class="form-wrap">
+                            <li class="line">
+                                <fieldset role="group">
+                                    <legend>sos버튼 수량 선택</legend>
+                                    <dl>
+                                        <dt>SOS 버튼</dt>
+                                        <dd>
+                                            <div class="btn-mp-wrap">
+                                                <button type="button" class="btn-minus">빼기</button>
+                                                <input type="text" class="inputbox" value="0">
+                                                <button type="button" class="btn-plus">더하기</button>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </fieldset>
+                            </li>
+                            <li class="line">
+                                <fieldset role="group">
+                                <legend>문열림 센서 수량 선택</legend>
+                                <dl>
+                                    <dt>문열림 센서</dt>
+                                    <dd>
+                                        <div class="btn-mp-wrap">
+                                            <button type="button" class="btn-minus">빼기</button>
+                                            <input type="text" class="inputbox" value="1">
+                                            <button type="button" class="btn-plus">더하기</button>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                </fieldset>
+                            </li>
+                        </ul>
+                        <ul class="list-dot">
+                            <li>SOS버튼과 문열림센서는 기본적으로 각각 1대씩 제공되며, 기기를 추가하시고 싶은 고객님은 아래에서 총 기기대수를 선택하여 주십시오.</li>
+                            <li>기기 1대 추가시 월 요금 1,000원(부가세포함) 추가</li>
+                        </ul>
+    
+                        <h3 class="h3">약정 및 요금정보</h3>
+    					<table class="tbl-base">
+    						<caption>휴대폰 공시지원금</caption>
+    						<colgroup>
+    							<col style="width:40%">
+    							<col style="width:auto">
+    						</colgroup>
+    						<tbody>
+    							<tr>
+    								<th scope="row">SK 7mobile <br class="mbr">가입상품</th>
+    								<td class="txt-l goods"><span>가입요금제</span><br class="mbr">예상 할인금액 -9,999원</td>
+    							</tr>
+    							<tr>
+    								<th scope="row">NSOK 홈n안심 <br class="mbr">약정기간</th>
+    								<td class="txt-l">2년</td>
+    							</tr>
+    							<tr>
+    								<th scope="row">NSOK 홈n안심 <br class="mbr">월 납입금액</th>
+    								<td class="txt-l">이용료 8,000 – <br class="mbr">총 할인금액 1,000 <br class="mbr">= 월 납부금액 7,000원(부가세포함)</td>
+    							</tr>
+    						</tbody>
+    					</table>
+    
+                        <div class="btn-wrap">
+                            <span><button type="button" class="btn btn-darkgray"><i>취소</i></button></span>
+                            <span><button type="button" class="btn btn-point"><i>가입완료</i></button></span>
+                        </div>
+                    </div>
+				</section>
+			</div><!-- .contents-wrap -->
+		</main>
+        <div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+
+	<script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+            // 약관동의
+			$plugins.uiForm({ id: 'agr_0', all: true, callback: allCheckCallback});
+            function allCheckCallback(v){}
+
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

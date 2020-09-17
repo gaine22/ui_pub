@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico"> 
+
+	<title>질문게시판 | SK 7mobile</title> <!--20180223 title 수정 -->
+	
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+<body>
+	<div class="skip" id="skip">
+		<ul>
+			<li><a href="#main">본문 바로가기</a></li>
+		</ul>
+	</div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+            <div class="contents-wrap">
+                <section>
+                    <h1 class="hide">혜택 이벤트</h1>
+    				<h2 class="h2">질문게시판</h2> <!--20180223 title 수정 -->
+                    <article class="view-wrap">
+                        <!-- 20180323 : 구조 수정 -->
+                        <header class="view-header">
+                            <div class="tit-area">
+                                <span class="only-m cate">가입(구매)/개통</span><!-- 모바일노출 질문유형 -->
+                                <h1>겔시리즈랑 아이폰이랑 어떤게 더 좋아요??</h1>
+                            </div>
+                            <div class="date type2">
+                                <strong class="only-d">질문유형</strong>
+                                <span class="only-d">가입(구매)/개통</span>
+                                <strong class="only-d">작성일</strong>
+                                <span>2018.01.01</span>
+                            </div>
+                            <div class="sns">
+                                <a href="#" class="s0">카카오톡 공유</a>
+                                <a href="#" class="s1">facebook 공유</a>
+                                <a href="#" class="s2">twitter 공유</a>
+                                <a href="#" class="s3">instagram 공유</a>
+                                <a href="#" class="s4">url 공유</a>
+                            </div>
+                        </header>
+                        <!-- // 20180323 : 구조 수정 -->
+                        <div class="view-cont">
+                            겔시리즈랑 아이폰이랑 어떤게 더 좋아요?? <br><br>
+                            <img src="../images/common/@event.jpg" alt="">
+                        </div>
+                    </article>
+                    <!-- 20180326 : 버튼 위치 최하단으로 이동 
+                    <div class="btn-wrap">
+                        <span><button type="button" class="btn btn-darkgold"><i>수정</i></button></span>
+                        <span><a href="#" class="btn btn-darkgray"><i>목록</i></a></span>
+                    </div> -->
+
+                    <!-- 20180323 : 전체적 구조 마크업 수정 -->
+                    <div class="comment-wrap">
+                        <!-- <p class="total">댓글 240</p> 20180323 아래로 이동 -->
+                        <div class="box-comment">
+                            <div class="write-area">
+                                <textarea placeholder="댓글은 로그인이 필요합니다.
+등록된 댓글 중 지나친 비방, 욕설, 목적 및 취지에 맞지 않는 댓글은 관리자에 의해 예고 없이 삭제됩니다." title="댓글"></textarea>
+                                <div class="attached">
+                                    <div><img src="../images/common/@event.jpg" alt=""><button type="button"><i>첨부취소</i></button></div>
+                                    <div><img src="../images/common/@event.jpg" alt=""><button type="button"><i>첨부취소</i></button></div>
+                                </div>
+                                <div class="limit">0 byte / 600 byte</div>
+                            </div>
+                            <div class="btn-comment-area">
+                                <div class="btn-file">
+                                    <input type="file" id="imgUpload" title="이미지첨부"><label for="imgUpload"><span>이미지등록</span></label>
+                                </div>
+                                <p>(사진은 1장당 1MB 이내의 jpg, jpeg, gif, png 형식으로만 최대 2장까지 등록 가능합니다.)</p>
+                                <div class="btn-comment"><button type="button"><i>도움주기</i></button></div>
+                            </div>
+                        </div>
+                        
+                        <div class="list-comment">
+                            <!-- 20180323 : 구조 변경 -->
+                            <div class="sort-area">
+                                <span class="total">댓글 120</span>
+                                <div class="txt-sort"><button type="button" class="on"><i>최신순</i></button><button type="button"><i>추천순</i></button></div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="inner">
+                                        <div class="info clear">
+                                            <div class="best"> <!-- 베스트 도움 선정될시 클래스 best -->
+                                                <strong class="hide">베스트도움</strong>
+                                                <strong class="name">유저ID</strong>
+                                                <span class="date">2017.12.01 14:24:55</span>
+                                            </div>
+                                            <!-- 20180323 : edit 버튼영역 아래로 이동 -->
+                                            <button type="button" class="choice"><i>베스트 도움 선정</i></button>
+                                        </div>
+                                        <div class="cont-comment">
+                                            최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력가능합니다. 최대 300자 입력
+                                        </div>
+                                        <!-- 20180323 : edit 버튼 모음 구조 추가 -->
+                                        <div class="edit">
+                                            <button type="button" class="recommend"><i>추천(1)</i></button>
+                                            <button type="button" class="btn-reply on"><i>답글(2)</i></button> <!-- 활성화시 클래스 on -->
+                                            <button type="button" class="delete"><i>삭제</i></button>
+                                            <button type="button"><i>수정</i></button>
+                                        </div>
+                                        <!-- // 20180323 : edit 버튼 모음 구조 추가 -->
+                                    </div>
+                                    <!-- 답글 활성화시 -->
+                                    <div class="reply-area">
+                                        <div class="box-reply">
+                                            <textarea placeholder="댓글은 로그인이 필요합니다.
+등록된 댓글 중 지나친 비방, 욕설, 목적 및 취지에 맞지 않는 댓글은 관리자에 의해 예고 없이 삭제됩니다." title="답글"></textarea>
+                                            <span>600 byte / 600 byte</span>
+                                            <button type="button"><i>답글달기</i></button>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                 <div class="inner">
+                                                     <div class="info clear">
+                                                        <div>
+                                                            <strong class="name">유저ID</strong>
+                                                            <span class="date">2017.12.01 14:24:55</span>
+                                                        </div>
+                                                        <!-- 20180323 : edit 버튼영역 아래로 이동 -->
+                                                    </div>
+                                                    <div class="cont-comment">
+                                                        이게바로 정답이네요!
+                                                    </div>
+                                                    <!-- 20180323 : edit 버튼 모음 구조 추가 -->
+                                                    <div class="edit">
+                                                        <button type="button" class="delete"><i>삭제</i></button>
+                                                        <button type="button"><i>수정</i></button>
+                                                    </div>
+                                                    <!-- // 20180323 : edit 버튼 모음 구조 추가 -->
+                                                 </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner">
+                                        <div class="info clear">
+                                            <div>
+                                                <strong class="name">유저ID</strong>
+                                                <span class="date">2017.12.01 14:24:55</span>
+                                            </div>
+                                        </div>
+                                        <div class="cont-comment">
+                                            이게바로 정답이네요!
+                                            <div class="img">
+                                                <img src="../images/main/@h3.png" alt="유저ID가 올린 이미지">
+                                            </div>
+                                        </div>
+                                        <!-- 20180323 : edit 버튼 모음 구조 추가 -->
+                                        <div class="edit">
+                                            <button type="button" class="recommend"><i>추천(1)</i></button>
+                                            <button type="button" class="btn-reply"><i>답글(1)</i></button><!-- 활성화시 클래스 on -->
+                                            <button type="button" class="delete"><i>삭제</i></button>
+                                            <button type="button"><i>수정</i></button>
+                                        </div>
+                                        <!-- // 20180323 : edit 버튼 모음 구조 추가 -->
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- // 20180323 : 전체적 구조 마크업 수정 -->
+                    <div class="paging">
+                        <a class="direction" href="#">맨처음</a>
+                        <a class="direction prev" href="#">이전</a>
+                        <a href="#" class="on">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">7</a>
+                        <a href="#">8</a>
+                        <a href="#">9</a>
+                        <a href="#">10</a>
+                        <a class="direction next" href="#">다음</a>
+                        <a class="direction end" href="#">맨뒤</a>
+                    </div>
+                    <!-- 20180326 : 추가 -->
+                    <div class="btn-wrap">
+                        <span><button type="button" class="btn btn-darkgold"><i>수정</i></button></span>
+                        <span><a href="#" class="btn btn-darkgray"><i>목록</i></a></span>
+                    </div>
+                    <!-- // 20180326 : 추가 -->
+                </section>
+            </div><!-- //.contents-wrap -->
+		</main>
+		<div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+	
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){ 
+			
+			
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

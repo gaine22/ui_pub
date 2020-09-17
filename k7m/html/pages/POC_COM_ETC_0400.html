@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico"> 
+
+	<title>우편번호 찾기</title>
+	
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+<body>
+	<div class="skip" id="skip">
+		<ul>
+			<li><a href="#main">본문 바로가기</a></li>
+		</ul>
+	</div>
+	<div class="base-layer" id="baseLayer">
+		<section class="ui-modal" id="postPopup" role="dialog" aria-hidden="true">
+			<div class="ui-modal-wrap">
+				<header class="ui-modal-tit">
+					<h1>우편번호 찾기</h1>
+					<button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id: 'postPopup' });">닫기</button>
+				</header>
+				<div class="ui-modal-cont">
+                    <div class="inputbox-wrap">
+                        <input type="text" placeholder="도로명, 건물명, 지번을 입력해주세요"><button type="button" class="btn-point-red"><i>우편번호 검색</i></button>
+                    </div>
+					<div class="txt-box bg">
+                        <strong>우편번호 검색 이렇게 하세요!</strong>
+                        <ul>
+                            <li>- 도로명 + 건물명  예) 종로6</li>
+                            <li>- 읍/면/동/리 + 지번  예) 서린동 154</li>
+                            <li>- 건물명  예) 나주시 OO아파트</li>
+                        </ul>
+					</div>
+                    <table class="tbl-base">
+                    <caption>우편번호 찾기</caption>
+                    <colgroup>
+                        <col style="width:20%">
+                        <col style="width:auto">
+                    </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">우편번호</th>
+                                <th scope="col">주소</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>22728</td>
+                                <td class="txt-l">
+                                    <p>[도로명] 인천광역시 서구 심곡로 11 (심곡동, 광명아파트)</p>
+                                    <p>[지 번] 인천광역시 서구 심곡동 336-1 광명아파트</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>14712</td>
+                                <td class="txt-l">
+                                    <p>[도로명] 경기도 부천시 심곡로 11 (심곡본동)</p>
+                                    <p>[지 번] 경기도 부천시 심곡본동 593-4</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>16859</td>
+                                <td class="txt-l">
+                                    <p>[도로명] 경기도 용인시 수지구 심곡로 11 (상현동)</p>
+                                    <p>[지 번] 경기도 용인시 수지구 상현동 197</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="paging">
+                        <a class="direction" href="#">맨처음</a>
+                        <a class="direction prev" href="#">이전</a>
+                        <span class="paging-list">
+                            <a href="#" class="on">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#">7</a>
+                            <a href="#">8</a>
+                            <a href="#">9</a>
+                            <a href="#">10</a>
+                        </span>
+                        <a class="direction next" href="#">다음</a>
+                        <a class="direction end" href="#">맨뒤</a>
+                    </div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>		
+		<header class="header" id="header"></header>		
+		<main class="main" id="main" role="main">
+            <div class="contents-wrap">				
+				<section>
+                    <h2 class="h2">우편번호 찾기</h2>
+					<ul class="tbl-wrap form-wrap"><!-- edit180228 form-wrap 클래스 추가 -->
+                        <li class="style-line">
+                            <div class="dt">수령인</div>
+                            <div class="dd">홍길동</div>
+                        </li>
+                        <li class="style">
+                            <div class="dt">주소<sup>*<span class="hide">필수</span></sup></div>
+                            <div class="dd address-wrap">
+                                <div class="inp-addr1">
+                                    <input type="text" class="inputbox addr" id="addr" disabled="disabled"> <button type="button" class="btn-inbase" onclick="$plugins.uiModal({ id:'postPopup',width:520 });">우편번호찾기</button>
+                                </div>
+                                <div class="inp-addr2">
+                                    <input type="text" class="inputbox" id="addr2">
+                                    <input type="text" class="inputbox" id="addr3">
+                                </div>
+                                 <p class="list-note">※ 청구주소는 명세서 발송 주소와 동일합니다.<br> 청구주소 변경 시 우편 명세서 주소도 변경됩니다.</p>
+                            </div>
+                        </li>
+                        <li class="style">
+                            <div class="dt">주소<sup>*<span class="hide">필수</span></sup></div>
+                            <div class="dd address-wrap">
+                                <div class="inp-addr1">
+                                    <input type="text" class="inputbox addr" id="addr" disabled="disabled"> <button type="button" class="btn-inbase" onclick="$plugins.uiModal({ id:'postPopup',width:520 });">우편번호찾기</button>
+                                </div>
+                                <div class="inp-addr2">
+                                    <input type="text" class="inputbox" id="addr2">
+                                    <input type="text" class="inputbox" id="addr3">
+                                </div>
+                                 <p class="list-note">※ 청구주소는 명세서 발송 주소와 동일합니다.<br> 청구주소 변경 시 우편 명세서 주소도 변경됩니다.</p>
+                            </div>
+                        </li>                         
+                    </ul>
+                </section>
+				</section>
+			</div><!-- //.contents-wrap -->
+		</main>
+		<div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+	
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			
+
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>
+
+			

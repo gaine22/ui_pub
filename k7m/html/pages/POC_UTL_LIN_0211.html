@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico"> 
+
+	<title>아이디찾기 | SK 7mobile</title>
+	
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+<body>
+	<div class="skip" id="skip">
+		<ul>
+			<li><a href="#main">본문 바로가기</a></li>
+		</ul>
+	</div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+            <div class="contents-wrap w100">
+                <div class="wallpaper">
+                    <div class="login-view">
+                        <section class="sec-top">
+                            <div class="logo-bi"><img src="../images/common/logo_bi.png" alt="SK 7mobile"></div>
+                            <div class="txt-lead-box">
+                                <strong class="txt-lead"><b>본인확인</b>을 통해<br> 아이디를 찾으실 수 있습니다.</strong>
+                                <p class="txt-lead-s">본인인증 시 입력하는 정보는 해당 인증기관에서 직접 수집하므로<br class="wbr"> 인증 이외의 용도로 이용 또는 저장되지 않습니다.</p>
+                            </div>
+
+                            <h3>인증방법</h3>                            
+                            <div class="btn-wrapper">
+                                <span><button type="button" class="btn-line point">휴대폰인증</button></span>
+                                <span><button type="button" class="btn-line">아이핀인증</button></span>
+							</div>
+							<div class="msg-area">
+								<strong class="txt">휴대폰 인증이 <b>완료</b>되었습니다.</strong>
+								<p>아래 '아이디 찾기' 버튼을 클릭(또는 탭) 하십시오.</p>
+							</div>
+                            <div class="btn-wrap">
+                                <a href="#" class="btn-point-red">아이디 찾기</a>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div><!-- //.contents-wrap -->
+		</main>
+		<footer class="footer" id="footer"></footer>
+	</div>
+	
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			$plugins.uiForm();
+			
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

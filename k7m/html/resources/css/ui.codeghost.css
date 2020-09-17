@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+.base-wrapper{min-width:102.4rem}
+/* .base-wrapper:before{content:""; display:block; border-top:0.5rem solid #303030; position:fixed; top:0; left:0; z-index:99; width:100%; height:4.0rem; background:url(/resources/img/codeghost/rolldown.png) repeat-x 0 0;} */
+    .ui-m .base-wrapper{min-width:32.0rem}
+
+/* header */
+.base-header{position:fixed; top:0; left:0; z-index:1; width:21.0rem; height:100%; padding:0 1.0rem 0 0;}
+.base-header h1{padding:1rem 0; width:18.0rem; line-height:1; background:#3b3a40;}
+.base-header h1 a{display:block;padding:0 20px;box-sizing:border-box}
+.base-header h1 a img{max-width:100%;margin:0 auto}
+.nav-wrap{width:100%; overflow-y:auto; padding:2.0rem 0.5rem}
+.nav-wrap ul{padding:0; margin:0;}
+.nav-wrap li{list-style:none}
+.nav-wrap .depth1 > li{padding-bottom:2.0rem}
+.nav-wrap .depth1 > li > button{font-size:1.8rem; font-weight:500; letter-spacing:0; color:#000}
+.nav-wrap .depth2 > li{padding:0.6rem 0 0 0.2rem;}
+.nav-wrap .depth2 > li:before{content:'-'; display:inline-block; padding-right:0.5rem}
+.nav-wrap .depth2 > li > a{font-size:1.2rem; color:#929292; letter-spacing:0; text-decoration:none}
+.nav-wrap .ui-acco .ui-acco-tit{padding:0; background:transparent; border:0}
+.nav-wrap .ui-acco .ui-acco-tit span{display:none}
+.nav-wrap .ui-acco .ui-acco-pnl{padding:0; background:transparent; border:0}
+.side-menu{display:none}
+    .ui-m .base-header{position:fixed; top:0; z-index:2; width:100%; height:6.4rem; padding:0; background:rgba(255,255,255,0.9); border-bottom:0.2rem solid #222}
+    .ui-m .base-header h1{position:absolute; top:-1.5rem; left:2.0rem; width:5.5rem; height:4.9rem; background:transparent}
+    .ui-m .base-header h1 img{width:5.5rem; height:auto}
+    .ui-m .side-menu{display:block; position:absolute; top:2.0rem; right:2.0rem; width:2.5rem; height:2.0rem; color:transparent; border-top:2px solid #222;  border-bottom:2px solid #222}
+    .ui-m .side-menu:after{content:''; display:block; position:absolute; top:50%; width:100%;  border-top:2px solid #222; margin-top:-0.1rem; }
+    .ui-m .nav-wrap{position:fixed; top:6.4rem; left:0; display:none; width:100%; height:calc(100vh - 6.4rem); background:#fff; padding:3.0rem;}
+
+/* main */
+.base-main{position:relative; width:100%; padding:0 5.0rem 10.0rem 20.0rem; font-size:1.4rem}
+    .ui-m .base-main{padding:9.0rem 1.5rem 1.5rem}
+/* index */ 
+
+    
+
+/* conding list */

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Concept</title>
+	<script src="./resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="./resources/js/lib/jquery.easing.min.js"></script>
+	<style>
+		* { margin: 0; }
+		body { overflow: hidden;}
+		img { border: 0; vertical-align: top; }
+		.dimWrap { display: none; position: fixed; left: 0; bottom: 0; width: 100%; height: 100%; border: 0 solid #222; box-sizing: border-box; }
+		.mobData { position: absolute; left: -9999px; width: 360px; height: 550px; }
+		.mob { position: absolute; left: 50%; top: 50%; width: 360px; height: 550px; margin: -275px 0 0 -180px; opacity: 0; background-color: black; }
+		.ctrl { position: fixed; left: 0; top: 50%; }
+	</style>
+	<script>
+		var aniDim = {
+			dim : null,
+			wW : null,
+			wH : null,
+			mob : null,
+			mobD : null,
+			mobW : null,
+			mobH : null,
+			tbW : null,
+			lrH : null,
+			init : function(){
+				o = this;
+				o.dim = $('.dimWrap');
+				o.wW = $(window).width();
+				o.wH = $(window).height();
+				o.mob = $('.mob');
+				o.mobD = $('.mobData');
+				o.mobW = o.mobD.innerWidth();
+				o.mobH = o.mobD.innerHeight();
+				o.tbW = (o.wW - o.mobW)/2;
+				o.lrH = (o.wH - o.mobH)/2;
+				o.openFn();
+			},
+			openFn : function(){
+				o.dim.show().animate({
+					'border-top-width'    : o.lrH + 'px',
+					'border-bottom-width' : o.lrH + 'px',
+					'border-right-width'  : o.tbW + 'px',
+					'border-left-width'   : o.tbW + 'px'
+				},700,'easeInOutQuint');
+				o.mob.delay(300).animate({ 'opacity' : 1 },500);
+			},
+			closeFn : function(){
+				o.dim.animate({
+					'border-width' : 0
+				},700,'easeInOutQuint',function(){
+					o.dim.hide();
+				});
+				o.mob.animate({ 'opacity' : 0 },300);
+			}
+		}
+		
+		$(document).ready(function(){
+			$('.mobView').click(function(){
+				aniDim.init();
+			});
+			$('.mobClose').click(function(){
+				aniDim.closeFn();
+			});
+		});
+		$(window).resize(function(){
+			 if($('.dimWrap').css('display') == 'none') return;
+			waitForFinalEvent(function(){
+				aniDim.init();
+		    }, 100, "some unique string");
+		});
+		
+		//https://stackoverflow.com/questions/2854407/javascript-jquery-window-resize-how-to-fire-after-the-resize-is-completed
+		var waitForFinalEvent = (function () {
+			var timers = {};
+			return function (callback, ms, uniqueId) {
+				if (!uniqueId) {
+					uniqueId = "Don't call this twice without a uniqueId";
+				}
+				if (timers[uniqueId]) {
+		 			clearTimeout (timers[uniqueId]);
+				}
+				timers[uniqueId] = setTimeout(callback, ms);
+			};
+		})();
+	</script>
+</head>
+<body>
+
+
+<button type="button" class="mobView">모바일 보기</button>
+
+<div class="dimWrap">
+	<div class="mob"></div>
+	<div class="ctrl">
+		<button type="button" class="mobClose">닫기</button>
+	</div>
+</div>
+<div class="mobData"></div>
+
+
+	
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico">
+
+	<title>SK 7mobile 고객을 위한 혜택 | SK 7mobile</title>
+
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+
+<body>
+	<div class="skip" id="skip"></div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+			<div class="contents-wrap">
+				<section>
+				    <h2 class="h2">SK 7mobile 고객을 위한 혜택</h2>
+                    <div class="ui-tab item3 m-item3-1"> <!-- 20180319 클래스추가 -->
+                        <div class="ui-tab-btns">
+                            <a href="../pages/POC_BNE_SMB_0100.html" class="ui-tab-btn" aria-selected="true"><i>7mobile 보험 안내</i></a>
+                            <a href="../pages/POC_BNE_SMB_0300.html" class="ui-tab-btn"><i>7 Point 안내</i></a>
+                            <a href="../pages/POC_BNE_SMB_0400.html" class="ui-tab-btn"><i>휴대폰결제 서비스 안내</i></a>
+                            <!-- 20180319 제거 <a href="https://sktl.efamilyshop.co.kr" class="ui-tab-btn" target="_blank" title="새창열림"><i>e-family shop</i></a>-->
+                        </div>
+                    </div>                    
+                    <div class="txt-top-org2">
+                        <div class="logo"><img src="../images/common/logo.png" alt="SK telink"></div>
+                        <h3 class="tit">SK 7mobile x 폰앤서비스</h3>
+                        <p><strong>월 1,200원</strong>으로 단말보험 가입하고, <br class="mbr"><strong>연 최대 10만원</strong>까지 수리비 보상받으세요!</p>
+                    </div>
+                    <div class="benefit-area1">
+                        <strong>폰앤서비스란?</strong>
+                        <ul class="list-dash-txt">
+                            <li>- 알뜰폰 고객을 위한 휴대폰파손보험입니다.</li>
+                            <li>- 폰 기종과 휴대폰 개통일에 관계없이 가입 및 해지가 가능합니다. <br>(단, 국내에 공식 AS센터가 없는 외산 휴대폰은 가입불가)</li>
+                        </ul>
+                        <strong>가입도 보상접수도 온라인으로 한번에!</strong>
+                    </div>
+
+                    <div class="btn-wrap">
+                        <a href="https://www.phoneservice.co.kr/product/channelIntro.do" target="_blank" title="새창열림" class="btn btn-point btn-arrow"><i>가입하러가기</i></a>
+                    </div>
+
+                    <div class="ui-acco basic-acco" role="group" id="pmAcco1">
+                        <dl class="ui-acco-wrap">
+                            <dt class="ui-acco-tit">
+                                <strong>유의사항</strong>
+                                <button type="button" class="ui-acco-btn"><span>열기</span></button>
+                            </dt>
+                            <dd class="ui-acco-pnl ">
+                                <ul class="list-dash-txt">
+                                    <li>- 타 월중 대상 요금제간 변경 시 할인금액의 일할계산분을 기준으로 반환금을 산정합니다.</li>
+                                    <li>- 월별 할인반환금은 할인금액과 월정액의 27.7% 중 작은 금액을 기준으로 산정합니다.</li>
+                                    <li>- 24개월 이용 후 12개월 추가 혜택 제공 기간 중 회선 해지 또는 할인제도 해지시에는 할인반환금이 부과되지 않습니다.</li>
+                                    <li>- 신규 가입일로부터 14일 내 주생활지에서의 통화품질 불량의 사유로 해지(단, 단말기 등의 지급물품 일체를 손상 없이 반납 필요)하거나, </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+				</section>
+			</div><!-- .contents-wrap -->
+		</main>
+        <div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+
+	<script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+            $plugins.uiAccordion({ id:'pmAcco1', current:[0], autoclose:false });
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

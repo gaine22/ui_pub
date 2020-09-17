@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico"> 
+
+	<title>오프라인매장안내 | SKTELINK</title>
+	
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+<body>
+	<div class="skip" id="skip">
+		<ul>
+			<li><a href="#main">본문 바로가기</a></li>
+		</ul>
+	</div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+            <div class="contents-wrap">
+                <section>
+                    <h2 class="h2">오프라인 매장안내</h2>
+                    <div class="ui-tab item2" id="cscOsi0100Tab">
+                        <div class="ui-tab-btns">
+                            <button type="button" class="ui-tab-btn"><i>공식인증 대리점 찾기</i></button>
+                            <button type="button" class="ui-tab-btn"><i>AS센터 찾기</i></button>
+                        </div>
+                        <div class="ui-tab-pnls">
+                            <!-- 공식인증 대리점 찾기 tab -->
+                            <section class="ui-tab-pnl offline-wrap">
+                                <h3 class="hide">공식인증 대리점 찾기</h3>
+                                <div class="ui-tab tab-menu" id="cscOsi0100Tab2">
+                                    <div class="ui-tab-btns">
+                                        <button type="button" class="ui-tab-btn"><i>서울&#40;<em>1</em>&#41;</i></button>
+                                        <button type="button" class="ui-tab-btn" ><i>인천&#40;<em>2</em>&#41;</i></button>
+                                        <button type="button" class="ui-tab-btn" ><i>강원&#40;<em>1</em>&#41;</i></button>
+                                        <button type="button" class="ui-tab-btn" ><i>충북/충남&#40;<em>3</em>&#41;</i></button>
+                                        <button type="button" class="ui-tab-btn" ><i>전북/전남&#40;<em>4</em>&#41;</i></button>
+                                        <button type="button" class="ui-tab-btn" ><i>경북/경남&#40;<em>1</em>&#41;</i></button>
+                                    </div>
+
+                                    <!-- 20180326 지도 위치 변경: 모바일에서 탭내용 위로  -->
+                                    <!-- 지도 -->
+                                    <div class="offline-map" id="offMap">
+                                        <img src="../images/common/@sample_addr_map.png" alt="맵 샘플 이미지">
+                                    </div>
+                                    <!-- // 지도 -->
+
+                                    <div class="ui-tab-pnls">
+                                        <!-- 서울 -->
+                                        <section class="ui-tab-pnl">
+                                            <ul class="offline-store">
+                                                <li class="on">
+                                                    <div class="info">
+                                                        <button type="button" class="btn-map"><i>신림점</i></button>
+                                                        <span>T. 02-123-1234</span>
+                                                        <span class="time"><em>운영시간 : </em>10:00~18:00</span>
+                                                    </div>
+                                                    <div class="addr">
+                                                        <p class="addr-road"><span>도로명</span>서울특별시 관악구 보라매로 2</p>
+                                                        <p class="addr-old"><span>지번</span>서울특별시 관악구 봉천동 971-4</p>
+                                                    </div>
+                                                    <div class="service">
+                                                        <span>신규가입</span>
+                                                        <span>번호이동</span>
+                                                        <span>기기변경</span>
+                                                        <span>요금수납</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                        <!-- 인천 -->
+                                        <section class="ui-tab-pnl">
+                                            <ul class="offline-store">
+                                                <li class="on">
+                                                    <div class="info">
+                                                        <button type="button" class="btn-map"><i>인천남동구점</i></button>
+                                                        <span>T. 032-429-9010</span>
+                                                        <span class="time"><em>운영시간 : </em>10:00~18:00</span>
+                                                    </div>
+                                                    <div class="addr">
+                                                        <p class="addr-road"><span>도로명</span>인천광역시 남동구 백범로 326</p>
+                                                        <p class="addr-old"><span>지번</span>인천광역시 남동구 간석동 120-2</p>
+                                                    </div>
+                                                    <div class="service">
+                                                        <span>신규가입</span>
+                                                        <span>번호이동</span>
+                                                        <span>기기변경</span>
+                                                        <span>요금수납</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="info">
+                                                        <button type="button" class="btn-map"><i>인천서구점</i></button>
+                                                        <span>T. 032-583-3011</span>
+                                                        <span class="time"><em>운영시간 : </em>10:00~18:00</span>
+                                                    </div>
+                                                    <div class="addr">
+                                                        <p class="addr-road"><span>도로명</span>인천광역시 서구 가정로 214</p>
+                                                        <p class="addr-old"><span>지번</span>인천광역시 서구 석남동 540-17</p>
+                                                    </div>
+                                                    <div class="service">
+                                                        <span>신규가입</span>
+                                                        <span>번호이동</span>
+                                                        <span>기기변경</span>
+                                                        <span>요금수납</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                        <!-- 강원 -->
+                                        <section class="ui-tab-pnl">
+                                            <ul class="offline-store">
+                                                <li class="on">
+                                                    <div class="info">
+                                                        <button type="button" class="btn-map"><i>원주점</i></button>
+                                                        <span>T. 033-734-0110</span>
+                                                        <span class="time"><em>운영시간 : </em>10:00~18:00</span>
+                                                    </div>
+                                                    <div class="addr">
+                                                        <p class="addr-road"><span>도로명</span>강원도 원주시 평원로 45</p>
+                                                        <p class="addr-old"><span>지번</span>강원도 원주시 중앙동 82-1</p>
+                                                    </div>
+                                                    <div class="service">
+                                                        <span>신규가입</span>
+                                                        <span>번호이동</span>
+                                                        <span>기기변경</span>
+                                                        <span>요금수납</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                        <!-- 충북/충남 -->
+                                        <section class="ui-tab-pnl">
+                                            <ul class="offline-store">
+                                                <li class="on">
+                                                    <div class="info">
+                                                        <button type="button" class="btn-map"><i>천안동남구점</i></button>
+                                                        <span>T. 070-4010-2731</span>
+                                                        <span class="time"><em>운영시간 : </em>10:00~18:00</span>
+                                                    </div>
+                                                    <div class="addr">
+                                                        <p class="addr-road"><span>도로명</span>충청남도 천안시 동남구 충절로 269</p>
+                                                        <p class="addr-old"><span>지번</span>충청남도 천안시 동남구 구성동 464-5</p>
+                                                    </div>
+                                                    <div class="service">
+                                                        <span>신규가입</span>
+                                                        <span>번호이동</span>
+                                                        <span>기기변경</span>
+                                                        <span>요금수납</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="info">
+                                                        <button type="button" class="btn-map"><i>청주터미널점</i></button>
+                                                        <span>T. 043-238-3538</span>
+                                                        <span class="time"><em>운영시간 : </em>10:00~18:00</span>
+                                                    </div>
+                                                    <div class="addr">
+                                                        <p class="addr-road"><span>도로명</span>충청북도 청주시 흥덕구 풍산로 25</p>
+                                                        <p class="addr-old"><span>지번</span>충청북도 청주시 흥덕구 가경동 1356</p>
+                                                    </div>
+                                                    <div class="service">
+                                                        <span>신규가입</span>
+                                                        <span>번호이동</span>
+                                                        <span>기기변경</span>
+                                                        <span>요금수납</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="info">
+                                                        <button type="button" class="btn-map"><i>청주복대동점</i></button>
+                                                        <span>T. 043-223-8019</span>
+                                                        <span class="time"><em>운영시간 : </em>10:00~18:00</span>
+                                                    </div>
+                                                    <div class="addr">
+                                                        <p class="addr-road"><span>도로명</span>충청북도 청주시 흥덕구 증안로 44</p>
+                                                        <p class="addr-old"><span>지번</span>충청북도 청주시 흥덕구 복대1동 2488</p>
+                                                    </div>
+                                                    <div class="service">
+                                                        <span>신규가입</span>
+                                                        <span>번호이동</span>
+                                                        <span>기기변경</span>
+                                                        <span>요금수납</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                        <!-- 전북/전남 -->
+                                        <section class="ui-tab-pnl">
+                                            <ul class="offline-store">
+                                                <li class="on">
+                                                    <div class="info">
+                                                        <button type="button" class="btn-map"><i>익산남중동점</i></button>
+                                                        <span>T. 063-858-8711</span>
+                                                        <span class="time"><em>운영시간 : </em>10:00~18:00</span>
+                                                    </div>
+                                                    <div class="addr">
+                                                        <p class="addr-road"><span>도로명</span>전라북도 익산시 익산대로52길 56</p>
+                                                        <p class="addr-old"><span>지번</span>전라북도 익산시 남중동 32-11</p>
+                                                    </div>
+                                                    <div class="service">
+                                                        <span>신규가입</span>
+                                                        <span>번호이동</span>
+                                                        <span>기기변경</span>
+                                                        <span>요금수납</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="info">
+                                                        <button type="button" class="btn-map"><i>목포죽동점</i></button>
+                                                        <span>T. 061-242-7015</span>
+                                                        <span class="time"><em>운영시간 : </em>10:00~18:00</span>
+                                                    </div>
+                                                    <div class="addr">
+                                                        <p class="addr-road"><span>도로명</span>전라남도 목포시 수문로20번길 1</p>
+                                                        <p class="addr-old"><span>지번</span>전라남도 목포시 죽동 9-10</p>
+                                                    </div>
+                                                    <div class="service">
+                                                        <span>신규가입</span>
+                                                        <span>번호이동</span>
+                                                        <span>기기변경</span>
+                                                        <span>요금수납</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="info">
+                                                        <button type="button" class="btn-map"><i>목포석현동점</i></button>
+                                                        <span>T. 061-285-1941</span>
+                                                        <span class="time"><em>운영시간 : </em>10:00~18:00</span>
+                                                    </div>
+                                                    <div class="addr">
+                                                        <p class="addr-road"><span>도로명</span>전라남도 목포시 석현로 12</p>
+                                                        <p class="addr-old"><span>지번</span>전라남도 목포시 석현동 1170-3</p>
+                                                    </div>
+                                                    <div class="service">
+                                                        <span>신규가입</span>
+                                                        <span>번호이동</span>
+                                                        <span>기기변경</span>
+                                                        <span>요금수납</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="info">
+                                                        <button type="button" class="btn-map"><i>고흥녹동점</i></button>
+                                                        <span>T. 061-843-2255</span>
+                                                        <span class="time"><em>운영시간 : </em>10:00~18:00</span>
+                                                    </div>
+                                                    <div class="addr">
+                                                        <p class="addr-road"><span>도로명</span전라남도 고흥군 도양읍 녹동남촌2길 35</p>
+                                                        <p class="addr-old"><span>지번</span>전라남도 고흥군 도양읍 봉암리 2698-16</p>
+                                                    </div>
+                                                    <div class="service">
+                                                        <span>신규가입</span>
+                                                        <span>번호이동</span>
+                                                        <span>기기변경</span>
+                                                        <span>요금수납</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                        <!-- 경북/경남 -->
+                                        <section class="ui-tab-pnl">
+                                            <ul class="offline-store">
+                                                <li class="on">
+                                                    <div class="info">
+                                                        <button type="button" class="btn-map"><i>안동옥동점</i></button>
+                                                        <span>T. 070-7794-7788</span>
+                                                        <span class="time"><em>운영시간 : </em>10:00~18:00</span>
+                                                    </div>
+                                                    <div class="addr">
+                                                        <p class="addr-road"><span>도로명</span>경상북도 안동시 광명로 175-1</p>
+                                                        <p class="addr-old"><span>지번</span>경상북도 안동시 옥동 787-12</p>
+                                                    </div>
+                                                    <div class="service">
+                                                        <span>신규가입</span>
+                                                        <span>번호이동</span>
+                                                        <span>기기변경</span>
+                                                        <span>요금수납</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                    </div>
+                                </div>
+                               
+                            </section>
+                            <!-- // 공식인증 대리점 찾기 tab -->
+
+                            <!-- AS센터 찾기 tab -->
+                            <section class="ui-tab-pnl ascenter">
+                                <h3 class="hide">AS센터 찾기</h3>
+                                <p class="title">휴대폰 제조사 고객센터를 이용하여<br class="mbr"> 편리하게 AS 받으세요.</p>
+                                <ul class="center-list">
+                                    <li class="list1">
+                                        <div class="logo_img"><span>삼성전자</span></div>
+                                        <dl>
+                                            <dt>삼성전자</dt>
+                                            <dd class="call">1588-3366</dd>
+                                            <dd class="find">
+                                                <a href="https://www.samsungsvc.co.kr/reserve/cenSearch.do?method=list" target="_blank" title="삼성전자 서비스센터 새창열기"><i>AS 센터 찾기</i></a>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="list2">
+                                        <div class="img">
+                                            <div class="logo_img"><span>애플</span></div>
+                                        </div>
+                                        <dl>
+                                            <dt>애플</dt>
+                                            <dd class="call">1577-9641</dd>
+                                            <dd class="find">
+                                                <a href="https://locate.apple.com/kr/ko/" target="_blank" title="애플 서비스 센터 새창열기"><i>AS 센터 찾기</i></a>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="list3">
+                                        <div class="img">
+                                            <div class="logo_img"><span>엘지전자</span></div>
+                                        </div>
+                                        <dl>
+                                            <dt>엘지전자</dt>
+                                            <dd class="call">1588-3366</dd>
+                                            <dd class="find">
+                                                <a href="https://www.lgservice.co.kr/center/selectCenterSearchList.do?serviceFlag=center"  target="_blank" title="lg전자 서비스센터 새창열기"><i>AS 센터 찾기</i></a>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </section>
+                            <!-- // AS센터 찾기 tab -->
+                        </div>
+                    </div>
+                </section>
+            </div><!-- //.contents-wrap -->
+		</main>
+        <div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+	
+	<script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+            $plugins.uiTab({ id:'cscOsi0100Tab', current:0});
+            $plugins.uiTab({ id:'cscOsi0100Tab2', current:0});
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

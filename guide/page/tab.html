@@ -1,0 +1,345 @@
+<div class="ui-position" id="exe-fix2">
+	<div class="ui-position-wrap">
+		<div style="background:red; width:873px; margin:0 auto; height:100px;">1aa</div>
+	</div>
+</div>
+
+<h1 class="g_h1">TAB guide</h1>
+<h2 class="g_h2">tab</h2>
+<div class="ex_div">
+	<div class="ui_tab exe_tab">
+		<div class="tab_btns">
+			<a href="#panel1" id="tab1" class="ui_btn">Herb Caen</a>
+			<a href="#panel2" id="tab2" class="ui_btn">Paul Klee</a>
+			<a href="#panel3" id="tab3" class="ui_btn">Albert Einstein</a>
+		</div>
+		<div class="tab_pnls">
+			<section id="panel1" class="ui_pnl">
+				<h1 class="panel_tit">Herb Caen</h1>
+				나는 과거 속에 사는 편인데 내 생애 대부분이 거기 있기 때문이다.
+			</section>
+			<section id="panel2" class="ui_pnl">
+				<h1 class="panel_tit">Paul Klee</h1>
+				우리를 조금 크게 만드는데 걸리는 시간은 단 하루면 충분하다.
+			</section>
+			<section id="panel3" class="ui_pnl">
+				<h1 class="panel_tit">Albert Einstein</h1>
+				아름다운 여자의 마음에 들려고 노력할 때는 1시간이 마치 1초처럼 흘러간다. 그러나 뜨거운 난로 위에 앉아 있을 때는 1초가 마치 1시간처럼 느껴진다. 그것이 바로 상대성이다.
+			</section>
+		</div>
+	</div>
+
+</div>
+		
+		
+<div class="ex_div2">
+	<h3 class="g_h3">HTML Code</h3>
+	<pre><xmp class="code">
+<div class="ui_tab exe_name">
+	<div class="tab_btns">
+		<a href="#unique-A" id="unique-B" class="ui_btn">Tab 1</a>
+	</div>
+	<div class="tab_pnls">
+		<section id="unique-A" class="ui_pnl">
+			Tab1 내용
+		</section>
+	</div>
+</div>
+
+$('exe_name').uiTab({ option : value });
+	</xmp></pre>
+			
+	<h3 class="g_h3">Elements</h3>
+	<table class="tbl_type">
+	<caption></caption>
+	<colgroup>
+		<col style="width:20%">
+		<col style="width:20%">
+		<col style="width:auto">
+	</colgroup>
+	<thead>
+		<tr>
+		<th scope="col">division</th>
+		<th scope="col">attributes</th>
+		<th scope="col">note</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+		<th scope="row">mother class</th>
+		<td>class="ui_tab"</td>
+		<td></td>
+		</tr>
+		
+		<tr>
+		<th scope="row" rowspan="3">event class</th>
+		<td>class="ui_btn"</td>
+		<td></td>
+		</tr>
+		<tr>
+		<td>href="unique-A"</td>
+		<td>해당 ui_pnl의 ID와 동일한 값</td>
+		</tr>
+		<tr>
+		<td>id="unique-B"</td>
+		<td>해당 ui_pnl의 aria-labelledby(스크립트로 자동 생성)과 연결 시 필요한 값 </td>
+		</tr>
+
+		<tr>
+		<th scope="row" rowspan="2">content class</th>
+		<td>class="ui_pnl"</td>
+		<td></td>
+		</tr>
+		<tr>
+		<td>id="unique-A"</td>
+		<td>해당 ui_btn의 href 와 동일한 값</td>
+		</tr>
+	</tbody>
+	</table>
+	
+	<h3 class="g_h3">Script Option</h3>
+	<table class="tbl_type">
+	<caption></caption>
+	<colgroup>
+		<col style="width:20%">
+		<col style="width:20%">
+		<col style="width:auto">
+	</colgroup>
+	<thead>
+		<tr>
+		<th scope="col">option</th>
+		<th scope="col">base value</th>
+		<th scope="col">note</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+		<th scope="row">current</th>
+		<td>1</td>
+		<td>처음에 열려있을 컨텐츠 선택. 1,2,3.... 식으로 숫자로 선택</td>
+		</tr>
+		
+		<tr>
+		<th scope="row">eff</th>
+		<td>'fade'</td>
+		<td>'show', 'fade' 선택</td>
+		</tr>
+	</tbody>
+	</table>
+</div>
+		
+<h2 class="g_h2">accordion</h2>
+<div class="ex_div">
+	<div class="ui_acco exe_acco base_acco">
+		<button type="button" class="ui_all btn_base"><span>전체열기</span></button>
+		<section class="ui_wrap">
+			<div class="ui_btn_wrap">
+				<h1 class="ui_tit">Oprah Winfrey</h1>
+				<a href="#panel2_1" class="ui_btn"><span class="ui_txt">열기</span></a>
+			</div>
+			<div id="panel2_1" class="ui_pnl">
+				나는 우리 각자에게 지문만큼 고유한 개인적 소명이 있고, 성공하는 최선의 방법은 자신이 사랑하는 것을 발견한 후, 열심히 일하고, 우주의 에너지가 자신을 인도하도록 내맡기는 가운데, 자신이 사랑하는 것을 봉사의 형태로 타인들에게 내어주는 방법을 찾는 것이라고 믿게 되었다.
+			</div>
+		</section>
+		<section class="ui_wrap">	
+			<div class="ui_btn_wrap">
+				<h1 class="ui_tit">Susan J. Bissonette</h1>
+				<a href="#panel2_2" class="ui_btn"><span class="ui_txt">열기</span></a>
+			</div>
+			<div id="panel2_2" class="ui_pnl">
+				낙관주의자란 봄이 인간으로 태어난 것이다.
+			</div>
+		</section>
+		<section class="ui_wrap">
+			<div class="ui_btn_wrap">
+				<h1 class="ui_tit">John Ruskin</h1>
+				<a href="#panel2_3" class="ui_btn"><span class="ui_txt">열기</span></a>
+			</div>
+			<div id="panel2_3" class="ui_pnl">
+				낙관주의자란 봄이 인간으로 태어난 것이다.
+			</div>
+		</section>
+	</div>
+</div>
+
+<div class="ex_div2">		
+	<h3 class="g_h3">HTML Code</h3>
+	<pre><xmp class="code">
+<div class="ui_acco exe_acco base_acco">
+	<button type="button" class="ui_all"><span>전체열기</span></button>
+	<section class="ui_wrap">
+		<div class="ui_btn_wrap">
+			<h1 class="ui_tit">......</h1>
+			<a href="#panel2_1" class="ui_btn"><span class="ui_txt">열기</span></a>
+		</div>
+		<div id="panel2_1" class="ui_pnl">
+			......
+		</div>
+	</section>
+</div>
+
+$('exe_name').uiAccordion({ option : value });
+	</xmp></pre>
+	
+	<h3 class="g_h3">Script Option</h3>
+	<table class="tbl_type">
+	<caption></caption>
+	<colgroup>
+		<col style="width:20%">
+		<col style="width:20%">
+		<col style="width:auto">
+	</colgroup>
+	<thead>
+		<tr>
+		<th scope="col">option</th>
+		<th scope="col">base value</th>
+		<th scope="col">note</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+		<th scope="row">current</th>
+		<td>1</td>
+		<td>처음에 열려있을 컨텐츠 선택. 1,2,3.... 식으로 숫자로 선택. 0 이면 모두 닫혀있음. 'all'이면 모두 열린상태</td>
+		</tr>
+		
+		<tr>
+		<th scope="row">toggle</th>
+		<td>true</td>
+		<td>true or false 선택. true일 경우 하나가 열리면 다른 아코디언탭은 자동으로 닫힘.</td>
+		</tr>
+		
+		<tr>
+		<th scope="row">scrollTop</th>
+		<td>true</td>
+		<td>true or false 선택. true일 경우 열리면 상단으로 자동스크롤</td>
+		</tr>
+		<tr>
+		<th scope="row">addTop</th>
+		<td>0</td>
+		<td>상단 스크롤 시 추가적으로 줄 여백</td>
+		</tr>
+	</tbody>
+	</table>
+</div>
+
+<div class="ui-position" id="exe-fix1">
+	<div class="ui-position-wrap">
+		<div style="background:black; width:873px; margin:0 auto; height:100px;">1aa</div>
+	</div>
+</div>	
+
+
+<h2 class="g_h2">dropdown</h2>
+<div class="ex_div" >
+	<div class="ui_drop exe_drop" style="float:left">
+		<button type="button" class="ui_drop_btn btn_select ico_gear">View - left</button>
+		<div class="ui_drop_cont ps_tl cont_select">
+			<!-- cont -->
+			<div style="background:#fff8dd; padding:20px; height:100px">
+				...
+			</div>
+		</div>
+	</div>
+	
+	<div class="ui_drop exe_drop" style="float:right">
+		<button type="button" class="ui_drop_btn btn_select ico_gear">View - right</button>
+		<div class="ui_drop_cont ps_tr cont_select">
+			<!-- cont -->
+			<div style="background:#fff8dd; padding:20px; height:300px">
+				...
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="ex_div2">		
+	<h3 class="g_h3">HTML code</h3>
+	<pre><xmp class="code">
+<div class="ui_drop exe_drop">
+	<button type="button" class="ui_drop_btn">button</button>
+	<div class="ui_drop_cont ps_tl">
+		......
+	</div>
+</div>
+
+$('.ui_exe').uiDropdowns();
+	</xmp></pre>
+			
+	<h3 class="g_h3">Elements</h3>
+	<table class="tbl_type">
+	<caption></caption>
+	<colgroup>
+		<col style="width:20%">
+		<col style="width:30%">
+		<col style="width:auto">
+	</colgroup>
+	<thead>
+		<tr>
+		<th scope="col">division</th>
+		<th scope="col">attributes</th>
+		<th scope="col">note</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+		<th scope="row">mother class</th>
+		<td>class="ui_drop"</td>
+		<td></td>
+		</tr>
+		
+		<tr>
+		<th scope="row">event class</th>
+		<td>class="ui_drop_btn"</td>
+		<td></td>
+		</tr>
+
+		<tr>
+		<th scope="row">content class</th>
+		<td>class="ui_drop_cont"</td>
+		<td></td>
+		</tr>
+
+	</tbody>
+	</table>
+
+			
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico"> 
+
+	<title>부가서비스 조회/변경 | SK 7mobile</title>
+
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+<body>
+	<div class="skip" id="skip">
+		<ul>
+			<li><a href="#main">본문 바로가기</a></li>
+		</ul>
+	</div>
+    <div class="base-layer" id="baseLayer">
+        <!-- MODAL: 부가서비스 해지 유의사항 -->
+        <section class="ui-modal" id="svrCancel" role="dialog" aria-hidden="true">
+            <div class="ui-modal-wrap">
+                <header class="ui-modal-tit">
+                    <h1>부가서비스 해지</h1>
+                    <button type="button" class="ui-modal-close btn-close">닫기</button>
+                </header>
+                <div class="ui-modal-cont">
+                    <h2 class="h2-tit">부가서비스 해지 유의사항</h2>                   
+                    <ol class="list-num">
+                        <li>1. 기본이용은 신청 없이, 이용가능하며, 일부 서비스는 신청 후 별도의 휴대폰 설정이 필요합니다.(ex.착신전환 등)</li>
+                        <li>2. 가입 부가서비스는 희망하시는 경우 고객센터 &lt;1599-0999(유료) / 휴대폰 114&gt;를 통해서도 해지하실 수 있습니다.</li>
+                        <li>3. 월 중 신청/해지시에는 월 정액 및 제공혜택은 각각 일할 적용됩니다.</li>
+                        <li>4. 서비스 이용정지시에는 부가서비스도 자동으로 정지됩니다.<br>
+                        단, 일부 부가서비스는 발신정지시에도 서비스 이용이 가능하며, 요금도 정상적으로 과금됩니다. (ex.착신전환 등)</li>
+                        <li>5. WIFI서비스 해지시에는 30일 내에는 재가입할 수 없습니다.</li>
+                    </ol>
+                    <div class="btn-wrap mgb-m">
+                        <span><button type="button" class="btn btn-ok">서비스 해지하기</button></span>
+                        <span><button type="button" class="ui-modal-close btn btn-darkgray">취소</button></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+            <div class="contents-wrap">
+                <section>
+                    <h2 class="h2">부가서비스 조회/변경</h2>
+                    <div class="select-top-area">
+                        <span class="lb-select"><label for="hpnumber">휴대폰번호</label> : 1개</span>
+                        <select class="selectbox-l" title="보유휴대폰" id="hpnumber">
+                            <option>010-1234-5678</option>
+                        </select>
+                    </div>
+                </section>
+
+                <section>                    
+                    <h3 class="h3tit">이용중인 부가서비스</h3>
+                    <table class="tbl-base">
+                        <caption>이용중인 부가서비스</caption>
+                        <colgroup>
+                            <col style="width:10%">
+                            <col style="width:auto">
+                            <col style="width:22%">
+                            <col style="width:22%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">선택</th>
+                                <th scope="col">부가서비스명</th>
+                                <th scope="col">이용요금</th>
+                                <th scope="col">신청일</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> 
+                                    <input type="checkbox" name="svrplan" id="svrplan1">
+                                    <label class="lb-check sck only" for="svrplan1"><span class="hide">익명호 수신거부</span></label>
+                                </td>
+                                <td>익명호 수신거부</td>
+                                <td>무료</td>
+                                <td>2018-01-29</td>
+                            </tr>
+                            <tr>
+                                <td> 
+                                    <input type="checkbox" name="svrplan" id="svrplan2">
+                                    <label class="lb-check sck only" for="svrplan2"><span class="hide">해외 SMS 발신금지</span></label>
+                                </td>
+                                <td>해외 SMS 발신금지</td>
+                                <td>1,000원</td>
+                                <td>2018-01-29</td>
+                            </tr>
+                            <tr>
+                                <td> 
+                                    <input type="checkbox" name="svrplan" id="svrplan3">
+                                    <label class="lb-check sck only" for="svrplan3"><span class="hide">통화중대기</span></label>
+                                </td>
+                                <td>통화중대기</td>
+                                <td>무료</td>
+                                <td>2018-01-29</td>
+                            </tr>
+                            <tr>
+                                <td> 
+                                    <input type="checkbox" name="svrplan" id="svrplan5">
+                                    <label class="lb-check sck only" for="svrplan5"><span class="hide">통화가능통보</span></label>
+                                </td>
+                                <td>통화가능통보</td>
+                                <td>무료</td>
+                                <td>2018-01-29</td>
+                            </tr>                        
+                        </tbody>
+                    </table>
+                </section>
+
+                <section>
+                    <div class="txt-box bg">
+                        <div class="line">
+                            <input type="checkbox" id="chReport" name="chReport_n">
+                            <!-- edit180312 문구수정 -->
+                            <label class="lb-check sck" for="chReport"><span>신청정보를 확인하였으며, 변경진행에 동의합니다.</span></label>
+                            <div class="btn-right">
+                                <button type="button" class="btn-point" aria-haspopup="true" onclick="$plugins.uiModal({ id:'svrCancel', width:520, height:540});" tabindex="0"><i>선택된 서비스 해지하기</i></button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="h3tit">신청 가능한 부가서비스</h3>
+                    <div class="ui-tab item5 mgt-m" id="svrTab">
+                        <div class="ui-tab-btns" role="tablist">
+                            <button type="button" class="ui-tab-btn" role="tab" id="svrTab0" aria-controls="chargeTabPnl0" aria-selected="true"><i>데이터상품</i></button>
+                            <button type="button" class="ui-tab-btn" role="tab" id="svrTab1" aria-controls="chargeTabPnl1" aria-selected="false"><i>통화편의</i></button>
+                            <button type="button" class="ui-tab-btn" role="tab" id="svrTab2" aria-controls="chargeTabPnl2" aria-selected="false"><i>개인정보보호</i></button>
+                            <button type="button" class="ui-tab-btn" role="tab" id="svrTab3" aria-controls="chargeTabPnl3" aria-selected="false"><i>위치교통</i></button>
+                            <button type="button" class="ui-tab-btn" role="tab" id="svrTab4" aria-controls="chargeTabPnl4" aria-selected="false"><i>로밍</i></button>
+                        </div>
+
+                        <div class="ui-tab-pnls">
+                            <section class="ui-tab-pnl" role="tabpanel" id="chargeTabPnl0" aria-labelledby="svrTab0" aria-hidden="true" tabindex="-1">
+                                <h2 class="hide">데이터상품</h2>
+                                <table class="tbl-base">
+                                    <caption>신청 가능한 부가서비스</caption>
+                                    <colgroup>
+                                        <col style="width:10%">
+                                        <col style="width:auto">
+                                        <col style="width:30%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">선택</th>
+                                            <th scope="col">부가서비스명</th>
+                                            <th scope="col">이용요금</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td> 
+                                                <input type="checkbox" name="chk_svrplan" id="chk_svrplan1">
+                                                <label class="lb-check sck only" for="chk_svrplan1"><span class="hide">데이터중심39_LTE 요금제</span></label>
+                                            </td>
+                                            <td>익명호 수신거부</td>
+                                            <td>무료</td>
+                                        </tr>
+                                        <tr>
+                                            <td> 
+                                                <input type="checkbox" name="chk_svrplan" id="chk_svrplan2">
+                                                <label class="lb-check sck only" for="chk_svrplan2"><span class="hide">데이터중심39_LTE 요금제</span></label>
+                                            </td>
+                                            <td>해외 SMS 발신금지</td>
+                                            <td>1,000원</td>
+                                        </tr>
+                                        <tr>
+                                            <td> 
+                                                <input type="checkbox" name="chk_svrplan" id="chk_svrplan3">
+                                                <label class="lb-check sck only" for="chk_svrplan3"><span class="hide">데이터중심39_LTE 요금제</span></label>
+                                            </td>
+                                            <td>통화중대기</td>
+                                            <td>무료</td>
+                                        </tr>
+                                        <tr>
+                                            <td> 
+                                                <input type="checkbox" name="chk_svrplan" id="chk_svrplan4">
+                                                <label class="lb-check sck only" for="chk_svrplan4"><span class="hide">데이터중심39_LTE 요금제</span></label>
+                                            </td>
+                                            <td>통화가능통보</td>
+                                            <td>무료</td>
+                                        </tr>                        
+                                    </tbody>
+                                </table>
+                            </section>
+                            <section class="ui-tab-pnl" role="tabpanel" id="chargeTabPnl1" aria-labelledby="svrTab1" aria-hidden="false">
+                                <h2 class="hide">통화편의</h2>
+
+                            </section>
+                            <section class="ui-tab-pnl" role="tabpanel" id="chargeTabPnl2" aria-labelledby="svrTab2" aria-hidden="false">
+                                <h2 class="hide">개인정보보호</h2>
+
+                            </section>
+                             <section class="ui-tab-pnl" role="tabpanel" id="chargeTabPnl3" aria-labelledby="svrTab3" aria-hidden="false">
+                                <h2 class="hide">위치교통</h2>
+
+                            </section>
+                            <section class="ui-tab-pnl" role="tabpanel" id="chargeTabPnl4" aria-labelledby="svrTab4" aria-hidden="false">
+                                <h2 class="hide">로밍</h2>
+
+                            </section>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="txt-box bg">
+                        <div class="line">
+                            <input type="checkbox" id="chReport1" name="chReport1_n">
+                            <!-- edit180312 문구수정 -->
+                            <label class="lb-check sck" for="chReport1"><span>신청정보를 확인하였으며, 신청진행에 동의합니다.</span></label>
+                            <div class="btn-right">
+                                <button type="button" class="btn-point"><i>선택된 서비스 신청하기</i></button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <!-- 20180320 리스트 스타일 변경 -->
+                    <div class="note-box">
+                        <!-- 20180322 유의사항 재변경, 20180320 리스트 스타일 변경 -->
+                        <h3 class="ico-note">유의사항</h3>
+                        <ol>
+                            <li>[발신금지] 신청 시 3G 및 LTE 데이터 접속이 불가합니다.</li>
+                            <li>[국제전화발신금지]를 신청한 경우 데이터로밍무조건차단서비스는 자동으로 가입됩니다.</li>
+                            <li>[컬러링] 서비스는 별도음원 구매 시, 추가비용이 발생됩니다.</li>
+                            <li>[착신전화(Voice Only)] 신청 시 금융거래 및 본인인증 등을 위한 ARS인증 통화에 대해서는 착신전환이 되지 않을 수 있습니다.</li>
+                            <li>[착신전화(일반)] 서비스 신청 시 개인정보를 포함한 일부 메시지 및 web에서 발신한 일부 메시지의 경우, 금융거래 및 본인인증 등을 위한 ARS인증 통화에 대해서는 착신 전환이 되지 않을 수 있습니다.</li>
+                            <li>[자동연결] 서비스는 착신전화(voice only) 또는 착신전환일반과 함께 가입은 가능하나 동시에 이용은 불가합니다.</li>
+                            <li>[T-MAP 종량] 신청 시 T map 네비게이션 1회 이용 시 데이터통화료는 별도입니다.</li>
+                            <li>[T-MAP 정액] 서비스는 월중 가입/ 해지 시 정액료의 일할 과금됩니다. </li>
+                            <li>[영상통화] 서비스는 상대방이 영상통화가 지원되지 않는 휴대폰이면 일반통화로 전환됩니다.</li>
+                            <li>[무선인터넷차단(일반)] 서비스는 일부 요금제(청소년요금제, 데이터중심 등) 가입 시 이용하실 수 없습니다.</li>
+                            <li>[번호도용 문자차단]은 신청 고객 본인도 인터넷 문자발송 서비스 이용 시 이동전화번호를 회신번호로 이용할 수 없습니다. (신청일 기준 영업일 2일 후 적용)</li>
+                            <li>[M-Wifi 15] 서비스는 당일 가입/당일 해지 시에도 일할 차감됩니다.</li>
+                            <li>[청소년 안심 부가서비스]는 청소년에게 무료로 제공되는 스마트폰 유해 차단 서비스 입니다.</li>
+                        </ol>
+                    </div>
+
+                </section>
+
+
+            </div><!-- //.contents-wrap -->
+		</main>
+		<div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+	
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+            $plugins.uiTab({ id:'svrTab', current:0});
+			
+			
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* Noto Sans KR (korean) http://www.google.com/fonts/earlyaccess */
+@font-face{
+	font-family:'notosanskr';
+	src:url('/html/css/font/NotoSans-Thin.eot');/* IE 호환성 보기 */
+	src:url('/html/css/font/NotoSans-Thin.eot?#iefix') format('embedded-opentype'),/* IE 6 ~ 8 */
+		url('/html/css/font/NotoSans-Thin.woff2') format('woff2'),/* WOFF2 지원 브라우저 */
+		url('/html/css/font/NotoSans-Thin.woff') format('woff'),/* 모던 브라우저 */
+		url('/html/css/font/NotoSans-Thin.svg#NotoSans-Thin') format('svg');/* 구 모바일 브라우저 */
+	font-weight:100;
+	font-style:normal;
+}
+@font-face{
+	font-family:'notosanskr';
+	src:url('/html/css/font/NotoSans-Light.eot');
+	src:url('/html/css/font/NotoSans-Light.eot?#iefix') format('embedded-opentype'),
+		url('/html/css/font/NotoSans-Light.woff2') format('woff2'),
+		url('/html/css/font/NotoSans-Light.woff') format('woff'),
+		url('/html/css/font/NotoSans-Light.svg#NotoSans-Light') format('svg');
+	font-weight:200;
+	font-style:normal;
+}
+@font-face{
+	font-family:'notosanskr';
+	src:url('/html/css/font/NotoSans-DemiLight.eot');
+	src:url('/html/css/font/NotoSans-DemiLight.eot?#iefix') format('embedded-opentype'),
+		url('/html/css/font/NotoSans-DemiLight.woff2') format('woff2'),
+		url('/html/css/font/NotoSans-DemiLight.woff') format('woff'),
+		url('/html/css/font/NotoSans-DemiLight.svg#NotoSans-DemiLight') format('svg');
+	font-weight:300;
+	font-style:normal;
+}
+@font-face{
+	font-family:'notosanskr';
+	src:url('/html/css/font/NotoSans-Regular.eot');
+	src:url('/html/css/font/NotoSans-Regular.eot?#iefix') format('embedded-opentype'),
+		url('/html/css/font/NotoSans-Regular.woff2') format('woff2'),
+		url('/html/css/font/NotoSans-Regular.woff') format('woff'),
+		url('/html/css/font/NotoSans-Regular.svg#NotoSans-Regular') format('svg');
+	font-weight:400;
+	font-style:normal;
+}
+@font-face{
+	font-family:'notosanskr';
+	src:url('/html/css/font/NotoSans-Medium.eot');
+	src:url('/html/css/font/NotoSans-Medium.eot?#iefix') format('embedded-opentype'),
+		url('/html/css/font/NotoSans-Medium.woff2') format('woff2'),
+		url('/html/css/font/NotoSans-Medium.woff') format('woff'),
+		url('/html/css/font/NotoSans-Medium.svg#NotoSans-Medium') format('svg');
+	font-weight:500;
+	font-style:normal;
+}
+@font-face{
+	font-family:'notosanskr';
+	src:url('/html/css/font/NotoSans-Black.eot');
+	src:url('/html/css/font/NotoSans-Black.eot?#iefix') format('embedded-opentype'),
+		url('/html/css/font/NotoSans-Black.woff2') format('woff2'),
+		url('/html/css/font/NotoSans-Black.woff') format('woff'),
+		url('/html/css/font/NotoSans-Black.svg#NotoSans-Black') format('svg');
+	font-weight:600;
+	font-style:normal;
+}
+@font-face{
+	font-family:'notosanskr';
+	src:url('/html/css/font/NotoSans-Black.eot');
+	src:url('/html/css/font/NotoSans-Black.eot?#iefix') format('embedded-opentype'),
+		url('/html/css/font/NotoSans-Black.woff2') format('woff2'),
+		url('/html/css/font/NotoSans-Black.woff') format('woff'),
+		url('/html/css/font/NotoSans-Black.svg#NotoSans-Black') format('svg');
+	font-weight:700;
+	font-style:normal;
+}

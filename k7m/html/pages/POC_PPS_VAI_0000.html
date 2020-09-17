@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico">
+
+	<title>가상계좌 발급/확인</title>
+
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+
+<body>
+	<div class="skip" id="skip"></div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+			<div class="contents-wrap">
+				<section>
+                    <h2 class="h2">가상계좌 발급/확인</h2>
+                    <!-- 180315 : 영역수정 -->
+                    <div class="select-top-area">
+                        휴대폰 번호 : 010-12**-56**
+                    </div>
+                </section>
+                <section>
+                    <h3 class="h3tit">전용계좌</h3>
+                    <div class="account-box">
+                        <div class="box-tit">
+                            <!-- 180306 : 전용계좌 -> 가상계좌번호  텍스트 수정 -->
+                            <strong>발급은행</strong>
+                            <strong>가상계좌번호</strong>
+                        </div>
+                        <div class="box-con">
+                            <!-- 180227 : button i태그 추가 -->
+                            <dl>
+                                <dt><span class="hide">발급은행</span><img src="../images/common/acount1.png" alt="KB국민은행"></dt>
+                                <dd><span class="hide">가상계좌번호</span><button type="button" class="btn-inbase"><i>발급받기</i></button><span class="acount-num">5654684346</span></dd>
+                            </dl>
+                            <dl>
+                                <dt><span class="hide">발급은행</span><img src="../images/common/acount2.png" alt="NH농협은행"></dt>
+                                <dd><span class="hide">가상계좌번호</span><button type="button" class="btn-inbase"><i>발급받기</i></button><span class="acount-num">5654684346</span></dd>
+                            </dl>
+                            <dl>
+                                <dt><span class="hide">발급은행</span><img src="../images/common/acount3.png" alt="우체국예금,우체국보험"></dt>
+                                <dd><span class="hide">가상계좌번호</span><button type="button" class="btn-inbase"><i>발급받기</i></button><span class="acount-num">654686894613</span></dd>
+                            </dl>
+                        </div>
+                        <!-- //180306 : 전용계좌 -> 가상계좌번호  텍스트 수정 -->
+                    </div>
+				</section>
+			</div><!-- .contents-wrap -->
+		</main>
+        <div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+
+	<script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+            $('.account-box').find('button').on('click',function(){
+                $(this).parent().addClass('on')
+            })
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

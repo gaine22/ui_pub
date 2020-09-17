@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico">
+	<title>휴대폰 목록 - 다이렉트샵 | SK 7mobile</title>
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+
+<body>
+	<div class="skip" id="skip"></div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+        <!-- 비교하기 팝업 -->
+        <div class="base-layer" id="baseLayer">
+            <section class="ui-modal modal-cp" id="modalCpPop" role="dialog" aria-hidden="true">
+                <div class="ui-modal-wrap">
+                    <header class="ui-modal-tit">
+                        <h1>휴대폰 및 요금제 비교하기</h1>
+                        <button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id: 'modalCpPop', endfocus: 'btnModalCp' });">닫기</button>
+                    </header>
+                    <div class="ui-modal-cont">
+                        <section class="sec1">
+                            <div class="title">
+                                <h2>선택한 휴대폰</h2>
+                                <span>총 <em>3</em>개</span>
+                            </div>
+                            <div class="cp-product">
+                                <div class="item pro1">
+                                    <img src="../images/desktop/@sample_product.png" alt="폰이미지 샘플">
+                                    <div class="txt-wrap">
+                                        <em class="maker">SAMSUNG</em>
+                                        <strong class="model-name">RE_갤럭시S7엣지_8G</strong>
+                                        <a href="#none" class="btn btn-buy">구매하기</a>
+                                    </div>
+                                    <button class="btn-cp-close">삭제하기</button>
+                                </div>
+                                <div class="item pro2">
+                                    <img src="../images/desktop/@sample_product.png" alt="폰이미지 샘플">
+                                    <div class="txt-wrap">
+                                        <em class="maker">SAMSUNG</em>
+                                        <strong class="model-name">RE_갤럭시S7엣지_16G</strong>
+                                        <a href="#none" class="btn btn-buy">구매하기</a>
+                                    </div>
+                                    <button class="btn-cp-close">삭제하기</button>
+                                </div>
+                                <div class="item pro3">
+                                    <img src="../images/desktop/@sample_product.png" alt="폰이미지 샘플">
+                                    <div class="txt-wrap">
+                                        <em class="maker">SAMSUNG</em>
+                                        <strong class="model-name">RE_갤럭시S7엣지_32G</strong>
+                                        <a href="#none" class="btn btn-buy">구매하기</a>
+                                    </div>
+                                    <button class="btn-cp-close">삭제하기</button>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="sec2">
+                            <h3 class="h3tit">월 납부금액 비교</h3>
+                            <span class="sub-txt">※ 24개월 약정 및 할부 기준 시 예상납부 금액</span>
+                            <table class="tbl-base th-line">
+                                <caption>월 납부금액 비교</caption>
+                                <colgroup>
+                                    <col style="width:38%">
+                                    <col style="width:auto">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">요금제</th>
+                                        <td>
+                                            <select class="selectbox" title="요금제선택" id="sltPlan">
+                                                <option>실속 LTE 요금제 2G</option>
+                                                <option>실속 LTE 요금제 4G</option>
+                                                <option>실속 LTE 요금제 6G</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">기본제공량</th>
+                                        <td class="data-box">
+                                            <span class="data1">음성 <em>100분</em></span>
+                                            <span class="data2">데이터 <em>2GB</em></span>
+                                            <span class="data3">문자<em>200건</em></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">월 예상납부금액 (A+B)</th>
+                                        <td class="fc-red">32,900원</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">월 휴대폰 할부금 (A)</th>
+                                        <td class="fc-red">32,900원</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">월 통신 요금 (B)</th>
+                                        <td class="fc-red">32,900원</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+
+                        <section class="sec3">
+                            <h3 class="h3tit">제품스펙</h3>
+                            <table class="tbl-base th-line">
+                                <caption>제품 스펙</caption>
+                                <colgroup>
+                                    <col style="width:28%">
+                                    <col style="width:auto">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">요금제</th>
+                                        <td>
+                                            <p class="color-box">
+                                                <span class="gray">그레이</span>
+                                                <span class="pink">핑크</span>
+                                                <span class="rosegold">로즈골드</span>
+                                                <span class="white">화이트</span>
+                                                <span class="gold">골드</span>
+                                                <span class="coralblue">코랄블루</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">네트워크 종류</th>
+                                        <td>LTE</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">카메라</th>
+                                        <td>후면 듀얼 1200만화소, 전면 500만화소</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">디스플레이</th>
+                                        <td>5.5인치, 2560 x 1440 dual edge Super AMOLED</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">메모리</th>
+                                        <td>5.5인치, 2560 x 1440 dual edge Super AMOLED</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">운영체제</th>
+                                        <td>안드로이드 마시멜로 6.0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">배터리</th>
+                                        <td>3,600mAh</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </div> 
+		<main class="main" id="main" role="main">
+			<div class="contents-wrap">
+				<section>
+				    <h2 class="h2">휴대폰목록</h2>
+                    <div class="banner-area">
+                        <img src="../images/desktop/@top_banner2.png" alt="iphone7 전국최저가 28만원 달라진 것은 단하나, 가겨입니다.">
+                    </div>
+
+                    <div class="ui-tab item3" id="phoneMenuTab">
+                        <div class="ui-tab-btns">
+                            <button type="button" class="ui-tab-btn"><i>바른폰</i></button>
+                            <button type="button" class="ui-tab-btn"><i>LTE</i></button>
+                            <button type="button" class="ui-tab-btn"><i>3G</i></button>
+                        </div>
+
+                        <!-- 20180321 제조사선택 공통으로 위치 변경-->
+                        <fieldset class="sort-box">
+                            <legend>휴대폰 정렬 선택</legend>
+                            <strong class="model-name">제조사를 선택하세요.</strong>
+                            <div class="chk-box">
+                                <input type="checkbox" id="chk-phone1">
+                                <label class="lb-check all sck" for="chk-phone1"><span>전체</span></label>
+                                <input type="checkbox" id="chk-phone1-1" class="chk-phone1">
+                                <label class="lb-check sck" for="chk-phone1-1"><span>삼성전자</span></label>
+                                <input type="checkbox" id="chk-phone1-2" class="chk-phone1">
+                                <label class="lb-check sck" for="chk-phone1-2"><span>LG전자</span></label>
+                                <input type="checkbox" id="chk-phone1-3" class="chk-phone1">
+                                <label class="lb-check sck" for="chk-phone1-3"><span>애플</span></label>
+                                <input type="checkbox" id="chk-phone1-4" class="chk-phone1">
+                                <label class="lb-check sck" for="chk-phone1-4"><span>기타</span></label>
+                            </div>
+                            <select class="selectbox-xl" title="추천 휴대폰">
+                                <option>추천 휴대폰순</option>
+                                <option>휴대폰 이름</option>
+                                <option>인기 휴대폰순</option>
+                                <option>최신 휴대폰순</option>
+                                <option>월 할부 낮은순</option>
+                                <option>월 할부 높은순</option>
+                            </select>
+                        </fieldset>
+
+                        <div class="ui-tab-pnls">
+                            <section class="ui-tab-pnl">
+                            <h3 class="hide">바른폰</h3>                                
+                            <ul class="product-list">
+                                <li class="on">
+                                    <a href="#none" class="soldout t">
+                                        <em class="tag t4">한정</em>                                    
+                                        <img src="../images/desktop/@sample_product.png" alt="폰이미지샘플">
+                                        <p class="color-box"><span class="gray">그레이</span><span class="pink">핑크</span><span class="rosegold">로즈골드</span><span class="black">블랙</span></p>
+                                        <div class="txt-wrap">
+                                            <em class="banner">가입 신청 30건 돌파</em>
+                                            <dl>
+                                                <dt>RE갤럭시S732G</dt>
+                                                <dd>
+                                                    <span class="sub-txt1">한정수량 역대 최저가</span>
+                                                    <em class="price">1,000 원/월</em>
+                                                    <span class="sub-txt2">데이터중심300MB_LTE 기준</span>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </a>
+                                    <div class="input-wrap">
+                                        <input type="checkbox" id="compare1-1" checked="checked">
+                                        <label class="lb-check rck" for="compare1-1"><span>비교하기</span></label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#none" class="soldout y">
+                                        <em class="tag t1">인기</em>
+                                        <img src="../images/desktop/@sample_product.png" alt="폰이미지샘플">
+                                        <p class="color-box"><span class="gold">골드</span><span class="coralblue">코랄블루</span><span class="siver">실버</span><span class="white">화이트</span></p>
+                                        <div class="txt-wrap">
+                                            <em class="banner">가입 신청 100건 돌파</em>
+                                            <dl>
+                                                <dt>RE_갤럭시노트5_32G</dt>
+                                                <dd>
+                                                    <span class="sub-txt1">노트5는 0원에 사는 것입니다.</span>
+                                                    <em class="price">1,000 원/월</em>
+                                                    <span class="sub-txt2">[LTE 온라인 음성 S6] 요금제 '단말할인' 기준</span>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </a>
+                                    <div class="input-wrap">
+                                        <input type="checkbox" id="compare1-2">
+                                        <label class="lb-check rck" for="compare1-2"><span>비교하기</span></label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#none">
+                                        <em class="tag t2">신규</em>
+                                        <img src="../images/desktop/@sample_product.png" alt="폰이미지샘플">
+                                        <p class="color-box"><span class="gold">골드</span><span class="coralblue">코랄블루</span></p>
+                                        <div class="txt-wrap">
+                                            <dl>
+                                                <dt>RE갤럭시S732G</dt>
+                                                <dd>
+                                                    <span class="sub-txt1">한정수량 역대 최저가</span>
+                                                    <em class="price">1,000 원/월</em>
+                                                    <span class="sub-txt2">데이터중심300MB_LTE 기준</span>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </a>
+                                    <div class="input-wrap">
+                                        <input type="checkbox" id="compare1-3">
+                                        <label class="lb-check rck" for="compare1-3"><span>비교하기</span></label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#none">
+                                        <em class="tag t3">핫딜</em>
+                                        <img src="../images/desktop/@sample_product.png" alt="폰이미지샘플">
+                                        <p class="color-box"><span class="gray">그레이</span><span class="pink">핑크</span><span class="rosegold">로즈골드</span><span class="black">블랙</span></p>
+                                        <div class="txt-wrap">
+                                            <dl>
+                                                <dt>RE갤럭시S732G</dt>
+                                                <dd>
+                                                    <span class="sub-txt1">#단순개봉폰#가격은낮추고#구성품은그대로#단순개봉폰</span>
+                                                    <em class="price">1,000 원/월</em>
+                                                    <span class="sub-txt2">데이터중심300MB_LTE 기준</span>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </a>
+                                    <div class="input-wrap">
+                                        <input type="checkbox" id="compare1-4">
+                                        <label class="lb-check rck" for="compare1-4"><span>비교하기</span></label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#none">
+                                        <img src="../images/desktop/@sample_product.png" alt="폰이미지샘플">
+                                        <p class="color-box"><span class="black">블랙</span><span class="gold">골드</span><span class="coralblue">코랄블루</span></p>
+                                        <div class="txt-wrap">
+                                            <dl>
+                                                <dt>RE갤럭시S732G</dt>
+                                                <dd>
+                                                    <span class="sub-txt1">한정수량 역대 최저가</span>
+                                                    <em class="price">1,000 원/월</em>
+                                                    <span class="sub-txt2">데이터중심300MB_LTE 기준</span>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </a>
+                                    <div class="input-wrap">
+                                        <input type="checkbox" id="compare1-5">
+                                        <label class="lb-check rck" for="compare1-5"><span>비교하기</span></label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#none">
+                                        <img src="../images/desktop/@sample_product.png" alt="폰이미지샘플">
+                                        <p class="color-box"><span class="black">블랙</span><span class="white">화이트</span></p>
+                                        <div class="txt-wrap">
+                                            <dl>
+                                                <dt>RE갤럭시S732G</dt>
+                                                <dd>
+                                                    <span class="sub-txt1">한정수량 역대 최저가</span>
+                                                    <em class="price">1,000 원/월</em>
+                                                    <span class="sub-txt2">데이터중심300MB_LTE 기준</span>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </a>
+                                    <div class="input-wrap">
+                                        <input type="checkbox" id="compare1-6">
+                                        <label class="lb-check rck" for="compare1-6"><span>비교하기</span></label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#none">
+                                        <em class="tag t2">신규</em>
+                                        <img src="../images/desktop/@sample_product.png" alt="폰이미지샘플">
+                                        <p class="color-box"><span class="black">블랙</span><span class="white">화이트</span><span class="coralblue">코랄블루</span></p>
+                                        <div class="txt-wrap">
+                                            <em class="banner">가입 신청 100건 돌파</em>
+                                            <dl>
+                                                <dt>RE갤럭시S732G</dt>
+                                                <dd>
+                                                    <span class="sub-txt1">한정수량 역대 최저가</span>
+                                                    <em class="price">1,000 원/월</em>
+                                                    <span class="sub-txt2">데이터중심300MB_LTE 기준</span>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </a>
+                                    <div class="input-wrap">
+                                        <input type="checkbox" id="compare1-7">
+                                        <label class="lb-check rck" for="compare1-7"><span>비교하기</span></label>
+                                    </div>
+                                </li>
+                                
+                                <li>
+                                    <a href="#none">
+                                        <img src="../images/desktop/@sample_product.png" alt="폰이미지샘플">
+                                        <p class="color-box"><span class="black">블랙</span><span class="white">화이트</span></p>
+                                        <div class="txt-wrap">
+                                            <dl>
+                                                <dt>RE갤럭시S732G</dt>
+                                                <dd>
+                                                    <span class="sub-txt1">한정수량 역대 최저가</span>
+                                                    <em class="price">1,000 원/월</em>
+                                                    <span class="sub-txt2">데이터중심300MB_LTE 기준</span>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </a>
+                                    <div class="input-wrap">
+                                        <input type="checkbox" id="compare1-8">
+                                        <label class="lb-check rck" for="compare1-8"><span>비교하기</span></label>
+                                    </div>
+                                </li>
+                            </ul>
+                            
+                            </section>
+                            <section class="ui-tab-pnl">
+                                <h3 class="hide">LTE</h3>
+                                <!-- 20180321 탭내부 삭제
+                                 <fieldset class="sort-box">
+                                <legend>휴대폰 정렬 선택</legend>
+                                <strong class="model-name">제조사를 선택하세요.</strong>
+                                <div class="chk-box">
+                                    <input type="checkbox" id="chk-phone2">
+                                    <label class="lb-check all sck" for="chk-phone2"><span>전체</span></label>
+
+                                    <input type="checkbox" id="chk-phone2-1" class="chk-phone2">
+                                    <label class="lb-check sck" for="chk-phone2-1"><span>삼성전자</span></label>
+
+                                    <input type="checkbox" id="chk-phone2-2" class="chk-phone2">
+                                    <label class="lb-check sck" for="chk-phone2-2"><span>LG전자</span></label>
+
+                                    <input type="checkbox" id="chk-phone2-3" class="chk-phone2">
+                                    <label class="lb-check sck" for="chk-phone2-3"><span>애플</span></label>
+
+                                    <input type="checkbox" id="chk-phone2-4" class="chk-phone2">
+                                    <label class="lb-check sck" for="chk-phone2-4"><span>기타</span></label>
+                                    
+                                </div>
+                                <select class="selectbox-xl" title="추천 휴대폰">
+                                        <option>추천 휴대폰순</option>
+                                        <option>휴대폰 이름</option>
+                                        <option>인기 휴대폰순</option>
+                                        <option>최신 휴대폰순</option>
+                                        <option>월 할부 낮은순</option>
+                                        <option>월 할부 높은순</option>
+                                    </select>
+                                </fieldset> -->
+                            </section>
+                            <section class="ui-tab-pnl">
+                                <h3 class="hide">3G</h3>
+                                <!-- 20180321 탭내부 삭제
+                                <fieldset class="sort-box">
+                                    <legend>휴대폰 정렬 선택</legend>
+                                    <strong class="model-name">제조사를 선택하세요.</strong>
+                                    <div class="chk-box">
+                                        <input type="checkbox" id="chk-phone3">
+                                        <label class="lb-check all sck" for="chk-phone3"><span>전체</span></label>
+                                        <input type="checkbox" id="chk-phone3-1" class="chk-phone3">
+                                        <label class="lb-check sck" for="chk-phone3-1"><span>삼성전자</span></label>
+                                        <input type="checkbox" id="chk-phone3-2" class="chk-phone3">
+                                        <label class="lb-check sck" for="chk-phone3-2"><span>LG전자</span></label>
+                                        <input type="checkbox" id="chk-phone3-3" class="chk-phone3">
+                                        <label class="lb-check sck" for="chk-phone3-3"><span>애플</span></label>
+                                        <input type="checkbox" id="chk-phone3-4" class="chk-phone3">
+                                        <label class="lb-check sck" for="chk-phone3-4"><span>기타</span></label>
+                                    </div>
+                                    <select class="selectbox-xl" title="추천 휴대폰">
+                                            <option>추천 휴대폰순</option>
+                                            <option>휴대폰 이름</option>
+                                            <option>인기 휴대폰순</option>
+                                            <option>최신 휴대폰순</option>
+                                            <option>월 할부 낮은순</option>
+                                            <option>월 할부 높은순</option>
+                                        </select>
+                                </fieldset> -->
+                            </section>
+                        </div>
+                        <!-- 20180321 위치변경 -->
+                        <ul class="product-hot">
+                            <li class="box1">
+                                <dl>
+                                    <dt>가장 많이 찾아본 휴대폰</dt>
+                                    <dd>
+                                        <a href="#none">
+                                            <img src="../images/desktop/@sample_product2.png" alt="가장많이 찾아본 휴대폰명">
+                                            <div class="txt-info">
+                                                <strong class="model-name">삼성갤럭시와이드2</strong>
+                                                <span class="sub-txt1">#단순개봉폰#가격은낮추고#구성품은그대로#단순개봉폰</span>
+                                                <em class="price">1,000 원/월</em>
+                                                <span class="sub-txt2">데이터중심300MB_LTE 기준 데이터중심300MB_LTE 기준</span>
+                                            </div>
+                                        </a>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li class="box2">
+                                <dl>
+                                    <dt>가장 많이 찾아본 요금제</dt>
+                                    <dd>
+                                        <a href="#none">
+                                            <div class="txt-info">
+                                                <strong class="model-name">LTE공신 LEVEL2</strong>
+                                                <em class="price">1,000 원/월</em>
+                                            </div>
+                                            <div class="data-info">
+                                                <span>데이터<br><em>0</em>MB</span>
+                                                <span>음성<br><em>90</em>MB</span>
+                                                <span>문자<br><em>1,800</em>건</span>
+                                            </div>
+                                        </a>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li class="box3">
+                                <dl>
+                                    <dt>방금 전에 가입한 상품은?</dt>
+                                    <dd>
+                                        <a href="#none">
+                                            <div class="txt-info">
+                                                <strong class="model-name">RE 갤럭시S7 32G</strong>
+                                                <span class="sub-txt1">#단순개봉폰#가격은낮추고 #단순개봉폰#가격은낮추고</span>
+                                                <em class="price">1,000 원/월</em>
+                                                <span class="sub-txt2">데이터중심300MB_LTE기준</span>
+                                            </div>
+                                            <img src="../images/desktop/@sample_product.png" alt="방금 전에 가입한 상품 휴대폰명">
+                                        </a>
+                                    </dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+				</section>
+                <!-- D: class = fixed -->
+                <section class="cp-wrap">
+                    <header><h2>선택된 휴대폰</h2></header>
+                    <div class="cp-box">
+                        <ul>
+                            <li>
+                                <div>
+                                    <img src="../images/desktop/@sample_product.png" alt="비교하기 휴대폰명">
+                                    <strong class="model-name">RE 갤럭시S7 32G</strong>
+                                    <button type="button" class="btn-cp-close">삭제하기</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="../images/desktop/@sample_product.png" alt="비교하기 휴대폰명">
+                                    <strong class="model-name">갤럭시노트8</strong>
+                                    <button type="button" class="btn-cp-close">삭제하기</button>
+                                </div>
+                            </li>
+                            <li class="noitem">
+                                <div>
+                                    <p class="txt">더 많은 제품을 비교해보세요.</p>
+                                    <button type="button" class="btn-cp-close">삭제하기</button>
+                                </div>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn-cp ui-laypop" id="btnModalCp" aria-haspopup="true">비교하기</button>
+                    </div>
+                    
+                </section>
+			</div><!-- .contents-wrap -->
+		</main>
+        <div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+
+	<script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+         
+		$(doc).ready(function(){
+			$plugins.uiTab({ id:'phoneMenuTab', current:0});
+            $plugins.uiForm({ id: 'chk-phone1', all: true, callback: allCheckCallback}); // 바른폰 제조사 선택
+            $plugins.uiForm({ id: 'chk-phone2', all: true, callback: allCheckCallback}); // LTE 제조사 선택
+            $plugins.uiForm({ id: 'chk-phone3', all: true, callback: allCheckCallback}); // 3G 제조사 선택
+            function allCheckCallback(v){}
+            
+            var cpProductSlide = $('.cp-product');
+            $('.cp-wrap .btn-cp').on('click', function(){
+                $plugins.uiModal({ 
+                    id : 'modalCpPop',
+                    width : 1020,
+                    callback : function(){
+                        cpProductSlide.owlCarousel({
+                            items: 1,
+                            loop: false,
+                            nav: true,
+                            navRewind: false,
+                            autoplay:false,
+                            navElement: 'button',
+                            navText:["이전 제품 보기", "다음 제품 보기"]
+                        });
+
+                        $('button').attr('type','button');
+                    }
+                })
+            });
+
+            var $btnCompare = $('.product-list .input-wrap input');
+            $btnCompare.click(function(){
+                $('.cp-wrap').addClass('fixed');
+                $('footer').addClass('pdbt1');
+            });
+            
+		});
+
+        // 180328 개발대응참고 : 비교하기 팝업내 owlCarousel 슬라이드 아이템 html() 후 팝업 닫을 때 owlCarousel destroy
+        function layerclose(){
+            $('.cp-produt').data('owlCarousel').destory();
+        }
+       
+        
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

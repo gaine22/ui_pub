@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico">
+
+	<title>가입신청 | SK 7mobile</title>
+
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+
+<body>
+	<div class="skip" id="skip"></div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+        <div class="base-layer" id="baseLayer">
+            <!-- modal : 신용카드 인증 팝업 -->
+            <section class="ui-modal" id="popCredit" role="dialog" aria-hidden="true">
+                <div class="ui-modal-wrap">
+                    <header class="ui-modal-tit">
+                        <h1>카드 본인인증</h1>
+                        <button type="button" class="ui-modal-close btn-close">닫기</button>
+                    </header>
+                    <div class="ui-modal-cont">
+                        <p class="term-txt">
+                            본인 명의의 신용카드 정보를 입력해 주십시오. <br>
+                            인증시도 3회 이상 오류시 해당카드로 인증을 받을 수 없습니다.<br>
+                            신한/하나/시티카드는 인증이 불가능 합니다.
+                        </p>
+                        <ul class="tbl-wrap form-wrap">
+                            <li class="style">
+                                <div class="dt wide">카드번호<sup>*<span class="hide">필수</span></sup></div>
+                                <div class="dd cardnum-wrap">
+                                    <input type="text" class="inputbox-xxs" title="카드번호 앞자리 "> <em class="swung">-</em> <input type="text" class="inputbox-xxs" title="카드번호 두번째자리"> <em class="swung">-</em> <input type="text" class="inputbox-xxs"  title="카드번호 세번째자리"> <em class="swung">-</em> <input type="text" class="inputbox-xxs" title="카드번호 마지막자리"> 
+                                </div>
+                            </li>
+                            <li class="style">
+                                <div class="dt wide">유효기간<sup>*<span class="hide">필수</span></sup></div>
+                                <div class="dd select-wrap">
+                                    <select class="selectbox-xxs" title="월">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                    </select> <em>월</em>
+                                    <select class="selectbox-xxs" title="연도">
+                                        <option>2020</option>
+                                        <option>2019</option>
+                                        <option>2018</option>
+                                    </select> <em>년</em>
+                                </div>
+                            </li>
+                            <li class="style">
+                                <div class="dt wide">비밀번호 앞 2자리<sup>*<span class="hide">필수</span></sup></div>
+                                <div class="dd"><input type="password" name="" class="inputbox-xxs" maxlength="2" title="비밀번호 앞 2자리"> <em class="unit">**</em></div>
+                            </li>
+                        </ul>
+                        <div class="term-agree-box">
+                            <div class="top-all">
+                                <input type="checkbox" id="termCard_0">
+                                <label class="lb-check sck" for="termCard_0"><span>전체 약관동의</span></label>
+                            </div>
+                            <div class="ui-acco" role="group" id="termAcco">						
+                                <dl class="ui-acco-wrap">
+                                    <dt class="ui-acco-tit">
+                                        <input type="checkbox" id="termCard_2" class="termCard_0">
+                                        <label class="lb-check sck" for="termCard_2"><span class="hide">개인정보 이용 및 활용동의</span></label>
+                                        <button type="button" class="ui-acco-btn"><i>개인정보 이용 및 활용동의</i></button>
+                                    </dt>
+                                    <dd class="ui-acco-pnl">
+                                        <div class="term-box">                           
+                                            <p>본인은 NICE신용평가정보(주)(이하 ‘회사’라 함)가 에스케이텔레콤(주), (주)케이티, LG유플러스(주) 등 통신사로부터 위탁 받아 제공하는 휴대폰 본인확인 서비스를 이용하기 위하여, 다음과 같이 ‘회사’가 본인의 개인정보를 수집∙이용∙제공 및 취급위탁 하는데 동의합니다.</p>
+                                            <ol>
+                                            <li><strong>1. 개인정보의 수집&middot;이용 목적</strong>
+                                                <ul>
+                                                    <li>가. 본인(서비스 이용자 포함)이 입력한 본인확인정보의 정확성 여부 확인</li>
+                                                    <li>나. 휴대폰 소지 확인을 위한 SMS(또는 LMS) 인증번호 전송</li>
+                                                    <li>다. 기타 법률에서 정한 목적 및 서비스 관련 상담 처리 등</li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>2. 수집하려는 개인정보의 항목</strong>
+                                                <ul>
+                                                    <li>가. 개인의 성명, 성별∙생년월일(또는 주민등록번호), 내외국인, 휴대폰번호, 이동통신</li>
+                                                    <li>나. 연계정보(CI), 중복확인정보(DI)</li>
+                                                    <li>다. 본인(서비스 이용자 포함)이 이용하는 웹사이트 또는 Application 정보</li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>3. 개인정보의 제공 및 취급위탁</strong>
+                                                <ul>
+                                                    <li>가. 제공항목 : 수집한 개인정보 항목</li>
+                                                    <li>나. 제공받는 자(수탁자) : 에스케이텔레콤, 케이티, LG유플러스, 삼성SDS, 드림시큐리티, 모빌리언스, SK네트웍스, 케이스카이비, 다날</li>
+                                                    <li>다. 제공받는 자의 이용목적(취급위탁 업무) : 휴대폰 본인확인서비스 제공</li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>4. 개인정보의 보유 및 이용 기간</strong>
+                                                <ul>
+                                                    <li>본인의 개인정보는 원칙적으로 개인정보의 수집 및 이용목적이 달성되면 지체없이 파기합니다. 단, 다음의 정보에 대해서는 아래의 이유로 명기한 기간 동안 보유합니다.</li>
+                                                    <li>가. 회사 내부 방침에 의한 정보보유 사유<br>
+                                                        - 본인확인 발생 및 차단기록, 휴대폰번호<br>
+                                                        - 보유 이유: 부정 이용 방지 및 민원 처리<br>
+                                                        - 보유 기간: 5년</li>
+                                                    <li>나. 관계법령에 의한 정보보유 사유<br>
+                                                        - 이용자 불만 또는 분쟁 처리에 관한 기록</li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>5. 본인은 동의를 거부할 권리가 있으며, 동의하지 않으실 경우 서비스를 이용하실 수 없습니다.</strong></li>
+
+                                            <li><strong>6. 개인신용정보 조회 동의</strong>
+                                                <ul>
+                                                    <li>‘신용정보의 이용 및 보호에 관한 법률’에 의거 본인은 귀사가 이동전화 서비스 가입, 이용, 유지 여부 및 단말기 할부구매 등의 판단 목적으로 신용정보조회 회사, 신용정보집중기관 또는 보증보험회사(보증보험회사의 신용조회회사, 신용정보집중기관 등을 통한 조회 포함)로부터 가입자의 신용정보를 조회하는데 동의합니다.</li>
+                                                    <li>
+                                                        - 조회할 신용정보  채무불이행정보, 신용거래정보, 신용등급, 타 기관의 신용정보 조회기록 등<br>
+                                                        - 조회 목적  당사 이동전화 서비스 가입, 이용, 유지여부 및 단말기 할부 구매, 신용보험의 가입 및 유지, 당사 제휴카드 발급가능 여부 등의 결정<br>
+                                                        - 조회동의 효력기간  조회 동의서를 제출한 시점부터 당해 이동전화서비스 계약 및 보험계약의 효력이 종료 (정산완료 및 계약해지)하는 시점까지 상기 동의의 효력이 유지됩니다. 단, 가입이 거절되는 경우 상담종료시점까지로 합니다.<br>
+                                                        - 조회한 개인신용정보의 보유 및 이용기간  동의서 및 동의서에 근거하여 조회한 기록은 분쟁이 발생할 경우 및 관계기관의 적법한 자료제출 요청이 있는 경우를 위하여 3년간 보관 및 이용됨
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>7. 개인신용정보 제공 동의</strong>
+                                                <ul>
+                                                    <li>‘신용정보의 이용 및 보호에 관한 법률’에 의거 본인은 귀사가 이동전화 서비스 가입, 이용, 유지 여부 및 단말기 할부구매 등의 판단 목적으로 신용정보조회 회사, 신용정보집중기관 또는 보증보험회사(보증보험회사의 신용조회회사, 신용정보집중기관 등을 통한 조회 포함)로부터 가입자의 신용정보를 조회하는데 동의합니다.</li>
+                                                    <li>
+                                                        - 귀사에서 가입자의 신용보험 가입 적격 유무 문의 시, 서울보증보험㈜가 신용보험 가입 및 유지를 위한 목적으로 조회과정에서 취득한 신용정보(연체정보 등)를 이용하여 귀사(대리점 포함)에 제공하는 것에 동의합니다.<br>
+                                                        - 일반적으로 신용조회회사에 신용정보를 조회한 경우 타 금융기관 등에 그 기록이 제공될 수 있고 신용등급이 하락할 수 있으나, 본 조회의 경우는 신용등급에 아무런 영향을 미치지 않습니다. 다만, 가입자의 단말대금 미 변제로 보증보험회사에서 보험금이 지급된 경우 금융상의 불이익이 있을 수 있습니다.<br>
+                                                        - 조회동의 효력기간  조회 동의서를 제출한 시점부터 당해 이동전화서비스 계약 및 보험계약의 효력이 종료 (정산완료 및 계약해지)하는 시점까지 상기 동의의 효력이 유지됩니다. <br>
+                                                        단, 가입이 거절되는 경우 상담종료시점까지로 합니다.<br>
+                                                        - 조회한 개인신용정보의 보유 및 이용기간  동의서 및 동의서에 근거하여 조회한 기록은 분쟁이 발생할 경우 및 관계기관의 적법한 자료제출 요청이 있는 경우를 위하여 3년간 보관 및 이용됨<br><br>
+                                                        본인은 귀사가 서울보증보험의 조회 포함하여 위와 같이 가입자의 신용정보를 조회 및 제공함에 동의합니다.
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            </ol>
+                                        </div>									
+                                    </dd>
+                                </dl>
+                                <dl class="ui-acco-wrap">
+                                    <dt class="ui-acco-tit">
+                                        <input type="checkbox" id="termCard_3" class="termCard_0">
+                                        <label class="lb-check sck" for="termCard_3"><span class="hide">고유식별정보 처리 동의</span></label>
+                                        <button type="button" class="ui-acco-btn"><i>고유식별정보 처리 동의</i></button>
+                                    </dt>
+                                    <dd class="ui-acco-pnl">
+                                        <div class="term-box">                           
+                                            <p>본인은 NICE신용평가정보(주)(이하 ‘회사’라 함)가 에스케이텔레콤(주), (주)케이티, LG유플러스(주) 등 통신사로부터 위탁 받아 제공하는 휴대폰 본인확인 서비스를 이용하기 위하여, 다음과 같이 SK텔레콤㈜, ㈜케이티, LG유플러스㈜ 등 통신사가 본인의 고유식별정보를 처리하는데 동의합니다.</p>
+                                            <ol>
+                                                <li>1. 개인정보를 제공받는 자 : NICE신용평가정보㈜</li>
+                                                <li>2. 개인정보를 제공받는 자의 개인정보 이용 목적 : 연계정보(CI)/중복가입확인정보(DI) 생성 및 제공</li>
+                                                <li>3. 제공하는 개인정보 항목 : 통신사가 보유하고 있는 본인의 주민등록번호, 외국인등록번호</li>
+                                                <li>4. 개인정보를 제공받는 자의 개인정보 보유 및 이용기간 : 연계정보(CI)/중복가입확인정보(DI) 생성 후 즉시 폐기</li>
+                                                <li>5. 본인은 동의를 거부할 권리가 있으며, 동의하지 않으실 경우 서비스를 이용하실 수 없습니다.</li>
+                                            </ol>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div><!-- //.ui-acco -->
+                        </div><!-- //.term-agree-box -->
+                        <div class="btn-wrap">
+                            <span><button type="button" class="btn btn-ok"><i>확인</i></button></span>
+                            <span><button type="button" class="btn btn-cancel ui-modal-close" holde="true"><i>취소</i></button></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+			<div class="contents-wrap">
+				<section>
+				    <h2 class="h2">가입신청</h2>
+                    <div class="step-wrap item4">
+                        <ol>
+                            <li class="step1" aria-selected="true">
+                                <span>STEP 01</span>
+                                <strong>약관동의 및 본인인증</strong>
+                            </li>
+                            <li class="step2" aria-selected="false">
+                                <span>STEP 02</span>
+                                <strong>신청정보<br class="mbr">입력</strong>
+                            </li>
+                            <li class="step3" aria-selected="false">
+                                <span>STEP 03</span>
+                                <strong>부가서비스 선택</strong> <!-- 20180308 : 텍스트수정 -->
+                            </li>
+                            <li class="step4" aria-selected="false">
+                                <span>STEP 04</span>
+                                <strong>신청 완료</strong>
+                            </li>
+                        </ol>
+                    </div>
+                    <h3 class="h3 pdt-n">약관동의</h3>
+                    <p class="txt-style">
+                        SK 7mobile  홈페이지 회원가입을 위해서 아래 이용약관 및 개인정보의 수집·이용·제공에 대한 안내를 읽으시고 동의하여 주시기 바랍니다. <br>고객님의 편의를 위해서 이용약관 및 개인정보의 수집·이용·제공에 대한 일괄동의를 제공합니다. <br>일괄동의를 원하지 않으시면 각 이용약관 및 개인정보의 수집·이용·제공에 개별 동의하시기 바랍니다.
+                    </p>
+					<div class="agree-box mgb-m">
+                        <fieldset class="div-wrap" role="group">
+                            <legend>약관동의 선택</legend>
+                            <span class="top-all">
+                                <input type="checkbox" id="agr_0">
+                                <!-- edit180312 문구수정 -->
+                                <label class="lb-check all sck" for="agr_0"><span>이용약관 및 개인정보의 수집 &middot; 이용 &middot; 제공에 일괄 동의합니다. </span></label>
+                            </span>
+                            <span>
+                                <input type="checkbox" id="agr_1" class="agr_0">
+                                <label class="lb-check sck" for="agr_1"><span>[필수] SK 7mobile 이용약관 및 개인정보 취급방침 동의</span></label>
+                                <button type="button" class="btn-ico-pop" aria-haspopup="true" onclick=""><span><i>[필수] SK 7mobile 이용약관 및 개인정보 취급방침 동의 팝업</i></span></button>
+                            </span>
+                            <span>
+                                <input type="checkbox" id="agr_2" class="agr_0">
+                                <label class="lb-check sck" for="agr_2"><span>[필수] SK 7mobile 웹회원 이용약관 동의</span></label>
+                                <button type="button" class="btn-ico-pop" aria-haspopup="true" onclick=""><span><i>[필수] SK 7mobile 웹회원 이용약관 동의 팝업</i></span></button>
+                            </span>
+                            <span>
+                                <input type="checkbox" id="agr_3" class="agr_0">
+                                <label class="lb-check sck" for="agr_3"><span>[필수] 개인 정보 수집 , 이용 동의</span></label>
+                                <button type="button" class="btn-ico-pop" aria-haspopup="true" onclick=""><span><i>[필수] 개인 정보 수집 , 이용 동의 팝업</i></span></button>
+                            </span>
+                            <span>
+                                <input type="checkbox" id="agr_4" class="agr_0">
+                                <label class="lb-check sck" for="agr_4"><span>[필수] 휴대폰 구매 계약 동의</span></label>
+                                <button type="button" class="btn-ico-pop" aria-haspopup="true" onclick=""><span><i>[필수] 휴대폰 구매 계약 동의 팝업</i></span></button>
+                            </span>
+                            <!-- 비회원 일시 동의여부 체크 -->
+                            <span>
+                                <input type="checkbox" id="agr_5" class="agr_0">
+                                <label class="lb-check sck" for="agr_5"><span>[필수] 비회원 주문을 위한 개인정보 수집이용 동의</span></label>
+                                <button type="button" class="btn-ico-pop" aria-haspopup="true" onclick=""><span><i>[필수] 비회원 주문을 위한 개인정보 수집이용 동의 팝업</i></span></button>
+                            </span>
+                            <!-- // 비회원 일시 동의여부 체크 -->
+                            <span>
+                                <input type="checkbox" id="agr_6" class="agr_0">
+                                <label class="lb-check sck" for="agr_6"><span>[선택] 마케팅 활용 동의</span></label>
+                                <button type="button" class="btn-ico-pop" aria-haspopup="true" onclick=""><span><i>[선택] 마케팅 활용 동의 팝업</i></span></button><span class="txt">*단, 정보제공성 정보는 동의 여부와 관계없이 발송됩니다.</span>
+                            </span>
+                        </fieldset>
+                    </div>
+
+                    <h3 class="h3">본인인증</h3>
+                    <ul class="form-wrap mtb-line">
+						<li class="line">
+							<dl>
+								<dt>고객구분</dt>
+								<dd>
+                                    <input type="radio" name="r1" id="r1_1" checked="checked" title="개인">
+                                    <label class="lb-radio checked" for="r1_1"><span>개인</span></label>
+                                    <input type="radio" name="r1" id="r1_2" title="미성년자">
+                                    <label class="lb-radio" for="r1_2"><span>미성년자 (XXXX년 XX월 XX일 이후 출생자)</span></label>
+								</dd>
+							</dl>
+						</li>
+                        <!-- 20180308 : 개인 수정되었음 -->
+						<li class="line">
+							<dl>
+								<dt><label for="userName">이름(명의자)<sup>*<span class="hide">필수</span></sup></label></dt>
+								<dd>
+									<input type="text" class="inputbox-s" id="userName" title="명의자 이름">
+								</dd>
+							</dl>
+						</li>
+						<li class="line">
+							<dl>
+								<dt><label for="userID">주민등록번호<sup>*<span class="hide">필수</span></sup></label></dt>
+								<dd>
+                                    <div class="idnumform-wrap">
+                                        <input type="text" id="userID" class="inputbox-s" maxlength="6" title="주민등록번호 앞자리">
+                                        <em class="swung">-</em>
+                                        <input type="text" class="inputbox-s" maxlength="7" title="주민등록번호 뒷자리">
+                                    </div>
+								</dd>
+							</dl>
+						</li>
+                        <!-- // 개인 -->
+                        <!-- 20180308 : 미성년자 추가 -->
+						<li class="line">
+							<dl>
+								<dt><label for="userName2">이름(명의자)<sup>*<span class="hide">필수</span></sup></label></dt>
+								<dd>
+									<input type="text" class="inputbox-s" id="userName2" title="명의자 이름">
+								</dd>
+							</dl>
+						</li>
+						<li class="line">
+							<dl>
+								<dt><label for="userID2">주민등록번호<sup>*<span class="hide">필수</span></sup></label></dt>
+								<dd>
+                                    <div class="idnumform-wrap">
+                                        <input type="text" id="userID2" class="inputbox-s" maxlength="6" title="주민등록번호 앞자리">
+                                        <em class="swung">-</em>
+                                        <input type="text" class="inputbox-s" maxlength="7" title="주민등록번호 뒷자리">
+                                        <button type="button" class="btn-inbase1"><i>실명 확인</i></button>
+                                    </div>
+								</dd>
+							</dl>
+						</li>
+                        <li class="line">
+							<dl>
+								<dt><label for="userName3">법정대리인 이름<sup>*<span class="hide">필수</span></sup></label></dt>
+								<dd>
+									<input type="text" class="inputbox-s" id="userName3" title="법정대리인 이름">
+								</dd>
+							</dl>
+						</li>
+						<li class="line">
+							<dl>
+								<dt><label for="userID3">법정대리인 주민등록번호<sup>*<span class="hide">필수</span></sup></label></dt>
+								<dd>
+                                    <div class="idnumform-wrap">
+                                        <input type="text" id="userID3" class="inputbox-s" maxlength="6" title="주민등록번호 앞자리">
+                                        <em class="swung">-</em>
+                                        <input type="text" class="inputbox-s" maxlength="7" title="주민등록번호 뒷자리">
+                                    </div>
+								</dd>
+							</dl>
+						</li>
+                        <!-- // 미성년자 -->   
+					</ul>		
+                    <div class="txt-con">
+                        <div class="mg">
+                            <p class="txt-base2">본인인증 시 입력하는 정보는 해당 인증기관에서 직접 수집하므로 인증 이외의 용도로 이용 또는 저장되지 않습니다. </p>
+                        </div>
+                    </div>
+
+                     <div class="ui-tab tab-page item2" id="certTab">
+                        <div class="ui-tab-btns">
+                            <button type="button" class="ui-tab-btn"><i>범용 공인인증서 인증</i></button>
+                            <button type="button" class="ui-tab-btn"><i>신용카드 인증</i></button>
+                        </div>
+                        <div class="ui-tab-pnls">
+                            <section class="ui-tab-pnl">
+                                <h3 class="hide">범용 공인인증서 인증</h3>
+                                <div class="txt-con brd">
+                                    <div class="mg">
+                                        <p class="txt-base">범용 공인인증서 인증하기 버튼을 클릭하십시오.</p>
+                                        <p class="top-infotxt">* 인증을 위해서는 브라우저 팝업차단을 반드시 해제 시켜야 합니다. </p>                                        
+                                        <p class="mgt-m">* 법정대리인 명의 범용공인인증서만 가능 (은행개인 무료 공인인증서는 불가)</p>                                    
+                                        <p class="mgt-s bold">※ 법인 고객 가입신청은 메인화면 우측 하단에서 신청 부탁드립니다.</p>
+                                    </div>
+                                </div>
+
+                                <div class="btn-wrap">
+                                    <button type="button" class="btn btn-darkblue-l"><i>범용 공인인증서 인증하기</i></button>
+                                </div>
+
+                                <div class="txt-con brd">
+                                    <div class="mg">
+                                        <p class="txt-base">범용 공인인증서 인증이 완료되었습니다.</p>
+                                        <p class="txt-base2">아래 '신청서 작성' 버튼을 클릭하십시오.</p>
+                                    </div>
+                                </div>
+
+                                <div class="btn-wrap">
+                                    <a href="#" class="btn btn-darkgray">신청서 작성</a>
+                                </div>
+
+                            </section>
+                            <section class="ui-tab-pnl">
+                                <h3 class="hide">신용카드 인증</h3>
+
+                                <div class="txt-con brd">
+                                    <div class="mg">
+                                        <p class="txt-base">신용카드 인증하기 버튼을 클릭하십시오.</p>
+                                        <p class="top-infotxt">* 인증을 위해서는 브라우저 팝업차단을 반드시 해제 시켜야 합니다. </p>                                        
+                                    </div>
+                                </div>
+
+                                <div class="btn-wrap">
+                                    <button type="button" class="btn btn-darkblue" onclick="$plugins.uiModal({ id:'popCredit' , width:770, height:820 })"><i>신용카드 인증하기</i></button>
+                                </div>
+                                
+                                <div class="txt-con brd">
+                                    <div class="mg">
+                                        <p class="txt-base">신용카드 인증이 완료되었습니다.</p>
+                                        <p class="txt-base2">아래 '신청서 작성' 버튼을 클릭하십시오.</p>
+                                    </div>
+                                </div>
+
+                                <div class="btn-wrap">
+                                    <a href="#" class="btn btn-darkgray">신청서 작성</a>
+                                </div>                                
+                            </section>
+                        </div>
+                    </div>                    
+				</section>
+			</div><!-- .contents-wrap -->
+		</main>
+        <div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+
+	<script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+            // 약관동의
+			$plugins.uiForm({ id: 'agr_0', all: true, callback: allCheckCallback});
+            function allCheckCallback(v){}
+
+            // 범용 공인인증서 인증/신용카드 탭
+            $plugins.uiTab({ id:'certTab', current:0 });
+
+            // 신용카드본인인증 약관 전체동의 체크박스
+            $plugins.uiForm({ id: 'termCard_0', all: true, callback: allCheckCallback});            
+             // 신용카드본인인증 아코디언
+			$plugins.uiAccordion({ id:'termAcco', current:[0], autoclose:true });
+
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

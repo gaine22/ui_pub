@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico">
+
+	<title>가입신청 | SK 7mobile</title>
+
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+
+<body>
+	<div class="skip" id="skip"></div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+			<div class="contents-wrap">
+				<section>
+				    <h2 class="h2">가입신청</h2>
+                    <div class="step-wrap item4">
+                        <ol>
+                            <li class="step1" aria-selected="false">
+                                <span>STEP 01</span>
+                                <strong>약관동의 및 본인인증</strong>
+                            </li>
+                            <li class="step2" aria-selected="true">
+                                <span>STEP 02</span>
+                                <strong>신청정보<br class="mbr">입력</strong>
+                            </li>
+                            <li class="step3" aria-selected="false">
+                                <span>STEP 03</span>
+                                <strong>부가서비스 선택</strong> <!-- 20180308 : 텍스트수정 -->
+                            </li>
+                            <li class="step4" aria-selected="false">
+                                <span>STEP 04</span>
+                                <strong>신청 완료</strong>
+                            </li>
+                        </ol>
+                        <div class="progress-bar">
+                            <span class="on">25% 작성 중 입니다.</span><i></i><i></i><i></i>
+                        </div>
+                    </div>
+                    <h3 class="h3 pdt-xl">가입고객정보</h3>
+                    <ul class="form-wrap mtb-line">
+						<li class="line">
+							<dl>
+								<dt>이름</dt>
+								<dd>
+
+                                    <p class="text">홍길동</p>
+								</dd>
+							</dl>
+						</li>
+                        <li class="line">
+							<dl>
+								<dt>주민등록번호</dt>
+								<dd>
+                                    <p class="text">910101 - *******</p>
+								</dd>
+							</dl>
+						</li>
+                        <li class="line">
+							<dl>
+								<dt>본인확인<sup>*<span class="hide">필수</span></sup><button type="button" class="btn-tip"><i>본인확인작성안내 팝업</i></button></dt> <!-- 20180308 본인확인작성안내 팝업디자인넣음 -->
+								<dd>
+                                    <div>
+                                        <input type="radio" name="identity" id="identity1" checked="checked" title="주민등록증 선택">
+                                        <label class="lb-radio checked" for="identity1"><span>주민등록증</span></label>
+                                        <input type="radio" name="identity" id="identity2" title="운전면허증 선택">
+                                        <label class="lb-radio" for="identity2"><span>운전면허증</span></label>
+                                    </div>
+                                    <div class="identityGroup on" id="identityGroup1">
+                                        <div class="group">
+                                            <span class="text2">발급일자</span>
+                                            <input type="text" class="date inputbox-s " id="datepicker1" placeholder="2017-12-22">
+                                            <label for="datepicker1" class="datepicker"><span class="hide">발급일자</span></label>
+                                            <p class="sub-info">※ 현재 정보 확인이 어려운 경우 해피콜 상담원에게 정확한 정보를 알려주시기 바랍니다.</p>
+                                        </div>
+                                    </div>
+                                    <div  class="identityGroup" id="identityGroup2">
+                                        <div class="group">
+                                            <span class="text2">발급일자</span>
+                                            <input type="text" class="date inputbox-s " id="datepicker2" placeholder="2017-12-22">
+                                            <label for="datepicker2" class="datepicker"><span class="hide">발급일자</span></label>
+                                        </div>
+                                        <div class="group">
+                                            <span class="text2">면허번호</span>
+                                            <span class="licenseform-wrap">
+                                                <select class="selectbox-xxs" title="면허번호 첫번째자리 선택">
+                                                    <option>선택</option>
+                                                </select>
+                                                <span class="unit-s">-</span>
+                                                <input type="text" class="inputbox-xxs" title="면허번호 두번째자리" >
+                                                <span class="unit-s">-</span>
+                                                <input type="text" class="inputbox-xxs" title="면허번호 세번째자리" >
+                                                <span class="unit-s">-</span>
+                                                <input type="text" class="inputbox-xxs" title="면허번호 마지막자리" >
+                                            </span>
+                                            <div>
+                                                <p class="sub-info">※ 현재 정보 확인이 어려운 경우 해피콜 상담원에게 정확한 정보를 알려주시기 바랍니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+								</dd>
+							</dl>
+						</li>
+                        <li class="line">
+							<dl>
+								<dt><label for="userPhone">휴대폰번호<sup>*<span class="hide">필수</span></sup></label></dt>
+								<dd>
+									<input type="text" class="inputbox" id="userPhone" placeholder="'-'를 제외하고 입력하세요.">
+                                    <p class="sub-info">※ 가입신청 완료 후, 접수번호 및 진행사항을 SMS로 보내드립니다.</p>
+								</dd>
+							</dl>
+						</li>
+                        <li class="line">
+							<dl>
+								<dt><label for="userMail">이메일<sup>*<span class="hide">필수</span></sup></label></dt>
+								<dd>
+                                    <div class="mailform-wrap2">
+                                        <span>
+                                            <input type="text" class="inputbox-s email" id="userMail" title="이메일 아이디">
+                                            <span class="unit-s">@</span>
+                                            <input type="text" class="inputbox-s" title="이메일 공급자 직접입력">
+                                        </span>
+                                        <select class="selectbox-m" title="이메일공급자 선택">
+                                            <option>직접입력</option>
+                                            <option>naver.com</option>
+                                            <option>gmail.com</option>
+                                            <option>nate.com</option>
+                                            <option>daum.net</option>
+                                            <option>hanmail.net</option>
+                                        </select>                  
+                                    </div>
+								</dd>
+							</dl>
+						</li>
+						<li class="line">
+							<dl>
+								<dt><label for="userAddr">주소<sup>*<span class="hide">필수</span></sup></label></dt>
+								<dd>
+									<div class="inp-addr1">
+                                        <input type="text" class="inputbox addr" id="userAddr" disabled="disabled" title="우편번호입력"> <button type="button" class="btn-inbase"><i>우편번호찾기</i></button>
+                                    </div>
+                                    <div class="inp-addr2">
+                                        <input type="text" class="inputbox-lg" id="addr2" title="주소입력">
+                                        <input type="text" class="inputbox-lg" id="addr3" title="상세주소입력">
+                                    </div>
+								</dd>
+							</dl>
+						</li>
+					</ul>	
+
+                    <div class="tit-check">
+                        <h3 class="h3">주문자 정보</h3>
+                        <p class="check">
+                            <input type="checkbox" id="agree1">
+                            <label class="lb-check sck" for="agree1"><span>가입고객 정보와 동일</span></label>
+                        </p>
+                    </div>
+                    <ul class="form-wrap mtb-line">
+						<li class="line">
+							<dl>
+								<dt><label for="userName">이름</label></dt>
+								<dd>
+                                    <input type="text" class="inputbox" id="userName">
+								</dd>
+							</dl>
+						</li>
+                        <li class="line">
+							<dl>
+								<dt><label for="userPhone2">휴대폰 번호<sup>*<span class="hide">필수</span></sup></label></dt>
+								<dd>
+                                    <input type="text" class="inputbox" id="userPhone2" placeholder="'-'를 제외하고 입력하세요.">
+                                    <p class="sub-info">※ 가입신청 완료 후, 접수번호 및 진행사항을 SMS로 보내드립니다.</p>
+								</dd>
+							</dl>
+						</li>
+                        <li class="line">
+							<dl>
+								<dt><label for="userMail2">이메일<sup>*<span class="hide">필수</span></sup></label></dt>
+								<dd>
+                                    <div class="mailform-wrap2">
+                                        <span>
+                                            <input type="text" class="inputbox-s email" id="userMail2" title="이메일 아이디">
+                                            <span class="unit-s">@</span>
+                                            <input type="text" class="inputbox-s" title="이메일 공급자 직접입력">
+                                        </span>
+                                        <select class="selectbox-m" title="이메일공급자 선택">
+                                            <option>직접입력</option>
+                                            <option>naver.com</option>
+                                            <option>gmail.com</option>
+                                            <option>nate.com</option>
+                                            <option>daum.net</option>
+                                            <option>hanmail.net</option>
+                                        </select>                  
+                                    </div>
+								</dd>
+							</dl>
+                        </li>
+					</ul>	
+
+                    <!-- 20180320 : 버튼 클래스 수정 회색/주황/빨강 순 -->
+                    <div class="btn-wrap item3">
+                        <span><button type="button" class="btn btn-darkgray"><i>이전</i></button></span>
+						<span><button type="button" class="btn btn-orange"><i>임시저장</i></button></span>
+						<span><button type="button" class="btn btn-point"><i>다음</i></button></span>
+					</div>
+				</section>
+			</div><!-- .contents-wrap -->
+		</main>
+        <div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+
+	<script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+            $("input[name='identity']:radio").click(function(){
+                if($(this).attr("id") == 'identity1'){
+                    $('#identityGroup2').removeClass('on');
+                    $('#identityGroup1').addClass('on');
+                }else if($(this).attr("id") == 'identity2'){
+                    $('#identityGroup1').removeClass('on');
+                    $('#identityGroup2').addClass('on');
+                }
+            });
+
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico"> 
+
+	<title>회원가입 | SK 7mobile</title>
+	
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+<body>
+	<div class="skip" id="skip"><ul><li><a href="#main">본문 바로가기</a></li></ul></div>
+    <!-- 20180208: 모달레이어 위치 변경 및 #baseLayer 감싸는 div 추가 -->
+    <div class="base-layer" id="baseLayer">     
+        <section class="ui-modal" id="pwTerms" role="dialog" aria-hidden="true">
+            <div class="ui-modal-wrap modal-black-wrap">
+                <header class="ui-modal-tit">
+                    <h1>비밀번호 설정안내</h1>
+                    <button type="button" class="ui-modal-close btn-close">닫기</button>
+                </header>
+                <div class="ui-modal-cont">
+                    <p class="txt-lead pdn">비밀번호는 <strong class="fc-point">영문, 숫자, 특수문자 중 2가지 조합<br class="wbr"> 10자 이상 혹은3가지 조합 8자 이상</strong> 입력 해주세요.</p>
+                    
+                    <h3 class="h3-tit-s mgt-l">사용 불가능한 비밀번호</h3>
+                    <ul class="list-dash-point mgt-s">
+                        <li>제한된 문자를 사용한 경우 (´|´)</li>
+                        <li>공백을 사용한 경우</li>
+                        <li>3자 이상 연속 또는 중복되는 문자, 숫자를 사용한 경우</li>
+                        <li>생년월일과 순서대로 4자 이상 동일한 경우</li>
+                        <li>아이디와 순서대로 4자 이상 동일한 경우</li>
+                        <li>영문,숫자,특수문자 중 두 가지 조합 10자 미만인 경우</li>
+                        <li>영문,숫자,특수문자 조합 8자 미만인 경우</li>	
+                        <li>비밀번호 변경 시 현재 사용중인 비밀번호를 재사용한 경우</li>
+                    </ul>
+                    <div class="btn-wrap">
+                        <button type="button" class="ui-modal-close btn-line">확인</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- //20180208 -->
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+
+		<main class="main" id="main" role="main">
+            <div class="contents-wrap w100">
+                <div class="wallpaper">
+                    <div class="login-view">
+                        <section class="sec-top">
+                            <div class="logo-bi"><img src="../images/common/logo_bi.png" alt="SK 7mobile"></div>
+                           
+                            <div class="step-num">
+                                <h2>본인인증</h2>
+                                <ul>
+                                    <li>1</li>
+                                    <li class="on">2</li>
+                                    <li>3</li>
+                                </ul>
+                            </div>
+                            <h3 class="line-top">아이디 정보입력</h3>
+                            <div class="certform-wrap">
+                                <input type="text" class="inputbox" placeholder="아이디 입력" title="아이디 입력">
+                                <p class="error aff">사용가능한 아이디입니다.</p>
+                                <p class="error neg">사용할 수 없는 아이디입니다.</p>
+                            </div>
+                            <h3 class="line-top">이메일 정보</h3>
+                            <div class="certform-wrap mailform-wrap">
+                                <input type="text" class="inputbox-s" placeholder="이메일 주소" title="이메일 주소">
+                                <span class="unit-s">@</span>
+                                <input type="text" class="inputbox-s" title="이메일 공급자">
+                                <select class="selectbox-m" title="이메일공급자">
+                                    <option>직접입력</option>
+                                    <option>naver.com</option>
+                                    <option>gmail.com</option>
+                                    <option>nate.com</option>
+                                    <option>daum.net</option>
+                                    <option>hanmail.net</option>
+                                </select>
+                                <p class="txt-lead-s">이메일주소는 서비스 안내, 이메일청구서, 아이디 찾기, 비밀번호 재설정 등에 사용되므로 정확히 기재해 주시기 바랍니다.</p>                                    
+                            </div>
+                            
+                            <h3 class="line-top">비밀번호</h3>
+                            <div class="certform-wrap pos-rel">
+                                <input type="password" class="inputbox" placeholder="비밀번호 입력" title="비밀번호 입력">
+                                <span class="pos"><button type="button" class="btn-ico-qus" onclick="$plugins.uiModal({ id:'pwTerms' });"><i>?</i></button></span>
+                                <input type="password" class="inputbox" placeholder="비밀번호 확인" title="비밀번호 확인">
+                                <p class="error neg">비밀번호가 일치하지 않습니다.</p>
+                                <p class="error aff">비밀번호가 일치합니다.</p>
+                            </div>
+                            
+
+                            <h3 class="line-top">인증방법</h3>
+                            <div class="ui-tab btn-wrapper">
+                                <span><button type="button" class="btn-line point">휴대폰인증</button></span>
+                                <span><button type="button" class="btn-line">아이핀인증</button></span>
+                            </div>
+                            <div class="msg-area">
+                                <p class="txt">휴대폰 인증하기 버튼을 클릭(또는 탭)해 주세요.</p>
+                                <p class="fc-point">* 휴대폰인증을 위해서는 브라우저 팝업차단을<br> 반드시 해제해야 합니다.</p>
+                            </div>
+                            <div class="btn-wrap">
+                                <a href="#" class="btn-point-red">회원가입</a>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div><!-- //.contents-wrap -->
+		</main>
+		<footer class="footer" id="footer"></footer>
+	</div>
+	
+	<script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			$plugins.uiForm();
+			
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

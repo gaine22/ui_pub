@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico"> 
+
+	<title>임대폰 신청 | SK 7mobile</title>
+
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+<body>
+	<div class="skip" id="skip">
+		<ul>
+			<li><a href="#main">본문 바로가기</a></li>
+		</ul>
+	</div>
+    <div class="base-layer" id="baseLayer"></div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+            <div class="contents-wrap">
+                <section>                  
+                    <h2 class="h2 brd ">임대폰 신청</h2>
+                    <h3 class="h3">임대폰을 선택하세요.</h3>
+                    <div class="rental-banner-wrap">
+                        <div class="rental-banner owl-carousel">
+                            <div class="item">
+                                <a href="#" title="새창" target="_blank">
+                                    <span class="prd-img"><img src="../images/main/@pd1.png" alt=""></span>
+                                    <span class="prd-tit">갤럭시노트</span>
+                                    <span class="prd-model">(SM-G950)</span>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" title="새창" target="_blank">
+                                    <span class="prd-img"><img src="../images/main/@pd2.png" alt=""></span>
+                                    <span class="prd-tit">갤럭시노트</span>
+                                    <span class="prd-model">(SM-G950)</span>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" title="새창" target="_blank">
+                                    <span class="prd-img"><img src="../images/main/@pd3.png" alt=""></span>
+                                    <span class="prd-tit">갤럭시노트</span>
+                                    <span class="prd-model">(SM-G950)</span>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" title="새창" target="_blank">
+                                    <span class="prd-tag">품절</span>                               
+                                    <span class="prd-img"><img src="../images/main/@pd4.png" alt=""></span>
+                                    <span class="prd-tit">갤럭시노트</span>
+                                    <span class="prd-model">(SM-G950)</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="fc-point list-note txt-r-d">※ 제품 모델 / 색상 / 재고 상태에 따라 휴대폰이 변경될 수 있습니다.</p>
+                    
+                    <h3 class="h3tit">배송 정보</h3>
+                    <ul class="tbl-wrap form-wrap"><!-- edit180228 form-wrap 클래스 추가 -->
+                        <li class="style-line">
+                            <div class="dt">수령인</div>
+                            <div class="dd">홍길동</div>
+                        </li>
+                        <li class="style">
+                            <div class="dt">주소<sup>*<span class="hide">필수</span></sup></div>
+                            <div class="dd address-wrap">
+                                <div class="inp-addr1">
+                                    <input type="text" class="inputbox addr" id="addr" disabled="disabled"> <button type="button" class="btn-inbase">우편번호찾기</button>
+                                </div>
+                                <div class="inp-addr2">
+                                    <input type="text" class="inputbox" id="addr2">
+                                    <input type="text" class="inputbox" id="addr3">
+                                </div>
+                                 <p class="list-note">※ 청구주소는 명세서 발송 주소와 동일합니다.<br> 청구주소 변경 시 우편 명세서 주소도 변경됩니다.</p>
+                            </div>
+                        </li>
+                        <li class="style">
+                            <div class="dt">연락처<sup>*<span class="hide">필수</span></sup></div>
+                            <div class="dd call-wrap">
+                                 <select class="selectbox-xs" title="연락처 지역번호 및 앞자리">
+                                    <option>010</option>
+                                    <option>011</option>                                    
+                                    <option>016</option>
+                                    <option>017</option>
+                                    <option>018</option>
+                                    <option>019</option>
+                                </select>
+                                <em class="swung">-</em>
+                                <input type="text" class="inputbox-xs" title="연락처 중간자리">
+                                <em class="swung">-</em>
+                                <input type="text" class="inputbox-xs" title="연락처 뒷자리">
+                            </div>
+                        </li>
+                        <li class="style">
+                            <div class="dt">배송메모(선택)</div>
+                            <div class="dd">
+                                <input type="text" class="inputbox-lg" title="배송메모">
+                            </div>
+                        </li>             
+                        <li class="style">
+                            <div class="dt">USIM 구매<sup>*<span class="hide">필수</span></sup></div>
+                            <div class="dd fieldset-wrap">
+                                <fieldset class="div-wrap" role="group">
+                                    <legend>USIM 구매여부</legend>  
+                                        <input type="radio" name="usim" id="usim_1" checked="checked" title="예">
+                                        <label class="lb-radio checked" for="usim_1"><span>예</span></label>
+                                        <input type="radio" name="usim" id="usim_2" title="아니오">
+                                        <label class="lb-radio" for="usim_2"><span>아니오</span></label>
+                                </fieldset>
+                                <span class="list-note fc-point">※ USIM 카드를 함께 구매하실 고객님은 ‘예’를 선택해 주세요.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <div class="txt-box bg">
+                        <div class="line">
+                            <input type="checkbox" id="m_agree" name="m_agree_n">
+                            <!-- edit180312 문구수정 -->
+                            <label class="lb-check sck" for="m_agree"><span>신청정보를 확인하였으며, 변경진행에 동의합니다.</span></label>
+                            <div class="btn-right">
+                                <button type="button" class="btn-point"><i>신청하기</i></button>
+                            </div>
+                        </div>
+                    </div>                    
+                </section>
+            </div><!-- //.contents-wrap -->
+		</main>
+		<div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+	
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+            // 메인제품배너
+			var rentalBNR = $('.rental-banner');
+			rentalBNR.owlCarousel({
+				loop: false,				
+				items: 4,
+				autoplay: false,
+				dots: false,
+				margin: 40,
+				autoWidth: false,
+				stagePadding: 0,
+                nav: true,
+                navElement: 'button',
+                navText: ["이전 제품 보기", "다음 제품 보기"],
+                navRewind: false,
+				responsive:{
+					0:{
+						items:2,
+                        margin:0
+					},
+					414:{
+						items:2,
+                        margin:0
+					},
+                    768:{
+						items:4,
+                        margin:0
+					}
+				}                
+			});
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico">
+
+	<title>가상계좌 발급 및 충전하기 | SK 7mobile</title>
+
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+
+<body>
+	<div class="skip" id="skip"></div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<main class="main" id="main" role="main">
+			<div class="contents-wrap">
+				<section>
+				    <h2 class="h2">가상계좌 발급 및 충전하기</h2>
+					<ol class="step-wrap">
+						<li class="step1" aria-selected="false">
+							<span>STEP 01</span>
+							<strong>약관동의 및 휴대폰번호확인</strong>
+						</li>
+						<li class="step2" aria-selected="true">
+							<span>STEP 02</span>
+							<strong>충전정보입력</strong>
+						</li>
+						<li class="step3" aria-selected="false">
+							<span>STEP 03</span>
+							<strong>충전완료</strong>
+						</li>
+					</ol>
+                </section>
+				<section>
+					<p class="top-text-s">아래 전환금액을 선택하여 주시기 바랍니다.</p> <!-- 20180315 : 수정 -->
+                    <ul class="form-wrap mtb-line">
+						<li class="line">
+							<dl>
+								<dt>휴대폰 번호<sup>*<span class="hide">필수</span></sup></dt>
+								<dd>
+									<p class="text">010-12**-56**</p>
+								</dd>
+							</dl>
+						</li>
+						<li class="line">
+							<dl>
+								<dt><label for="chg-price">충전금액<sup>*<span class="hide">필수</span></sup></label></dt>
+								<dd>
+                                    <div class="selsubbox">
+                                        <select title="충전금액" id="chg-price">
+                                            <option>5,000원</option>
+                                            <option>6,000원</option>
+                                            <option>8,000원</option>
+                                            <option>10,000원</option>
+                                            <option>15,000원</option>
+                                            <option>20,000원</option>
+                                            <option>30,000원</option>
+                                            <option>45,000원</option>
+                                        </select>
+                                    </div>
+								</dd>
+							</dl>
+						</li>
+						<li class="line row-line">
+                            <dl>
+								<dt class="vert-middle">충전계좌선택<sup>*<span class="hide">필수</span></sup></sup></dt>
+                                <dd>
+                                    <div class="account-box">
+                                        <div class="box-tit">
+                                            <strong>발급은행</strong>
+                                            <strong>가상계좌번호</strong>
+                                        </div>                                       
+                                        <div class="box-con">
+                                            <dl>
+                                                <dt><span class="hide">발급은행</span>
+                                                    <input type="radio" name="bank" id="bank_1" checked="checked">
+                                                    <label class="lb-radio checked" for="bank_1"><span>국민은행</span></label>
+                                                </dt>
+                                                <dd><span class="hide">가상계좌번호</span><button type="button" class="btn-inbase"><i>발급받기</i></button><span class="acount-num">5654684346</span></dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><span class="hide">발급은행</span>
+                                                    <input type="radio" name="bank" id="bank_2" title="농협">
+                                                    <label class="lb-radio" for="bank_2"><span>농협</span></label></dt>
+                                                <dd><span class="hide">가상계좌번호</span><button type="button" class="btn-inbase"><i>발급받기</i></button><span class="acount-num">5654684346</span></dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><span class="hide">발급은행</span>
+                                                    <input type="radio" name="bank" id="bank_3" title="우체국">
+                                                    <label class="lb-radio" for="bank_3"><span>우체국</span></label></dt>
+                                                <dd><span class="hide">가상계좌번호</span><button type="button" class="btn-inbase"><i>발급받기</i></button><span class="acount-num">654686894613</span></dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+						</li>
+					</ul>
+
+                    <ul class="list-note mg">
+					    <li class="fc-red">※ 당일 충전 건에 한하여 충전 취소가 가능합니다.</li>
+                        <li class="fc-red">※ 충전금액으로 음성통화, 데이터, SMS/LMS/MMS, 국제전화 등 모든 서비스 이용 가능합니다.</li>
+                    </ul>
+					<div class="txt-box bg">
+                        <div class="line">
+                            <input type="checkbox" id="c_agree" name="c_agree_n">
+                            <label class="lb-check sck" for="c_agree"><span>충전정보를 확인하였으며, 결제 진행에 동의합니다.</span></label>
+                            <div class="btn-right">
+								<span><a href="#none" class="btn btn-gray">취소</a></span>
+                                <span><a href="#none" class="btn btn-point">충전</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+			</div><!-- .contents-wrap -->
+		</main>
+        <div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+
+	<script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+            $('.account-box').find('button').on('click',function(){
+                $(this).parent().addClass('on')
+            })
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

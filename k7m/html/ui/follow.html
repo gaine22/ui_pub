@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../resources/img/common/ico_favicon.ico"> 
+
+	<title>SKTELINK</title>
+	
+	<script src="../resources/js/ui.init.js"></script>
+	<link rel="stylesheet" href="../resources/css/ui.base.css">
+	<style>
+			.big{height:800px !important}
+	</style>
+		
+</head>
+
+<body class="page-codinglist">
+	<div class="base-skip" id="baseSkip"></div>
+	<div class="base-modal" id="baseModal"></div>
+	<div class="base-wrapper">
+		<header class="base-header" id="baseHeader"></header>
+		<main class="base-main" id="baseMain" role="main">
+
+			<div class="base-content">
+				<div class="base-tit">
+					<h1 class="h1">Follow layer</h1>
+				</div>
+				
+				<section class="mgb_l">
+					<div class="ui-position" id="exeFix1">
+						<div class="ui-position-wrap">
+							<div style="background:rgba(113,167,234,0.4); width:100%; margin:0 auto; height:100px; font-size:1.3rem; color:#fff; text-align:center; padding-top:30px;">
+							처음에 relative이다 상단에 fixed.
+							</div>
+						</div>
+					</div>	
+					
+					<div class="ex_div" style="width:100%; padding:0 0 800px; background:#e2f6f6">
+						<button type="button" style="width:200px; height:200px; background:#e2f6f6" class="uiBtnSize">크기 늘려다 줄이기</button>
+					</div>
+					
+					<div class="ui-position" id="exeFix2">
+						<div class="ui-position-wrap">
+							<div style="background:rgba(113,124,234,0.4); width:100%; margin:0 auto; height:100px; font-size:1.3rem; color:#fff; text-align:center; padding-top:30px">
+							처음에 relative이다 하단에 fixed
+							</div>
+						</div>
+					</div>	
+					
+					<div class="ex_div" style="width:100%; height:1000px; background:#e2eef6">
+						...
+					</div>
+					
+					<div class="ui-position" id="exeFix3">
+						<div class="ui-position-wrap" style="height:100px">
+							<div style="background:rgba(111,215,219,0.4); width:100%; margin:0 auto; height:100px; font-size:1.3rem; color:#fff; text-align:center; padding-top:30px">
+							처음에 하단에 fixed이다 relative
+							</div>
+						</div>
+					</div>	
+					
+					<div class="ex_div" style="width:100%; height:1000px; background:#e7e2f6">
+						...
+					</div>
+					
+				</section>
+			</div>
+<pre><xmp class="code mgb_l">
+■html code
+<div class="ui-position" id="exeFix">
+	<div class="ui-position-wrap">
+	.........
+	</div>
+</div>
+
+■■javascript code
+NETIVE.uiFollow.inner({ id: 'exeFix2', ps: 'bottom', fix: false, add: 'baseFooter' });
+	[id] 아이디명 
+	 - Type: String
+	[ps] 고정될 위치 
+	 - Type: String
+	 - Default: bottom / top, bottom
+	[fix] 처음부터 고정일지 설정. false 이면 relative > fixed로 변경, true 이면 fixed > relative로 변경
+	 - Type: Boolean
+	 - Default: true / true, false
+	[add] 아이디명. ps값이 'top'일 경우 해당 아이디의 높이값을 구해 fixed 될 위치 설정, ps값이 'bottom'일 경우 해당 아이디의 위치값을 구해 한계점 설정
+	 - Type: String
+	 - Default: false / false, 아이디명 
+	[callback] 함수명. function callback(v) { v.scrolltop //현재 스크롤 값 받아옴. }
+	 - Type: String
+
+</xmp></pre>
+			
+
+		</main>
+		<aside class="ui-follow-bn type-sidebn" id="exeFix4">
+		  <button type="button" style="width:200px; height:300px; background:rgba(234,113,113,0.4)" class="uiBtnSize">크기 늘려다 줄이기</button>
+		</aside>
+		<footer class="base-footer" id="baseFooter" style="background:black; height:200px; width:100%"></footer>
+	</div>
+	
+	<script src="../resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../resources/js/ui.plugins.js"></script>
+	<script src="../resources/js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			$plugins.uiFollow({ id:'exeFix1', ps:'top', fix:false });
+			$plugins.uiFollow({ id:'exeFix2', ps:'bottom', fix:true });
+			$plugins.uiFollow({ id:'exeFix3', ps:'bottom', fix:false });
+			/*
+			NETIVE.uiFollow.aside({ id: 'exeFix4', start: 200, end: 200 });
+			*/
+			$('.uiBtnSize').on('click', function(){
+				!$(this).hasClass('big') ? $(this).addClass('big') : $(this).removeClass('big');
+			})
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+/* common */
+@import url(jquery-ui.css);
+@import url(ui_plugins.css);
+@import url(ui_common.css);
+@import url(ui_main.css);
+@import url(ui_content.css);
+@import url(ui_service.css);

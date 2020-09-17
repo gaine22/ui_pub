@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../images/common/ico_app.png" >
+	<link rel="shortcut icon" href="../images/common/ico_favicon.ico">
+
+	<title>선불충전하기 | SK 7mobile</title>
+
+	<script src="../js/ui.init.js"></script>
+	<link rel="stylesheet" href="../css/ui_base.css">
+</head>
+
+<body>
+	<div class="skip" id="skip"></div>
+	<div class="wrapper">
+		<div class="toplink"><a href="#" title="새창" target="_blank">SK Telink 바로가기</a></div>
+		<header class="header" id="header"></header>
+		<!-- 180306 : 영수증 팝업 추가 -->
+        <div class="base-layer" id="baseLayer">
+            <section class="ui-modal modal-receipt" id="receiptPopup" role="dialog" aria-hidden="true">
+                <div class="ui-modal-wrap">
+                    <header class="ui-modal-tit">
+                        <h1>영수증</h1>
+                        <!-- 180227 : button i태그 추가 -->
+                        <button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id: 'receiptPopup', endfocus: 'btnReceiptPopup' });"><i>닫기</i></button>
+                    </header>
+                    <div class="ui-modal-cont">
+                        <div class="receipt-box">
+                            영수증 내용 필요
+                        </div>
+                        <div class="btn-wrap">
+                            <span><button type="button" class="btn btn-ok"><i>인쇄</i></button></span>
+                            <span><button type="button" class="btn btn-cancel"  onclick="$plugins.uiModalClose({ id: 'receiptPopup', endfocus: 'btnReceiptPopup' });"><i>취소</i></button></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div> 
+		<main class="main" id="main" role="main">
+			<div class="contents-wrap">
+				<section>
+				    <h2 class="h2">선불 충전하기</h2>
+                    <div class="step-wrap">
+                        <ol>
+                            <li class="step1" aria-selected="false">
+                                <span>STEP 01</span>
+                                <strong>약관동의 및 휴대폰번호확인</strong>
+                            </li>
+                            <li class="step2" aria-selected="false">
+                                <span>STEP 02</span>
+                                <strong>충전정보입력</strong>
+                            </li>
+                            <li class="step3" aria-selected="true">
+                                <span>STEP 03</span>
+                                <strong>충전완료</strong>
+                            </li>
+                        </ol>
+                    </div>
+                </section>
+
+                <section class="pocpps">
+					<!-- 180306 : 영역 수정 -->
+					<p class="top-txt"><strong>충전</strong>이 <strong>완료</strong>되었습니다.</p>
+					<table class="tbl-base th-line type-finish">
+                        <caption>충전내역정보</caption>
+                        <colgroup>
+                            <col class="finish-th">
+                            <col class="finish-td">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+								<th scope="row">충전일시</th>
+                                <td>2018-02-14 13:12:44</td>
+                            </tr>
+                            <tr>
+								<th scope="row">휴대폰번호</th>
+                                <td>010-12**-56**</td>
+                            </tr>
+							<tr>
+								<th scope="row">충전 금액</th>
+                                <td>30,000원</td>
+                            </tr>
+							<tr>
+								<th scope="row">충전 후 잔액</th>
+                                <td class="fc-red">40,000원</td>
+                            </tr>
+                        </tbody>
+					</table>
+                    <div class="btn-wrap type-flex">
+						<span><a href="#" class="btn btn-point">충전 내역 조회</a></span>
+                        <!-- 180322 버튼색 변경 -->
+						<span><a href="#" class="btn btn-bluegreen">데이터 전환하기</a></span>
+					</div>
+					<div class="btn-wrap type-flex">
+						<span><a href="#" class="btn btn-point">충전 내역 조회</a></span>
+                        <!-- 180322 버튼색 변경 -->
+						<span><a href="#" class="btn btn-bluegreen">데이터 전환하기</a></span>
+						<!-- 180306 영수증 출력 버튼 추가 -->
+						<span><button type="button" class="btn btn-gray ui-laypop" id="btnReceiptPopup" aria-haspopup="true" onclick="$plugins.uiModal({ id:'receiptPopup', width:520})"><i>영수증 출력</i></button></span>
+					</div>
+					<!-- //180306 : 영역 수정 -->
+					<!-- 180306 : 유의사항 삭제 -->
+				</section>
+			</div><!-- .contents-wrap -->
+		</main>
+        <div class="qucik" id="quick"></div>
+		<footer class="footer" id="footer"></footer>
+	</div>
+
+	<script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/owl.carousel.js"></script>
+	<script src="../js/ui.plugins.js"></script>
+	<script src="../js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

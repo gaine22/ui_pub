@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../resources/img/common/ico_favicon.ico"> 
+
+	<title>SKTELINK</title>
+	
+	<script src="../resources/js/ui.init.js"></script>
+	<link rel="stylesheet" href="../resources/css/ui.base.css">
+</head>
+
+<body class="page-form">
+	<div class="base-skip" id="baseSkip"></div>
+	<div class="base-modal" id="baseModal"></div>
+	<div class="base-wrapper">
+		<header class="base-header" id="baseHeader"></header>
+		<main class="base-main" id="baseMain" role="main">
+			<div class="base-content">
+				<div class="base-tit">
+					<h1 class="h1">Range Slider</h1>
+				</div>
+				
+				<section class="mgb-l">
+					<h2 class="h2">Dual Range slider</h2>
+					<div class="ui-range" id="uiRange">
+						<div class="ui-range-wrap">
+							<button class="ui-range-btn-s" data-btn="min" type="button" title="최소값 설정">현재 최소값 <span class="ui-range-txt"></span></button>
+							<button class="ui-range-btn-e" data-btn="max" type="button" title="최대값 설정">현재 최대값 <span class="ui-range-txt"></span></button>
+							<div class="ui-range-bg">
+								<div class="ui-range-bar"></div>
+							</div>
+							<div class="ui-range-div-wrap"></div>
+						</div>
+					</div>
+					<div data-rangeselect="uiRange">
+						<select title="최소가격 선택" class="t1 ui-range-min">
+						</select>
+						<select title="최대가격 선택" class="t2 ui-range-max">
+						</select>
+					</div>
+				</section>
+				
+				<section class="mgb-l">
+					<h2 class="h2">Single Range slider</h2>
+					<div class="ui-range type-single" id="uiRange2">
+						<div class="ui-range-wrap">
+							<button class="ui-range-btn-s" data-btn="min" type="button" title="값 설정">현재 값 <span class="ui-range-txt"></span></button>
+							<div class="ui-range-bg">
+								<div class="ui-range-bar"></div>
+							</div>
+							<div class="ui-range-div-wrap"></div>
+						</div>
+					</div>
+					<div data-rangeselect="uiRange2">
+						<select title="현재가격 선택" class="t1 ui-range-min">
+						</select>
+					</div>
+				</section>
+				
+				
+				<section class="mgb-l plan-gauge">
+					<h2 class="h2">Single Range slider - Vertical</h2>
+					<div class="ui-range type-single" id="uiRange3">
+						<div class="ui-range-wrap">
+							<button class="ui-range-btn-s" data-btn="min" type="button" title="값 설정">280<span class="ui-range-txt">븐</span></button>
+							<div class="ui-range-bg">
+								<div class="ui-range-bar"></div>
+							</div>
+							<div class="ui-range-div-wrap"></div>
+						</div>
+					</div>
+					<div data-rangeselect="uiRange3">
+						<select title="현재가격 선택" class="t1 ui-range-min">
+						</select>
+					</div>
+				</section>
+			</div>
+			
+<pre><xmp class="code mgb_l">
+NETIVE.uiRange.init({
+	id : "uiRange",
+	step : 10,            // 단계설정
+	min : 1000,           // 최소값
+	max : 6000,           // 최대값
+	now : [1500, 2500],   // 설정값, 단계설정으로 맞추어진 근사값으로 변경됨.
+	tooltip : true,       // 툴팁여부
+	unit: '만원',         // 단위 텍스트
+	txt_s : '이하',       // 첫번째 값 추가 텍스트
+	txt_e : '이상',       // 마지막 값 추가 텍스트
+	acc : true,           // 접근성 select 박스연결
+	callback: callback    // callback 함수
+});
+function callback(v){
+	console.log(v.min, v.max);
+}
+</xmp></pre>
+
+		</main>
+		<footer class="base-footer" id="baseFooter"></footer>
+	</div>
+	
+	<script src="../resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../resources/js/ui.plugins.js"></script>
+	<script src="../resources/js/ui.common.js"></script>
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			$plugins.uiRange({
+				id : "uiRange",
+				step : 10,
+				min : 1000,
+				max : 6000,
+				now : [1500, 2500],
+				tooltip : true,
+				unit: '만원',
+				txt_s : '이하',
+				txt_e : '이상',
+				acc : true, 
+				callback: rangeCallback
+			});
+			
+			$plugins.uiRange({
+				id : "uiRange2",
+				step : 10,
+				min : 0,
+				max : 1000,
+				now : [500],
+				tooltip : true,
+				unit: '만원',
+				txt_s : '',
+				txt_e : '',
+				acc : true, 
+				callback: rangeCallback
+			});
+			
+			$plugins.uiRange({
+				id : "uiRange3",
+				step : 5,
+				min : 0,
+				max : 500,
+				now : [300],
+				tooltip : true,
+				unit: '분',
+				txt_s : '',
+				txt_e : '',
+				acc : true, 
+				callback: rangeCallback
+			});
+			
+			function rangeCallback(v){
+				console.log(v.min, v.max);
+			}
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

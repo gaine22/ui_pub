@@ -1,0 +1,73 @@
+<!-- MODAL: 소액결제서비스 이용동의 -->
+<section class="ui-modal" id="smallsumTerm" role="dialog" aria-hidden="true" style="display:block !important;opacity:1;width:520px">
+    <div class="ui-modal-wrap">
+        <header class="ui-modal-tit">
+            <h1>이용약관동의 및 비밀번호 설정</h1>
+            <button type="button" class="ui-modal-close btn-close">닫기</button>
+        </header>
+        <div class="ui-modal-cont">
+            <h2 class="h2-tit">통신과금서비스(소액결제서비스) 이용약관</h2>
+            <div class="term-wrap-contents">
+                <div class="term-box">
+                    <h3>통신과금서비스 이용약관</h3>
+                    <h4>제 1 조 (목적)</h4>
+                </div>
+                <div class="field-box">
+                    <fieldset class="div-wrap" role="group">
+                        <legend>통신과금서비스(소액결제서비스) 이용약관 동의여부</legend>
+                            <input type="radio" name="agree" id="agree1" checked="checked" title="동의">
+                            <label class="lb-radio checked" for="agree1"><span>동의</span></label>
+                            <input type="radio" name="agree" id="agree2" title="동의 안함">
+                            <label class="lb-radio" for="agree2"><span>동의 안함</span></label>
+					</fieldset>
+                </div>
+                <p class="info-txt">* 이용약관동의 시 소액결제 월 30만원의 이용한도 부여, 통신과금서비스 동의 후 6개월까지 이용한도는 순차적으로 제한 될 수 있습니다.</p>
+            </div>
+            <h3 class="h3-tit">비밀번호 서비스등록(선택)</h3>
+            <ul class="form-wrap2">
+                <li class="line">
+                    <dl>
+                        <dt><label for="svrPwd1">비밀번호 입력</label></dt>
+                        <dd>
+                            <div>
+                                <input type="password" class="inputbox" id="svrPwd1" title="비밀번호 입력">
+                            </div>
+                            
+                        </dd>
+                    </dl>
+                </li>
+                <li class="line">
+                    <dl>
+                        <dt><label for="svrPwd2">비밀번호 확인</label></dt>
+                        <dd>
+                            <div>
+                            <input type="password" class="inputbox" id="svrPwd2" title="비밀번호 확인">
+                            </div>
+                            
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+
+            <h4 class="h4-tit">소액결제 비밀번호 서비스</h4>
+            <p>소액결제의 안전한 이용을 위해 고객님께서 비밀번호를 설정하여 결제 의사를 재확인 하는 서비스 입니다.</p>
+
+            <h4 class="h4-tit">소액결제 비밀번호</h4>
+            <ul class="list-dash-txt">
+                <li>- 입력방법: 0~9의 숫자로 6자리 입력</li>
+                <li>- 사용제한
+                    <ol>
+                    <li>1) 본인 생년월일(예: 생년월일 2015년 1월 1일 &rarr; 150101)</li>
+                    <li>2) 동일숫자 2자리 이상(예: 111111, 111893)</li>
+                    <li>3) 연속된 숫자 3자리 이상(예: 123456, 123047)</li>
+                    </ol>
+                </li>
+            </ul>
+
+            <div class="btn-wrap">
+                <span><button type="button" class="btn-point">등록</button></span>
+                <span><button type="button" class="ui-modal-close btn-black">닫기</button></span>
+            </div>
+        </div>
+    </div>
+</section>
